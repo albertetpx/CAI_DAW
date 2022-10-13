@@ -12,19 +12,11 @@ function pasarForm1(){
     buton2.style.display="block";
 }
 
-
 function pasarForm1_1(){
     let form1_1 = document.getElementById("part1_1");
     form1_1.style.display = "none";
  
     let form2 = document.getElementById("part2");
-}
-
-function pasarForm2_1(){
-    let form1 = document.getElementById("part2");
-    form1.style.display = "none";
-
-    let form2 = document.getElementById("part2.1");
     form2.style.display = "flex";
 
     let buton2 =document.getElementById("button2");
@@ -118,6 +110,9 @@ function pasarForm4_1(){
     buton8.style.display="block";
 }
 
+
+//  NuevooooooOooooooO
+
 function pasarForm5(){
     let form5 = document.getElementById("part5");
     form5.style.display = "none";
@@ -146,6 +141,7 @@ function pasarForm6(){
     buton9.style.display="block";
 }
 
+
 function pasarForm7(){
     let form7 = document.getElementById("part7");
     form7.style.display = "none";
@@ -159,6 +155,7 @@ function pasarForm7(){
     let buton10 =document.getElementById("button11");
     buton10.style.display="block";
 }
+
 
 function pasarForm8(){
     let form8 = document.getElementById("part8");
@@ -174,6 +171,7 @@ function pasarForm8(){
     buton11.style.display="block";
 }
 
+
 function pasarForm9(){
     let form9 = document.getElementById("part9");
     form9.style.display = "none";
@@ -187,6 +185,9 @@ function pasarForm9(){
     let buton12 =document.getElementById("button13");
     buton12.style.display="block";
 }
+
+// NuevOOOOOoooOoooOOO
+
 
 function pasarForm10(){
     let form10 = document.getElementById("part10");
