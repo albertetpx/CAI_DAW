@@ -344,41 +344,43 @@
 
 <!--  sexta parte -->
 <div class="form" id="part6">
+  <!-- En bases de datos hay campos que soplan (Revisar bases de datos)  -->
   <div id="div_caja1">
     <label for="">HORES QUE DORM HABITUALMENT
-        <input type="text">
+        <input type="text" name="hores_dorm">
     </label>
     <br>
     <label for="">
         MIDIGADA:
-        <input type="radio" name="pmpc" required>
+        <input type="radio" name="migdia" required>
         SI
-        <input type="radio" name="pmpc" required>
+        <input type="radio" name="migdia" required>
         NO
     </label>
     <br>
     <label for="a_quantitat_son">
       QUALITAT DEL SON:  
       <br>
-        <input type="radio"  required>a) TRQBQUIL
-        <input type="radio"  required>b) MAL SONS
-        <input type="radio"  required>c) INTERRUPCIONS
+        <input type="radio" name="qualitat_son"  required>a) TRQBQUIL
+        <input type="radio" name="qualitat_son"  required>b) MAL SONS
+        <input type="radio" name="qualitat_son"  required>c) INTERRUPCIONS
         
       </label>
 </div>
+  
 
 <!-- caja2 -->
 <div class="div_caja2">
    
     <label for="">
         HI HA SITUACIONS QUE <br>INFLUENCIEN LA SEVA SON: 
-        <input type="radio" name="sim" required>
+        <input type="radio" name="situacions_influencien_son" required>
         SI
-        <input type="radio" name="sim" required>
+        <input type="radio" name="situacions_influencien_son" required>
         NO
         <br>
         QUINES &nbsp;
-        <textarea></textarea>
+        <textarea name="quienes_situacions_influencien_son"></textarea>
       </label>
 <br>
          </div>
