@@ -3,8 +3,8 @@ from flask import Flask, redirect, render_template, request, url_for
 
 db=mysql.connector.connect(host='localhost',
                        user='root',
-                       password='Karlen-1999',
-                       database='lista_paciente'
+                       password='el.moounirejh1',
+                       database='formulario_cai'
                        )
 
 def rellenar_datos(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
