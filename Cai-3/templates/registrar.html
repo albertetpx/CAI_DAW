@@ -487,17 +487,19 @@
       </div>
          
 </div>
+<!-- Decima primera parte -->
 <div class="form" id="part10">
   <div class="div_caja1">
     <label for="">CONEIX MIDES DE PREVENCIÓ:
-     <textarea name="" id="" ></textarea>
+     <textarea name="coneix_mides_prevencio" ></textarea>
  </label> <br>
-
- <label for="">SALUBRITAT DEL MEDI:
-     <input type="text"><br> 
+<!-- Mirar la base de datos, revisar si hay que poner más cosas en html o DB -->
+ <label >SALUBRITAT DEL MEDI:
+     <input type="text" name="salubritat_habitat_1"><br> 
      HÀBITAT 
      <input type="text"><br>
      LLOC DE TREBALL <textarea name="" id=""></textarea> 
+     <!-- Revisar base de datos, no esta creada una columna para este dato -->
  </label>
 
  </div>
@@ -506,24 +508,24 @@
  <div class="div_caja2">
   <label for="">HI HA SITUACIONS O CIRCUMSTÀNCIES QUE <br> INFLUENCIEN LA SEVA SEGURETAT FÍSICA, PSICOLÒGICA, SOCIAL:
     <br>
-    <input type="radio" name="sim" required>
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" required>
     SI
-    <input type="radio" name="sim" required>
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" required>
     NO
     <br>
     QUINES &nbsp;
-    <textarea></textarea>
+    <textarea name="quines_situacions_seguretat_fisica_psicologica_social"></textarea>
 </label><br>  
-  <label for="">MITJANS QUE UTILITZA DE PROTECCIÓ: 
-    <textarea></textarea>
+  <label >MITJANS QUE UTILITZA DE PROTECCIÓ: 
+    <textarea name="mitjans_utilitza_proteccio"></textarea>
 </label><br>
 
-<label for="">ALTRES MANIFESTACIONS: 
-    <textarea></textarea>
+<label >ALTRES MANIFESTACIONS: 
+    <textarea name="altres_manifestacio"></textarea>
 </label>
  </div>
 </div>
-<!-- Decimo primera parte -->
+<!-- Decimo Primera primera parte -->
  <div class="form" id="part11">
   <div class="div_caja1">
     <label>ESTAT DE CONSCIENCIA: <input type="text" name="estat_consciencia"/> </label><br>
@@ -544,7 +546,7 @@
   </div>
 </div>
 
-<!-- Decima Primera parte del form -->
+<!-- Decima Segunda parte del form -->
 <div class="form" id="part12">
   <div class="div_caja1">
     <label>QUINES SON LES SEVES CREENCES I VALORS PRIORITARIS: <input type="number" name="quines_creences_valors"/> </label><br>
@@ -553,7 +555,7 @@
   </div>
 </div>
 
-<!-- Decima Segunda parte del form -->
+<!-- Decima Tercera parte del form -->
 <div class="form" id="part13">
   <div class="div_caja1">
     <label>ROL FAMILIAR: <input type="text" name="rol_familiar" /> </label><br>
@@ -565,7 +567,7 @@
   </div>
 </div>
 
-<!-- Decima Tercera parte del form -->
+<!-- Decima Quarta parte del form -->
 <div class="form" id="part14">
   <div class="div_caja1">
     <label>HABITS DE DIVERSIÓ I DISTRACCIÓ: <input type="text" /> </label><br> <!-- FALTA ESTE APARTADO EN LA BASE DE DATOS -->
@@ -587,7 +589,7 @@
   </div>
 </div>
 
-<!-- Decima Cuarta parte del form -->
+<!-- Decima Quinta parte del form -->
 <div class="form" id="part15">
   <div class="div_caja1">
     <label>TE INTERÈS PER A CONEIXER EL PROCÉS DE LA SEVA SALUT:
