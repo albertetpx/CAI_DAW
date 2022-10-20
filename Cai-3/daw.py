@@ -222,6 +222,7 @@ def recibirDatosPaciente2():
             amplitud=respuesta['amplitud']
             tipus_respiracio=respuesta['tipus_respiracio']
             orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']
+            familia_origen_pare=respuesta['familia_origen_pare']
             familia_origen_mare=respuesta['familia_origen_mare']
             familia_origen_germans=respuesta['familia_origen_germans']
             rol_ocupa=respuesta['respuesta']
