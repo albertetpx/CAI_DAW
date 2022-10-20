@@ -9,18 +9,57 @@ db=mysql.connector.connect(host='localhost',
 
 #FUNCIONES PARA INTRODUCIR DATOS A MYSQL
 
-def rellenar_datos(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
+def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
       
-    q = f"""insert into lista_paciente (
+    primer = f"""insert into lista_paciente (
         Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,Hi_viu_desde,Viu_sol,Medicaments_que_pren) 
     values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}',{Desde},'{viuSol}','{medicament}')
         """
     # print(q)
     cursor= db.cursor()
-    cursor.execute(q)
+    cursor.execute(primer)
     db.commit()
+
+def rellenar_datos_2(ritme,frequencia_r,amplitud,tipus_respiracio,orifisis_nasals_permeables,familia_origen_pare,familia_origen_mare,familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio):
+    segundo = f"""insert into necessitat_respirar (ritme,frequencia_r,amplitud,tipus_respiracio,orifisis_nasals_permeables,familia_origen_pare,familia_origen_mare,familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio) 
+    values ('{ritme}',{frequencia_r},'{amplitud}','{tipus_respiracio}','{orifisis_nasals_permeables}',{familia_origen_pare},'{familia_origen_mare}','{familia_origen_germans}','{rol_ocupa}','{membres_integren}','{temps_residencia}','{pren_medicaments_casa}','{quins_medicaments}','{problema_salut_actual}','{familia_procreacio}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(segundo)
+    db.commit()
+
+def rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions):
+    tercera = f"""insert into necessitat_menjar_beure (pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions) 
+    values ('{pes}',{talla},'{numero_dents_realitzar_funcio}','{protesi_dental}','{masticacio}',{caracteriques_deglucio},'{esmorzar}','{dinar}','{berenar}','{sopar}','{altres}','{sensacio_habitual_respecte_menjar}','{habitualment_menja}','{situacions_influencien_habits_alimentalis}','{mitjans_utilitza_millorar}','{altres_manifestacions}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(tercera)
+    db.commit()
+
+def rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions):
+    quarta = f"""insert into necessitat_eliminar (frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions) 
+    values ('{frequencia_orina}',{quantitat_orina},'{aspecte_orina}','{frequencia_femtes}','{quantitat_femtes}',{aspecte_femtes},'{frequencia_suor}','{quantitat_suor}','{aspecte_suor}','{situacions_influencien_habits_eliminacio}','{quines_influencien}','{mitjans_utilitzar_eliminar_millor}','{altres_manifestacions}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quarta)
+    db.commit()
+
+def rellenar_datos_5(pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions):
+    quinta = f"""insert into necessitat_moure_mantenir_postura_adequada (pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions) 
+    values ('{pot_moure_totes_parts_cos}',{quines_parts},'{perque_pot_moure}','{es}','{postura_habitual}',{activitats_fisiques},'{situacions_interfereixen_mobilitat}','{quines_situacions_interfreixen_mobilitat}','{mitjans_utilitza_moure_millor_mantenir_postura_adequada}','{altres_manifestacions}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quinta)
+    db.commit()
+
+def rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions):
     
-    # return redirect(url_for(""))
+    quinta = f"""insert into necesitat_dormir_reposar ( hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions  ) 
+    values ('{hores_dorm}','{migdia}','{qualitat_son}','{situacions_influencien}','{quines_situacions_influencien}','{mitjans_dormir}','{altres_manifestacions}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quinta)
+    db.commit()
 
 def rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres):
 
@@ -143,6 +182,167 @@ def registrar():
     
 @app.route("/recibirDatosPaciente",methods=['POST'])   
 
+def recibirDatosPaciente1():
+    try:   
+        if request.method == 'POST':
+            respuesta = request.form
+            print(respuesta)
+            nom =respuesta['nom']
+            edat =respuesta['edat']
+            sexe =respuesta['sexe']
+            LLoc_naixement =respuesta['LLoc_naixement']
+            Lloc_residencia =respuesta['Lloc_residencia']
+            familia_origen_pare =respuesta['familia_origen_pare']
+            familia_origen_mare =respuesta['familia_origen_mare']
+            familia_origen_germans =respuesta['familia_origen_germans']
+            rol_ocupa =respuesta['rol_ocupa']
+            membres_integren =respuesta['membres_integren']
+            temps_residencia =respuesta['temps_residencia']
+            pren_medicaments_casa =respuesta['pren_medicaments_casa']
+            quins_medicaments =respuesta['quins_medicaments']
+            problema_salut_actual =respuesta['problema_salut_actual']
+            familia_procreacio =respuesta['familia_procreacio']
+            
+            resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement, Lloc_residencia, familia_origen_pare, familia_origen_mare, familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio)
+            
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")    
+        
+        
+def recibirDatosPaciente2():
+    try:  
+        if request.method == 'POST':
+            respuesta = request.form             
+            ritme=respuesta['ritme']
+            frequencia_r=respuesta['frequencia_r']
+            amplitud=respuesta['amplitud']
+            tipus_respiracio=respuesta['tipus_respiracio']
+            orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']
+            familia_origen_mare=respuesta['familia_origen_mare']
+            familia_origen_germans=respuesta['familia_origen_germans']
+            rol_ocupa=respuesta['respuesta']
+            membres_integren=respuesta['membres_integren']
+            temps_residencia=respuesta['temps_residencia']
+            pren_medicaments_casa=respuesta['pren_medicaments_casa']
+            quins_medicaments=respuesta['quins_medicaments']
+            problema_salut_actual=respuesta['problema_salut_actual']
+            familia_procreacio=respuesta['familia_procreacio']
+            
+            resultado = rellenar_datos_2(ritme, frequencia_r, amplitud, tipus_respiracio, orifisis_nasals_permeables, familia_origen_pare, familia_origen_mare, familia_origen_germans, rol_ocupa, membres_integren, temps_residencia, pren_medicaments_casa, quins_medicaments, problema_salut_actual, familia_procreacio)
+                                               
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")    
+
+def recibirDatosPaciente3():
+    try:  
+        if request.method == 'POST':
+            respuesta = request.form   
+            pes=respuesta['pes']
+            talla=respuesta['talla']
+            numero_dents_realitzar_funcio=respuesta['numero_dents_realitzar_funcio']
+            protesi_dental=respuesta['protesi_dental']
+            masticacio=respuesta['masticacio']
+            caracteriques_deglucio=respuesta['caracteriques_deglucio']
+            esmorzar=respuesta['esmorzar']
+            dinar=respuesta['dinar']
+            berenar=respuesta['berenar']
+            sopar=respuesta['sopar']
+            altres=respuesta['altres']
+            sensacio_habitual_respecte_menjar=respuesta['sensacio_habitual_respecte_menjar']
+            habitualment_menja=respuesta['habitualment_menja']
+            situacions_influencien_habits_alimentalis=respuesta['situacions_influencien_habits_alimentalis']
+            quines_situacions=respuesta['quines_situacions']
+            mitjans_utilitza_millorar=respuesta['mitjans_utilitza_millorar']
+            altres_manifestacions=respuesta['altres_manifestacions']
+            
+            resultado =  rellenar_datos_3(pes, talla, numero_dents_realitzar_funcio, protesi_dental, masticacio, caracteriques_deglucio, esmorzar, dinar, berenar, sopar, altres, sensacio_habitual_respecte_menjar, habitualment_menja, situacions_influencien_habits_alimentalis, quines_situacions, mitjans_utilitza_millorar, altres_manifestacions)
+            
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")    
+
+
+def recibirDatosPaciente4():
+    try:  
+        if request.method == 'POST':
+            respuesta = request.form    
+            frequencia_orina=respuesta['frequencia_orina']
+            quantitat_orina=respuesta['sopaquantitat_orinar']
+            aspecte_orina=respuesta['aspecte_orina']
+            frequencia_femtes=respuesta['frequencia_femtes']
+            quantitat_femtes=respuesta['quantitat_femtes']
+            aspecte_femtes=respuesta['aspecte_femtes']
+            frequencia_suor=respuesta['frequencia_suor']
+            quantitat_suor=respuesta['quantitat_suor']
+            aspecte_suor=respuesta['aspecte_suor']
+            situacions_influencien_habits_eliminacio=respuesta['situacions_influencien_habits_eliminacio']
+            quines_influencien=respuesta['quines_influencien']
+            mitjans_utilitzar_eliminar_millor=respuesta['mitjans_utilitzar_eliminar_millor']
+            altres_manifestacions=respuesta['altres_manifestacions']
+            
+            resultado =  rellenar_datos_4(frequencia_orina, quantitat_orina, aspecte_orina, frequencia_femtes, quantitat_femtes, aspecte_femtes, frequencia_suor, quantitat_suor, aspecte_suor, situacions_influencien_habits_eliminacio, quines_influencien, mitjans_utilitzar_eliminar_millor, altres_manifestacions)
+            
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")    
+
+
+def recibirDatosPaciente5():
+    try:  
+        if request.method == 'POST':
+            respuesta = request.form    
+            pot_moure_totes_parts_cos=respuesta['pot_moure_totes_parts_cos']
+            quines_parts=respuesta['quines_parts']
+            perque_pot_moure=respuesta['perque_pot_moure']
+            es=respuesta['es']
+            postura_habitual=respuesta['postura_habitual']
+            activitats_fisiques=respuesta['activitats_fisiques']
+            situacions_interfereixen_mobilitat=respuesta['situacions_interfereixen_mobilitat']
+            quines_situacions_interfreixen_mobilitat=respuesta['quines_situacions_interfreixen_mobilitat']
+            mitjans_utilitza_moure_millor_mantenir_postura_adequada=respuesta['mitjans_utilitza_moure_millor_mantenir_postura_adequada']
+            altres_manifestacions=respuesta['altres_manifestacions']
+            resultado =  rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions)
+            
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")
+
+def recibirDatosPaciente6():
+    try:  
+        if request.method == 'POST':
+            respuesta = request.form    
+            hores_dorm=respuesta['hores_dorm']
+            migdia=respuesta['migdia']
+            qualitat_son=respuesta['qualitat_son']
+            situacions_influencien=respuesta['situacions_influencien_son']
+            quines_situacions_influencien=respuesta['quines_situacions_influencien_son']
+            mitjans_dormir=respuesta['mitjans_utilitza_dormir_millor_reposar']
+            altres_manifestacions=respuesta['altres_manifestacions']
+            resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions)
+            
+            return redirect(url_for("ex_pagina_exit"))
+        else:
+            return render_template("registrar.html")    
+    
+    except:
+            return render_template("registro_error.html")
 
 def insertar_datos_7():
     try:
