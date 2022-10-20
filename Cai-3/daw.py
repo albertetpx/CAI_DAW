@@ -117,7 +117,7 @@ def rellenar_datos_15(interes,perque,situacions,mitjans,altres):
     db.commit()
 
 
-app = Flask(_name_)
+app = Flask("_name_")
 
 @app.route("/")
 def principalTabla_inicio():
