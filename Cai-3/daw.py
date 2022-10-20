@@ -3,28 +3,46 @@ from flask import Flask, redirect, render_template, request, url_for
 
 db=mysql.connector.connect(host='localhost',
                        user='root',
-                       password='el.moounirejh1',
+                       password='Karlen-1999',
                        database='formulario_cai'
-                       )
-
-def rellenar_datos(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
+                       )         #  rELLENAR DATOS 1                       
+def rellenar_datos_1(nom,edat,sexe,LLoc_naixement,Lloc_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio):
       
     q = f"""insert into lista_paciente (
-        Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,Hi_viu_desde,Viu_sol,Medicaments_que_pren) 
-    values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}',{Desde},'{viuSol}','{medicament}')
-        """
+        nom,edat,sexe,Lloc_residencia,Lloc_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio) 
+    values ('{nom}',{edat},'{sexe}','{Lloc_residencia}','{Lloc_residencia}',{familia_origen_pare},'{familia_origen_mare}','{familia_origen_germans}','{rol_ocupa}','{membres_integren}','{temps_residencia}','{pren_medicaments_casa}','{quins_medicaments}','{problema_salut_actual}','{familia_procreacio}')"""
     # print(q)
     cursor= db.cursor()
     cursor.execute(q)
     db.commit()
-    
+# RELENAR DATOS  2                                                                                                               
+def rellenar_datos_2(ritme,frequencia_r,amplitud,tipus_respiracio,orifisis_nasals_permeables,familia_origen_pare,familia_origen_mare,familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio):
+    q = f"""insert into lista_paciente (nom,edat,sexe,Lloc_residencia,Lloc_residencia,frequencia_cardiaca,pa.,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia) 
+    values ('{nom}',{edat},'{sexe}','{Lloc_residencia}','{Lloc_residencia}',{familia_origen_pare},'{familia_origen_mare}','{familia_origen_germans}','{rol_ocupa}','{membres_integren}','{temps_residencia}','{pren_medicaments_casa}','{quins_medicaments}','{problema_salut_actual}','{familia_procreacio}')"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(q)
+    db.commit()                                                
+# NMUSH ORIGINAL 
+# def rellenar_datos(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
+      
+#     q = f"""insert into lista_paciente (
+#         Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,Hi_viu_desde,Viu_sol,Medicaments_que_pren) 
+#     values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}',{Desde},'{viuSol}','{medicament}')
+#         """
+#     # print(q)
+#     cursor= db.cursor()
+#     cursor.execute(q)
+#     db.commit()
     # return redirect(url_for(""))      
      
 app = Flask(__name__)
 
-@app.route("/")
+
+
+@app.route("/") 
 def principalTabla_inicio():
-    consulta = "select count(*) from lista_paciente;"
+    consulta = "select count(*) from info_general;"
     cursor = db.cursor()
     cursor.execute(consulta)
     numPacient = cursor.fetchall()[0][0]
@@ -33,7 +51,7 @@ def principalTabla_inicio():
 
 @app.route("/lista_paciente")
 def lista_paciente():
-    consulta_sel = "select * from lista_paciente;"
+    consulta_sel = "select * from info_general;"
     cursor = db.cursor()
     cursor.execute(consulta_sel)
     data = cursor.fetchall() 
@@ -51,14 +69,21 @@ def recibirDatosPaciente():
             respuesta = request.form
             print(respuesta)
             nom =respuesta['nom']
-            edad =respuesta['edad']
+            edat =respuesta['edat']
             sexe =respuesta['sexe']
-            llocNaixament =respuesta['llocNaixament']
-            llocResidencia =respuesta['llocResidencia']
-            Desde =respuesta['Desde']
-            viuSol =respuesta['viuSol']
-            medicament =respuesta['medicament']
-            resultado=  rellenar_datos(nom, edad, sexe, llocNaixament, llocResidencia, Desde, viuSol, medicament)
+            LLoc_naixement =respuesta['LLoc_naixement']
+            Lloc_residencia =respuesta['Lloc_residencia']
+            familia_origen_pare =respuesta['familia_origen_pare']
+            familia_origen_mare =respuesta['familia_origen_mare']
+            familia_origen_germans =respuesta['familia_origen_germans']
+            rol_ocupa =respuesta['rol_ocupa']
+            membres_integren =respuesta['membres_integren']
+            temps_residencia =respuesta['temps_residencia']
+            pren_medicaments_casa =respuesta['pren_medicaments_casa']
+            quins_medicaments =respuesta['quins_medicaments']
+            problema_salut_actual =respuesta['problema_salut_actual']
+            familia_procreacio =respuesta['familia_procreacio']
+            resultado=  rellenar_datos(nom, edat, sexe, LLoc_naixement, Lloc_residencia, familia_origen_pare, familia_origen_mare, familia_origen_germans,rol_ocupa,membres_integren,temps_residencia,pren_medicaments_casa,quins_medicaments,problema_salut_actual,familia_procreacio)
             
             return redirect(url_for("ex_pagina_exit"))
         else:
@@ -67,7 +92,7 @@ def recibirDatosPaciente():
     except:
             return render_template("registro_error.html")    
         
-   
+
    
    
     #     return redirect(url_for("ex_pagina_exit"))
