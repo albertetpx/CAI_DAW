@@ -4,14 +4,14 @@ from flask import Flask, redirect, render_template, request, url_for
 db=mysql.connector.connect(host='localhost',
                        user='root',
                        password='el.moounirejh1',
-                       database='formulario_cai'
+                       database="formulario_cai"
                        )
 
 #FUNCIONES PARA INTRODUCIR DATOS A MYSQL
 
 def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
       
-    primer = f"""insert into lista_paciente (
+    primer = f"""insert into info_general (
         Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,Hi_viu_desde,Viu_sol,Medicaments_que_pren) 
     values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}',{Desde},'{viuSol}','{medicament}')
         """
@@ -160,7 +160,7 @@ app = Flask("_name_")
 
 @app.route("/")
 def principalTabla_inicio():
-    consulta = "select count(*) from lista_paciente;"
+    consulta = "select count(*) from info_general;"
     cursor = db.cursor()
     cursor.execute(consulta)
     numPacient = cursor.fetchall()[0][0]
@@ -169,7 +169,7 @@ def principalTabla_inicio():
 
 @app.route("/lista_paciente")
 def lista_paciente():
-    consulta_sel = "select * from lista_paciente;"
+    consulta_sel = "select * from info_general;"
     cursor = db.cursor()
     cursor.execute(consulta_sel)
     data = cursor.fetchall() 
