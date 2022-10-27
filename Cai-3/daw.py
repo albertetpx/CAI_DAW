@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template, request, url_for
 
 db=mysql.connector.connect(host='localhost',
                        user='root',
-                       password='',
+                       password='el.moounirejh1',
                        database="formulario_cai"
                        )
 
