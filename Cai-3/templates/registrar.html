@@ -18,6 +18,7 @@
           src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
           alt="Imagen de carta "
         />
+
       </div>
 
       <h1 class="titulo1">REGISTRAR PACIENT</h1>
@@ -52,14 +53,20 @@
     <label>FAMILIA D'ORIGEN: PARE <input type="text"  name="familia_origen_pare"/> </label><br>
     <label>FAMILIA D'ORIGEN: MARE <input type="text"  name="familia_origen_mare"/> </label><br>
     <label>FAMILIA D'ORIGEN: GERMANS <input type="text" name="familia_origen_germans" /> </label><br>
+<<<<<<< HEAD
     <label>ROL QUE OCUPA <input type="text" name="familia_procreacio" /> </label><br>
     <label>MEMBRE QUE LA INTEGREN <input type="text"  name="rol_ocupa"/> </label><br>
+=======
+    <label>ROL QUE OCUPA <input type="text" name="rol_ocupa" /> </label><br>
+    <label>MEMBRE QUE LA INTEGREN <input type="text"  name="membres_integren"/> </label><br>
+>>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
   </div>
 </div>
 
 <!-- Parte 1.1 del form -->
 <div class="form" id="part1_1">
   <div class="div_caja1">
+<<<<<<< HEAD
     <label>TEMPS DE RESIDÈNCIA <input type="number" name="membres_integren" /> </label><br>
     <label
       >PRENS MEDICAMENTS A CASA
@@ -75,46 +82,56 @@
       >FAMILIA DE PROCREACIÓ
       <input type="radio" name="fp"name="" required /> SI
       <input type="radio" name="fp"name="" required /> NO
+=======
+    <label>TEMPS DE RESIDÈNCIA <input type="number" name="temps_residencia" /> </label><br>
+    <label
+      >PRENS MEDICAMENTS A CASA
+      <input type="radio"  name="pren_medicaments_casa" required /> SI
+      <input type="radio"  name="pren_medicaments_casa" required /> NO
+    </label><br>
+    <label>QUINS <input type="text" name="quins_medicaments" /> </label><br>
+  </div>
+
+  <div class="div_caja2">
+    <label>PROBLEMAS DE SALUT <input type="text" name="problema_salut_actual"/> </label><br>
+    <label
+      >FAMILIA DE PROCREACIÓ
+      <input type="radio" name="familia_procreacio" required /> SI
+      <input type="radio" name="familia_procreacio" required /> NO
+>>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
     </label><br>
   </div>
 </div>
 
-<input
-  type="submit"
-  name="registrar"
-  value="Registrar
-              pacient"
-  id="botonRegistrar"
-/>
-
 <!-- Segunda parte del form -->
 <div class="form" id="part2">
   <div class="div_caja1">
-    <label>RITME <input type="text" /></label><br />
-    <label>FREQÜENCIA R <input type="number" /></label><br />
-    <label>AMPLITUD: <input type="text" /></label><br />
-    <label
-      >RESPIRACIÓ: <input type="radio" name="r" required /> BUCAL
-      <input type="radio" name="r" required /> NASAL </label
+    <label>RITME <input type="text" name="ritme" /></label><br />
+    <label>FREQÜENCIA R <input type="number" name="frequencia_r"/></label><br />
+    <label>AMPLITUD: <input type="text" name="amplitud" /></label><br />
+    <label>
+      RESPIRACIÓ: 
+      <input type="radio"  name="tipus_respiracio" required /> BUCAL
+      <input type="radio"  name="tipus_respiracio" required /> NASAL </label
     ><br />
-    <label>ORIFICIS NASALS PERMEABLES <input type="text" /></label
+    <label>ORIFICIS NASALS PERMEABLES <input type="text"  name="orifisis_nasals_permeables"/></label
     ><br />
   </div>
 
   <div class="div_caja2">
-    <label>FREQÜENCIA CARDIACA <input type="number" /> </label
+    <label>FREQÜENCIA CARDIACA <input type="number" name="frequencia_cardiaca" /> </label
     ><br />
-    <label>PA. <input type="number" /> </label><br />
-    <label>COLORACIÓ: MUCOSES: <input type="text" /> </label><br />
-    <label id="pell">PELL: <input type="text" /> </label><br />
+    <label>PA. <input type="number" name="pa." /> </label><br />
+    <label>COLORACIÓ: MUCOSES: <input type="text" name="coloracio_mucoses " /> </label><br />
+    <label id="pell">PELL: <input type="text" name="coloracio_pell" /> </label><br />
     <label
       > RESPIRACIÓ: <br> 
     </label>
       <label for="res">
-        <input type="radio" name="res" id="res" required /> SILENCIOSA
+        <input type="radio" name="respiracio" id="res" required /> SILENCIOSA
       </label>
       <label for="res2">
-        <input type="radio" name="res2" id="res2" required /> SOROLLOSA
+        <input type="radio" name="respiracio" id="res2" required /> SOROLLOSA
       </label>
   </div>
 </div>
@@ -124,102 +141,104 @@
 <div class="form" id="part2_1">
   <div class="div_caja1">
     <label
-      >TOS: <input type="radio" name="t" required /> SI
-      <input type="radio" name="t" required /> NO </label
+      >TOS: <input type="radio" name="tos" required /> SI
+      <input type="radio" name="tos" required /> NO </label
     ><br />
 
-    <label>DESCRIPCIÓ <input type="text" /> </label><br />
-    <label>MUCOSITAT <input type="text" /> </label><br />
-    <label>DESCRIPCIÓ <input type="text" /> </label><br />
+    <label>DESCRIPCIÓ <input type="text" name="tos_descripcio" /> </label><br />
+    <label>MUCOSITAT <input type="text"  name="mucositat"/> </label><br />
+    <label>DESCRIPCIÓ <input type="text" name="mucositat_descripcio" /> </label><br />
 
     <label
-      >EXPECTORACIÓ <input type="radio" name="e" required /> SI
-      <input type="radio" name="e" required /> NO
+      >EXPECTORACIÓ
+      <input type="radio" name="expectoracio" required /> SI
+      <input type="radio" name="expectoracio" required /> NO
     </label>
   </div>
 
   <div class="div_caja2">
-    <label>ALTRES MANIFESTACIONS <input type="text" /> </label
+    <label>ALTRES MANIFESTACIONS <input type="text" name="altres_manifestacions"/> </label
     ><br />
 
     <label
       >HI HA SITUACIONS QUE INFLUENCIEN LA SEVA RESPIRACIÓ: <br>
-      <input type="radio" name="sir" required /> SI
-      <input type="radio" name="sir" required /> NO </label
+      <input type="radio" name="situacions_influencien_respiracio" required /> SI
+      <input type="radio" name="situacions_influencien_respiracio" required /> NO </label
     ><br />
 
-    <label>QUINES &nbsp;<textarea></textarea></label><br />
+    <label>QUINES &nbsp;<textarea name="quines_influencien"></textarea></label><br />
     <label
       >MITJANS QUE UTILITZAN PER RESPIRAR MILLOR &nbsp;<textarea
-      ></textarea></label
+       name="mitja_utilitza_respirar_millor"></textarea></label
     ><br />
 
     <label
-      >FUMA <input type="radio" name="f" required /> SI
-      <input type="radio" name="f" required /> NO </label
+      >FUMA <input type="radio" name="fuma" required /> SI
+      <input type="radio" name="fuma" required /> NO </label
     ><br />
 
-    <label>CIGARS DIA <input type="number" /> </label>
+    <label>CIGARS DIA <input type="number" name="cigars_dia"/> </label>
   </div>
 </div>
 
 <!-- Tercera Parte -->
+
 <div class="form" id="part3">
   <div class="div_caja1">
-      <label>PES <input type="number"> </label><br>
-      <label>TALLA <input type="text"> </label><br>
-      <label>CAVITAT BUCAL: <br>  a) DENTS EN Nº SUFICIENT PER REALITZAR BÉ LA SEVA FUNCIÓ: <input type="number"> </label><br>
+      <label>PES <input type="number" name="pes"> </label><br>
+      <label>TALLA <input type="text" name="talla"> </label><br>
+      <label>CAVITAT BUCAL: <br>  
+        a) DENTS EN Nº SUFICIENT PER REALITZAR BÉ LA SEVA FUNCIÓ: 
+      <input type="number" name="numero_dents_realitzar_funcio"> </label><br>
       <label id="b">b) PROTESIS DENTAL: 
-          <input type="radio" name="pd" required> PARCIAL
-          <input type="radio" name="pd" required> TOTAL
+          <input type="radio" name="protesi_dental" required> PARCIAL
+          <input type="radio" name="protesi_dental" required> TOTAL
       </label><br>
       
       <label>MASTICACIÓ:  
-          <input type="radio" name="m" required> LENTA
-          <input type="radio" name="m" required> RÀPIDA
+          <input type="radio" name="masticacio" required> LENTA
+          <input type="radio" name="masticacio" required> RÀPIDA
       </label>
   </div>
 
   <div class="div_caja2">
-      <label>LA DEGLUCIÓ. CARACTERÍSTIQUES: <input type="text"> </label>
-      <br>
-      <label>TIPUS DE DIETA &nbsp;<textarea></textarea></label><br><br>
+      <label>LA DEGLUCIÓ. CARACTERÍSTIQUES: <input type="text" name="caracteriques_deglucio"></textarea></label><br><br>
       <label>ALIMENTS I LIQUITS QUE PREN HABITUALMENT I QUANTITAT/DIA </label><br>
-      <label>ESMORZAR <input type="text"> </label><br>
-      <label>DINAR <input type="text"> </label><br>
+      <label>ESMORZAR <input type="text" name="esmorzar"> </label><br>
+      <label>DINAR <input type="text" name="dinar"> </label><br>
   </div>
 </div>
 
 <!-- 3.1 Parte -->
 <div class="form" id="part3_1">
   <div class="div_caja1">
-      <label>BERENAR <input type="text"> </label><br>
-      <label>SOPAR <input type="text"> </label><br>
-      <label>ALTRES &nbsp;<textarea></textarea></label><br><br>
-      <label>HABITUALMENT QUINA SENSACIÓ TÉ <br> RESPECTE AL MENJAR &nbsp;<textarea></textarea> </label><br><br>
+      <label>BERENAR <input type="text" name="berenar"> </label><br>
+      <label>SOPAR <input type="text" name="sopar"> </label><br>
+      <label>ALTRES &nbsp;<textarea name="altres"></textarea></label><br><br>
+      <label>HABITUALMENT QUINA SENSACIÓ TÉ <br> RESPECTE AL MENJAR &nbsp;<textarea name="sensacio_habitual_respecte_menjar"></textarea> </label><br><br>
       <label>ALIMENTS SÒLITS O LIQUIDS QUE NO LI AGRADEN, INTOLERA O TÉ ALGUNA RESTRICCIÓ &nbsp;<textarea></textarea> </label>
   </div>
 
   <div class="div_caja2">
       <label for="">HABITUALMENT MENJA:
-          <input type="radio" name="hm" required> A CASA <br>
-          <input type="radio" name="hm" required> A LA FEINA
-          <input type="radio" name="hm" required> A UN RESTAURANT <br>
-          <input type="radio" name="hm" required> SOL
-          <input type="radio" name="hm" required> ACOMPANYAT
+          <input type="radio" name="habitualment_menja" required> A CASA <br>
+          <input type="radio" name="habitualment_menja" required> A LA FEINA
+          <input type="radio" name="habitualment_menja" required> A UN RESTAURANT <br>
+          <input type="radio" name="habitualment_menja" required> SOL
+          <input type="radio" name="habitualment_menja" required> ACOMPANYAT
       </label><br>
       <label>HI HA SITUACIONS QUE INFLUENCIEN ELS SEUS HABITS ALIMENTARIS
-          <input type="radio"  name="sih" required> SI
-          <input type="radio"  name="sih" required> NO
+          <input type="radio"  name="situacions_influencien_habits_alimentalis" required> SI
+          <input type="radio"  name="situacions_influencien_habits_alimentalis" required> NO
       </label><br>
-      <label>QUINES &nbsp;<textarea></textarea> </label><br><br>
-      <label>MITJANS QUE UTILITZA PER MILLORAR-LOS &nbsp;<textarea></textarea> </label><br>
-      <label>ALTRES MANIFESTACIONS &nbsp;<textarea></textarea> </label><br>
+      <label>QUINES &nbsp;<textarea name="quines_situacions"></textarea> </label><br><br>
+      <label>MITJANS QUE UTILITZA PER MILLORAR-LOS &nbsp;<textarea name="mitjans_utilitza_millorar"></textarea> </label><br>
+      <label>ALTRES MANIFESTACIONS &nbsp;<textarea name="altres_manifestacions"></textarea> </label><br>
   </div>
   <br>
 </div>
 
-<!-- Quarta Parte -->
+
 <!-- Quarta Parte -->
 <div class="form" id="part4">
   <div class="div_caja1">
@@ -241,11 +260,11 @@
         
               <td>ORINA</td>
           
-              <td><input type="text"></td>
+              <td><input type="text" name="frequencia_orina"></td>
           
-              <td><input type="text"></td>
+              <td><input type="text" name="quantitat_orina"></td>
 
-              <td><input type="text"></td>
+              <td><input type="text" name="aspecte_orina"></td>
           
           </tr>
 
@@ -253,11 +272,11 @@
         
               <td>PEMTES</td>
           
-              <td><input type="text"></td>
+              <td><input type="text" name="frequencia_femtes"></td>
           
-              <td><input type="text"></td>
+              <td><input type="text" name="quantitat_femtes"></td>
 
-              <td><input type="text"></td>
+              <td><input type="text" name="aspecte_femtes"></td>
           
           </tr>
           
@@ -266,13 +285,13 @@
               <td>SUOR</td>
           
               <td>
-                  <input type="radio" name="s" required> SI
-                  <input type="radio" name="s" required> NO
+                  <input type="radio" name="frequencia_suor" required> SI
+                  <input type="radio" name="frequencia_suor" required> NO
               </td>
           
-              <td><input type="text"></td>
+              <td><input type="text" name="quantitat_suor"></td>
 
-              <td>OLOR<input type="text"></td>
+              <td>OLOR<input type="text" name="aspecte_suor"></td>
           
           </tr>
 
@@ -281,8 +300,8 @@
               <td>REGLA</td>
 
               <td>
-                  <input type="radio" name="s" required> SI
-                  <input type="radio" name="s" required> NO
+                  <input type="radio" name="frequencia_regla" required> SI
+                  <input type="radio" name="frequencia_regla" required> NO
               </td>
                <td></td>
                <td></td>
@@ -295,16 +314,16 @@
 <div class="form" id="part4_1">
   <div class="div_caja1">
       <label>HIA HA SITUACIONS QUE INFLUENCIEN ELS <br> SEUS HÀBITS D'ELIMINACIÓ:  <br>
-          <input type="radio" name="sie" required> SI
-          <input type="radio" name="sie" required> NO
+          <input type="radio" name="situacions_influencien_habits_eliminacio" required> SI
+          <input type="radio" name="situacions_influencien_habits_eliminacio" required> NO
       </label> <br>
-      <label>QUINES<textarea></textarea></label><br>      
+      <label>QUINES<textarea name="quines_influencien"></textarea></label><br>      
   </div>
 
   <div class="div_caja2">
 
-    <label>MITJANS QUE UTILITZA PER ELIMINAR MILLOR<textarea></textarea> </label><br>
-    <label>ALTRES MANIFESTACIONS<textarea></textarea> </label><br>
+    <label>MITJANS QUE UTILITZA PER ELIMINAR MILLOR<textarea name="mitjans_utilitzar_eliminar_millor"></textarea> </label><br>
+    <label>ALTRES MANIFESTACIONS<textarea name="altres_manifestacions"></textarea> </label><br>
   </div>
   
 </div>
@@ -313,129 +332,139 @@
 <div class="form" id="part5">
   <div class="div_caja1">
       <label>POT MOURE TOTES LES PART DEL COS <br>
-          <input type="radio" class="pmpc" required /> SI
-          <input type="radio" class="pmpc" required /> NO
+          <input type="radio" class="pmpc" name="pot_moure_totes_parts_cos" required /> SI
+          <input type="radio" class="pmpc" name="pot_moure_totes_parts_cos" required /> NO
         </label><br>
-        <label> QUINES &nbsp; <textarea></textarea></label><br>
-        <label> PER QUÈ &nbsp; <textarea></textarea></label><br>
+        <label> QUINES &nbsp; <textarea name="quines_parts"></textarea></label><br>
+        <label> PER QUÈ &nbsp; <textarea name="perque_pot_moure"></textarea></label><br>
         <label>ÉS: 
-          <input type="radio" class="es" required /> DRETÀ
-          <input type="radio" class="es" required /> ESQUERRÀ
+          <input type="radio" class="es" name="es" required /> DRETÀ
+          <input type="radio" class="es" name="es" required /> ESQUERRÀ
         </label><br>
-       <label> POSTURA HABITUAL <input type="text"> </label><br>
+       <label> POSTURA HABITUAL <input type="text" name="postura_habitual"> </label><br>
   </div>
 
   <div class="div_caja2">
-      <label> ACTIVITATS FÍSIQUES &nbsp; <textarea></textarea> </label><br>
+      <label> ACTIVITATS FÍSIQUES &nbsp; <textarea name="activitats_fisiques"></textarea> </label><br>
       <label> HI HA SITUACIONS QUE INTERFEREIXEN LA SEVA MOBILITAT: <br>
-          <input type="radio" class="sim" required> SÍ
-          <input type="radio" class="sim" required> NO
+          <input type="radio" class="sim" name="situacions_interfereixen_mobilitat" required> SÍ
+          <input type="radio" class="sim" name="situacions_interfereixen_mobilitat" required> NO
       </label><br>
-      <label> QUINES &nbsp; <textarea></textarea> </label><br>
-      <label> MITJANS QUE UTILITZA PER MOURE'S MILLOR Y MANTENIR  UNA  <br> POSTURA ADEQUADA &nbsp; <textarea></textarea> </label><br>
-      <label> ALTRES MANIFESTACIONS &nbsp; <textarea></textarea> </label>
+      <label> QUINES &nbsp; <textarea name="quines_situacions_interfreixen_mobilitat"></textarea> </label><br>
+      <label> MITJANS QUE UTILITZA PER MOURE'S MILLOR Y MANTENIR  UNA  <br> POSTURA ADEQUADA &nbsp; <textarea name="mitjans_utilitza_moure_millor_mantenir_postura_adequada"></textarea> </label><br>
+      <label> ALTRES MANIFESTACIONS &nbsp; <textarea name="altres_manifestacions"></textarea> </label>
   </div>
 
 </div>
 
 
+<!--  sexta parte -->
 <div class="form" id="part6">
+  <!-- En bases de datos hay campos que soplan (Revisar bases de datos)  -->
   <div id="div_caja1">
     <label for="">HORES QUE DORM HABITUALMENT
-        <input type="text">
+        <input type="text" name="hores_dorm">
     </label>
     <br>
     <label for="">
         MIDIGADA:
-        <input type="radio" name="pmpc" required>
+        <input type="radio" name="migdia" value="SI" required>
         SI
-        <input type="radio" name="pmpc" required>
+        <input type="radio" name="migdia" value="NO" required>
         NO
     </label>
     <br>
     <label for="a_quantitat_son">
       QUALITAT DEL SON:  
       <br>
-        <input type="radio"  required>a) TRQBQUIL
-        <input type="radio"  required>b) MAL SONS
-        <input type="radio"  required>c) INTERRUPCIONS
+        <input type="radio" name="qualitat_son" value="tranquil"  required>a) TRANQUIL
+        <input type="radio" name="qualitat_son" value="mal son" required>b) MAL SONS
+        <input type="radio" name="qualitat_son" value="interrupcions" required>c) INTERRUPCIONS
         
       </label>
 </div>
+  
 
 <!-- caja2 -->
 <div class="div_caja2">
    
     <label for="">
         HI HA SITUACIONS QUE <br>INFLUENCIEN LA SEVA SON: 
-        <input type="radio" name="sim" required>
+        <input type="radio" name="situacions_influencien_son" required>
         SI
-        <input type="radio" name="sim" required>
+        <input type="radio" name="situacions_influencien_son" required>
         NO
         <br>
         QUINES &nbsp;
-        <textarea></textarea>
+        <textarea name="quienes_situacions_influencien_son"></textarea>
       </label>
 <br>
          </div>
 
 </div>
 
+<!-- septima parte -->
 <div class="form" id="part7">
   
   <div class="div_caja1">
     
     <label> SIGNIFICAT DE LA ROBA</label>
     <br>
+    <textarea name="significat_roba"></textarea>
     <br>
     <label> TIPUS DE ROPA &nbsp;
-        <textarea></textarea>
+        <textarea name="tipus_roba"></textarea>
     </label>
     <br>
     <label> CAPACITAT DE VESTIR-SE Y DESVESTIR-SE
         <br>
         <br>
-        <input type="radio" class="" required> SÍ
-        <input type="radio" class="" required> NO
+        <input type="radio" name="capacitat_vestir_desvestir" required> SÍ
+        <input type="radio" name="capacitat_vestir_desvestir" required> NO
         <br>
         <br>
     </label>
     <label> HI HA SITUACIONS QUE INFLUENCIEN LA SEVA VESTIMENTA
         <br>
-        <input type="radio" class="" required> SÍ
-        <input type="radio" class="" required> NO
+        <input type="radio" name="situacions_influencien_vestimenta" required> SÍ
+        <input type="radio" name="situacions_influencien_vestimenta" required> NO
         <br>
+    </label>
+    <label>QUINES SITUACIONS
+      <br>
+      <textarea name="quines_situacions_influencien_vestimenta"></textarea>
     </label>
 </div>
 <div class="div_caja2">
     <label>MITJANS PER MILLORAR LA SATISFACCIÓ DE <br> VESTIR-SE Y DESVESTIR-SE: &nbsp;
-        <textarea></textarea>
+        <textarea name="mitjans_millorar_satisfaccio_vestir_desvestir"></textarea>
     </label>
     <br>
     <br>
     <label>ALTRES MANIFESTACIONS &nbsp;
-        <textarea></textarea>
+        <textarea name="altres_manifestacions"></textarea>
     </label>
     <br>
 </div>
 
-  
 </div>
+
+<!-- Octava parte-->
 <div class="form" id="part8">
   <div class="div_caja1">
   <label for="TEMP_PELL">
     TEMPERATURA DE LA PELL:
-    <input type="text" name="" id="TEMP_PELL">
+    <input type="text" name="" id="TEMP_PELL" name="temperatura_pell">
 </label>
 <br>
 <label for="TEMP_AUXXILAR">
     TEMPERATURA AXILAR:
-    <input type="text" name="" id="TEMP_AUXXILAR">
+    <input type="text" name="" id="TEMP_AUXXILAR" name="temperatura_axilar">
 </label>
 <br>
-<label for="">
-    NORMALMENT CON ES SENT RESPECTE A LA TEMPERATURA AMBIENT:
-    <textarea></textarea>
+<label>
+    NORMALMENT COM ES SENT RESPECTE A LA TEMPERATURA AMBIENT:
+    <textarea name="com_sent_temperatura_ambient"></textarea>
 </label>
 <br>
 <br>
@@ -445,59 +474,60 @@
 <div class="div_caja2">
   <label for="">HI HA SITUACIONS QUE INFLUENCIEN LA TERMOREGULACIÓ:
       <br>
-      <input type="radio" name="sim" required>
+      <input type="radio" name="situacions_influencien_termoregulacio" required>
       SI
-      <input type="radio" name="sim" required>
+      <input type="radio" name="situacions_influencien_termoregulacio" required>
       NO
       <br>
       QUINES &nbsp;
-      <textarea></textarea>
+      <textarea name="quines_situacions_influencien_termoregulacio"></textarea>
   </label><br>
 
-  <label for="">ALTES MANIFESTACIONS:
-    <textarea name="" id=""></textarea>
+  <label>ALTES MANIFESTACIONS:
+    <textarea name="altres_manifestacions"></textarea>
   </label>
   <br>
   
-<label for="">MITJANS QUE UTILITZA PER MANTENIR LA TEMPERATURA:
-    <textarea name="" id=""></textarea>
+<label>MITJANS QUE UTILITZA PER MANTENIR LA TEMPERATURA:
+    <textarea name="mitjans_utilitza_mantenir_temperatura"></textarea>
 </label>
 <br><br><br>
 </div>
   
 </div>
-
+<!-- Novena parte -->
 <div class="form" id="part9">
   <div class="div_caja1">
-  <label> CONDICIONS HIGIÈNIQUES DE PELL Y MUCOSAS &nbsp; <textarea></textarea> </label><br>
-        <label> CONDICIONS PELL Y MUCOSA. <br> DESCRIPCIÓ: &nbsp; <textarea></textarea> </label><br>
-        <label> HÀBITS D'HIGIENE CORPORAL &nbsp; <textarea></textarea> </label><br>
-        <label> HÀBITS D'HIGIENE BUCAL &nbsp; <textarea></textarea> </label><br>
+  <label> CONDICIONS HIGIÈNIQUES DE PELL Y MUCOSAS &nbsp; <textarea name="condicions_higeniques_pell_mucoses"></textarea> </label><br>
+        <label> CONDICIONS PELL Y MUCOSA. <br> DESCRIPCIÓ: &nbsp; <textarea name="descripcio_condicions_pell_mucosa"></textarea> </label><br>
+        <label> HÀBITS D'HIGIENE CORPORAL &nbsp; <textarea name="habits_higene_corporal"></textarea> </label><br>
+        <label> HÀBITS D'HIGIENE BUCAL &nbsp; <textarea name="habits_higene_bucal"></textarea> </label><br>
         </div>
         
         <div class="div_caja2">
         <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA HIGIENE
-            <input type="radio" name="" required> SÍ
-            <input type="radio" name="" required> NO
+            <input type="radio" name="situacions_influencien_higene" required> SÍ
+            <input type="radio" name="situacions_influencien_higene" required> NO
         </label><br>
-        <label> QUINES &nbsp; <textarea></textarea> </label><br>
-        <label> MITJANS QUE UTILITZA PER MILLORAR LA SEVA HIGIENE &nbsp; <textarea></textarea> </label><br>
-        <label> ALTRES MANIFESTACIONS &nbsp; <textarea></textarea> </label><br>
+        <label> QUINES &nbsp; <textarea name="quines_situacions_influencien_higene"></textarea> </label><br>
+        <label> MITJANS QUE UTILITZA PER MILLORAR LA SEVA HIGIENE &nbsp; <textarea name="mijans_utilitza_millorar_higene"></textarea> </label><br>
+        <label> ALTRES MANIFESTACIONS &nbsp; <textarea name="altres_manifestacions"></textarea> </label><br>
           <br><br>  
-      </div>
-         
+      </div>   
 </div>
+<!-- Decima primera parte -->
 <div class="form" id="part10">
   <div class="div_caja1">
     <label for="">CONEIX MIDES DE PREVENCIÓ:
-     <textarea name="" id="" ></textarea>
+     <textarea name="coneix_mides_prevencio" ></textarea>
  </label> <br>
-
- <label for="">SALUBRITAT DEL MEDI:
-     <input type="text"><br> 
+<!-- Mirar la base de datos, revisar si hay que poner más cosas en html o DB -->
+ <label >SALUBRITAT DEL MEDI:
+     <input type="text" name="salubritat_habitat_1"><br> 
      HÀBITAT 
      <input type="text"><br>
      LLOC DE TREBALL <textarea name="" id=""></textarea> 
+     <!-- Revisar base de datos, no esta creada una columna para este dato -->
  </label>
 
  </div>
@@ -506,87 +536,88 @@
  <div class="div_caja2">
   <label for="">HI HA SITUACIONS O CIRCUMSTÀNCIES QUE <br> INFLUENCIEN LA SEVA SEGURETAT FÍSICA, PSICOLÒGICA, SOCIAL:
     <br>
-    <input type="radio" name="sim" required>
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" required>
     SI
-    <input type="radio" name="sim" required>
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" required>
     NO
     <br>
     QUINES &nbsp;
-    <textarea></textarea>
+    <textarea name="quines_situacions_seguretat_fisica_psicologica_social"></textarea>
 </label><br>  
-  <label for="">MITJANS QUE UTILITZA DE PROTECCIÓ: 
-    <textarea></textarea>
+  <label >MITJANS QUE UTILITZA DE PROTECCIÓ: 
+    <textarea name="mitjans_utilitza_proteccio"></textarea>
 </label><br>
 
-<label for="">ALTRES MANIFESTACIONS: 
-    <textarea></textarea>
+<label >ALTRES MANIFESTACIONS: 
+    <textarea name="altres_manifestacio"></textarea>
 </label>
  </div>
 </div>
-
+<!-- Decimo Primera primera parte -->
  <div class="form" id="part11">
   <div class="div_caja1">
-    <label>ESTAT DE CONSCIENCIA: <input type="text" /> </label><br>
-    <label>ORIENTACIÓ TEMPS-ESPAI: <input type="text" /> </label><br>
-    <label>ESTATS SENSORIALS: <input type="text" /> </label><br>
-    <label>ESPRESSIÓ VERBAL: <input type="text" /> </label><br>
-    <label>ESPRESSIÓ NO VERBAL(Descripció): <input type="text" /> </label><br>
+    <label>ESTAT DE CONSCIENCIA: <input type="text" name="estat_consciencia"/> </label><br>
+    <label>ORIENTACIÓ TEMPS-ESPAI: <input type="text" name="orientacio_temps_espai" /> </label><br>
+    <label>ESTATS SENSORIALS: <input type="text" name="estat_sesorials" /> </label><br>
+    <label>EXPRESSIÓ VERBAL: <input type="text" name="expressio_verbal" /> </label><br>
+    <label>EXPRESSIÓ NO VERBAL(Descripció): <input type="text" name="descripccio_expressio_no_verbal" /> </label><br>
   </div>
 
   <div class="div_caja2">
     <label>HI HA SITUACIONS QUE INFLENCIEN LA <br> SEVA COMUNICACIÓ:
-          <input type="radio" name="ic" required /> SI
-          <input type="radio" name="ic" required /> NO
+          <input type="radio" name="situacions_influencien_comunicacio" required /> SI
+          <input type="radio" name="situacions_influencien_comunicacio" required /> NO
     </label><br>
-    <label>QUINES <input type="text" /> </label><br>
-    <label>MITJANS QUE LI FACILITEN LA COMUNICACIÓ: <input type="text" /> </label><br>
-    <label>ALTRES MANIFESTACIONS: <input type="text" /> </label><br>
-  </div>
-</div>
-
-<!-- Decima Primera parte del form -->
-<div class="form" id="part12">
-  <div class="div_caja1">
-    <label>QUINES SON LES SEVES CREENCES I VALORS PRIORITARIS: <input type="number" /> </label><br>
-    <label>MITJANS QUE UTILITZA PER VIURE D'ACORD AMB LES SEVES CREENCES I VALORS: <input type="text" /> </label><br>
-    <label>ALTRES MANIFESTACIONS: <input type="text" /> </label><br>
+    <label>QUINES <input type="text" name="quines_situacions_influencien_comunicacio" /> </label><br>
+    <label>MITJANS QUE LI FACILITEN LA COMUNICACIÓ: <input type="text" name="mitjans_faciliten_comunicacio" /> </label><br>
+    <label>ALTRES MANIFESTACIONS: <input type="text" name="altres_maniestacions" /> </label><br>
   </div>
 </div>
 
 <!-- Decima Segunda parte del form -->
-<div class="form" id="part13">
+<div class="form" id="part12">
   <div class="div_caja1">
-    <label>ROL FAMILIAR: <input type="text" /> </label><br>
-    <label>ROL SOCIAL: <input type="text" /> </label><br>
-    <label>TIPUS D'OCUPACIÓ: <input type="text" /> </label><br>
-    <label>HI HAN SITUACIONS QUE INFLUENCIEN SOBRE EL DESENVOLUPAMENT DEL ROL SOCIAL I FAMILIAR: <input type="text" /> </label><br>
-    <label>ALTRES MANIFESTACIONS: <input type="text" /> </label><br>
+    <label>QUINES SON LES SEVES CREENCES I VALORS PRIORITARIS: <input type="number" name="quines_creences_valors"/> </label><br>
+    <label>MITJANS QUE UTILITZA PER VIURE D'ACORD AMB LES SEVES CREENCES I VALORS: <input type="text" name="mitjans_utilitza_viure_creences_valors" /> </label><br>
+    <label>ALTRES MANIFESTACIONS: <input type="text" name="altres_manifestacions" /> </label><br>
   </div>
 </div>
 
 <!-- Decima Tercera parte del form -->
-<div class="form" id="part14">
+<div class="form" id="part13">
   <div class="div_caja1">
-    <label>HABITS DE DIVERSIÓ I DISTRACCIÓ: <input type="text" /> </label><br>
-    <label>ESPORT: <input type="text" /> </label><br>
-    <label>MÚSICA: <input type="text" /> </label><br>
-    <label>LECTURA: <input type="text" /> </label><br>
-    <label>AUDIOVISUALS: <input type="text" /> </label><br>
-  </div>
-
-  <div class="div_caja2">
-    <label>ALTRES: <input type="text" /> </label><br>
-    <label>HI HA SITUACIONS QUE INFLENCIEN LA SEVA COMUNICACIÓ:
-      <input type="radio" name="if" required /> SI
-      <input type="radio" name="if" required /> NO
-    </label><br>
-    <label>QUINES: <input type="text" /> </label><br>
-    <label>MITJANS QUE UTILITZA PER MILLORAR LA SEVA REALITZACIÓ: <input type="text" /> </label><br>
-    <label>ALTRES MANIFESTACIONS: <input type="text" /> </label><br>
+    <label>ROL FAMILIAR: <input type="text" name="rol_familiar" /> </label><br>
+    <label>ROL SOCIAL: <input type="text" name="rol_social" /> </label><br>
+    <label>TIPUS D'OCUPACIÓ: <input type="text" name="tipus_ocupacio" /> </label><br>
+    <label>HI HAN SITUACIONS QUE INFLUENCIEN SOBRE EL DESENVOLUPAMENT DEL ROL SOCIAL I FAMILIAR: <input type="text" name="situacions_desenvolupacio_rol_social_familiar"/> </label><br>
+    <!-- Aqui falta otro input -->
+    <label>ALTRES MANIFESTACIONS: <input type="text" name="altres_manifestacions"/> </label><br>
   </div>
 </div>
 
-<!-- Decima Cuarta parte del form -->
+<!-- Decima Quarta parte del form -->
+<div class="form" id="part14">
+  <div class="div_caja1">
+    <label>HABITS DE DIVERSIÓ I DISTRACCIÓ: <input type="text" /> </label><br> <!-- FALTA ESTE APARTADO EN LA BASE DE DATOS -->
+    <label>ESPORT: <input type="text" name="habits_esport" /> </label><br>
+    <label>MÚSICA: <input type="text" name="habits_musica" /> </label><br>
+    <label>LECTURA: <input type="text" name="habits_lectura" /> </label><br>
+    <label>AUDIOVISUALS: <input type="text" name="habits_audiovisual" /> </label><br>
+  </div>
+
+  <div class="div_caja2">
+    <label>ALTRES: <input type="text" name="habits_altres" /> </label><br>
+    <label>HI HA SITUACIONS QUE INFLENCIEN LA SEVA COMUNICACIÓ:
+      <input type="radio" name="if" required name="situacions_influencien_interes_esbargir" /> SI
+      <input type="radio" name="if" required name="situacions_influencien_interes_esbargir" /> NO
+    </label><br>
+    <label>QUINES: <input type="text" name="quines_situacions_influencien_interes_esbargir"/> </label><br>
+    <label>MITJANS QUE UTILITZA PER MILLORAR LA SEVA REALITZACIÓ: <input type="text" name="mitjans_utilitza_millorar_realitzacio"/> </label><br>
+    <label>ALTRES MANIFESTACIONS: <input type="text" name="altres_manifestacions"/> </label><br>
+  </div>
+</div>
+
+<!-- Decima Quinta parte del form -->
 <div class="form" id="part15">
   <div class="div_caja1">
     <label>TE INTERÈS PER A CONEIXER EL PROCÉS DE LA SEVA SALUT:
@@ -602,8 +633,14 @@
     <label>ALTRES MANIFESTACIONS: <input type="text"  name="altres_manifestacions"/> </label><br>
   </div>
 </div>
-
-
+      
+<input
+type="submit"
+  name="registrar"
+  value="Registrar
+              pacient"
+  id="butonFinal"
+/>
         </form>
 
 
