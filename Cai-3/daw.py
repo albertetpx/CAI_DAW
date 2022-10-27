@@ -4,7 +4,7 @@ from flask import Flask, redirect, render_template, request, url_for
 db=mysql.connector.connect(host='localhost',
                        user='root',
                        password='Karlen-1999',
-                       database='formulario_cai'
+                       database='lista_paciente'
                        )
 
 def rellenar_datos(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
