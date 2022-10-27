@@ -5,18 +5,14 @@ db=mysql.connector.connect(host='localhost',
                        user='root',
                        password='',
                        database="formulario_cai"
->>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
                        )
 
 #FUNCIONES PARA INTRODUCIR DATOS A MYSQL
 
 def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,Desde,viuSol,medicament):
       
-<<<<<<< HEAD
-    q = f"""insert into formulario_cai (
-=======
-    primer = f"""insert into info_general (
->>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
+
+    primer =  f"""insert into info_general (
         Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,Hi_viu_desde,Viu_sol,Medicaments_que_pren) 
     values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}',{Desde},'{viuSol}','{medicament}')
         """
@@ -165,11 +161,7 @@ app = Flask("_name_")
 
 @app.route("/")
 def principalTabla_inicio():
-<<<<<<< HEAD
     consulta = "select count(*) from formulario_cai;"
-=======
-    consulta = "select count(*) from info_general;"
->>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
     cursor = db.cursor()
     cursor.execute(consulta)
     numPacient = cursor.fetchall()[0][0]
@@ -178,11 +170,8 @@ def principalTabla_inicio():
 
 @app.route("/lista_paciente")
 def lista_paciente():
-<<<<<<< HEAD
+
     consulta_sel = "select * from formulario_cai;"
-=======
-    consulta_sel = "select * from info_general;"
->>>>>>> 55e21139c84200a2a0e648c2beb1de5248956fcc
     cursor = db.cursor()
     cursor.execute(consulta_sel)
     data = cursor.fetchall() 
