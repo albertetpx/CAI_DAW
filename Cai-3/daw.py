@@ -4,7 +4,7 @@ from flask import Flask, redirect, render_template, request, url_for
 db=mysql.connector.connect(host='localhost',
                        user='root',
                        password='el.moounirejh1',
-                       database="formulario_cai"
+                       database='formulario_cai'
                        )
 
 #FUNCIONES PARA INTRODUCIR DATOS A MYSQL
@@ -226,8 +226,7 @@ def recibirDatosPaciente2():
             pa = respuesta['pa']
             amplitud=respuesta['amplitud']
             tipus_respiracio=respuesta['tipus_respiracio']
-            orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']
-            
+            orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']           
             coloracio_mucoses = respuesta['coloracio_mucoses']
             coloracio_pell =respuesta['coloracio_pell']
             respiracio = respuesta['respiracio']
