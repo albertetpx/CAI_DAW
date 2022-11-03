@@ -215,8 +215,7 @@ def recibirDatosPaciente1():
     
     except:
             return render_template("registro_error.html")    
-        
-        
+            
 def recibirDatosPaciente2():
     try:  
         if request.method == 'POST':
@@ -282,7 +281,6 @@ def recibirDatosPaciente3():
     except:
             return render_template("registro_error.html")    
 
-
 def recibirDatosPaciente4():
     try:  
         if request.method == 'POST':
@@ -309,7 +307,6 @@ def recibirDatosPaciente4():
     
     except:
             return render_template("registro_error.html")    
-
 
 def recibirDatosPaciente5():
     try:  
