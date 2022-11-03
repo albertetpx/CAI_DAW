@@ -11,8 +11,7 @@ function pasarForm1() {
   let buton2 = document.getElementById("button2");
   buton2.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm1_1() {
@@ -28,8 +27,7 @@ function pasarForm1_1() {
   let buton3 = document.getElementById("button3");
   buton3.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm2() {
@@ -45,8 +43,7 @@ function pasarForm2() {
   let buton4 = document.getElementById("button4");
   buton4.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm2_1() {
@@ -62,8 +59,7 @@ function pasarForm2_1() {
   let buton5 = document.getElementById("button5");
   buton5.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm3() {
@@ -79,8 +75,7 @@ function pasarForm3() {
   let buton6 = document.getElementById("button6");
   buton6.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm3_1() {
@@ -96,8 +91,7 @@ function pasarForm3_1() {
   let buton7 = document.getElementById("button7");
   buton7.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm4() {
@@ -113,8 +107,7 @@ function pasarForm4() {
   let buton7_1 = document.getElementById("button7_1");
   buton7_1.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm4_1() {
@@ -130,8 +123,7 @@ function pasarForm4_1() {
   let buton8 = document.getElementById("button8");
   buton8.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm5() {
@@ -147,8 +139,7 @@ function pasarForm5() {
   let buton9 = document.getElementById("button9");
   buton9.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm6() {
@@ -164,8 +155,7 @@ function pasarForm6() {
   let buton9 = document.getElementById("button10");
   buton9.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm7() {
@@ -181,8 +171,7 @@ function pasarForm7() {
   let buton10 = document.getElementById("button11");
   buton10.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm8() {
@@ -198,8 +187,7 @@ function pasarForm8() {
   let buton11 = document.getElementById("button12");
   buton11.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm9() {
@@ -215,8 +203,7 @@ function pasarForm9() {
   let buton12 = document.getElementById("button13");
   buton12.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm10() {
@@ -232,8 +219,7 @@ function pasarForm10() {
   let buton14 = document.getElementById("button14");
   buton14.style.display = "block";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm11() {
@@ -245,12 +231,7 @@ function pasarForm11() {
 
   let buton14 = document.getElementById("button14");
   buton14.style.display = "none";
-
-  let buton15 = document.getElementById("button15");
-  buton15.style.display = "block";
-
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm12() {
@@ -262,12 +243,7 @@ function pasarForm12() {
 
   let buton14 = document.getElementById("button14");
   buton14.style.display = "none";
-
-  let buton15 = document.getElementById("button15");
-  buton15.style.display = "block";
-
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  
 }
 
 function pasarForm13() {
@@ -276,10 +252,7 @@ function pasarForm13() {
 
   let form14 = document.getElementById("part14");
   form14.style.display = "flex";
-
-  let buton15 = document.getElementById("button15");
-  buton15.style.display = "none";
-
+  
   let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  butonFinal.style.display = "block";
 }
