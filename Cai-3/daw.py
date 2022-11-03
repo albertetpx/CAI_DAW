@@ -55,7 +55,7 @@ def rellenar_datos_5(pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,
 
 def rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions):
     
-    quinta = f"""insert into necesitat_dormir_reposar ( hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions  ) 
+    quinta = f"""insert into necesitat_dormir_reposar (hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions) 
     values ('{hores_dorm}','{migdia}','{qualitat_son}','{situacions_influencien}','{quines_situacions_influencien}','{mitjans_dormir}','{altres_manifestacions}')"""
     # print(q)
     cursor= db.cursor()
@@ -234,7 +234,7 @@ def recibirDatosPaciente2():
             mucositat = respuesta['mucositat']
             mucositat_descripcio = respuesta['mucositat_descripcio']
             expectoracio = respuesta['expectoracio']
-            altres_manifestacions = respuesta['altres_manifestacions']
+            altres_manifestacions = respuesta['altres_manifestacions2']
             situacions_influencien_respiracio = respuesta['situacions_influencien_respiracio']
             quines_influencien = respuesta['quines_influencien']
             mitja_utilitza_respirar_millor = respuesta['mitja_utilitza_respirar_millor']
@@ -338,12 +338,12 @@ def recibirDatosPaciente6():
             hores_dorm=respuesta['hores_dorm']
             migdia=respuesta['migdia']
             qualitat_son=respuesta['qualitat_son']
-            situacions_influencien=respuesta['situacions_influencien_son']
-            quines_situacions_influencien=respuesta['quines_situacions_influencien_son']
+            situacions_influencien_son=respuesta['situacions_influencien_son']
+            quienes_situacions_influencien_son=respuesta['quines_situacions_influencien_son']    
+            
             mitjans_dormir=respuesta['mitjans_utilitza_dormir_millor_reposar']
             altres_manifestacions=respuesta['altres_manifestacions6']
-            resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions)
-            
+            resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_dormir,altres_manifestacions)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
