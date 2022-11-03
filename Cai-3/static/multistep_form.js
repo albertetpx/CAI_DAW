@@ -1,3 +1,8 @@
+
+// function ocultarBotonRegistrar(){
+//   let butonFinal = document.getElementById("butonFinal");
+//   butonFinal.style.display = "none";
+// }
 function pasarForm1() {
   let form1 = document.getElementById("part1");
   form1.style.display = "none";
@@ -11,7 +16,7 @@ function pasarForm1() {
   let buton2 = document.getElementById("button2");
   buton2.style.display = "block";
 
-  
+
 }
 
 function pasarForm1_1() {
@@ -218,7 +223,6 @@ function pasarForm10() {
 
   let buton14 = document.getElementById("button14");
   buton14.style.display = "block";
-
   
 }
 
@@ -230,29 +234,31 @@ function pasarForm11() {
   form12.style.display = "flex";
 
   let buton14 = document.getElementById("button14");
-  buton14.style.display = "none";
+  buton14.style.display = "none";  let butonFinal = document.getElementById("butonFinal");
+  butonFinal.style.display = "flex";
   
 }
 
-function pasarForm12() {
-  let form12 = document.getElementById("part12");
-  form12.style.display = "none";
+// function pasarForm12() {
+//   let form12 = document.getElementById("part12");
+//   form12.style.display = "none";
 
-  let form13 = document.getElementById("part13");
-  form13.style.display = "flex";
+//   let form13 = document.getElementById("part13");
+//   form13.style.display = "flex";
 
-  let buton14 = document.getElementById("button14");
-  buton14.style.display = "none";
+//   let buton14 = document.getElementById("button14");
+//   buton14.style.display = "none";
+
+//   let butonFinal = document.getElementById("butonFinal");
+//   butonFinal.style.display = "none";
+// }
+
+// function pasarForm13() {
+//   let form13 = document.getElementById("part13");
+//   form13.style.display = "none";
+
+//   let form14 = document.getElementById("part14");
+//   form14.style.display = "flex";
   
-}
 
-function pasarForm13() {
-  let form13 = document.getElementById("part13");
-  form13.style.display = "none";
-
-  let form14 = document.getElementById("part14");
-  form14.style.display = "flex";
-  
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "block";
-}
+// }
