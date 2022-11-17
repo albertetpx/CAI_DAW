@@ -177,14 +177,13 @@ def lista_paciente():
 
 @app.route("/registrar",methods=['GET', 'POST'])
 # def registrar():
-    
-#     return render_template("registrar.html")   
+#     return render_template("registrar.html")
 
 def recibirDatosPaciente1():
     try:   
         if request.method == 'POST':
             respuesta = request.form
-            print(respuesta)
+
             nom =respuesta['nom']
             edat =respuesta['edat']
             sexe =respuesta['sexe']
@@ -205,6 +204,7 @@ def recibirDatosPaciente1():
             familia_procreacio =respuesta['familia_procreacio']
             
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -238,7 +238,7 @@ def recibirDatosPaciente2():
             cigars_dia = respuesta['cigars_dia']
             
             resultado = rellenar_datos_2(ritme,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia)
-                                       
+            print(resultado)                       
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -269,7 +269,7 @@ def recibirDatosPaciente3():
             altres_manifestacions=respuesta['altres_manifestacions3']
             
             resultado =  rellenar_datos_3(pes, talla, numero_dents_realitzar_funcio, protesi_dental, masticacio, caracteriques_deglucio, esmorzar, dinar, berenar, sopar, altres, sensacio_habitual_respecte_menjar, habitualment_menja, situacions_influencien_habits_alimentalis, quines_situacions, mitjans_utilitza_millorar, altres_manifestacions)
-            
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -296,7 +296,7 @@ def recibirDatosPaciente4():
             altres_manifestacions=respuesta['altres_manifestacions4']
             
             resultado =  rellenar_datos_4(frequencia_orina, quantitat_orina, aspecte_orina, frequencia_femtes, quantitat_femtes, aspecte_femtes, frequencia_suor, quantitat_suor, aspecte_suor, situacions_influencien_habits_eliminacio, quines_influencien, mitjans_utilitzar_eliminar_millor, altres_manifestacions)
-            
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -318,8 +318,9 @@ def recibirDatosPaciente5():
             quines_situacions_interfreixen_mobilitat=respuesta['quines_situacions_interfreixen_mobilitat']
             mitjans_utilitza_moure_millor_mantenir_postura_adequada=respuesta['mitjans_utilitza_moure_millor_mantenir_postura_adequada']
             altres_manifestacions=respuesta['altres_manifestacions5']
+
             resultado =  rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions)
-            
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -340,6 +341,7 @@ def recibirDatosPaciente6():
             mitjans_dormir=respuesta['mitjans_utilitza_dormir_millor_reposar']
             altres_manifestacions=respuesta['altres_manifestacions6']
             resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_dormir,altres_manifestacions)
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -359,7 +361,7 @@ def insertar_datos_7():
             mitjans =respuesta['mitjans_millorar_satisfaccio_vestir_desvestir']
             altres =respuesta['altres_manifestacions7']
             resultado= rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -379,7 +381,7 @@ def insertar_datos_8():
             altres =respuesta['altres_manifestacions8']
             mitjans =respuesta['mitjans_utilitza_mantenir_temperatura']
             resultado= rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -400,7 +402,7 @@ def insertar_datos_9():
             mitjans =respuesta['mitjans_utilitza_millorar_higene']
             altres =respuesta['altres_manifestacions9']
             resultado= rellenar_datos_9(condicions,descripcio,habits_corporal,habits_bucal,situacions,quines,mitjans,altres)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -419,7 +421,7 @@ def insertar_datos_10():
             mitjans =respuesta['mitjans_utilitza_proteccio']
             altres =respuesta['altres_manifestacio']
             resultado= rellenar_datos_10(coneix_mides,salubritat,situacions,quines,mitjans,altres)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -440,7 +442,7 @@ def insertar_datos_11():
             quines =respuesta['quines_situacions_influencien_comunicacio']
             mitjans =respuesta['mitjans_faciliten_comunicacioaltres_maniestacions']
             resultado= rellenar_datos_11(estat_consciencia,orientacio,estat_sesorial,expressio_verbal,descripcio,situacions,quines,mitjans)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -456,7 +458,7 @@ def insertar_datos_12():
             mitjans =respuesta['mitjans_utilitza_viure_creences_valors']
             altres =respuesta['altres_manifestacions12']
             resultado= rellenar_datos_12(quines,mitjans,altres)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -474,7 +476,7 @@ def insertar_datos_13():
             situacions =respuesta['situacions_desenvolupacio_rol_social_familiar']
             altres =respuesta['altres_manifestacions13']
             resultado= rellenar_datos_13(rol_familiar,rol_social,tipus_ocupacio,situacions,altres)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -496,7 +498,7 @@ def insertar_datos_14():
             mitjans =respuesta['mitjans_utilitza_millorar_realitzacio']
             altres_manifestacions =respuesta['altres_manifestacions14']
             resultado=  rellenar_datos_14(esport,musica,lectura,audiovisual,altres,situacions,quines_situacions,mitjans,altres_manifestacions)
-
+            print(resultado)
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -515,7 +517,7 @@ def insertar_datos_15():
             altres =respuesta['altres_manifestacions15']
             resultado=  rellenar_datos_15(interes,perque,situacions,mitjans,altres)
             
-            
+
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
