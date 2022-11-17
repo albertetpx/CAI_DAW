@@ -3,15 +3,13 @@ from flask import Flask, redirect, render_template, request, url_for
 
 db=mysql.connector.connect(host='localhost',
                        user='root',
-                       password='',
+                       password='el.moounirejh1',
                        database="formulario_cai"
                        )
 
 #FUNCIONES PARA INTRODUCIR DATOS A MYSQL
 
 def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,familiaOrigenPare,familiaOrigenMare,familiaOrigenGermans,familiaProcreacio,rolOcupa,membresIntegren,viuSol,problemaSalutActual,prenMedicamentsCasa,quinsMedicament):
-      
-
     primer =  f"""insert into info_general (
         Paciente,Edad,Sexe,LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,Viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments) 
     values ('{nom}',{edad},'{sexe}','{llocNaixament}','{llocResidencia}','{tempsResidencia}','{familiaOrigenPare}','{familiaOrigenMare}','{familiaOrigenGermans}','{familiaProcreacio}','{rolOcupa}','{membresIntegren}','{viuSol}','{problemaSalutActual}''{prenMedicamentsCasa}''{quinsMedicament}')
@@ -177,12 +175,10 @@ def lista_paciente():
     data = cursor.fetchall() 
     return render_template("lista_paciente.html", data = data)
 
-@app.route("/registrar",methods=['GET'])
-def registrar():
+@app.route("/registrar",methods=['GET', 'POST'])
+# def registrar():
     
-    return render_template("registrar.html")
-    
-@app.route("/recibirDatosPaciente",methods=['POST'])   
+#     return render_template("registrar.html")   
 
 def recibirDatosPaciente1():
     try:   
@@ -518,7 +514,7 @@ def insertar_datos_15():
             mitjans =respuesta['mitjans_utilitza_aprendre']
             altres =respuesta['altres_manifestacions15']
             resultado=  rellenar_datos_15(interes,perque,situacions,mitjans,altres)
-
+            
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
@@ -531,6 +527,8 @@ def insertar_datos_15():
     # else:
         
     #     return render_template("registrar.html") 
+
+@app.route("/recibirDatosPaciente",methods=['POST'])
 
 @app.route("/pagina_exit", methods=["GET", "POST"])
 def ex_pagina_exit():
