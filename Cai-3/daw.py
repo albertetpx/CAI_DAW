@@ -515,6 +515,7 @@ def insertar_datos_15():
             altres =respuesta['altres_manifestacions15']
             resultado=  rellenar_datos_15(interes,perque,situacions,mitjans,altres)
             
+            
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
