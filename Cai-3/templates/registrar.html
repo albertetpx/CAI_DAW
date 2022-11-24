@@ -42,14 +42,14 @@
 <!-- Primera parte del form -->
 <div class="form" id="part1">
   <div class="div_caja1">
-    <label form="nom">NOM: <input type="text" value="a" id="nom" name="nom" /> </label><br>
-    <label>EDAT: <input type="number" value="1" name="edat"/> </label><br>
+    <label >NOM: <input type="text" value="a" id="nom" name="nom" /> </label><br>
+    <label>EDAT: <input type="number" value=1 name="edat"/> </label><br>
     <label>SEXE: <input type="text" value="a"  name="sexe"/> </label><br>
-    <label>LLOC DE NAIXEMENT: <input type="text" value="a" name="LLoc_naixement" /> </label><br>
+    <label>LLOC DE NAIXEMENT: <input type="number" value=1 name="LLoc_naixement" /> </label><br>
     <label>LLOC DE RESIDÈNCIA: <input type="text" value="a"  name="Lloc_residencia"/> </label><br>
     <label>Vius Sol: 
-      <input type="radio" value="a"  name="pmc" name="viu_sol"  /> SI
-      <input type="radio" value="a" name="pmc" name="viu_sol"  /> NO
+      <input type="radio"  value="pmc" name="viu_sol"  /> SI
+      <input type="radio"  value="pmc" name="viu_sol"  /> NO
     </label>
   </div>
 
@@ -65,11 +65,11 @@
 <!-- Parte 1.1 del form -->
 <div class="form" id="part1_1">
   <div class="div_caja1">
-    <label>TEMPS DE RESIDÈNCIA <input type="number" value="1" name="temps_residencia" /> </label><br>
+    <label>TEMPS DE RESIDÈNCIA <input type="number" value= 1 name="temps_residencia" /> </label><br>
     <label
       >PRENS MEDICAMENTS A CASA
-      <input type="radio" value="a" name="pmc" name="pren_medicaments_casa"  /> SI
-      <input type="radio" value="a" name="pmc" name="pren_medicaments_casa"  /> NO
+      <input type="radio"  value="pmc" name="pren_medicaments_casa"  /> SI
+      <input type="radio"  value="pmc" name="pren_medicaments_casa"  /> NO
     </label><br>
     <label>QUINS <input type="text" value="a"  name="quins_medicaments"/> </label><br>
   </div>
@@ -78,8 +78,8 @@
     <label>PROBLEMAS DE SALUT <input type="text" value="a" name="problema_salut_actual"/> </label><br>
     <label
       >FAMILIA DE PROCREACIÓ
-      <input type="radio" value="a" name="fp" name="familia_procreacio"  /> SI
-      <input type="radio" value="a" name="fp" name="familia_procreacio"  /> NO
+      <input type="radio"  value="fp" name="familia_procreacio"  /> SI
+      <input type="radio"  value="fp" name="familia_procreacio"  /> NO
     </label><br>
   </div>
 </div>
@@ -92,8 +92,8 @@
     <label>AMPLITUD: <input type="text" value="a" name="amplitud" /></label><br />
     <label>
       RESPIRACIÓ: 
-      <input type="radio" value="a"  name="tipus_respiracio"  /> BUCAL
-      <input type="radio" value="a"  name="tipus_respiracio"  /> NASAL </label
+      <input type="radio"   name="tipus_respiracio"  /> BUCAL
+      <input type="radio"   name="tipus_respiracio"  /> NASAL </label
     ><br />
     <label>ORIFICIS NASALS PERMEABLES <input type="text" value="a"  name="orifisis_nasals_permeables"/></label
     ><br />
@@ -109,10 +109,10 @@
       > RESPIRACIÓ: <br> 
     </label>
       <label for="res">
-        <input type="radio" value="a" name="respiracio" id="res"  /> SILENCIOSA
+        <input type="radio" name="respiracio" id="res"  /> SILENCIOSA
       </label>
       <label for="res2">
-        <input type="radio" value="a" name="respiracio" id="res2"  /> SOROLLOSA
+        <input type="radio" name="respiracio" id="res2"  /> SOROLLOSA
       </label>
   </div>
 </div>
@@ -122,8 +122,8 @@
 <div class="form" id="part2_1">
   <div class="div_caja1">
     <label
-      >TOS: <input type="radio" value="a" name="tos"  /> SI
-      <input type="radio" value="a" name="tos"  /> NO </label
+      >TOS: <input type="radio" name="tos"  /> SI
+      <input type="radio" name="tos"  /> NO </label
     ><br />
 
     <label>DESCRIPCIÓ <input type="text" value="a" name="tos_descripcio" /> </label><br />
@@ -132,8 +132,8 @@
 
     <label
       >EXPECTORACIÓ
-      <input type="radio" value="a" name="expectoracio"  /> SI
-      <input type="radio" value="a" name="expectoracio"  /> NO
+      <input type="radio" name="expectoracio"  /> SI
+      <input type="radio" name="expectoracio"  /> NO
     </label>
   </div>
 
@@ -143,8 +143,8 @@
 
     <label
       >HI HA SITUACIONS QUE INFLUENCIEN LA SEVA RESPIRACIÓ: <br>
-      <input type="radio" value="a" name="situacions_influencien_respiracio"  /> SI
-      <input type="radio" value="a" name="situacions_influencien_respiracio"  /> NO </label
+      <input type="radio" name="situacions_influencien_respiracio"  /> SI
+      <input type="radio" name="situacions_influencien_respiracio"  /> NO </label
     ><br />
 
     <label>QUINES &nbsp;<textarea name="quines_influencien"></textarea></label><br />
@@ -154,8 +154,8 @@
     ><br />
 
     <label
-      >FUMA <input type="radio" value="a" name="fuma"  /> SI
-      <input type="radio" value="a" name="fuma"  /> NO </label
+      >FUMA <input type="radio" name="fuma"  /> SI
+      <input type="radio" name="fuma"  /> NO </label
     ><br />
 
     <label>CIGARS DIA <input type="number" value="1" name="cigars_dia"/> </label>
@@ -172,13 +172,13 @@
         a) DENTS EN Nº SUFICIENT PER REALITZAR BÉ LA SEVA FUNCIÓ: 
       <input type="number" value="1" name="numero_dents_realitzar_funcio"> </label><br>
       <label id="b">b) PROTESIS DENTAL: 
-          <input type="radio" value="a" name="protesi_dental" > PARCIAL
-          <input type="radio" value="a" name="protesi_dental" > TOTAL
+          <input type="radio" name="protesi_dental" > PARCIAL
+          <input type="radio" name="protesi_dental" > TOTAL
       </label><br>
       
       <label>MASTICACIÓ:  
-          <input type="radio" value="a" name="masticacio" > LENTA
-          <input type="radio" value="a" name="masticacio" > RÀPIDA
+          <input type="radio" name="masticacio" > LENTA
+          <input type="radio" name="masticacio" > RÀPIDA
       </label>
   </div>
 
@@ -202,15 +202,15 @@
 
   <div class="div_caja2">
       <label for="">HABITUALMENT MENJA:
-          <input type="radio" value="a" name="habitualment_menja" > A CASA <br>
-          <input type="radio" value="a" name="habitualment_menja" > A LA FEINA
-          <input type="radio" value="a" name="habitualment_menja" > A UN RESTAURANT <br>
-          <input type="radio" value="a" name="habitualment_menja" > SOL
-          <input type="radio" value="a" name="habitualment_menja" > ACOMPANYAT
+          <input type="radio" name="habitualment_menja" > A CASA <br>
+          <input type="radio" name="habitualment_menja" > A LA FEINA
+          <input type="radio" name="habitualment_menja" > A UN RESTAURANT <br>
+          <input type="radio" name="habitualment_menja" > SOL
+          <input type="radio" name="habitualment_menja" > ACOMPANYAT
       </label><br>
       <label>HI HA SITUACIONS QUE INFLUENCIEN ELS SEUS HABITS ALIMENTARIS
-          <input type="radio" value="a"  name="situacions_influencien_habits_alimentalis" > SI
-          <input type="radio" value="a"  name="situacions_influencien_habits_alimentalis" > NO
+          <input type="radio"  name="situacions_influencien_habits_alimentalis" > SI
+          <input type="radio"  name="situacions_influencien_habits_alimentalis" > NO
       </label><br>
       <label>QUINES &nbsp;<textarea name="quines_situacions"></textarea> </label><br><br>
       <label>MITJANS QUE UTILITZA PER MILLORAR-LOS &nbsp;<textarea name="mitjans_utilitza_millorar"></textarea> </label><br>
@@ -266,8 +266,8 @@
               <td>SUOR</td>
           
               <td>
-                  <input type="radio" value="a" name="frequencia_suor" > SI
-                  <input type="radio" value="a" name="frequencia_suor" > NO
+                  <input type="radio" name="frequencia_suor" > SI
+                  <input type="radio" name="frequencia_suor" > NO
               </td>
           
               <td><input type="text" value="a" name="quantitat_suor"></td>
@@ -281,8 +281,8 @@
               <td>REGLA</td>
 
               <td>
-                  <input type="radio" value="a" name="frequencia_regla" > SI
-                  <input type="radio" value="a" name="frequencia_regla" > NO
+                  <input type="radio" name="frequencia_regla" > SI
+                  <input type="radio" name="frequencia_regla" > NO
               </td>
                <td></td>
                <td></td>
@@ -295,8 +295,8 @@
 <div class="form" id="part4_1">
   <div class="div_caja1">
       <label>HIA HA SITUACIONS QUE INFLUENCIEN ELS <br> SEUS HÀBITS D'ELIMINACIÓ:  <br>
-          <input type="radio" value="a" name="situacions_influencien_habits_eliminacio" > SI
-          <input type="radio" value="a" name="situacions_influencien_habits_eliminacio" > NO
+          <input type="radio" name="situacions_influencien_habits_eliminacio" > SI
+          <input type="radio" name="situacions_influencien_habits_eliminacio" > NO
       </label> <br>
       <label>QUINES<textarea name="quines_influencien"></textarea></label><br>      
   </div>
@@ -313,14 +313,14 @@
 <div class="form" id="part5">
   <div class="div_caja1">
       <label>POT MOURE TOTES LES PART DEL COS <br>
-          <input type="radio" value="a" class="pmpc" name="pot_moure_totes_parts_cos"  /> SI
-          <input type="radio" value="a" class="pmpc" name="pot_moure_totes_parts_cos"  /> NO
+          <input type="radio" class="pmpc" name="pot_moure_totes_parts_cos"  /> SI
+          <input type="radio" class="pmpc" name="pot_moure_totes_parts_cos"  /> NO
         </label><br>
         <label> QUINES &nbsp; <textarea name="quines_parts"></textarea></label><br>
         <label> PER QUÈ &nbsp; <textarea name="perque_pot_moure"></textarea></label><br>
         <label>ÉS: 
-          <input type="radio" value="a" class="es" name="es"  /> DRETÀ
-          <input type="radio" value="a" class="es" name="es"  /> ESQUERRÀ
+          <input type="radio" class="es" name="es"  /> DRETÀ
+          <input type="radio" class="es" name="es"  /> ESQUERRÀ
         </label><br>
        <label> POSTURA HABITUAL <input type="text" value="a" name="postura_habitual"> </label><br>
   </div>
@@ -328,8 +328,8 @@
   <div class="div_caja2">
       <label> ACTIVITATS FÍSIQUES &nbsp; <textarea name="activitats_fisiques"></textarea> </label><br>
       <label> HI HA SITUACIONS QUE INTERFEREIXEN LA SEVA MOBILITAT: <br>
-          <input type="radio" value="a" class="sim" name="situacions_interfereixen_mobilitat" > SÍ
-          <input type="radio" value="a" class="sim" name="situacions_interfereixen_mobilitat" > NO
+          <input type="radio" class="sim" name="situacions_interfereixen_mobilitat" > SÍ
+          <input type="radio" class="sim" name="situacions_interfereixen_mobilitat" > NO
       </label><br>
       <label> QUINES &nbsp; <textarea name="quines_situacions_interfreixen_mobilitat"></textarea> </label><br>
       <label> MITJANS QUE UTILITZA PER MOURE'S MILLOR Y MANTENIR  UNA  <br> POSTURA ADEQUADA &nbsp; <textarea name="mitjans_utilitza_moure_millor_mantenir_postura_adequada"></textarea> </label><br>
@@ -341,26 +341,25 @@
 
 <!--  sexta parte -->
 <div class="form" id="part6">
-  <!-- En bases de datos hay campos que soplan (Revisar bases de datos)  -->
   <div id="div_caja1">
     <label for="">HORES QUE DORM HABITUALMENT
-        <input type="text" value="a" name="hores_dorm">
+        <input type="text" value= 1 name="hores_dorm">
     </label>
     <br>
     <label for="">
         MIDIGADA:
-        <input type="radio" value="a" name="migdia" value="SI" >
+        <input type="radio" name="migdia" value="SI" >
         SI
-        <input type="radio" value="a" name="migdia" value="NO" >
+        <input type="radio" name="migdia" value="NO" >
         NO
     </label>
     <br>
     <label for="a_quantitat_son">
       QUALITAT DEL SON:  
       <br>
-        <input type="radio" value="a" name="qualitat_son" value="tranquil"  >a) TRANQUIL
-        <input type="radio" value="a" name="qualitat_son" value="mal son" >b) MAL SONS
-        <input type="radio" value="a" name="qualitat_son" value="interrupcions" >c) INTERRUPCIONS
+        <input type="radio" name="qualitat_son" value="tranquil"  >a) TRANQUIL
+        <input type="radio" name="qualitat_son" value="mal son" >b) MAL SONS
+        <input type="radio" name="qualitat_son" value="interrupcions" >c) INTERRUPCIONS
         
       </label>
 </div>
@@ -369,19 +368,19 @@
 <!-- caja2 -->
 <div class="div_caja2">
    
-    <label for="">
-        HI HA SITUACIONS QUE <br>INFLUENCIEN LA SEVA SON: 
-        <input type="radio" value="a" name="situacions_influencien_son" >
-        SI
-        <input type="radio" value="a" name="situacions_influencien_son" >
-        NO
-        <br>
-        QUINES &nbsp;
-        <textarea name="quienes_situacions_influencien_son"></textarea>
-      </label>
-<br>
-<label>Mitjans que utilita per reposar millor: <input type="text" value="a" name="mitjans_utilitza_dormir_millor_reposar"></label><br>
-<label>Altres manifestacions: <input type="text" value="a" name="altres_manifestacions6"></label>
+  <label>
+    HI HA SITUACIONS QUE <br>INFLUENCIEN LA SEVA SON: 
+    <input type="radio" name="situacions_influencien_son" >
+    SI
+    <input type="radio" name="situacions_influencien_son" >
+    NO
+    <br>
+    QUINES &nbsp;
+    <textarea name="quienes_situacions_influencien_son"></textarea>
+  </label>
+  <br>
+  <label>Mitjans que utilita per reposar millor: <input type="text" value="a" name="mitjans_utilitza_dormir_millor_reposar"></label><br>
+  <label>Altres manifestacions: <input type="text" value="a" name="altres_manifestacions6"></label>
 
 
 </div>
@@ -402,15 +401,15 @@
     <label> CAPACITAT DE VESTIR-SE Y DESVESTIR-SE
         <br>
         <br>
-        <input type="radio" value="a" name="capacitat_vestir_desvestir" > SÍ
-        <input type="radio" value="a" name="capacitat_vestir_desvestir" > NO
+        <input type="radio" name="capacitat_vestir_desvestir" > SÍ
+        <input type="radio" name="capacitat_vestir_desvestir" > NO
         <br>
         <br>
     </label>
     <label> HI HA SITUACIONS QUE INFLUENCIEN LA SEVA VESTIMENTA
         <br>
-        <input type="radio" value="a" name="situacions_influencien_vestimenta" > SÍ
-        <input type="radio" value="a" name="situacions_influencien_vestimenta" > NO
+        <input type="radio" name="situacions_influencien_vestimenta" > SÍ
+        <input type="radio" name="situacions_influencien_vestimenta" > NO
         <br>
     </label>
     <label>QUINES SITUACIONS
@@ -457,9 +456,9 @@
 <div class="div_caja2">
   <label for="">HI HA SITUACIONS QUE INFLUENCIEN LA TERMOREGULACIÓ:
       <br>
-      <input type="radio" value="a" name="situacions_influencien_termoregulacio" >
+      <input type="radio" name="situacions_influencien_termoregulacio" >
       SI
-      <input type="radio" value="a" name="situacions_influencien_termoregulacio" >
+      <input type="radio" name="situacions_influencien_termoregulacio" >
       NO
       <br>
       QUINES &nbsp;
@@ -489,8 +488,8 @@
         
         <div class="div_caja2">
         <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA HIGIENE
-            <input type="radio" value="a" name="situacions_influencien_higene" > SÍ
-            <input type="radio" value="a" name="situacions_influencien_higene" > NO
+            <input type="radio" name="situacions_influencien_higene" > SÍ
+            <input type="radio" name="situacions_influencien_higene" > NO
         </label><br>
         <label> QUINES &nbsp; <textarea name="quines_situacions_influencien_higene"></textarea> </label><br>
         <label> MITJANS QUE UTILITZA PER MILLORAR LA SEVA HIGIENE &nbsp; <textarea name="mijans_utilitza_millorar_higene"></textarea> </label><br>
@@ -498,20 +497,21 @@
           <br><br>  
       </div>   
 </div>
-<!-- Decima primera parte -->
+<!-- Decima parte -->
 <div class="form" id="part10">
   <div class="div_caja1">
-    <label for="">CONEIX MIDES DE PREVENCIÓ:
-     <textarea name="coneix_mides_prevencio" ></textarea>
- </label> <br>
-<!-- Mirar la base de datos, revisar si hay que poner más cosas en html o DB -->
- <label >SALUBRITAT DEL MEDI:
-     <input type="text" value="a" name="salubritat_habitat_1"><br> 
-     HÀBITAT 
-     <input type="text" value="a"><br>
-     LLOC DE TREBALL <textarea name="" id=""></textarea> 
-     <!-- Revisar base de datos, no esta creada una columna para este dato -->
- </label>
+    <label>CONEIX MIDES DE PREVENCIÓ:
+      <textarea name="coneix_mides_prevencio" ></textarea>
+    </label> <br>
+
+  <label>
+    SALUBRITAT DEL MEDI:
+    <input type="text" value="a" name="salubritat_medi_1"><br> 
+    <!-- AJUSTAR EN LAS FUNCIONES EL HABITAT Y MYSQL -->
+    SALUBRITAT DEL MEDI: 
+    <input type="text" value="a" name="salubritat_habitat_1"><br>
+    LLOC DE TREBALL <textarea name="lloc_treball" id=""></textarea> 
+  </label>
 
  </div>
  
@@ -519,9 +519,9 @@
  <div class="div_caja2">
   <label for="">HI HA SITUACIONS O CIRCUMSTÀNCIES QUE <br> INFLUENCIEN LA SEVA SEGURETAT FÍSICA, PSICOLÒGICA, SOCIAL:
     <br>
-    <input type="radio" value="a" name="situacions_circumstancies_seguretat_fisica_psicologica_social" >
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" >
     SI
-    <input type="radio" value="a" name="situacions_circumstancies_seguretat_fisica_psicologica_social" >
+    <input type="radio" name="situacions_circumstancies_seguretat_fisica_psicologica_social" >
     NO
     <br>
     QUINES &nbsp;
@@ -532,10 +532,11 @@
 </label><br>
 
 <label >ALTRES MANIFESTACIONS: 
-    <textarea name="altres_manifestacio"></textarea>
+    <textarea name="altres_manifestacio10"></textarea>
 </label>
  </div>
 </div>
+
 <!-- Decimo Primera primera parte -->
  <div class="form" id="part11">
   <div class="div_caja1">
@@ -544,12 +545,12 @@
     <label>ESTATS SENSORIALS: <input type="text" value="a" name="estat_sesorials" /> </label><br>
     <label>EXPRESSIÓ VERBAL: <input type="text" value="a" name="expressio_verbal" /> </label><br>
     <label>EXPRESSIÓ NO VERBAL(Descripció): <input type="text" value="a" name="descripccio_expressio_no_verbal" /> </label><br>
-  </div>
+  </div>z
 
   <div class="div_caja2">
     <label>HI HA SITUACIONS QUE INFLENCIEN LA <br> SEVA COMUNICACIÓ:
-          <input type="radio" value="a" name="situacions_influencien_comunicacio"  /> SI
-          <input type="radio" value="a" name="situacions_influencien_comunicacio"  /> NO
+          <input type="radio" name="situacions_influencien_comunicacio"  /> SI
+          <input type="radio" name="situacions_influencien_comunicacio"  /> NO
     </label><br>
     <label>QUINES <input type="text" value="a" name="quines_situacions_influencien_comunicacio" /> </label><br>
     <label>MITJANS QUE LI FACILITEN LA COMUNICACIÓ: <input type="text" value="a" name="mitjans_faciliten_comunicacio" /> </label><br>
@@ -591,8 +592,8 @@
   <div class="div_caja2">
     <label>ALTRES: <input type="text" value="a" name="habits_altres" /> </label><br>
     <label>HI HA SITUACIONS QUE INFLENCIEN LA SEVA COMUNICACIÓ:
-      <input type="radio" value="a" name="if"  name="situacions_influencien_interes_esbargir" /> SI
-      <input type="radio" value="a" name="if"  name="situacions_influencien_interes_esbargir" /> NO
+      <input type="radio" name="if"  name="situacions_influencien_interes_esbargir" /> SI
+      <input type="radio" name="if"  name="situacions_influencien_interes_esbargir" /> NO
     </label><br>
     <label>QUINES: <input type="text" value="a" name="quines_situacions_influencien_interes_esbargir"/> </label><br>
     <label>MITJANS QUE UTILITZA PER MILLORAR LA SEVA REALITZACIÓ: <input type="text" value="a" name="mitjans_utilitza_millorar_realitzacio"/> </label><br>
@@ -604,8 +605,8 @@
 <div class="form" id="part15">
   <div class="div_caja1">
     <label>TE INTERÈS PER A CONEIXER EL PROCÉS DE LA SEVA SALUT:
-      <input type="radio" value="a" name="interes_coneixer_proces_salut"  /> SI
-      <input type="radio" value="a" name="interes_coneixer_proces_salut"  /> NO
+      <input type="radio" name="interes_coneixer_proces_salut"  /> SI
+      <input type="radio" name="interes_coneixer_proces_salut"  /> NO
     </label><br>
     <label>PERQUE: <input type="text" value="a"  name="perque_interes_coneixer_proces_salut"> </label><br>
     <label>HI HA SITUACIONS QUE LI DIFICULTEN L'APRENENTATGE: <input type="text" value="a" name="situacions_dificulten_aprenentatge"/> </label><br>

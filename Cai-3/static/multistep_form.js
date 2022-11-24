@@ -239,26 +239,34 @@ function pasarForm11() {
   
 }
 
-// function pasarForm12() {
-//   let form12 = document.getElementById("part12");
-//   form12.style.display = "none";
+function pasarForm12() {
+  let form12 = document.getElementById("part12");
+  form12.style.display = "none";
 
-//   let form13 = document.getElementById("part13");
-//   form13.style.display = "flex";
+  let form13 = document.getElementById("part13");
+  form13.style.display = "flex";
 
-//   let buton14 = document.getElementById("button14");
-//   buton14.style.display = "none";
+  let buton14 = document.getElementById("button14");
+  buton14.style.display = "none";
 
-//   let butonFinal = document.getElementById("butonFinal");
-//   butonFinal.style.display = "none";
-// }
+  let butonFinal = document.getElementById("butonFinal");
+  butonFinal.style.display = "none";
+}
 
-// function pasarForm13() {
-//   let form13 = document.getElementById("part13");
-//   form13.style.display = "none";
+function pasarForm13() {
+  let form13 = document.getElementById("part13");
+  form13.style.display = "none";
 
-//   let form14 = document.getElementById("part14");
-//   form14.style.display = "flex";
+  let form14 = document.getElementById("part14");
+  form14.style.display = "flex";
   
+}
 
-// }
+function pasarForm14() {
+  let form14 = document.getElementById("part14");
+  form14.style.display = "none";
+
+  let form15 = document.getElementById("part15");
+  form15.style.display = "flex";
+  
+}

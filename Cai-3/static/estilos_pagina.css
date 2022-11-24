@@ -246,9 +246,7 @@ td {
 } */
 
 /* partes */
-#part1 {
-  display: none;
-}
+
 #part1_1 {
   display: none;
 }
@@ -313,16 +311,10 @@ td {
 /*BUTTONS*/
 
 /* Button ocult general  */
-#button1{
-  display: none;
-}
+
 .buton_oculta {
   display: none;
   margin: 0 auto;
-}
-
-#part15{
-  display: flex;
 }
 
 #butonFinal{
