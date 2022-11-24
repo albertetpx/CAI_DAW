@@ -180,12 +180,11 @@ def registrar():
     return render_template("registrar.html")
 
 @app.route("/recibirDatosPaciente",methods=['POST'])
-
-def recibirDatosPaciente1():
-    try:   
+def registrarPacientes():
+    try:
         if request.method == 'POST':
             respuesta = request.form
-
+            # LEER PRIMERA PARTE FORM
             nom =respuesta['nom']
             edat =respuesta['edat']
             sexe =respuesta['sexe']
@@ -198,7 +197,7 @@ def recibirDatosPaciente1():
             familia_origen_germans =respuesta['familia_origen_germans']
             rol_ocupa =respuesta['rol_ocupa']
             membres_integren =respuesta['membres_integren']
-            
+        
             temps_residencia =respuesta['temps_residencia']
             pren_medicaments_casa =respuesta['pren_medicaments_casa']
             quins_medicaments =respuesta['quins_medicaments']
@@ -207,12 +206,15 @@ def recibirDatosPaciente1():
             
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
             print(resultado)
+
+            # LEER SEGUNDA PARTE FORM
+
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    
-    
+            
     except:
-            return render_template("registro_error.html")    
+        return render_template("registro_error.html")    
             
 # def recibirDatosPaciente2():
 #     try:  
