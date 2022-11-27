@@ -92,27 +92,27 @@ def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,
 #     cursor.execute(novena)
 #     db.commit()
 
-# def rellenar_datos_10(coneix_mides,salubritat,situacions,quines,mitjans,altres):
+def rellenar_datos_10(coneix_mides,salubritat,situacions,quines,mitjans,altres):
 
-#     decima = f""" insert necessitat_evitar_perills (
-#         coneix_mides_prevencio,salubritat_habitat_1,situacions_circumstancies_seguretat_fisica_psicologica_social,
-#         quines_situacions_seguretat_fisica_psicologica_social,mitjans_utilitza_proteccio,altres_manifestacio)
-#         values ('{coneix_mides}','{salubritat}','{situacions}','{quines}','{mitjans}','{altres}',)"""
+    decima = f""" insert necessitat_evitar_perills (
+        coneix_mides_prevencio,salubritat_habitat_1,situacions_circumstancies_seguretat_fisica_psicologica_social,
+        quines_situacions_seguretat_fisica_psicologica_social,mitjans_utilitza_proteccio,altres_manifestacio)
+        values ('{coneix_mides}','{salubritat}','{situacions}','{quines}','{mitjans}','{altres}');"""
 
-#     cursor= db.cursor()
-#     cursor.execute(decima)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(decima)
+    db.commit()
 
-# def rellenar_datos_11(estat_consciencia,orientacio,estat_sesorial,descripcio,expressio_no_verbal,situacions,quines,mitjans):
+def rellenar_datos_11(estat_consciencia,orientacio,estat_sesorial,descripcio,expressio_no_verbal,situacions,quines,mitjans,altres_manifestacions13):
 
-#     decimo_primera = f""" insert into necessitat_comunicar(
-#         estat_consciencia,orientacio_temps_espai,estat_sesorials,expressio_verbal,descripccio_expressio_no_verbal,
-#         situacions_influencien_comunicacio,quines_situacions_influencien_comunicacio,mitjans_faciliten_comunicacioaltres_maniestacions)
-#         values ('{estat_consciencia}','{orientacio}','{estat_sesorial}','{descripcio}','{expressio_no_verbal}','{situacions}','{quines}','{mitjans}')"""
+    decimo_primera = f""" insert into necessitat_comunicar(
+        estat_consciencia,orientacio_temps_espai,estat_sesorials,expressio_verbal,descripccio_expressio_no_verbal,
+        situacions_influencien_comunicacio,quines_situacions_influencien_comunicacio,mitjans_faciliten_comunicacio,altres_maniestacions)
+        values ('{estat_consciencia}','{orientacio}','{estat_sesorial}','{expressio_no_verbal}','{descripcio}','{situacions}','{quines}','{mitjans}','{altres_manifestacions13}');"""
     
-#     cursor= db.cursor()
-#     cursor.execute(decimo_primera)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(decimo_primera)
+    db.commit()
 
 def rellenar_datos_12(quines,mitjans,altres):
 
@@ -205,6 +205,33 @@ def registrarPacientes():
             familia_procreacio =respuesta['familia_procreacio']
             
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
+            print(resultado)
+
+            # LEER DECIMA PARTE
+
+            coneix_mides =respuesta['coneix_mides_prevencio']
+            salubritat_habitat =respuesta['salubritat_habitat_1']
+            situacions =respuesta['situacions_circumstancies_seguretat_fisica_psicologica_social']
+            quines =respuesta['quines_situacions_seguretat_fisica_psicologica_social']
+            mitjans =respuesta['mitjans_utilitza_proteccio']
+            altres =respuesta['altres_manifestacio10']
+            
+            resultado= rellenar_datos_10(coneix_mides,salubritat_habitat,situacions,quines,mitjans,altres)
+            print(resultado)
+
+            # LEER DECIMO PRIMERA PARTE
+
+            estat_consciencia =respuesta['estat_consciencia']
+            orientacio =respuesta['orientacio_temps_espai']
+            estat_sesorial =respuesta['estat_sesorials']
+            expressio_verbal =respuesta['expressio_verbal']
+            descripcio =respuesta['descripccio_expressio_no_verbal']
+            situacions =respuesta['situacions_influencien_comunicacio']
+            quines =respuesta['quines_situacions_influencien_comunicacio']
+            mitjans =respuesta['mitjans_faciliten_comunicacio']
+            altres_manifestacions11 = respuesta['altres_manifestacions11']
+
+            resultado= rellenar_datos_11(estat_consciencia,orientacio,estat_sesorial,expressio_verbal,descripcio,situacions,quines,mitjans,altres_manifestacions11)
             print(resultado)
 
             # LEER DECIMO SEGUNDA PARTE FORM
@@ -475,29 +502,6 @@ def registrarPacientes():
     
 #     except:
 #             return render_template("registro_error.html")
-
-# def insertar_datos_11():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             estat_consciencia =respuesta['estat_consciencia']
-#             orientacio =respuesta['orientacio_temps_espai']
-#             estat_sesorial =respuesta['estat_sesorial']
-#             expressio_verbal =respuesta['expressio_verbal']
-#             descripcio =respuesta['descripcio_expressio_no_verbal']
-#             situacions =respuesta['situacions_influencien_comunicacio']
-#             quines =respuesta['quines_situacions_influencien_comunicacio']
-#             mitjans =respuesta['mitjans_faciliten_comunicacioaltres_maniestacions']
-#             resultado= rellenar_datos_11(estat_consciencia,orientacio,estat_sesorial,expressio_verbal,descripcio,situacions,quines,mitjans)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-
 
 @app.route("/pagina_exit", methods=["GET", "POST"])
 def ex_pagina_exit():
