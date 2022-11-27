@@ -70,27 +70,27 @@ def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,
 #     cursor.execute(septimo)
 #     db.commit()
 
-# def rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans):
+def rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans):
 
-#     octava = f""" insert into necessitat_mantenir_temperatura_corporal_limits_normals (
-#         temperatura_pell,temperatura_axilar,com_sent_temperatura_ambient,situacions_influencien_termoregulacio,
-#         quines_situacions_influencien_termoregulacio,altres_manifestacions,mitjans_utilitza_mantenir_temperatura)
-#         values ('{temperatura_pell}','{temperatura_axilar}','{com_sent}','{situacions}','{quines}','{altres}','{mitjans}')"""
+    octava = f""" insert into necessitat_mantenir_temperatura_corporal_limits_normals (
+        temperatura_pell,temperatura_axilar,com_sent_temperatura_ambient,situacions_influencien_termoregulacio,
+        quines_situacions_influencien_termoregulacio,altres_manifestacions,mitjans_utilitza_mantenir_temperatura)
+        values ({temperatura_pell},{temperatura_axilar},'{com_sent}','{situacions}','{quines}','{altres}','{mitjans}');"""
     
-#     cursor= db.cursor()
-#     cursor.execute(octava)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(octava)
+    db.commit()
 
-# def rellenar_datos_9(condicions,descripcio,habits_corporal,habits_bucal,situacions,quines,mitjans,altres):
+def rellenar_datos_9(condicions,descripcio,habits_corporal,habits_bucal,situacions,quines,mitjans,altres):
 
-#     novena = f""" insert necessitat_estar_net_polt_protegir_teguments (
-#         condicions_higeniques_pell_mucoses,descripcio_condicions_pell_mucosa,habits_higene_corporal,habits_higene_bucal,
-#         situacions_influencien_higene,quines_situacions_influencien_higene,mijans_utilitza_millorar_higene,altres_manifestacions)
-#         values ('{condicions}','{descripcio}','{habits_corporal}','{habits_bucal}','{situacions}','{quines}','{mitjans}','{altres}',)"""
+    novena = f""" insert necessitat_estar_net_polt_protegir_teguments (
+        condicions_higeniques_pell_mucoses,descripcio_condicions_pell_mucosa,habits_higene_corporal,habits_higene_bucal,
+        situacions_influencien_higene,quines_situacions_influencien_higene,mijans_utilitza_millorar_higene,altres_manifestacions)
+        values ('{condicions}','{descripcio}','{habits_corporal}','{habits_bucal}','{situacions}','{quines}','{mitjans}','{altres}')"""
     
-#     cursor= db.cursor()
-#     cursor.execute(novena)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(novena)
+    db.commit()
 
 def rellenar_datos_10(coneix_mides,salubritat,situacions,quines,mitjans,altres):
 
@@ -207,6 +207,33 @@ def registrarPacientes():
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
             print(resultado)
 
+            # LEER OCATAVA PARTE
+
+            temperatura_pell =respuesta['temperatura_pell']
+            temperatura_axilar =respuesta['temperatura_axilar']
+            com_sent =respuesta['com_sent_temperatura_ambient']
+            situacions =respuesta['situacions_influencien_termoregulacio']
+            quines =respuesta['quines_situacions_influencien_termoregulacio']
+            altres =respuesta['altres_manifestacions8']
+            mitjans =respuesta['mitjans_utilitza_mantenir_temperatura']
+
+            resultado= rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans)
+            print(resultado)
+
+            # LEER NOVENA PARTE
+
+            condicions =respuesta['condicions_higeniques_pell_mucoses']
+            descripcio =respuesta['descripcio_condicions_pell_mucosa']
+            habits_corporal =respuesta['habits_higene_corporal']
+            habits_bucal =respuesta['habits_higene_bucal']
+            situacions =respuesta['situacions_influencien_higene']
+            quines =respuesta['quines_situacions_influencien_higene']
+            mitjans =respuesta['mijans_utilitza_millorar_higene']
+            altres =respuesta['altres_manifestacions9']
+
+            resultado= rellenar_datos_9(condicions,descripcio,habits_corporal,habits_bucal,situacions,quines,mitjans,altres)
+            print(resultado)
+
             # LEER DECIMA PARTE
 
             coneix_mides =respuesta['coneix_mides_prevencio']
@@ -215,7 +242,7 @@ def registrarPacientes():
             quines =respuesta['quines_situacions_seguretat_fisica_psicologica_social']
             mitjans =respuesta['mitjans_utilitza_proteccio']
             altres =respuesta['altres_manifestacio10']
-            
+
             resultado= rellenar_datos_10(coneix_mides,salubritat_habitat,situacions,quines,mitjans,altres)
             print(resultado)
 
@@ -463,45 +490,6 @@ def registrarPacientes():
 #     except:
 #             return render_template("registro_error.html")
 
-# def insertar_datos_9():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             condicions =respuesta['condicions_higeniques_pell_mucoses']
-#             descripcio =respuesta['descripcio_condicions_pell_mucosa']
-#             habits_corporal =respuesta['habits_higene_corporal']
-#             habits_bucal =respuesta['habits_higene_bucal']
-#             situacions =respuesta['situacions_influencien_higene']
-#             quines =respuesta['quines_situacions_influencien_higene']
-#             mitjans =respuesta['mitjans_utilitza_millorar_higene']
-#             altres =respuesta['altres_manifestacions9']
-#             resultado= rellenar_datos_9(condicions,descripcio,habits_corporal,habits_bucal,situacions,quines,mitjans,altres)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_10():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             coneix_mides =respuesta['coneix_mides_prevencio']
-#             salubritat_habitat =respuesta['salubritat_habitat_1']
-#             situacions =respuesta['situacions_circumstancies_seguretat_fisica_psicologica_social']
-#             quines =respuesta['quines_situacions_seguretat_fisica_psicologica_social']
-#             mitjans =respuesta['mitjans_utilitza_proteccio']
-#             altres =respuesta['altres_manifestacio10']
-#             resultado= rellenar_datos_10(coneix_mides,salubritat_habitat,situacions,quines,mitjans,altres)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
 
 @app.route("/pagina_exit", methods=["GET", "POST"])
 def ex_pagina_exit():
