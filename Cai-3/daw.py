@@ -114,44 +114,44 @@ def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,
 #     cursor.execute(decimo_primera)
 #     db.commit()
 
-# def rellenar_datos_12(quines,mitjans,altres):
+def rellenar_datos_12(quines,mitjans,altres):
 
-#     decimo_segunda = f""" insert necessitat_viure_creences_valors (
-#         quines_creences_valors, mitjans_utilitza_viure_creences_valors,altres_manifestacions)
-#         values ('{quines}','{mitjans}','{altres}')"""
+    decimo_segunda = f""" insert necessitat_viure_creences_valors (
+        quines_creences_valors, mitjans_utilitza_viure_creences_valors,altres_manifestacions)
+        values ('{quines}','{mitjans}','{altres}')"""
     
-#     cursor= db.cursor()
-#     cursor.execute(decimo_segunda)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(decimo_segunda)
+    db.commit()
 
-# def rellenar_datos_13(rol_familiar,rol_social,tipus_ocupacio,situacions,altres):
+def rellenar_datos_13(rol_familiar,rol_social,tipus_ocupacio,situacions,mitjans13,altres):
 
-#     decimo_tercer = f""" insert into necessitat_ocupar_realitzar (
-#         rol_familiar,rol_social,tipus_ocupacio,situacions_desenvolupacio_rol_social_familiar,altres_manifestacions)
-#         values ('{rol_familiar}','{rol_social}','{tipus_ocupacio}','{situacions}','{altres}')"""
-#     cursor= db.cursor()
-#     cursor.execute(decimo_tercer)
-#     db.commit()
+    decimo_tercer = f""" insert into necessitat_ocupar_realitzar (
+        rol_familiar,rol_social,tipus_ocupacio,situacions_desenvolupacio_rol_social_familiar,mitjans_utilitza_millorar_realitzacio,altres_manifestacions)
+        values ('{rol_familiar}','{rol_social}','{tipus_ocupacio}','{situacions}','{mitjans13}','{altres}');"""
+    cursor= db.cursor()
+    cursor.execute(decimo_tercer)
+    db.commit()
 
-# def rellenar_datos_14(esport,musica,lectura,audiovisual,altres,situacions,quines_situacions,mitjans,altres_manifestacions):
+def rellenar_datos_14(esport,musica,lectura,audiovisual,altres,situacions,quines_situacions,mitjans,altres_manifestacions):
 
-#     decimo_quarta = f""" insert into necessitat_esbargir (
-#         habits_esport,habits_musica,habits_lectura,habits_audiovisual,habits_altres,situacions_influencien_interes_esbargir,
-#         quines_situacions_influencien_interes_esbargir,mitjans_utilitza_millorar_realitzacio,altres_manifestacions)
-#         values ('{esport}','{musica}','{lectura}','{audiovisual}','{altres}','{situacions}','{quines_situacions}','{mitjans}','{altres_manifestacions}')"""
-#     cursor= db.cursor()
-#     cursor.execute(decimo_quarta)
-#     db.commit()
+    decimo_quarta = f""" insert into necessitat_esbargir (
+        habits_esport,habits_lectura,habits_musica,habits_audiovisual,habits_altres,situacions_influencien_interes_esbargir,quines_situacions_influencien_interes_esbargir,mitjans_utilitza_millorar_realitzacio,altres_manifestacions)
+        values ('{esport}','{lectura}','{musica}','{audiovisual}','{altres}','{situacions}','{quines_situacions}','{mitjans}','{altres_manifestacions}')"""
 
-# def rellenar_datos_15(interes,perque,situacions,mitjans,altres):
+    cursor= db.cursor()
+    cursor.execute(decimo_quarta)
+    db.commit()
 
-#     decimo_quinta = f""" insert into necessitat_aprendre (
-#         interes_coneixer_proces_salut, perque_interes_coneixer_proces_salut, situacions_dificulten_aprenentatge, mitjans_utilitza_aprendre, altres_manifestacions) 
-#         values ('{interes}','{perque}','{situacions}','{mitjans}','{altres}')"""
+def rellenar_datos_15(interes,perque,situacions,mitjans,altres):
+
+    decimo_quinta = f""" insert into necessitat_aprendre (
+        interes_coneixer_proces_salut, perque_interes_coneixer_proces_salut, situacions_dificulten_aprenentatge, mitjans_utilitza_aprendre, altres_manifestacions) 
+        values ('{interes}','{perque}','{situacions}','{mitjans}','{altres}')"""
     
-#     cursor= db.cursor()
-#     cursor.execute(decimo_quinta)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(decimo_quinta)
+    db.commit()
 
 
 app = Flask(__name__)
@@ -185,18 +185,18 @@ def registrarPacientes():
         if request.method == 'POST':
             respuesta = request.form
             # LEER PRIMERA PARTE FORM
-            nom =respuesta['nom']
-            edat =respuesta['edat']
-            sexe =respuesta['sexe']
-            LLoc_naixement =respuesta['LLoc_naixement']
-            Lloc_residencia =respuesta['Lloc_residencia']
+            nom = respuesta['nom']
+            edat = respuesta['edat']
+            sexe = respuesta['sexe']
+            LLoc_naixement = respuesta['LLoc_naixement']
+            Lloc_residencia = respuesta['Lloc_residencia']
             viu_sol = respuesta['viu_sol']
 
-            familia_origen_pare =respuesta['familia_origen_pare']
-            familia_origen_mare =respuesta['familia_origen_mare']
-            familia_origen_germans =respuesta['familia_origen_germans']
-            rol_ocupa =respuesta['rol_ocupa']
-            membres_integren =respuesta['membres_integren']
+            familia_origen_pare = respuesta['familia_origen_pare']
+            familia_origen_mare = respuesta['familia_origen_mare']
+            familia_origen_germans = respuesta['familia_origen_germans']
+            rol_ocupa = respuesta['rol_ocupa']
+            membres_integren = respuesta['membres_integren']
         
             temps_residencia =respuesta['temps_residencia']
             pren_medicaments_casa =respuesta['pren_medicaments_casa']
@@ -207,7 +207,50 @@ def registrarPacientes():
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
             print(resultado)
 
-            # LEER SEGUNDA PARTE FORM
+            # LEER DECIMO SEGUNDA PARTE FORM
+
+            quines =respuesta['quines_creences_valors']
+            mitjans =respuesta['mitjans_utilitza_viure_creences_valors']
+            altres =respuesta['altres_manifestacions12']
+            resultado= rellenar_datos_12(quines,mitjans,altres)
+            print(resultado)
+
+            # LEER DECIMO TERCERA PARTE FORM
+            
+            rol_familiar =respuesta['rol_familiar']
+            rol_social =respuesta['rol_social']
+            tipus_ocupacio =respuesta['tipus_ocupacio']
+            situacions =respuesta['situacions_desenvolupacio_rol_social_familiar']
+            mitjans13 = respuesta['mitjans_millorar13']
+            altres =respuesta['altres_manifestacions13']
+            resultado13= rellenar_datos_13(rol_familiar,rol_social,tipus_ocupacio,situacions,mitjans13,altres)
+            print(resultado13)
+
+            # LEER DECIMO CUARTA PARTE FORM
+            
+            esport = respuesta['habits_esport']
+            musica = respuesta['habits_musica']
+            lectura = respuesta['habits_lectura']
+            audiovisual = respuesta['habits_audiovisual']
+            altres14 = respuesta['habits_altres']
+            situacions14 = respuesta['situacions_influencien_interes_esbargir']
+            quines_situacions = respuesta['quines_situacions_influencien_interes_esbargir']
+            mitjans14 = respuesta['mitjans_utilitza_millorar_realitzacio']
+            altres_manifestacions = respuesta['altres_manifestacions14']
+            
+            resultado14 =  rellenar_datos_14(esport,lectura,musica,audiovisual,altres14,situacions14,quines_situacions,mitjans14,altres_manifestacions)
+            print(resultado14)
+
+            # LEER DECIMO QUINTA PARTE FORM
+
+            interes = respuesta['interes_coneixer_proces_salut']
+            perque = respuesta['perque_interes_coneixer_proces_salut']
+            situacions = respuesta['situacions_dificulten_aprenentatge']
+            mitjans = respuesta['mitjans_utilitza_aprendre']
+            altres = respuesta['altres_manifestacions15']
+
+            resultado15 = rellenar_datos_15(interes,perque,situacions,mitjans,altres)
+            print(resultado15)
 
             return redirect(url_for("ex_pagina_exit"))
         else:
@@ -454,86 +497,6 @@ def registrarPacientes():
 #     except:
 #             return render_template("registro_error.html")
 
-# def insertar_datos_12():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             quines =respuesta['quines_creences_valors']
-#             mitjans =respuesta['mitjans_utilitza_viure_creences_valors']
-#             altres =respuesta['altres_manifestacions12']
-#             resultado= rellenar_datos_12(quines,mitjans,altres)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_13():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             rol_familiar =respuesta['rol_familiar']
-#             rol_social =respuesta['rol_social']
-#             tipus_ocupacio =respuesta['tipus_ocupacio']
-#             situacions =respuesta['situacions_desenvolupacio_rol_social_familiar']
-#             altres =respuesta['altres_manifestacions13']
-#             resultado= rellenar_datos_13(rol_familiar,rol_social,tipus_ocupacio,situacions,altres)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_14():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             esport =respuesta['habits_esport']
-#             musica =respuesta['habits_musica']
-#             lectura =respuesta['habits_lectura']
-#             audiovisual =respuesta['habits_audiovisual']
-#             altres =respuesta['habits_altres']
-#             situacions =respuesta['situacions_influencien_interes_esbargir']
-#             quines_situacions =respuesta['quines_situacions_influencien_interes_esbargir']
-#             mitjans =respuesta['mitjans_utilitza_millorar_realitzacio']
-#             altres_manifestacions =respuesta['altres_manifestacions14']
-#             resultado=  rellenar_datos_14(esport,musica,lectura,audiovisual,altres,situacions,quines_situacions,mitjans,altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_15():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             interes =respuesta['interes_coneixer_proces_salut']
-#             perque =respuesta['perque_interes_coneixer_proces_salut']
-#             situacions =respuesta['situacions_dificulten_aprenentatge']
-#             mitjans =respuesta['mitjans_utilitza_aprendre']
-#             altres =respuesta['altres_manifestacions15']
-#             resultado=  rellenar_datos_15(interes,perque,situacions,mitjans,altres)
-            
-
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-   
-    #     return redirect(url_for("ex_pagina_exit"))
-    # else:
-        
-    #     return render_template("registrar.html") 
 
 
 @app.route("/pagina_exit", methods=["GET", "POST"])

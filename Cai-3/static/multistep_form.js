@@ -234,8 +234,10 @@ function pasarForm11() {
   form12.style.display = "flex";
 
   let buton14 = document.getElementById("button14");
-  buton14.style.display = "none";  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "flex";
+  buton14.style.display = "none";  
+  
+  let buton15 = document.getElementById("button15");
+  buton15.style.display = "flex";
   
 }
 
@@ -246,11 +248,11 @@ function pasarForm12() {
   let form13 = document.getElementById("part13");
   form13.style.display = "flex";
 
-  let buton14 = document.getElementById("button14");
-  buton14.style.display = "none";
+  let buton15 = document.getElementById("button15");
+  buton15.style.display = "none";
 
-  let butonFinal = document.getElementById("butonFinal");
-  butonFinal.style.display = "none";
+  let buton16 = document.getElementById("button16");
+  buton16.style.display = "flex";
 }
 
 function pasarForm13() {
@@ -259,7 +261,12 @@ function pasarForm13() {
 
   let form14 = document.getElementById("part14");
   form14.style.display = "flex";
-  
+
+  let buton16 = document.getElementById("button16");
+  buton16.style.display = "none";
+
+  let buton17 = document.getElementById("button17");
+  buton17.style.display = "flex";
 }
 
 function pasarForm14() {
@@ -268,5 +275,10 @@ function pasarForm14() {
 
   let form15 = document.getElementById("part15");
   form15.style.display = "flex";
-  
+ 
+  let buton17 = document.getElementById("button17");
+  buton17.style.display = "none";
+
+  let buton18 = document.getElementById("button18");
+  buton18.style.display = "flex";
 }
