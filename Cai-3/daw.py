@@ -59,16 +59,16 @@ def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,
 #     cursor.execute(quinta)
 #     db.commit()
 
-# def rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres):
+def rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres):
 
-#     septimo = f""" insert into necessitat_vestir_desvestir(
-#         significat_roba,tipus_roba,capacitat_vestir_desvestir,situacions_influencien_vestimenta,
-#         quines_situacions_influencien_vestimenta,mitjans_millorar_satisfaccio_vestir_desvestir,altres_manifestacions)
-#         values ('{significat_roba}','{tipus_roba}','{capacitat}','{situacions}','{quines}','{mitjans}','{altres}') """
+    septimo = f""" insert into necessitat_vestir_desvestir(
+        significat_roba,tipus_roba,capacitat_vestir_desvestir,situacions_influencien_vestimenta,
+        quines_situacions_influencien_vestimenta,mitjans_millorar_satisfaccio_vestir_desvestir,altres_manifestacions)
+        values ('{significat_roba}','{tipus_roba}','{capacitat}','{situacions}','{quines}','{mitjans}','{altres}'); """
     
-#     cursor= db.cursor()
-#     cursor.execute(septimo)
-#     db.commit()
+    cursor= db.cursor()
+    cursor.execute(septimo)
+    db.commit()
 
 def rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans):
 
@@ -205,6 +205,18 @@ def registrarPacientes():
             familia_procreacio =respuesta['familia_procreacio']
             
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
+            print(resultado)
+
+            # LEER SEPTIMA PARTE
+
+            significat_roba =respuesta['significat_roba']
+            tipus_roba =respuesta['tipus_roba']
+            capacitat =respuesta['capacitat_vestir_desvestir']
+            situacions =respuesta['situacions_influencien_vestimenta']
+            quines =respuesta['quines_situacions_influencien_vestimenta']
+            mitjans =respuesta['mitjans_millorar_satisfaccio_vestir_desvestir']
+            altres =respuesta['altres_manifestacions7']
+            resultado= rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres)
             print(resultado)
 
             # LEER OCATAVA PARTE
@@ -462,26 +474,6 @@ def registrarPacientes():
 #             mitjans =respuesta['mitjans_millorar_satisfaccio_vestir_desvestir']
 #             altres =respuesta['altres_manifestacions7']
 #             resultado= rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_8():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             temperatura_pell =respuesta['temperatuta_pell']
-#             temperatura_axilar =respuesta['temperatura_axilar']
-#             com_sent =respuesta['com_sent_temperatura_ambient']
-#             situacions =respuesta['situacions_influencien_termoregulacio']
-#             quines =respuesta['quines_situacions_influencien_termoregulacio']
-#             altres =respuesta['altres_manifestacions8']
-#             mitjans =respuesta['mitjans_utilitza_mantenir_temperatura']
-#             resultado= rellenar_datos_8(temperatura_pell,temperatura_axilar,com_sent,situacions,quines,altres,mitjans)
 #             print(resultado)
 #             return redirect(url_for("ex_pagina_exit"))
 #         else:
