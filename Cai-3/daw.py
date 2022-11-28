@@ -19,13 +19,13 @@ def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,
     cursor.execute(primer)
     db.commit()
 
-# def rellenar_datos_2(ritme,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia):
-#     segundo = f"""insert into necessitat_respirar (ritme,frequencia_r,pa.,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia) 
-#     values ('{ritme}','{frequencia_r}','{pa}','{amplitud}','{tipus_respiracio}','{orifisis_nasals_permeables}','{coloracio_mucoses}','{coloracio_pell}','{respiracio}','{tos}','{tos_descripcio}','{mucositat}','{mucositat_descripcio}','{expectoracio}','{altres_manifestacions}','{situacions_influencien_respiracio}','{quines_influencien}','{mitja_utilitza_respirar_millor}','{fuma}','{cigars_dia}')"""
-#     # print(q)
-#     cursor= db.cursor()
-#     cursor.execute(segundo)
-#     db.commit()
+def rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia):
+    segundo = f"""insert into necessitat_respirar (ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia) 
+    values ('{ritme}',{frequencia_cardiaca},{frequencia_r},{pa},{amplitud},'{tipus_respiracio}','{orifisis_nasals_permeables}','{coloracio_mucoses}','{coloracio_pell}','{respiracio}','{tos}','{tos_descripcio}','{mucositat}','{mucositat_descripcio}','{expectoracio}','{altres_manifestacions}','{situacions_influencien_respiracio}','{quines_influencien}','{mitja_utilitza_respirar_millor}','{fuma}',{cigars_dia});"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(segundo)
+    db.commit()
 
 # def rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions):
 #     tercera = f"""insert into necessitat_menjar_beure (pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions) 
@@ -205,6 +205,33 @@ def registrarPacientes():
             familia_procreacio =respuesta['familia_procreacio']
             
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
+            print(resultado)
+
+            # LEER SEGUNDA PARTE FORM/AUN FALTA PARA TERMINAR
+
+            ritme = respuesta['ritme']
+            frequencia_r = respuesta['frequencia_r']
+            amplitud = respuesta['amplitud']
+            tipus_respiracio=respuesta['tipus_respiracio']
+            orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']
+            frequencia_cardiaca = respuesta['frequencia_cardiaca']
+            pa = respuesta['pa']
+            coloracio_mucoses = respuesta['coloracio_mucoses']
+            coloracio_pell = respuesta['coloracio_pell']
+            respiracio = respuesta['respiracio']   
+            tos = respuesta['tos']
+            tos_descripcio = respuesta['tos_descripcio']
+            mucositat = respuesta['mucositat']
+            mucositat_descripcio = respuesta['mucositat_descripcio']
+            expectoracio = respuesta['expectoracio']
+            altres_manifestacions2 = respuesta['altres_manifestacions2']        
+            situacions_influencien_respiracio = respuesta['situacions_influencien_respiracio']
+            quines_influencien = respuesta['quines_influencien2']
+            mitja_utilitza_respirar_millor = respuesta['mitja_utilitza_respirar_millor']
+            fuma = respuesta['fuma']
+            cigars_dia = respuesta['cigars_dia']
+            
+            resultado = rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions2,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia)
             print(resultado)
 
             # LEER SEPTIMA PARTE
