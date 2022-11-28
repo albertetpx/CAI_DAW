@@ -51,13 +51,13 @@ def rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_re
 #     cursor.execute(quinta)
 #     db.commit()
 
-# def rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions):   
-#     quinta = f"""insert into necesitat_dormir_reposar (hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions) 
-#     values ('{hores_dorm}','{migdia}','{qualitat_son}','{situacions_influencien}','{quines_situacions_influencien}','{mitjans_dormir}','{altres_manifestacions}')"""
-#     # print(q)
-#     cursor= db.cursor()
-#     cursor.execute(quinta)
-#     db.commit()
+def rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions):   
+    quinta = f"""insert into necesitat_dormir_reposar (hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions) 
+    values ({hores_dorm},'{migdia}','{qualitat_son}','{situacions_influencien}','{quines_situacions_influencien}','{mitjans_dormir}','{altres_manifestacions}');"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quinta)
+    db.commit()
 
 def rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres):
 
@@ -207,7 +207,7 @@ def registrarPacientes():
             resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
             print(resultado)
 
-            # LEER SEGUNDA PARTE FORM/AUN FALTA PARA TERMINAR
+            # LEER SEGUNDA PARTE
 
             ritme = respuesta['ritme']
             frequencia_r = respuesta['frequencia_r']
@@ -232,6 +232,20 @@ def registrarPacientes():
             cigars_dia = respuesta['cigars_dia']
             
             resultado = rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions2,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia)
+            print(resultado)
+
+            # LEER SEXTA PARTE
+
+            hores_dorm=respuesta['hores_dorm']
+            migdia=respuesta['migdia']
+            qualitat_son=respuesta['qualitat_son']
+            situacions_influencien_son=respuesta['situacions_influencien_son']
+            quienes_situacions_influencien_son=respuesta['quienes_situacions_influencien_son']    
+            
+            mitjans_dormir=respuesta['mitjans_utilitza_dormir_millor_reposar']
+            altres_manifestacions=respuesta['altres_manifestacions6']
+
+            resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_dormir,altres_manifestacions)
             print(resultado)
 
             # LEER SEPTIMA PARTE
@@ -351,40 +365,7 @@ def registrarPacientes():
             
     except:
         return render_template("registro_error.html")    
-            
-# def recibirDatosPaciente2():
-#     try:  
-#         if request.method == 'POST':
-#             respuesta = request.form             
-#             ritme=respuesta['ritme']
-#             frequencia_r=respuesta['frequencia_r']
-#             pa = respuesta['pa']
-#             amplitud=respuesta['amplitud']
-#             tipus_respiracio=respuesta['tipus_respiracio']
-#             orifisis_nasals_permeables=respuesta['orifisis_nasals_permeables']           
-#             coloracio_mucoses = respuesta['coloracio_mucoses']
-#             coloracio_pell =respuesta['coloracio_pell']
-#             respiracio = respuesta['respiracio']
-#             tos = respuesta['tos']
-#             tos_descripcio = respuesta['tos_descripcio']
-#             mucositat = respuesta['mucositat']
-#             mucositat_descripcio = respuesta['mucositat_descripcio']
-#             expectoracio = respuesta['expectoracio']
-#             altres_manifestacions = respuesta['altres_manifestacions2']
-#             situacions_influencien_respiracio = respuesta['situacions_influencien_respiracio']
-#             quines_influencien = respuesta['quines_influencien']
-#             mitja_utilitza_respirar_millor = respuesta['mitja_utilitza_respirar_millor']
-#             fuma = respuesta['fuma']
-#             cigars_dia = respuesta['cigars_dia']
-            
-#             resultado = rellenar_datos_2(ritme,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia)
-#             print(resultado)                       
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")    
+
 
 # def recibirDatosPaciente3():
 #     try:  
@@ -460,47 +441,6 @@ def registrarPacientes():
 #             altres_manifestacions=respuesta['altres_manifestacions5']
 
 #             resultado =  rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def recibirDatosPaciente6():
-#     try:  
-#         if request.method == 'POST':
-#             respuesta = request.form    
-#             hores_dorm=respuesta['hores_dorm']
-#             migdia=respuesta['migdia']
-#             qualitat_son=respuesta['qualitat_son']
-#             situacions_influencien_son=respuesta['situacions_influencien_son']
-#             quienes_situacions_influencien_son=respuesta['quines_situacions_influencien_son']    
-            
-#             mitjans_dormir=respuesta['mitjans_utilitza_dormir_millor_reposar']
-#             altres_manifestacions=respuesta['altres_manifestacions6']
-#             resultado =  rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_dormir,altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
-
-# def insertar_datos_7():
-#     try:
-#         if request.method == 'POST':
-#             respuesta = request.form
-#             significat_roba =respuesta['significat_roba']
-#             tipus_roba =respuesta['tipus_roba']
-#             capacitat =respuesta['capacitat_vestir_desvestir']
-#             situacions =respuesta['situacions_influencien_vestimenta']
-#             quines =respuesta['quines_situacions_influencien_vestimenta']
-#             mitjans =respuesta['mitjans_millorar_satisfaccio_vestir_desvestir']
-#             altres =respuesta['altres_manifestacions7']
-#             resultado= rellenar_datos_7(significat_roba,tipus_roba,capacitat,situacions,quines,mitjans,altres)
 #             print(resultado)
 #             return redirect(url_for("ex_pagina_exit"))
 #         else:
