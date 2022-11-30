@@ -35,13 +35,13 @@ def rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,mast
     cursor.execute(tercera)
     db.commit()
 
-# def rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions):
-#     quarta = f"""insert into necessitat_eliminar (frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions) 
-#     values ('{frequencia_orina}','{quantitat_orina}','{aspecte_orina}','{frequencia_femtes}','{quantitat_femtes}','{aspecte_femtes}','{frequencia_suor}','{quantitat_suor}','{aspecte_suor}','{situacions_influencien_habits_eliminacio}','{quines_influencien}','{mitjans_utilitzar_eliminar_millor}','{altres_manifestacions}')"""
-#     # print(q)
-#     cursor= db.cursor()
-#     cursor.execute(quarta)
-#     db.commit()
+def rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,frequencia_regla,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions):
+    quarta = f"""insert into necessitat_eliminar (frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,frequencia_regla,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions) 
+    values ({frequencia_orina},{quantitat_orina},'{aspecte_orina}',{frequencia_femtes},{quantitat_femtes},'{aspecte_femtes}','{frequencia_suor}',{quantitat_suor},'{aspecte_suor}','{frequencia_regla}','{situacions_influencien_habits_eliminacio}','{quines_influencien}','{mitjans_utilitzar_eliminar_millor}','{altres_manifestacions}');"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quarta)
+    db.commit()
 
 # def rellenar_datos_5(pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions):
 #     quinta = f"""insert into necessitat_moure_mantenir_postura_adequada (pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions) 
@@ -259,6 +259,26 @@ def registrarPacientes():
             resultado =  rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions)
             print(resultado)
 
+            # LEER CUARTA PARTE
+
+            frequencia_orina=respuesta['frequencia_orina']
+            quantitat_orina=respuesta['quantitat_orinar']
+            aspecte_orina=respuesta['aspecte_orina']
+            frequencia_femtes=respuesta['frequencia_femtes']
+            quantitat_femtes=respuesta['quantitat_femtes']
+            aspecte_femtes=respuesta['aspecte_femtes']
+            frequencia_suor=respuesta['frequencia_suor']
+            quantitat_suor=respuesta['quantitat_suor']
+            aspecte_suor=respuesta['aspecte_suor']
+            frequencia_regla = respuesta['frequencia_regla']#falta
+            situacions_influencien_habits_eliminacio=respuesta['situacions_influencien_habits_eliminacio']
+            quines_influencien=respuesta['quines_influencien4']
+            mitjans_utilitzar_eliminar_millor=respuesta['mitjans_utilitzar_eliminar_millor']
+            altres_manifestacions=respuesta['altres_manifestacions4']
+            
+            resultado =  rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,frequencia_regla,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions)
+            print(resultado)
+
             # LEER SEXTA PARTE
 
             hores_dorm=respuesta['hores_dorm']
@@ -391,37 +411,6 @@ def registrarPacientes():
     except:
         return render_template("registro_error.html")    
 
-
-# def recibirDatosPaciente3():
-#     try:  
-#         if request.method == 'POST':
-#             respuesta = request.form   
-#             pes=respuesta['pes']
-#             talla=respuesta['talla']
-#             numero_dents_realitzar_funcio=respuesta['numero_dents_realitzar_funcio']
-#             protesi_dental=respuesta['protesi_dental']
-#             masticacio=respuesta['masticacio']
-#             caracteriques_deglucio=respuesta['caracteriques_deglucio']
-#             esmorzar=respuesta['esmorzar']
-#             dinar=respuesta['dinar']
-#             berenar=respuesta['berenar']
-#             sopar=respuesta['sopar']
-#             altres=respuesta['altres']
-#             sensacio_habitual_respecte_menjar=respuesta['sensacio_habitual_respecte_menjar']
-#             habitualment_menja=respuesta['habitualment_menja']
-#             situacions_influencien_habits_alimentalis=respuesta['situacions_influencien_habits_alimentalis']
-#             quines_situacions=respuesta['quines_situacions']
-#             mitjans_utilitza_millorar=respuesta['mitjans_utilitza_millorar']
-#             altres_manifestacions=respuesta['altres_manifestacions3']
-            
-#             resultado =  rellenar_datos_3(pes, talla, numero_dents_realitzar_funcio, protesi_dental, masticacio, caracteriques_deglucio, esmorzar, dinar, berenar, sopar, altres, sensacio_habitual_respecte_menjar, habitualment_menja, situacions_influencien_habits_alimentalis, quines_situacions, mitjans_utilitza_millorar, altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")    
 
 # def recibirDatosPaciente4():
 #     try:  
