@@ -242,14 +242,14 @@ def registrarPacientes():
             protesi_dental=respuesta['protesi_dental']
             masticacio=respuesta['masticacio']
             caracteriques_deglucio=respuesta['caracteriques_deglucio']
-            tipus_dieta = respuesta['tipus_dieta']#falta
+            tipus_dieta = respuesta['tipus_dieta']
             esmorzar=respuesta['esmorzar']
             dinar=respuesta['dinar']
             berenar=respuesta['berenar']
             sopar=respuesta['sopar']
             altres=respuesta['altres']
             sensacio_habitual_respecte_menjar=respuesta['sensacio_habitual_respecte_menjar']
-            aliments_solits_liquids_no_agraden_intolera_restriccio = respuesta['aliments_solits_liquids_no_agraden_intolera_restriccio']#falta
+            aliments_solits_liquids_no_agraden_intolera_restriccio = respuesta['aliments_solits_liquids_no_agraden_intolera_restriccio']
             habitualment_menja=respuesta['habitualment_menja']
             situacions_influencien_habits_alimentalis=respuesta['situacions_influencien_habits_alimentalis']
             quines_situacions=respuesta['quines_situacions']
@@ -270,7 +270,7 @@ def registrarPacientes():
             frequencia_suor=respuesta['frequencia_suor']
             quantitat_suor=respuesta['quantitat_suor']
             aspecte_suor=respuesta['aspecte_suor']
-            frequencia_regla = respuesta['frequencia_regla']#falta
+            frequencia_regla = respuesta['frequencia_regla']
             situacions_influencien_habits_eliminacio=respuesta['situacions_influencien_habits_eliminacio']
             quines_influencien=respuesta['quines_influencien4']
             mitjans_utilitzar_eliminar_millor=respuesta['mitjans_utilitzar_eliminar_millor']
