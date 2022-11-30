@@ -159,24 +159,25 @@
 
 <div class="form" id="part3">
   <div class="div_caja1">
-      <label>PES <input type="number" value="1" name="pes"> </label><br>
+      <label>PES <input type="number" value=1 name="pes"> </label><br>
       <label>TALLA <input type="text" value="a" name="talla"> </label><br>
       <label>CAVITAT BUCAL: <br>  
         a) DENTS EN Nº SUFICIENT PER REALITZAR BÉ LA SEVA FUNCIÓ: 
-      <input type="number" value="1" name="numero_dents_realitzar_funcio"> </label><br>
+      <input type="number" value=1 name="numero_dents_realitzar_funcio"> </label><br>
       <label id="b">b) PROTESIS DENTAL: 
-          <input type="radio" name="protesi_dental" > PARCIAL
-          <input type="radio" name="protesi_dental" > TOTAL
+          <input type="radio" value="a" name="protesi_dental" > PARCIAL
+          <input type="radio" value="a" name="protesi_dental" > TOTAL
       </label><br>
       
       <label>MASTICACIÓ:  
-          <input type="radio" name="masticacio" > LENTA
-          <input type="radio" name="masticacio" > RÀPIDA
+          <input type="radio" value="a" name="masticacio" > LENTA
+          <input type="radio" value="a" name="masticacio" > RÀPIDA
       </label>
   </div>
 
   <div class="div_caja2">
-      <label>LA DEGLUCIÓ. CARACTERÍSTIQUES: <input type="text" value="a" name="caracteriques_deglucio"></textarea></label><br><br>
+      <label>LA DEGLUCIÓ. CARACTERÍSTIQUES: <input type="text" value="a" name="caracteriques_deglucio"></label><br><br>
+      <label>TIPUS DIETA: <input type="text" value="a" name="tipus_dieta"></label><br><br>
       <label>ALIMENTS I LIQUITS QUE PREN HABITUALMENT I QUANTITAT/DIA </label><br>
       <label>ESMORZAR <input type="text" value="a" name="esmorzar"> </label><br>
       <label>DINAR <input type="text" value="a" name="dinar"> </label><br>
@@ -186,28 +187,32 @@
 <!-- 3.1 Parte -->
 <div class="form" id="part3_1">
   <div class="div_caja1">
-      <label>BERENAR <input type="text" value="a" name="berenar"> </label><br>
-      <label>SOPAR <input type="text" value="a" name="sopar"> </label><br>
-      <label>ALTRES &nbsp;<textarea name="altres"></textarea></label><br><br>
-      <label>HABITUALMENT QUINA SENSACIÓ TÉ <br> RESPECTE AL MENJAR &nbsp;<textarea name="sensacio_habitual_respecte_menjar"></textarea> </label><br><br>
-      <label>ALIMENTS SÒLITS O LIQUIDS QUE NO LI AGRADEN, INTOLERA O TÉ ALGUNA RESTRICCIÓ &nbsp;<textarea></textarea> </label>
+    <label>BERENAR <input type="text" value="a" name="berenar"> </label><br>
+    <label>SOPAR <input type="text" value="a" name="sopar"> </label><br>
+    <label>ALTRES &nbsp;<textarea name="altres"></textarea></label><br><br>
+    <label>HABITUALMENT QUINA SENSACIÓ TÉ <br> RESPECTE AL MENJAR &nbsp;<textarea name="sensacio_habitual_respecte_menjar"></textarea> </label><br><br>
+    <label>ALIMENTS SÒLITS O LIQUIDS QUE NO LI AGRADEN, INTOLERA O TÉ ALGUNA RESTRICCIÓ &nbsp;<textarea name="aliments_solits_liquids_no_agraden_intolera_restriccio"></textarea> </label>
   </div>
 
   <div class="div_caja2">
-      <label for="">HABITUALMENT MENJA:
-          <input type="radio" name="habitualment_menja" > A CASA <br>
-          <input type="radio" name="habitualment_menja" > A LA FEINA
-          <input type="radio" name="habitualment_menja" > A UN RESTAURANT <br>
-          <input type="radio" name="habitualment_menja" > SOL
-          <input type="radio" name="habitualment_menja" > ACOMPANYAT
-      </label><br>
-      <label>HI HA SITUACIONS QUE INFLUENCIEN ELS SEUS HABITS ALIMENTARIS
-          <input type="radio"  name="situacions_influencien_habits_alimentalis" > SI
-          <input type="radio"  name="situacions_influencien_habits_alimentalis" > NO
-      </label><br>
-      <label>QUINES &nbsp;<textarea name="quines_situacions"></textarea> </label><br><br>
-      <label>MITJANS QUE UTILITZA PER MILLORAR-LOS &nbsp;<textarea name="mitjans_utilitza_millorar"></textarea> </label><br>
-      <label>ALTRES MANIFESTACIONS &nbsp;<textarea name="altres_manifestacions3"></textarea> </label><br>
+    <label for="">HABITUALMENT MENJA:
+      <input type="radio" value="a" name="habitualment_menja" > A CASA <br>
+      <input type="radio" value="a" name="habitualment_menja" > A LA FEINA
+      <input type="radio" value="a" name="habitualment_menja" > A UN RESTAURANT <br>
+      <input type="radio" value="a" name="habitualment_menja" > SOL
+      <input type="radio" value="a" name="habitualment_menja" > ACOMPANYAT
+    </label>
+    
+    <br>
+    
+    <label>HI HA SITUACIONS QUE INFLUENCIEN ELS SEUS HABITS ALIMENTARIS
+      <input type="radio" value="a" name="situacions_influencien_habits_alimentalis" > SI
+      <input type="radio" value="a" name="situacions_influencien_habits_alimentalis" > NO
+    </label><br>
+    
+    <label>QUINES &nbsp;<textarea name="quines_situacions"></textarea> </label><br><br>
+    <label>MITJANS QUE UTILITZA PER MILLORAR-LOS &nbsp;<textarea name="mitjans_utilitza_millorar"></textarea> </label><br>
+    <label>ALTRES MANIFESTACIONS &nbsp;<textarea name="altres_manifestacions3"></textarea> </label><br>
   </div>
   <br>
 </div>
@@ -332,7 +337,6 @@
 </div>
 
 <!--  sexta parte -->
-
 <div class="form" id="part6">
   <div id="div_caja1">
     <label for="">HORES QUE DORM HABITUALMENT
@@ -460,6 +464,7 @@
 </div>
   
 </div>
+
 <!-- Novena parte -->
 <div class="form" id="part9">
   <div class="div_caja1">
@@ -480,6 +485,7 @@
           <br><br>  
       </div>   
 </div>
+
 <!-- Decima parte -->
 <div class="form" id="part10">
   <div class="div_caja1">

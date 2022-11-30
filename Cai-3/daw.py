@@ -27,13 +27,13 @@ def rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_re
     cursor.execute(segundo)
     db.commit()
 
-# def rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions):
-#     tercera = f"""insert into necessitat_menjar_beure (pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions) 
-#     values ('{pes}',{talla},'{numero_dents_realitzar_funcio}','{protesi_dental}','{masticacio}','{caracteriques_deglucio}','{esmorzar}','{dinar}','{berenar}','{sopar}','{altres}','{sensacio_habitual_respecte_menjar}','{habitualment_menja}','{situacions_influencien_habits_alimentalis}','{mitjans_utilitza_millorar}','{altres_manifestacions}')"""
-#     # print(q)
-#     cursor= db.cursor()
-#     cursor.execute(tercera)
-#     db.commit()
+def rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions):
+    tercera = f"""insert into necessitat_menjar_beure (pes,talla,numero_dents_realitzar_funcio,protesi_dental,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions,masticacio)
+    values ({pes},'{talla}',{numero_dents_realitzar_funcio},'{protesi_dental}','{masticacio}','{caracteriques_deglucio}','{tipus_dieta}','{esmorzar}','{dinar}','{berenar}','{sopar}','{altres}','{sensacio_habitual_respecte_menjar}','{aliments_solits_liquids_no_agraden_intolera_restriccio}','{habitualment_menja}','{situacions_influencien_habits_alimentalis}','{quines_situacions}','{mitjans_utilitza_millorar}','{altres_manifestacions}');"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(tercera)
+    db.commit()
 
 # def rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions):
 #     quarta = f"""insert into necessitat_eliminar (frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions) 
@@ -232,6 +232,31 @@ def registrarPacientes():
             cigars_dia = respuesta['cigars_dia']
             
             resultado = rellenar_datos_2(ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions2,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia)
+            print(resultado)
+
+            # LEER TERCERA PARTE
+
+            pes=respuesta['pes']
+            talla=respuesta['talla']
+            numero_dents_realitzar_funcio=respuesta['numero_dents_realitzar_funcio']
+            protesi_dental=respuesta['protesi_dental']
+            masticacio=respuesta['masticacio']
+            caracteriques_deglucio=respuesta['caracteriques_deglucio']
+            tipus_dieta = respuesta['tipus_dieta']#falta
+            esmorzar=respuesta['esmorzar']
+            dinar=respuesta['dinar']
+            berenar=respuesta['berenar']
+            sopar=respuesta['sopar']
+            altres=respuesta['altres']
+            sensacio_habitual_respecte_menjar=respuesta['sensacio_habitual_respecte_menjar']
+            aliments_solits_liquids_no_agraden_intolera_restriccio = respuesta['aliments_solits_liquids_no_agraden_intolera_restriccio']#falta
+            habitualment_menja=respuesta['habitualment_menja']
+            situacions_influencien_habits_alimentalis=respuesta['situacions_influencien_habits_alimentalis']
+            quines_situacions=respuesta['quines_situacions']
+            mitjans_utilitza_millorar=respuesta['mitjans_utilitza_millorar']
+            altres_manifestacions=respuesta['altres_manifestacions3']
+            
+            resultado =  rellenar_datos_3(pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions)
             print(resultado)
 
             # LEER SEXTA PARTE
