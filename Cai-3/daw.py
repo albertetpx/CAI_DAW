@@ -43,13 +43,13 @@ def rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_f
     cursor.execute(quarta)
     db.commit()
 
-# def rellenar_datos_5(pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions):
-#     quinta = f"""insert into necessitat_moure_mantenir_postura_adequada (pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions) 
-#     values ('{pot_moure_totes_parts_cos}','{quines_parts}','{perque_pot_moure}','{es}','{postura_habitual}',{activitats_fisiques},'{situacions_interfereixen_mobilitat}','{quines_situacions_interfreixen_mobilitat}','{mitjans_utilitza_moure_millor_mantenir_postura_adequada}','{altres_manifestacions}')"""
-#     # print(q)
-#     cursor= db.cursor()
-#     cursor.execute(quinta)
-#     db.commit()
+def rellenar_datos_5(pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions):
+    quinta = f"""insert into necessitat_moure_mantenir_postura_adequada (pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions) 
+    values ('{pot_moure_totes_parts_cos}','{quines_parts}','{perque_pot_moure}','{es}','{postura_habitual}','{activitats_fisiques}','{situacions_interfereixen_mobilitat}','{quines_situacions_interfreixen_mobilitat}','{mitjans_utilitza_moure_millor_mantenir_postura_adequada}','{altres_manifestacions}');"""
+    # print(q)
+    cursor= db.cursor()
+    cursor.execute(quinta)
+    db.commit()
 
 def rellenar_datos_6(hores_dorm,migdia,qualitat_son,situacions_influencien,quines_situacions_influencien,mitjans_dormir,altres_manifestacions):   
     quinta = f"""insert into necesitat_dormir_reposar (hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions) 
@@ -279,6 +279,22 @@ def registrarPacientes():
             resultado =  rellenar_datos_4(frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,frequencia_regla,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions)
             print(resultado)
 
+            # LEER QUINTA PARTE
+
+            pot_moure_totes_parts_cos=respuesta['pot_moure_totes_parts_cos']
+            quines_parts=respuesta['quines_parts']
+            perque_pot_moure=respuesta['perque_pot_moure']
+            es=respuesta['es']
+            postura_habitual=respuesta['postura_habitual']
+            activitats_fisiques=respuesta['activitats_fisiques']
+            situacions_interfereixen_mobilitat=respuesta['situacions_interfereixen_mobilitat']
+            quines_situacions_interfreixen_mobilitat=respuesta['quines_situacions_interfreixen_mobilitat']
+            mitjans_utilitza_moure_millor_mantenir_postura_adequada=respuesta['mitjans_utilitza_moure_millor_mantenir_postura_adequada']
+            altres_manifestacions=respuesta['altres_manifestacions5']
+
+            resultado =  rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions)
+            print(resultado)            
+
             # LEER SEXTA PARTE
 
             hores_dorm=respuesta['hores_dorm']
@@ -410,58 +426,6 @@ def registrarPacientes():
             
     except:
         return render_template("registro_error.html")    
-
-
-# def recibirDatosPaciente4():
-#     try:  
-#         if request.method == 'POST':
-#             respuesta = request.form    
-#             frequencia_orina=respuesta['frequencia_orina']
-#             quantitat_orina=respuesta['sopaquantitat_orinar']
-#             aspecte_orina=respuesta['aspecte_orina']
-#             frequencia_femtes=respuesta['frequencia_femtes']
-#             quantitat_femtes=respuesta['quantitat_femtes']
-#             aspecte_femtes=respuesta['aspecte_femtes']
-#             frequencia_suor=respuesta['frequencia_suor']
-#             quantitat_suor=respuesta['quantitat_suor']
-#             aspecte_suor=respuesta['aspecte_suor']
-#             situacions_influencien_habits_eliminacio=respuesta['situacions_influencien_habits_eliminacio']
-#             quines_influencien=respuesta['quines_influencien']
-#             mitjans_utilitzar_eliminar_millor=respuesta['mitjans_utilitzar_eliminar_millor']
-#             altres_manifestacions=respuesta['altres_manifestacions4']
-            
-#             resultado =  rellenar_datos_4(frequencia_orina, quantitat_orina, aspecte_orina, frequencia_femtes, quantitat_femtes, aspecte_femtes, frequencia_suor, quantitat_suor, aspecte_suor, situacions_influencien_habits_eliminacio, quines_influencien, mitjans_utilitzar_eliminar_millor, altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")    
-
-# def recibirDatosPaciente5():
-#     try:  
-#         if request.method == 'POST':
-#             respuesta = request.form    
-#             pot_moure_totes_parts_cos=respuesta['pot_moure_totes_parts_cos']
-#             quines_parts=respuesta['quines_parts']
-#             perque_pot_moure=respuesta['perque_pot_moure']
-#             es=respuesta['es']
-#             postura_habitual=respuesta['postura_habitual']
-#             activitats_fisiques=respuesta['activitats_fisiques']
-#             situacions_interfereixen_mobilitat=respuesta['situacions_interfereixen_mobilitat']
-#             quines_situacions_interfreixen_mobilitat=respuesta['quines_situacions_interfreixen_mobilitat']
-#             mitjans_utilitza_moure_millor_mantenir_postura_adequada=respuesta['mitjans_utilitza_moure_millor_mantenir_postura_adequada']
-#             altres_manifestacions=respuesta['altres_manifestacions5']
-
-#             resultado =  rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions)
-#             print(resultado)
-#             return redirect(url_for("ex_pagina_exit"))
-#         else:
-#             return render_template("registrar.html")    
-    
-#     except:
-#             return render_template("registro_error.html")
 
 
 @app.route("/pagina_exit", methods=["GET", "POST"])
