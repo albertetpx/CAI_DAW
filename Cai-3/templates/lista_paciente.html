@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Inicio</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static',filename='estilos_pagina.css')}}"
-    />
-  </head>
-  <body>
-    <!-- Herer  Encabezado -->
-    <header>
-      <div class="headerLeft">
-        <img
-          class="img_Logo"
-          src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
-          alt="Imagen de carta "
-        />
-      </div>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='estilos_pagina.css')}}"/>
+</head>
+<body>
+    
+        <!-- Herer  Encabezado -->
+        <header>
+            <div class="headerLeft">
+                <img class="img_Logo" src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png" alt="Imagen de carta ">   
+            </div>
+            
+            <h1 class="titulo1">LLISTAT DE PACIENTS</h1>
+    
+            <div class="headerRight">
+                <a href="/">INICI</a>
+                <a href="/lista_paciente">Llistat de pacients</a>
+                <a href="/registrar">Registrar nou pacient</a>
+            </div>         
 
-      <h1 class="titulo1">LLISTAT DE PACIENTS</h1>
+        </header>
+        <hr >
 
-      <div class="headerRight">
-        <a href="/">INICI</a>
-        <a href="/lista_paciente">Llistat de pacients</a>
-        <a href="/registrar">Registrar nou pacient</a>
-      </div>
-    </header>
-    <hr />
+<!-- contenido de MAIN  -->
 
-    <!-- contenido de MAIN  -->
-
-    <main>
-      <section class="s_main_list">
-        <table>
-          <tr>
-            <th>Pacient</th>
-            <th>Edat</th>
-            <th>Sexe</th>
-            <th>Lloc de naixement</th>
-            <th>Lloc de residencia</th>
-            <th>viu desde...</th>
-            <th>Viu sol?</th>
-            <th>Medicaments que pren</th>
-          </tr>
-
-          {% for linea in data %}
-          <tr>
-            {% for n in linea %}
-            <td>{{n}}</td>
+<main>
+        <section class="s_main_list">
+        
+           <table>
+               <tr>
+                   <th>Pacient</th>
+                   <th>Edat</th>
+                   <th>Sexe</th>
+                   <th>Lloc de naixement</th>
+                   <th>Lloc de residencia</th>
+                   <th>viu desde...</th>
+                   <th>Viu sol?</th>
+                   <th>Medicaments que pren</th>
+                  
+                </tr>
+                {% for linea in data %}
+            <tr>
+              {% for n in linea %}
+              <td> {{n}} </td>
+              {% endfor %}
+            </tr>
             {% endfor %}
-          </tr>
-          {% endfor %}
-        </table>
-      </section>
+           </table>
+            
+        </section>
+
     </main>
 
     <footer>DAW ETPXAVIER 2022</footer>
-  </body>
+</body>
 </html>
