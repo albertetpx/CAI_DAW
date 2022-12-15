@@ -224,10 +224,10 @@ function pasarForm12(){
     let form13 = document.getElementById("part13");
     form13.style.display = "flex";
 
-    let buton14 =document.getElementById("button14");
+    let buton14 =document.getElementById("button15");
     buton14.style.display="none";
 
-    let buton15 =document.getElementById("button15");
+    let buton15 =document.getElementById("button16");
     buton15.style.display="block";
 }
 
@@ -238,7 +238,23 @@ function pasarForm13(){
     let form14 = document.getElementById("part14");
     form14.style.display = "flex";
 
-    let buton15 =document.getElementById("button15");
-    buton15.style.display="none";
+    let buton16 = document.getElementById("button16");
+    buton16.style.display="none";
 
+    let buton17 = document.getElementById("button17");
+    buton17.style.display="block";
+}
+
+function pasarForm14(){
+    let form13 = document.getElementById("part14");
+    form13.style.display = "none";
+ 
+    let form14 = document.getElementById("part15");
+    form14.style.display = "flex";
+
+    let buton17 = document.getElementById("button17");
+    buton17.style.display="none";
+
+    let butonFinal = document.getElementById("butonFinal");
+    butonFinal.style.display="block";
 }

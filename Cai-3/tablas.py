@@ -1,6 +1,5 @@
 import mysql.connector
 
-
 def conectardb():
     db = mysql.connector.connect(host='localhost',
                                  user='root',
@@ -8,7 +7,6 @@ def conectardb():
                                  database="formulario_cai"
                                  )
     return db
-
 
 def countPacients():
     db=conectardb()
