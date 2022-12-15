@@ -18,12 +18,6 @@ def countPacients():
     numPacient = cursor.fetchall()[0][0]
     return numPacient
 
-
-    # consulta = "select count(*) from info_general;"
-    # cursor = db.cursor()
-    # cursor.execute(consulta)
-    # numPacient = cursor.fetchall()[0][0]
-    # return render_template("index.html", numPacient=numPacient)
 def consultaTablaEjemplo():
     db = conectardb()
     consulta_sel = "SELECT nom, edat, LLoc_naixement, Lloc_residencia, temps_residencia, viu_sol, quins_medicaments FROM info_general LIMIT 5;"
