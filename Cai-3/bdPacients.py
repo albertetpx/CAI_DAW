@@ -15,13 +15,6 @@ def conectardb(consulta):
     db.close()
     return
 
-
-def consultaTABLA():
-    consulta_sel = "select * from info_general;"
-    cursor = db.cursor()
-    cursor.execute(consulta_sel)
-    data = cursor.fetchall() 
-
 def rellenar_datos_1(nom, edad, sexe, llocNaixament, llocResidencia, tempsResidencia, familiaOrigenPare, familiaOrigenMare, familiaOrigenGermans, familiaProcreacio, rolOcupa, membresIntegren, viuSol, problemaSalutActual, prenMedicamentsCasa, quinsMedicament):
 
     consulta = f"""insert into info_general (nom,edat,sexe,Lloc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments) 

@@ -42,21 +42,22 @@
 <!-- Primera parte del form -->
 <div class="form" id="part1">
   <div class="div_caja1">
-    <label >NOM: <input type="text" value="a" id="nom" name="nom" /> </label><br>
+    <label >NOM (SENSE ELS COGNOMS): <input type="text" value="a" id="nom" name="nom" /> </label><br>
     <label>EDAT: <input type="number" value=1 name="edat"/> </label><br>
     <label>SEXE: <input type="text" value="a"  name="sexe"/> </label><br>
     <label>LLOC DE NAIXEMENT: <input type="number" value=1 name="LLoc_naixement" /> </label><br>
     <label>LLOC DE RESIDÈNCIA: <input type="text" value="a"  name="Lloc_residencia"/> </label><br>
-    <label>Vius Sol: 
-      <input type="radio"  value="pmc" name="viu_sol"  /> SI
-      <input type="radio"  value="pmc" name="viu_sol"  /> NO
+    <label>TEMPS DE RESIDÈNCIA <input type="number" value= 1 name="temps_residencia" /> </label><br>
+    <label>VIU SOL/A: 
+      <input type="radio"  value="SI" name="viu_sol"  /> SI
+      <input type="radio"  value="NO" name="viu_sol"  /> NO
     </label>
   </div>
 
   <div class="div_caja2">
-    <label>FAMILIA D'ORIGEN: PARE <input type="text" value="a"  name="familia_origen_pare"/> </label><br>
-    <label>FAMILIA D'ORIGEN: MARE <input type="text" value="a"  name="familia_origen_mare"/> </label><br>
-    <label>FAMILIA D'ORIGEN: GERMANS <input type="text" value="a" name="familia_origen_germans" /> </label><br>
+    <label>FAMÍLIA D'ORIGEN: PARE <input type="text" value="a"  name="familia_origen_pare"/> </label><br>
+    <label>FAMÍLIA D'ORIGEN: MARE <input type="text" value="a"  name="familia_origen_mare"/> </label><br>
+    <label>FAMÍLIA D'ORIGEN: GERMANS <input type="text" value="a" name="familia_origen_germans" /> </label><br>
     <label>ROL QUE OCUPA <input type="text" value="a" name="rol_ocupa" /> </label><br>
     <label>MEMBRE QUE LA INTEGREN <input type="text" value="a" name="membres_integren"/> </label><br>
   </div>
@@ -65,21 +66,20 @@
 <!-- Parte 1.1 del form -->
 <div class="form" id="part1_1">
   <div class="div_caja1">
-    <label>TEMPS DE RESIDÈNCIA <input type="number" value= 1 name="temps_residencia" /> </label><br>
-    <label
-      >PRENS MEDICAMENTS A CASA
-      <input type="radio"  value="pmc" name="pren_medicaments_casa"  /> SI
-      <input type="radio"  value="pmc" name="pren_medicaments_casa"  /> NO
+    <label>
+      PRENS MEDICAMENTS A CASA
+      <input type="radio"  value="SI" name="pren_medicaments_casa"  /> SI
+      <input type="radio"  value="NO" name="pren_medicaments_casa"  /> NO
     </label><br>
-    <label>QUINS <input type="text" value="a"  name="quins_medicaments"/> </label><br>
+    <label>QUINS: <input type="text" value="a"  name="quins_medicaments"/> </label><br>
   </div>
 
   <div class="div_caja2">
     <label>PROBLEMAS DE SALUT <input type="text" value="a" name="problema_salut_actual"/> </label><br>
-    <label
-      >FAMILIA DE PROCREACIÓ
-      <input type="radio"  value="fp" name="familia_procreacio"  /> SI
-      <input type="radio"  value="fp" name="familia_procreacio"  /> NO
+    <label>
+      FAMILIA DE PROCREACIÓ
+      <input type="radio"  value="SI" name="familia_procreacio"  /> SI
+      <input type="radio"  value="NO" name="familia_procreacio"  /> NO
     </label><br>
   </div>
 </div>
@@ -87,19 +87,19 @@
 <!-- Segunda parte del form -->
 <div class="form" id="part2">
   <div class="div_caja1">
-    <label>RITME <input type="text" value="a" name="ritme" /></label><br />
-    <label>FREQÜENCIA R <input type="number" value=1 name="frequencia_r"/></label><br />
+    <label>RITME: <input type="text" value="a" name="ritme" /></label><br />
+    <label>FREQÜÈNCIA R. <input type="number" value=1 name="frequencia_r"/></label><br />
     <label>AMPLITUD: <input type="number" value=1 name="amplitud" /></label><br />
     <label>
       RESPIRACIÓ: 
-      <input type="radio" value="a"  name="tipus_respiracio"  /> BUCAL
-      <input type="radio" value="a"  name="tipus_respiracio"  /> NASAL 
+      <input type="radio" value="BUCAL"  name="tipus_respiracio"  /> BUCAL
+      <input type="radio" value="NACAL"  name="tipus_respiracio"  /> NASAL 
     </label><br />
-    <label>ORIFICIS NASALS PERMEABLES <input type="text" value="a"  name="orifisis_nasals_permeables"/></label><br />
+    <label>ORIFICIS NASALS PERMEABLES: <input type="text" value="a"  name="orifisis_nasals_permeables"/></label><br />
   </div>
 
   <div class="div_caja2">
-    <label>FREQÜENCIA CARDIACA <input type="number" value=1 name="frequencia_cardiaca" /> </label><br />
+    <label>FREQÜENCIA CARDIACA: <input type="number" value=1 name="frequencia_cardiaca" /> </label><br />
     <label>PA. <input type="number" value=1 name="pa" /> </label><br />
     <label>COLORACIÓ: MUCOSES: <input type="text" value="a" name="coloracio_mucoses" /> </label><br />
     <label id="pell">PELL: <input type="text" value="a" name="coloracio_pell" /> </label><br />
@@ -107,8 +107,8 @@
       RESPIRACIÓ: <br> 
     </label>
     <label>
-      <input type="radio" value="a" name="respiracio" id="res"  /> SILENCIOSA<br>
-      <input type="radio" value="a" name="respiracio" id="res2"  /> SOROLLOSA
+      <input type="radio" value="SILENCIOSA" name="respiracio" id="res"  /> SILENCIOSA<br>
+      <input type="radio" value="SOROLLOSA" name="respiracio" id="res2"  /> SOROLLOSA
     </label>
   </div>
 </div>
@@ -117,11 +117,11 @@
 <div class="form" id="part2_1">
   <div class="div_caja1">
     <label>TOS: 
-      <input type="radio" value="a" name="tos"  /> SI
-      <input type="radio" value="a" name="tos"  /> NO 
+      <input type="radio" value="SI" name="tos"  /> SI
+      <input type="radio" value="NO" name="tos"  /> NO 
     </label>
     <br />
-    <label>DESCRIPCIÓ <input type="text" value="a" name="tos_descripcio" /> </label><br />
+    <label>DESCRIPCIÓ: <input type="text" value="a" name="tos_descripcio" /> </label><br />
     <label>MUCOSITAT <input type="text" value="a"  name="mucositat"/> </label><br />
     <label>DESCRIPCIÓ <input type="text" value="a" name="mucositat_descripcio" /> </label><br />
 
@@ -606,7 +606,7 @@
     <label>ALTRES MANIFESTACIONS: <input type="text" value="a"  name="altres_manifestacions15"/> </label><br>
   </div>
 </div>
-      
+<!-- AÑADIR NUEVA PAGINA ALTRES DADES D'INTERES QUE SEA UNA PAGINA ENTERA Y QUE PUEDAN ESCRIBIR LO QUE QUIERAN -->
   <input type="submit" class="buton_oculta" name="registrar" value="Registrar pacient" id="butonFinal"/>
         </form>
           <button onclick="pasarForm1()"  id="button1">Següent</button>

@@ -1,6 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for
 from procesarForm import procesarFormulario
-
+from tablas import consultaTablaEjemplo
 
 app = Flask(__name__)
 
@@ -15,10 +15,7 @@ def principalTabla_inicio():
 
 @app.route("/lista_paciente")
 def lista_paciente():
-    consulta_sel = "select * from info_general;"
-    # cursor = db.cursor()
-    # cursor.execute(consulta_sel)
-    # data = cursor.fetchall() 
+    data = consultaTablaEjemplo()
     return render_template("lista_paciente.html", data = data)
 
 @app.route("/registrar",methods=['GET'])

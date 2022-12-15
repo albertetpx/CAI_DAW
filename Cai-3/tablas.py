@@ -1,0 +1,17 @@
+import mysql.connector
+def conectardb():
+    db = mysql.connector.connect(host='localhost',
+                                 user='root',
+                                 password='el.moounirejh1',
+                                 database="formulario_cai"
+                                 )
+    return db
+
+
+def consultaTablaEjemplo():
+    db = conectardb()
+    consulta_sel = "SELECT nom, edat, LLoc_naixement, Lloc_residencia, temps_residencia, viu_sol, quins_medicaments FROM info_general LIMIT 5;"
+    cursor = db.cursor() 
+    cursor.execute(consulta_sel)
+    data = cursor.fetchall()
+    return data
