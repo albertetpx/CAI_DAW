@@ -246,6 +246,7 @@ td {
 } */
 
 /* partes */
+
 #part1_1 {
   display: none;
 }
@@ -310,15 +311,12 @@ td {
 /*BUTTONS*/
 
 /* Button ocult general  */
-.button{
-  position: absolute;
-  height: 20px;
-  width: 100%;
-  background-color: black;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .buton_oculta {
   display: none;
   margin: 0 auto;
+}
+
+#butonFinal{
+  display: block;
 }
