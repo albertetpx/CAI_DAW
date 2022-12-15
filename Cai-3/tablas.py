@@ -1,9 +1,9 @@
 import mysql.connector
 
 def conectardb():
-    db = mysql.connector.connect(host='localhost',
+    db = mysql.connector.connect(host='LocalHost',
                                  user='root',
-                                 password='el.moounirejh1',
+                                 password='',
                                  database="formulario_cai"
                                  )
     return db
