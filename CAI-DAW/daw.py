@@ -1,17 +1,15 @@
 from flask import Flask, redirect, render_template, request, url_for
 from procesarForm import procesarFormulario
 from bdPacients import obtenerDatos
+from bdPacients import obtenerNumPacientes
 
 app = Flask(__name__)
 
 @app.route("/")
 def principalTabla_inicio():
     consulta = "select count(*) from info_general;"
-    # cursor = db.cursor()
-    # cursor.execute(consulta)
-    # numPacient = cursor.fetchall()[0][0]
-    # return render_template("index.html", numPacient=numPacient)
-    return render_template("index.html")
+    data = obtenerNumPacientes(consulta)
+    return render_template("index.html", data = data)
 
 @app.route("/lista_paciente")
 def lista_paciente():
