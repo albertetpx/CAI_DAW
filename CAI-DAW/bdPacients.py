@@ -5,7 +5,7 @@ import mysql.connector
 def conectardb(consulta):
     db=mysql.connector.connect(host='localhost',
                         user='root',
-                        password='Ahinoa@21',
+                        password='el.moounirejh1',
                         database="formulario_cai"
                         )
     cursor= db.cursor()
@@ -13,6 +13,18 @@ def conectardb(consulta):
     db.commit()
     db.close()
     return
+
+def obtenerDatos(consulta):
+    db=mysql.connector.connect(host='localhost',
+                        user='root',
+                        password='el.moounirejh1',
+                        database="formulario_cai"
+                        )
+    cursor = db.cursor()
+    cursor.execute(consulta)
+    data = cursor.fetchall()
+    return data
+
 
 def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,familiaOrigenPare,familiaOrigenMare,familiaOrigenGermans,familiaProcreacio,rolOcupa,membresIntegren,viuSol,problemaSalutActual,prenMedicamentsCasa,quinsMedicament):
     

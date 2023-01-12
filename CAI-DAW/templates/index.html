@@ -44,15 +44,15 @@
           <div id="tapa-caja"></div>
           <div id="caja-pastilla">
             <div class="pastilla">
-              <button class="button">INICI</button>
+              <button class="button"></button><a href="/lista_paciente">LISTA DE PACIENTES</a></button>
               <div id="tapa-pastilla"></div>
             </div>
             <div class="pastilla">
-              <button class="button">PACIENTE</button>
+              <button class="button"><a>PACIENTE</a></button>
               <div id="tapa-pastilla"></div>
             </div>
             <div class="pastilla">
-              <button class="button">VALORACION</button>
+              <button class="button"><a>VALORACION</a></button>
               <div id="tapa-pastilla"></div>
             </div>
           </div>
@@ -63,9 +63,9 @@
     <main>
       <div id="text">
         <p><h1>Benvingut a DAWCAI, l'aplicació de registre de pacients en cures</h1></p>
-        <p id="descripcion">Actualmente hi ha un total de <b> {{numPacient}}</b> en el
+        <p id="descripcion">Actualmente hi ha un total de <b> {{data}}</b> en el
           registre.</p>
-          <button class="button-registro">Registrar</button>
+          <button class="button-registro" ><a href="/registrar">Registrar</a></button>
       </div>
       <div id="image">
         <img src="/static/medica.png" alt="Medica" width="480px">
