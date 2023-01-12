@@ -3,6 +3,7 @@ from procesarForm import procesarFormulario
 from bdPacients import obtenerDatos
 from bdPacients import obtenerNumPacientes
 
+
 app = Flask(__name__)
 
 @app.route("/")

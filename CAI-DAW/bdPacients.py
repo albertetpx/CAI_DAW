@@ -15,6 +15,16 @@ def conectardb(consulta):
     db.close()
     return
 
+def listaInfoGeneral(consulta):
+    db = mysql.connector.connect(host='localhost',
+                        user='root',
+                        password='el.moounirejh1',
+                        database="formulario_cai"
+                        )
+    cursor = db.cursor()
+    cursor.execute(consulta)
+    data = cursor.fetchall()
+    return
 
 def obtenerDatos(consulta):
     db = mysql.connector.connect(host='localhost',
