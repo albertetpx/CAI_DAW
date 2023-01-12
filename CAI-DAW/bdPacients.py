@@ -5,7 +5,7 @@ import mysql.connector
 def conectardb(consulta):
     db=mysql.connector.connect(host='localhost',
                         user='root',
-                        password='Ahinoa@21',
+                        password='',
                         database="formulario_cai"
                         )
     cursor= db.cursor()
