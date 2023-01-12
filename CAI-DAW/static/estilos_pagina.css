@@ -1,0 +1,565 @@
+/* HTML */
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+/* BODY  */
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Grids de body  */
+.contenido {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+}
+
+/* header menu */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-color: #c9c9c9;
+}
+
+#logo {
+  display: block;
+  align-self: auto;
+}
+
+.titulo h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  color: #223645;
+}
+
+#descripcion {
+  font-family: Poppins, sans-serif;
+  color: #707070;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Poppins, sans-serif;
+  color: #223645;
+  font-size: 56px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+#text {
+  animation-name: slide;
+  animation-duration: 3s; 
+  animation-fill-mode: forwards; 
+}
+
+.button-registro {
+  display: inline-block;
+  padding: 20px 40px 20px 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e61f57;
+  border-radius: 50px;
+  background-color: #e61f57;
+  background-position: 88% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 30px 0 rgb(230 31 87 / 30%);
+  -webkit-transition: color 300ms ease, background-color 300ms ease;
+  transition: color 300ms ease, background-color 300ms ease;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.button-registro:hover {
+  background-color: #fff;
+  background-position: 88% 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  opacity: 1;
+  color: #e61f57;
+}
+
+/* .img_Logo {
+  width: 150px;
+}
+.headerLeft {
+  display: block;
+}
+
+.titulo1 {
+  margin-left: 175px;
+  color: white;
+  margin-top: 50px;
+}
+
+hr {
+  color: white;
+}
+
+.headerRight {
+  display: block;
+  margin-top: 60px;
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+} */
+
+aside {
+  grid-area: aside;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+/* FIN DE GRID  */
+
+/* CONTENIDO DDE FPRM  */
+.form {
+  display: flex;
+  /* margin-left: 250px; */
+}
+
+/* SELECT MAIN  */
+/* DE INDEX  */
+.s_main_index {
+  width: 70%;
+  margin-top: 100px;
+}
+/* DE REGISTRAR PAGINA  */
+.s_main_registrar {
+  background-color: silver;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 20%;
+  width: 60%;
+  color: white;
+
+  box-shadow: 3px 4px 15px black;
+}
+/* DE PAGINA LISTA PACIENT */
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin-top: 2.9%;
+  margin-left: 8%;
+  width: 90%;
+  box-shadow: 2px 3px 20px black;
+  text-align: center;
+}
+tr,
+th,
+td {
+  border: 1px solid black;
+  font-size: 20px;
+}
+th {
+  background-color: black;
+  color: rgb(163, 157, 157);
+  padding: 10px;
+}
+td {
+  background-color: white;
+}
+
+/* PAGINA EXITOSA  */
+.s_main_exitosa {
+  background-color: white;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 20%;
+  width: 60%;
+}
+.h1_pagina_exitosa {
+  color: rgb(16, 236, 16);
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* PAGINA ERROR  */
+.s_main_error {
+  background-color: white;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 20%;
+  width: 60%;
+}
+.h1_pagina_error {
+  color: rgb(236, 16, 16);
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* INPUTS selects */
+input,
+select {
+  font-size: 15px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.div_caja1 {
+  margin: 0 auto;
+  text-align: left;
+  padding: 15px;
+}
+.div_caja2 {
+  margin: 0 auto;
+  text-align: left;
+  padding: 15px;
+}
+.s_main_registrar,
+h2 {
+  text-align: center;
+}
+/* MENU  */
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 25%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#tapa-caja {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #604dfb;
+}
+
+#caja-pastilla {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #604dfb;
+  padding: 45px;
+  border-radius: 35px;
+}
+
+.pastilla {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 1s;
+}
+
+.pastilla:hover {
+  translate: 30px;
+}
+
+#tapa-pastilla {
+  height: 35px;
+  width: 80px;
+  background-color: red;
+  border-radius: 0px 25px 25px 0px;
+  display: inline-block;
+  transition: 1s;
+}
+
+.button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  width: 80px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px 0px 0px 16px;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+#tapa-pastilla:hover {
+  translate: 30px;
+}
+
+.container-menu {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 5px;
+  background-color: #223645;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+#caja-menu {
+  display: relative;
+}
+
+/* nav{
+    border: 1px solid silver;
+    border-radius: 5px;
+    text-align:right;
+    margin-top: 5px;
+    margin-right: 25px;
+    
+} */
+/* LOS LINKS  */
+/* a {
+  text-decoration: none;
+  border: 1px solid silver;
+  text-shadow: 1px 1px 2px white;
+  color: black;
+  background-color: #3ff6f3;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 15px;
+} */
+
+/* a:hover,
+a:active {
+  background-color: rgba(192, 192, 192, 0.542);
+  color: white;
+  font-size: 22px;
+  text-shadow: 2px 3px 8px black;
+}
+a:active {
+  background-color: rgba(34, 34, 236, 0.578);
+  color: white;
+
+  text-shadow: 2px 3px 8px black;
+} */
+
+/* select main  */
+.s_main {
+  margin-left: 15%;
+}
+.a_main {
+  background-color: silver;
+  box-shadow: 1px 2px 12px black;
+  padding: 10px;
+  margin: 30px;
+}
+
+/* FOOTER */
+footer {
+  border: solid 1px black;
+  background-color: rgb(240, 237, 237);
+  box-shadow: 2px 3px 13px black;
+  position: relative;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 97%;
+}
+/* LOS PARRAFOS  */
+.p1 {
+  padding-left: 20%;
+}
+.p2 {
+  padding-left: 40%;
+}
+
+.table_multi {
+  border-collapse: collapse;
+  box-shadow: 2px 3px 20px black;
+}
+
+.table_multi tr td {
+  background-color: rgb(118, 186, 201);
+  font-size: 14px;
+  color: white;
+}
+
+/* Estilos multiform */
+
+/* table  */
+.default,
+tr,
+td {
+  color: black;
+}
+td {
+  font-size: 17px;
+}
+/* #botonRegistrar{
+    display: none;
+} */
+
+/* partes */
+
+#part1_1 {
+  display: none;
+}
+
+#part2 {
+  display: none;
+}
+
+#part2_1 {
+  display: none;
+}
+
+#part3 {
+  display: none;
+}
+
+#part3_1 {
+  display: none;
+}
+
+#part4 {
+  display: none;
+}
+#part4_1 {
+  display: none;
+}
+#part5 {
+  display: none;
+}
+#part6 {
+  display: none;
+}
+#part7 {
+  display: none;
+}
+
+#part8 {
+  display: none;
+}
+#part9 {
+  display: none;
+}
+#part10 {
+  display: none;
+}
+#part11 {
+  display: none;
+}
+#part12 {
+  display: none;
+}
+#part13 {
+  display: none;
+}
+#part14 {
+  display: none;
+}
+#part15 {
+  display: none;
+}
+
+/*BUTTONS*/
+
+/* Button ocult general  */
+
+.buton_oculta {
+  display: none;
+  margin: 0 auto;
+}
+
+#butonFinal {
+  display: block;
+}
+
+
+/*ANIMACIONES*/
+@keyframes slide {
+  0%   { transform: translate(0px,100px); }
+  100% { transform: translate(0px,0px); }
+}
