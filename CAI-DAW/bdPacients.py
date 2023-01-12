@@ -1,23 +1,23 @@
 import mysql.connector
 
-#FUNCIONES PARA INTRODUCIR DATOS A MYSQL
+# FUNCIONES PARA INTRODUCIR DATOS A MYSQL
+
 
 def conectardb(consulta):
-    db=mysql.connector.connect(host='localhost',
+    db = mysql.connector.connect(host='localhost',
                         user='root',
                         password='el.moounirejh1',
-
-
                         database="formulario_cai"
                         )
-    cursor= db.cursor()
+    cursor = db.cursor()
     cursor.execute(consulta)
     db.commit()
     db.close()
     return
 
+
 def obtenerDatos(consulta):
-    db=mysql.connector.connect(host='localhost',
+    db = mysql.connector.connect(host='localhost',
                         user='root',
                         password='el.moounirejh1',
                         database="formulario_cai"
@@ -27,6 +27,17 @@ def obtenerDatos(consulta):
     data = cursor.fetchall()
     return data
 
+
+def obtenerNumPacientes(consulta):
+    db = mysql.connector.connect(host='localhost',
+                        user='root',
+                        password='el.moounirejh1',
+                        database="formulario_cai"
+                        )
+    cursor = db.cursor()
+    cursor.execute(consulta)
+    numPacient = cursor.fetchall()[0][0]
+    return numPacient
 
 def rellenar_datos_1(nom,edad,sexe,llocNaixament,llocResidencia,tempsResidencia,familiaOrigenPare,familiaOrigenMare,familiaOrigenGermans,familiaProcreacio,rolOcupa,membresIntegren,viuSol,problemaSalutActual,prenMedicamentsCasa,quinsMedicament):
     
