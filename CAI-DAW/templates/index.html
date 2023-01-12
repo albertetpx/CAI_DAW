@@ -28,8 +28,8 @@
         <h1>INICI</h1>
       </div>
       <!--Menu Hmaburguesa-->
-      <span onclick="openNav()" id="caja-menu">
-        <div class="container-menu" onclick="myFunction(this)">
+      <span id="caja-menu">
+        <div class="container-menu" id="menu" onclick="abrirMenu()">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
@@ -38,21 +38,19 @@
 
       <!-- Overlay cuando el menu esta activado-->
       <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a>
         <div class="overlay-content">
           <div id="tapa-caja"></div>
           <div id="caja-pastilla">
             <div class="pastilla">
-              <button class="button"></button><a href="/lista_paciente">LISTA DE PACIENTES</a></button>
+              <button class="button" onclick="listaPaciente()" >LISTA DE PACIENTES</button>
               <div id="tapa-pastilla"></div>
             </div>
             <div class="pastilla">
-              <button class="button"><a>PACIENTE</a></button>
+              <button class="button">PACIENTE</button>
               <div id="tapa-pastilla"></div>
             </div>
             <div class="pastilla">
-              <button class="button"><a>VALORACION</a></button>
+              <button class="button">VALORACION</button>
               <div id="tapa-pastilla"></div>
             </div>
           </div>
@@ -65,58 +63,14 @@
         <p><h1>Benvingut a DAWCAI, l'aplicació de registre de pacients en cures</h1></p>
         <p id="descripcion">Actualmente hi ha un total de <b> {{data}}</b> en el
           registre.</p>
-          <button class="button-registro" ><a href="/registrar">Registrar</a></button>
+          <button class="button-registro" id="button-registro" onclick="registrar()">Registrar</button>
       </div>
       <div id="image">
         <img src="/static/medica.png" alt="Medica" width="480px">
       </div>
     </main>
 
-    <!-- <main>
-      <center>
-        <section class="s_main_index">
-          <article class="a_main">
-            <h1>
-              Benvingut a DAWCAI, l'aplicació de registre de pacients en cures
-            </h1>
-
-            <p class="p1">
-              -Per obtenir un llistat dels pacients en cures,accedeix a
-              <br /><i> Llistat de pacients.</i>
-            </p>
-            <p class="p1">
-              -Per afegir un nou pacient al registre, accedeix a <br /><i>
-                Registrar nou pacient.</i
-              >
-            </p>
-
-            <p class="p2">
-              -Actualmente hi ha un total de <b> {{numPacient}}</b> en el
-              registre.
-            </p>
-          </article>
-        </section>
-      </center>
-    </main> -->
-
-    <!-- <footer>ADAW ETPXAVIER 2022</footer> -->
-    <script>
-
-      function myFunction(x) {
-        x.classList.toggle("change");
-      }
-
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-        // document.getElementById("caja-menu").style.display = "none";
-
-      }
-        function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-        // document.getElementById("caja-menu").style.display = "block";
-
-      }
-      
-    </script>
+    <script src="/static/funciones.js"></script>
+    <script src="/static/menu.js"></script>
   </body>
 </html>

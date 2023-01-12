@@ -107,31 +107,6 @@ h1 {
   color: #e61f57;
 }
 
-/* .img_Logo {
-  width: 150px;
-}
-.headerLeft {
-  display: block;
-}
-
-.titulo1 {
-  margin-left: 175px;
-  color: white;
-  margin-top: 50px;
-}
-
-hr {
-  color: white;
-}
-
-.headerRight {
-  display: block;
-  margin-top: 60px;
-  position: absolute;
-  right: 0;
-  margin-right: 25px;
-} */
-
 aside {
   grid-area: aside;
 }
@@ -362,7 +337,8 @@ h2 {
 .container-menu {
   display: inline-block;
   cursor: pointer;
-  z-index: 1;
+  position: relative;
+  z-index: 99;
 }
 
 .bar1,
