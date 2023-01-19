@@ -5,7 +5,7 @@ import mysql.connector
 def conectarBD():
     db = mysql.connector.connect(host='localhost',
                                  user='root',
-                                 password='el.moounirejh1',
+                                 password='Karlen-1999',
                                  database="formulario_cai"
                                  )
     return db

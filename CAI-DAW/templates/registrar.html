@@ -37,28 +37,43 @@
       <section class="s_main_registrar">
         <h2>REGISTRE DE NOU PACIENT</h2>
 
-        <form action="/recibirDatosPaciente" method="POST">`
+        <form action="/recibirDatosPaciente" method="POST">
 
 <!-- Primera parte del form -->
 <div class="form" id="part1">
-  <div class="div_caja1">
-     <input placeholder="Nom" type="text" value="a" id="nom" name="nom" /> <br>
-     <input placeholder="Edat" type="number" value=1 name="edat"/> </label><br>
-     <input placeholder="Sexe" type="text" value="a"  name="sexe"/> </label><br>
-    <label>LLOC DE NAIXEMENT: <input type="number" value=1 name="LLoc_naixement" /> </label><br>
-    <label>LLOC DE RESIDÈNCIA: <input type="text" value="a"  name="Lloc_residencia"/> </label><br>
-    <label>Vius Sol: 
-      <input type="radio"  value="pmc" name="viu_sol"  /> SI
-      <input type="radio"  value="pmc" name="viu_sol"  /> NO
-    </label>
-  </div>
 
-  <div class="div_caja2">
-    <label>FAMILIA D'ORIGEN: PARE <input type="text" value="a"  name="familia_origen_pare"/> </label><br>
-    <label>FAMILIA D'ORIGEN: MARE <input type="text" value="a"  name="familia_origen_mare"/> </label><br>
-    <label>FAMILIA D'ORIGEN: GERMANS <input type="text" value="a" name="familia_origen_germans" /> </label><br>
-    <label>ROL QUE OCUPA <input type="text" value="a" name="rol_ocupa" /> </label><br>
-    <label>MEMBRE QUE LA INTEGREN <input type="text" value="a" name="membres_integren"/> </label><br>
+   <div class="form_caja_raiz">
+
+     <input placeholder="Nom" type="text" value="a" id="nom" name="nom" /> 
+    
+     <input placeholder="Edat" type="number" value=1 name="edat"/> 
+    
+    <label for="sexe">
+      <input placeholder="Sexe" type="text" value="a"  name="sexe"/> 
+    </label>
+    
+     <label for="LLoc_naixement">LLOC DE NAIXEMENT: </label>
+      <input type="number" value=1 name="LLoc_naixement" /> 
+    <label for="Lloc_residencia">LLOC DE RESIDÈNCIA: </label> 
+      <input type="text" value="a"  name="Lloc_residencia"/>
+    
+      <label>Vius Sol:</label> 
+      <label>
+        <input type="radio"  value="pmc" name="viu_sol"  /> SI</label>
+      <label>
+        <input type="radio"  value="pmc" name="viu_sol"  /> NO</label>
+
+    <label for="familia_origen_pare">FAMILIA D'ORIGEN: PARE </label>
+      <input type="text" value="a"  name="familia_origen_pare"/> 
+    <label for="familia_origen_mare">FAMILIA D'ORIGEN: MARE </label>
+      <input type="text" value="a"  name="familia_origen_mare"/> 
+    <label for="familia_origen_germans">FAMILIA D'ORIGEN: GERMANS</label> 
+      <input type="text" value="a" name="familia_origen_germans"/>
+
+    <label for="rol_ocupa">ROL QUE OCUPA </label>
+      <input type="text" value="a" name="rol_ocupa" /> 
+    <label for="membres_integren">MEMBRE QUE LA INTEGREN </label>
+      <input type="text" value="a" name="membres_integren"/> 
   </div>
 </div>
 
@@ -98,7 +113,7 @@
     <label>ORIFICIS NASALS PERMEABLES <input type="text" value="a"  name="orifisis_nasals_permeables"/></label><br />
   </div>
 
-  <div class="div_caja2">
+
     <label>FREQÜENCIA CARDIACA <input type="number" value=1 name="frequencia_cardiaca" /> </label><br />
     <label>PA. <input type="number" value=1 name="pa" /> </label><br />
     <label>COLORACIÓ: MUCOSES: <input type="text" value="a" name="coloracio_mucoses" /> </label><br />
@@ -111,7 +126,7 @@
       <input type="radio" value="a" name="respiracio" id="res2"  /> SOROLLOSA
     </label>
   </div>
-</div>
+
 
 <!-- 2.1 parte del form -->
 <div class="form" id="part2_1">
