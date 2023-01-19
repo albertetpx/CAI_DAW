@@ -192,7 +192,7 @@ td {
 }
 
 
-.div_caja1 {
+/* .div_caja1 {
   margin: 0 auto;
   text-align: left;
   padding: 15px;
@@ -201,7 +201,7 @@ td {
   margin: 0 auto;
   text-align: left;
   padding: 15px;
-}
+} */
 .s_main_registrar,
 h2 {
   text-align: center;
@@ -450,27 +450,18 @@ td {
 
 /* INPUTS selects */
 input,select {
-  width: 80%;
-  height: 50px;
+  width: 50%;
+  height: 30px;
 }
 /* Form raiz caja  */
-/* .form_caja_raiz{
- 
-  flex-wrap: wrap;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-} */
 /* CONTENIDO DDE FPRM  */
-/* .form { */
-  /* display: block; */
-  /* margin-left: 250px; */
-/* }  */
-/* .form{
-  flex-direction:column;
+.form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}   */
+} 
+
 
 
 /* partes */
