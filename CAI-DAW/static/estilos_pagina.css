@@ -295,7 +295,7 @@ h2 {
 #tapa-pastilla {
   height: 35px;
   width: 80px;
-  background-color: red;
+  background-color: rgb(194, 225, 22);
   border-radius: 0px 25px 25px 0px;
   display: inline-block;
   transition: 1s;
