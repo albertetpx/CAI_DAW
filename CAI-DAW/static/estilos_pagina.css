@@ -6,11 +6,11 @@
 }
 
 /* BODY  */
-body {
+/* body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+} */
 
 /* Grids de body  */
 .contenido {
@@ -56,6 +56,8 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
 h1 {
@@ -128,13 +130,11 @@ footer {
 }
 /* DE REGISTRAR PAGINA  */
 .s_main_registrar {
-  background-color: rgb(216, 39, 39);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width:90% ;
+  background-color: rgba(24, 39, 51, 0.85);
+  width:90% ;
   color: white;
   box-shadow: 3px 4px 15px black;
+  border-radius: 20px;
 }
 /* DE PAGINA LISTA PACIENT */
 table {
@@ -253,16 +253,7 @@ h2 {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
+
 
 #tapa-caja {
   width: 150px;
@@ -423,14 +414,16 @@ footer {
 .table_multi {
   border-collapse: collapse;
   box-shadow: 2px 3px 20px black;
+  margin: 0 0;
 }
 
 .table_multi tr td {
-  background-color: rgb(118, 186, 201);
+  background-color: rgba(79, 79, 79, 0.236);
   font-size: 14px;
   color: white;
-}
+  padding: 15px;
 
+}
 /* Estilos multiform */
 
 /* table  */
@@ -449,19 +442,40 @@ td {
 
 
 /* INPUTS selects */
-input,select {
+.form input,label input  {
+  width: 40%;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 40px 0; 
+  box-shadow: 2px 7px 20px  black ;
+  border-radius: 20px;
+}
+textarea{
+  width: 400px;
+  height: 100px;
+  padding: 30px;
+  margin: 30px;
+}
+
+label{
+  
+  text-align: center;
   width: 50%;
-  height: 30px;
+}
+.form_label_si_no label input {
+  width: 50px;
+  font-size: 40px;
 }
 /* Form raiz caja  */
 /* CONTENIDO DDE FPRM  */
-.form {
+.form{
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 } 
-
 
 
 /* partes */
@@ -484,6 +498,24 @@ input,select {
 
 #part3_1 {
   display: none;
+}
+
+/* linea larga de si o no  */
+.part_3_1labelsiNo_linea_larga{
+  padding-left:40px;
+  
+}
+.part_3_labelsiNo_linea_larga_inputs1,.part_3_labelsiNo_linea_larga_inputs2{
+  padding-left:60px;
+}
+.part_3_labelsiNo_linea_larga_inputs3{
+  padding-left:140px;
+}
+.part_3_labelsiNo_linea_larga_inputs4{
+  padding-left:100px;
+}
+.part_3_labelsiNo_linea_larga_inputs5{
+  padding-left:120px;
 }
 
 #part4 {
@@ -545,4 +577,16 @@ input,select {
 @keyframes slide {
   0%   { transform: translate(0px,100px); }
   100% { transform: translate(0px,0px); }
+}
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
