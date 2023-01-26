@@ -1,11 +1,12 @@
 import mysql.connector
+from config import CONTRASENA
 
 # FUNCIONES PARA INTRODUCIR DATOS A MYSQL
 #Funcion para conectar BD
 def conectarBD():
     db = mysql.connector.connect(host='localhost',
                                  user='root',
-                                 password='el.moounirejh1',
+                                 password=CONTRASENA,
                                  database="formulario_cai"
                                  )
     return db
@@ -41,7 +42,7 @@ def rellenar_datos_1(nom, edad, sexe, llocNaixament, llocResidencia, tempsReside
 def getData1(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.info_general where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.info_general where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -53,7 +54,7 @@ def rellenar_datos_2(ritme, frequencia_cardiaca, frequencia_r, pa, amplitud, tip
 def getData2(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_respirar where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_respirar where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -65,7 +66,7 @@ def rellenar_datos_3(pes, talla, numero_dents_realitzar_funcio, protesi_dental, 
 def getData2(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_menjar_beure where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_menjar_beure where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -77,7 +78,7 @@ def rellenar_datos_4(frequencia_orina, quantitat_orina, aspecte_orina, frequenci
 def getData4(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_eliminar where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_eliminar where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -89,7 +90,7 @@ def rellenar_datos_5(pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, 
 def getData5(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_moure_mantenir_postura_adequada where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_moure_mantenir_postura_adequada where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -101,7 +102,7 @@ def rellenar_datos_6(hores_dorm, migdia, qualitat_son, situacions_influencien, q
 def getData6(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necesitat_dormir_reposar where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necesitat_dormir_reposar where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -116,7 +117,7 @@ def rellenar_datos_7(significat_roba, tipus_roba, capacitat, situacions, quines,
 def getData7(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_vestir_desvestir where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_vestir_desvestir where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -131,7 +132,7 @@ def rellenar_datos_8(temperatura_pell, temperatura_axilar, com_sent, situacions,
 def getData8(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -146,7 +147,7 @@ def rellenar_datos_9(condicions, descripcio, habits_corporal, habits_bucal, situ
 def getData9(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -161,7 +162,7 @@ def rellenar_datos_10(coneix_mides, salubritat, situacions, quines, mitjans, alt
 def getData10(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_evitar_perills where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_evitar_perills where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -176,7 +177,7 @@ def rellenar_datos_11(estat_consciencia, orientacio, estat_sesorial, descripcio,
 def getData11(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_comunicar where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_comunicar where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -190,7 +191,7 @@ def rellenar_datos_12(quines, mitjans, altres):
 def getData12(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_viure_creences_valors where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_viure_creences_valors where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -204,7 +205,7 @@ def rellenar_datos_13(rol_familiar, rol_social, tipus_ocupacio, situacions, mitj
 def getData13(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_ocupar_realitzar where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_ocupar_realitzar where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -218,7 +219,7 @@ def rellenar_datos_14(esport, musica, lectura, audiovisual, altres, situacions, 
 def getData14(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_esbargir where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_esbargir where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
 
@@ -232,6 +233,6 @@ def rellenar_datos_15(interes, perque, situacions, mitjans, altres):
 def getData15(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute( "SELECT * FROM formulario_cai.necessitat_aprendre where dni = '{dni}'")
+    cursor.execute( f"""SELECT * FROM formulario_cai.necessitat_aprendre where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
