@@ -1,7 +1,11 @@
-  function registrar() {
-    location.replace("/registrar");
-  }
+let index = function inicio() {
+  location.replace("/");
+}
 
-  function listaPaciente() {
-    location.replace("/lista_paciente");
-  }
+let registro = function registrar() {
+  location.replace("/registrar");
+}
+
+let lista = function listaPaciente() {
+  location.replace("/lista_paciente");
+}
