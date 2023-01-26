@@ -13,11 +13,7 @@ def conectarBD():
 
 
 def conectardb(consulta):
-    db = mysql.connector.connect(host='localhost',
-                        user='root',
-                        password='Ahinoa@21',
-                        database="formulario_cai"
-                        )
+    db = conectarBD()
     cursor = db.cursor()
     cursor.execute(consulta)
     db.commit()
@@ -26,11 +22,7 @@ def conectardb(consulta):
 
 
 def obtenerDatos(consulta):
-    db = mysql.connector.connect(host='localhost',
-                        user='root',
-                        password='Ahinoa@21',
-                        database="formulario_cai"
-                        )
+    db = conectarBD()
     cursor = db.cursor()
     cursor.execute(consulta)
     data = cursor.fetchall()
@@ -38,11 +30,7 @@ def obtenerDatos(consulta):
 
 
 def obtenerNumPacientes(consulta):
-    db = mysql.connector.connect(host='localhost',
-                        user='root',
-                        password='Ahinoa@21',
-                        database="formulario_cai"
-                        )
+    db = conectarBD()
     cursor = db.cursor()
     cursor.execute(consulta)
     numPacient = cursor.fetchall()[0][0]
