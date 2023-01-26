@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
+    <title>Inici</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -30,9 +30,9 @@
       <!--Menu Hmaburguesa-->
       <span id="caja-menu">
         <div class="container-menu" id="menu" onclick="abrirMenu()">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+          <div id="bar1" class="bar1"></div>
+          <div id="bar2" class="bar2"></div>
+          <div id="bar3" class="bar3"></div>
         </div>
       </span>
 
@@ -42,16 +42,16 @@
           <div id="tapa-caja"></div>
           <div id="caja-pastilla">
             <div class="pastilla">
-              <button class="button" onclick="listaPaciente()" >LISTA DE PACIENTES</button>
-              <div id="tapa-pastilla"></div>
+              <div id="tapa-pastilla-start"><h3 onclick="listaPaciente()">INI</h3></div>
+              <div id="tapa-pastilla-end"><h3>CI</h3></div>
             </div>
             <div class="pastilla">
-              <button class="button">PACIENTE</button>
-              <div id="tapa-pastilla"></div>
+              <div id="tapa-pastilla-start"><h3>PACI</h3></div>
+              <div id="tapa-pastilla-end"><h3>ENT</h3></div>
             </div>
             <div class="pastilla">
-              <button class="button">VALORACION</button>
-              <div id="tapa-pastilla"></div>
+              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
+              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
             </div>
           </div>
         </div>
@@ -69,6 +69,10 @@
         <img src="/static/medica.png" alt="Medica" width="480px">
       </div>
     </main>
+
+    <footer>
+      <p>ADAW ETPXAVIER 2022</p>
+    </footer>
 
     <script src="/static/funciones.js"></script>
     <script src="/static/menu.js"></script>

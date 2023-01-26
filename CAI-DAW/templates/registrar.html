@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Inicio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registre</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -10,26 +12,50 @@
     />
   </head>
   <body>
-    <!-- Herer  Encabezado -->
     <header>
-      <div class="headerLeft">
+      <!-- LOGO DE LA APP-->
+      <div id="logo">
         <img
-          class="img_Logo"
           src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
-          alt="Imagen de carta "
+          alt="Imagen de logo"
+          width="90px"
         />
-
       </div>
 
-      <h1 class="titulo1">REGISTRAR PACIENT</h1>
+      <!-- TITULO DE LA PAGINA-->
+      <div class="titulo">
+        <h1>REGISTRE</h1>
+      </div>
+      <!--Menu Hmaburguesa-->
+      <span id="caja-menu">
+        <div class="container-menu" id="menu" onclick="abrirMenu()">
+          <div id="bar1" class="bar1"></div>
+          <div id="bar2" class="bar2"></div>
+          <div id="bar3" class="bar3"></div>
+        </div>
+      </span>
 
-      <div class="headerRight">
-        <a href="/">INICI</a>
-        <a href="/lista_paciente">Llistat de pacients</a>
-        <a href="/registrar">Registrar nou pacient</a>
+      <!-- Overlay cuando el menu esta activado-->
+      <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <div id="tapa-caja"></div>
+          <div id="caja-pastilla">
+            <div class="pastilla">
+              <div id="tapa-pastilla-start"><h3 onclick="listaPaciente()">INI</h3></div>
+              <div id="tapa-pastilla-end"><h3>CI</h3></div>
+            </div>
+            <div class="pastilla">
+              <div id="tapa-pastilla-start"><h3>PACI</h3></div>
+              <div id="tapa-pastilla-end"><h3>ENT</h3></div>
+            </div>
+            <div class="pastilla">
+              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
+              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-    <hr />
 
     <!-- contenido de MAIN  -->
 
@@ -629,7 +655,13 @@
           <button onclick="pasarForm14()" class="buton_oculta"  id="button17">Següent</button>
       </section>
     </main>
-    <!-- <footer>ADAW ETPXAVIER 2022</footer> -->
+
+    <footer>
+      <p>ADAW ETPXAVIER 2022</p>
+    </footer>
+    
     <script src="{{url_for('static',filename='multistep_form.js')}}"></script>
+    <script src="/static/funciones.js"></script>
+    <script src="/static/menu.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@ import mysql.connector
 def conectardb(consulta):
     db = mysql.connector.connect(host='localhost',
                         user='root',
-                        password='',
+                        password='Ahinoa@21',
                         database="formulario_cai"
                         )
     cursor = db.cursor()
@@ -19,7 +19,7 @@ def conectardb(consulta):
 def obtenerDatos(consulta):
     db = mysql.connector.connect(host='localhost',
                         user='root',
-                        password='',
+                        password='Ahinoa@21',
                         database="formulario_cai"
                         )
     cursor = db.cursor()
@@ -31,7 +31,7 @@ def obtenerDatos(consulta):
 def obtenerNumPacientes(consulta):
     db = mysql.connector.connect(host='localhost',
                         user='root',
-                        password='',
+                        password='Ahinoa@21',
                         database="formulario_cai"
                         )
     cursor = db.cursor()

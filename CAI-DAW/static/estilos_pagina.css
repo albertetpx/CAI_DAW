@@ -68,11 +68,11 @@ h1 {
   font-weight: 700;
 }
 
-#text {
+/* #text {
   animation-name: slide;
   animation-duration: 3s; 
   animation-fill-mode: forwards; 
-}
+} */
 
 .button-registro {
   display: inline-block;
@@ -279,7 +279,7 @@ h2 {
   width: 150px;
   height: 30px;
   border-radius: 5px;
-  background-color: #604dfb;
+  background-color: #223645;
 }
 
 #caja-pastilla {
@@ -287,7 +287,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #604dfb;
+  border: 2px solid #223645;
   padding: 45px;
   border-radius: 35px;
 }
@@ -303,13 +303,37 @@ h2 {
   translate: 30px;
 }
 
-#tapa-pastilla {
+#tapa-pastilla-start {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  height: 35px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px 0px 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#tapa-pastilla-end h3{
+  color: #f1f1f1;
+}
+
+#tapa-pastilla-end {
   height: 35px;
   width: 80px;
   background-color: red;
   border-radius: 0px 25px 25px 0px;
-  display: inline-block;
+  display: flex;
   transition: 1s;
+  position: relative;
+  z-index: 5;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .button {
@@ -317,13 +341,15 @@ h2 {
   border: none;
   color: black;
   width: 80px;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  height: 35px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px 0px 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .button:hover {
@@ -414,14 +440,13 @@ a:active {
 
 /* FOOTER */
 footer {
-  border: solid 1px black;
-  background-color: rgb(240, 237, 237);
-  box-shadow: 2px 3px 13px black;
-  position: relative;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 97%;
+    background-color: #223645;
+    background-image: linear-gradient(white, #223645);
+    color: #fff;
+    margin: 16px 0px;
+    position: relative;
+    padding: 10px;
+    bottom: 0;
 }
 /* LOS PARRAFOS  */
 .p1 {
