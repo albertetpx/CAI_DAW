@@ -345,7 +345,7 @@ label{
 #tapa-pastilla-end {
   height: 35px;
   width: 80px;
-  background-color: red;
+  background-color: #e61f57;
   border-radius: 0px 25px 25px 0px;
   display: flex;
   cursor: pointer;
