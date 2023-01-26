@@ -1,8 +1,9 @@
 
 // function ocultarBotonRegistrar(){
 //   let butonFinal = document.getElementById("butonFinal");
-//   butonFinal.style.display = "none";
+//   butonFinal.style.display = "block";
 // }
+
 function pasarForm1() {
   let form1 = document.getElementById("part1");
   form1.style.display = "none";
@@ -281,4 +282,7 @@ function pasarForm14() {
 
   let buton18 = document.getElementById("button18");
   buton18.style.display = "flex";
+
+  let butonFinal = document.getElementById("butonFinal");
+    butonFinal.style.display = "block";
 }
