@@ -1,59 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Inicio</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='estilos_pagina.css')}}"/>
-</head>
-<body>
-    
-        <!-- Herer  Encabezado -->
-        <header>
-            <div class="headerLeft">
-                <img class="img_Logo" src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png" alt="Imagen de carta ">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Llista</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='estilos_pagina.css')}}"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- LOGO DE LA APP-->
+      <div id="logo">
+        <img
+          src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
+          alt="Imagen de logo"
+          width="90px"
+        />
+      </div>
+
+      <!-- TITULO DE LA PAGINA-->
+      <div class="titulo">
+        <h1>LLISTA</h1>
+      </div>
+      <!--Menu Hmaburguesa-->
+      <span id="caja-menu">
+        <div class="container-menu" id="menu" onclick="abrirMenu()">
+          <div id="bar1" class="bar1"></div>
+          <div id="bar2" class="bar2"></div>
+          <div id="bar3" class="bar3"></div>
+        </div>
+      </span>
+
+      <!-- Overlay cuando el menu esta activado-->
+      <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <div id="tapa-caja"></div>
+          <div id="caja-pastilla">
+            <div class="pastilla" onclick="index()">
+              <div id="tapa-pastilla-start">
+                <h3>INI</h3>
+              </div>
+              <div id="tapa-pastilla-end"><h3>CI</h3></div>
             </div>
-            
-            <h1 class="titulo1">LLISTAT DE PACIENTS</h1>
-    
-            <div class="headerRight">
-                <a href="/">INICI</a>
-                <a href="/lista_paciente">Llistat de pacients</a>
-                <a href="/registrar">Registrar nou pacient</a>
-            </div>         
+            <div class="pastilla" onclick="registro()">
+              <div id="tapa-pastilla-start"><h3>REGI</h3></div>
+              <div id="tapa-pastilla-end"><h3>STRE</h3></div>
+            </div>
+            <div class="pastilla">
+              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
+              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        </header>
-        <hr >
+    <!-- contenido de MAIN  -->
 
-<!-- contenido de MAIN  -->
-
-<main>
-        <section class="s_main_list">
-        
-           <table>
-               <tr>
-                   <th>Pacient</th>
-                   <th>Edat</th>
-                   <th>Sexe</th>
-                   <th>Lloc de naixement</th>
-                   <th>Lloc de residencia</th>
-                   <th>viu desde...</th>
-                   <th>Viu sol?</th>
-                   <th>Medicaments que pren</th>
-                  
-                </tr>
-                {% for linea in data %}
-            <tr>
-              {% for n in linea %}
-              <td> {{n}} </td>
-              {% endfor %}
-            </tr>
+    <main>
+      <section class="s_main_list">
+        <table>
+          <tr>
+            <th>Pacient</th>
+            <th>Edat</th>
+            <th>Sexe</th>
+            <th>Lloc de naixement</th>
+            <th>Lloc de residencia</th>
+            <th>viu desde...</th>
+            <th>Viu sol?</th>
+            <th>Medicaments que pren</th>
+          </tr>
+          {% for linea in data %}
+          <tr>
+            {% for n in linea %}
+            <td>{{n}}</td>
             {% endfor %}
-           </table>
-            
-        </section>
-
+          </tr>
+          {% endfor %}
+        </table>
+      </section>
     </main>
 
-    <footer>DAW ETPXAVIER 2022</footer>
-</body>
+    <footer>
+      <p>ADAW ETPXAVIER 2022</p>
+    </footer>
+
+    <script src="/static/funciones.js"></script>
+    <script src="/static/menu.js"></script>
+  </body>
 </html>

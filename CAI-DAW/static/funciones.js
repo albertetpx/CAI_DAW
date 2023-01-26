@@ -2,20 +2,22 @@ function abrirMenu() {
   // Utilizar variables
   icono = document.getElementById("menu");
   menu = document.getElementById("myNav");
-  lineas = document.getElementsByClassName("bar1");
+  linea1 = document.getElementById("bar1");
+  linea2 = document.getElementById("bar2");
+  linea3 = document.getElementById("bar3");
 
   //Cambiamos el icono
   icono.classList.toggle("change");
 
   if (menu.style.width == "100%") {
     menu.style.width = "0%";
+    linea1.style.backgroundColor = "#223645"
+    linea2.style.backgroundColor = "#223645";
+    linea3.style.backgroundColor = "#223645";
   } else {
     menu.style.width = "100%";
-    lineas.style.color = "white";
+    linea1.style.backgroundColor = "white"
+    linea2.style.backgroundColor = "white";
+    linea3.style.backgroundColor = "white";
   }
 }
-
-// function cerrarMenu() {
-//   document.getElementById("myNav").style.width = "0%";
-//   document.getElementById("caja-menu").style.display = "block";
-// }
