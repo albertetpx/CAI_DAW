@@ -593,7 +593,8 @@ td {
 }
 
 #butonFinal {
-  display: block;
+  display: none;
+  margin: 0 auto;
 }
 
 
