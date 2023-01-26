@@ -348,6 +348,7 @@ label{
   background-color: red;
   border-radius: 0px 25px 25px 0px;
   display: flex;
+  cursor: pointer;
   transition: 1s;
   position: relative;
   z-index: 5;
