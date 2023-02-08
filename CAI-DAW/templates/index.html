@@ -59,22 +59,23 @@
     </header>
 
     <main>
-      <div id="text">
-        <p><h1>Benvingut a DAWCAI, l'aplicació de registre de pacients en cures</h1></p>
-        <p id="descripcion">Actualmente hi ha un total de <b> {{ data }}</b> en el
-          registre.</p>
-          <button class="button-registro" id="button-registro" onclick="registro()">Registrar</button>
-      </div>
-      <div id="image">
-        <img src="/static/medica.png" alt="Medica" width="480px">
+      <div class="container">
+        <div id="text" class="text">
+          <p><h1>Benvingut a DAWCAI, l'aplicació de registre de pacients en cures</h1></p>
+          <p id="descripcion">Actualmente hi ha un total de <b> {{ data }}</b> en el
+            registre.</p>
+            <button class="button-registro" id="button-registro" onclick="registro()">Registrar</button>
+        </div>
+        <div id="image">
+          <img src="/static/medica.png" alt="Medica" width="480px">
+        </div>
       </div>
     </main>
 
-    <footer>
+    <!-- <footer>
       <p>ADAW ETPXAVIER 2022</p>
-    </footer>
+    </footer> -->
 
     <script src="/static/funciones.js"></script>
-    <script src="/static/menu.js"></script>  
   </body>
 </html>
