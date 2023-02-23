@@ -70,31 +70,29 @@
     <main>
       <div class="column">
         {% for linea in data %}
-        <div class="row">
-          {% for n in linea %}
+        <div id="{{linea[0]}}" class="row">
           <div class="card">
             <img src="./../static/man.png" alt="hombre" class="image-man" />
             <div class="text-card">
               <div class="text-name">
-                <h3>Pacient</h3>
+                <h3>Pacient: {{linea[1]}}</h3>
               </div>
               <div class="list">
                 <div class="items-right">
-                  <p>Edat</p>
-                  <p>Sexe</p>
+                  <p>Edat: {{linea[2]}}</p>
+                  <p>Sexe: {{linea[3]}}</p>
                 </div>
                 <div class="items-center">
-                  <p>lloc de residencia</p>
-                  <p>viu desde..</p>
+                  <p>lloc de residencia: {{linea[5]}}</p>
+                  <p>viu desde... {{linea[6]}}</p>
                 </div>
                 <div class="items-left">
-                  <p>Viu sol?</p>
-                  <p>Medicaments que pren</p>
+                  <p>Viu sol?Revisa: {{linea[13]}}</p>
+                  <p>Medicaments que pren: {{linea[16]}}</p>
                 </div>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
         {% endfor %}
       </div>
