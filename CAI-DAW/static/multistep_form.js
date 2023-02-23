@@ -1,23 +1,25 @@
-let button1_1_siguiente_arriba = document.getElementById("button1_1_siguiente");
-let button2_siguiente_arriba = document.getElementById("button2_siguiente");
-let button2_1_siguiente_arriba = document.getElementById("button2_1_siguiente");
-let button3_siguiente_arriba = document.getElementById("button3_siguiente");
-let button3_1_siguiente_arriba = document.getElementById("button3_1_siguiente");
-let button4_siguiente_arriba = document.getElementById("button4_siguiente");
-let button4_1_siguiente_arriba = document.getElementById("button4_1_siguiente");
-let button5_siguiente_arriba =   document.getElementById("button5_siguiente");
-let button6_siguiente_arriba =   document.getElementById("button6_siguiente");
-let button7_siguiente_arriba =   document.getElementById("button7_siguiente");
-let button8_siguiente_arriba =   document.getElementById("button8_siguiente");
-let button9_siguiente_arriba =   document.getElementById("button9_siguiente");
-let button10_siguiente_arriba =  document.getElementById("button10_siguiente");
-let button11_siguiente_arriba =  document.getElementById("button11_siguiente");
-let button12_siguiente_arriba =  document.getElementById("button12_siguiente");
-let button13_siguiente_arriba =  document.getElementById("button13_siguiente");
-let button14_siguiente_arriba =  document.getElementById("button14_siguiente");
+// ******
+// Para subir cada vez al principio del todo 
+// ******
+document.addEventListener("DOMContentLoaded", function() {
+  for (let i = 1; i <= 14; i++) {
+    const button = document.getElementById(`button${i}_siguiente`);
+    const button_conGion = document.getElementById(`button${i}_1_siguiente`);
+    button.addEventListener("click", function() {
+      window.scrollTo({
+        top: -100,
+        behavior: 'smooth'
+      });
+    });
+    button_conGion.addEventListener("click", function() {
+      window.scrollTo({
+        top: -100,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
 
-
-  
 function ocultarBotonRegistrar(){
   let butonFinal = document.getElementById("butonFinal");
   butonFinal.style.display = "block";
@@ -40,21 +42,6 @@ function pasarForm1() {
   // Atras 
   let buton1_atras = document.getElementById("button1_atras");
   buton1_atras.style.display = "block";
-
-  
-    function crear(){
-    // llevar arriba  de la pantalla 
-    document.getElementById("button1_siguiente").addEventListener("click", function(){
-       window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-        });
-      });
-      
-    }
-    crear();
-
-
 }
 
 function pasarForm1_1() {
@@ -81,7 +68,7 @@ function pasarForm1_1() {
     // llevar arriba  de la pantalla 
     document.getElementById("button1_siguiente").addEventListener("click", function(){
        window.scrollTo({
-         top: 0,
+         top: -100,
          behavior: 'smooth'
         });
       });

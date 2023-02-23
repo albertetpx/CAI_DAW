@@ -3,13 +3,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 7vw 37vw 6vw;
   grid-template-areas:
     "header header header"
-    "main main main"
-    "footer footer footer";
+    "container container container"
+    "footer footer footer"; */
 }
 
 header {
@@ -17,11 +17,11 @@ header {
 }
 
 .container {
-  grid-area: main;
+  grid-area: container;
 }
 
 .column {
-  grid-area: main;
+  grid-area: container;
 }
 
 footer {
@@ -57,7 +57,7 @@ header {
   font-weight: 400;
 }
 
-.container {
+.container{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -281,10 +281,16 @@ h1 {
 /* DE REGISTRAR PAGINA  */
 .s_main_registrar {
   background-color: rgba(24, 39, 51, 0.85);
-  width: 90%;
+  width: 60%;
   color: white;
-  box-shadow: 3px 4px 15px black;
-  border-radius: 20px;
+  text-align:center;
+  margin: 0 auto;
+  padding: 15px;
+}
+.s_main_registrar h2{
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px;
+  margin: 0 0 5% 0;
 }
 
 /* DE PAGINA LISTA PACIENT */
@@ -345,28 +351,25 @@ td {
 /* INPUTS selects */
 .form input,
 label input {
-  width: 40%;
-  height: 35px;
+  width: 30%;
+  height: 15px;
   font-size: 20px;
-  text-align: center;
   margin: 20px 0 40px 0;
-  box-shadow: 2px 7px 20px black;
-  border-radius: 20px;
+
 }
 textarea {
   width: 400px;
-  height: 100px;
-  padding: 30px;
+  height: 50px;
+  padding: 15px;
   margin: 30px;
 }
 
 label {
-  text-align: center;
+  text-align:center;
   width: 50%;
 }
 .form_label_si_no label input {
-  width: 50px;
-  font-size: 40px;
+  width: 15px;
 }
 /* Form raiz caja  */
 /* CONTENIDO DDE FPRM  */
@@ -564,6 +567,12 @@ label {
   box-shadow: 1px 2px 12px black;
   padding: 10px;
   margin: 30px;
+}
+
+
+/* main  */
+.register__contenido--main{
+  margin: 0 auto;
 }
 
 /* FOOTER */
