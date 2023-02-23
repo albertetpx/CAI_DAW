@@ -11,12 +11,12 @@ function abrirMenu() {
 
   if (menu.style.width == "100%") {
     menu.style.width = "0%";
-    linea1.style.backgroundColor = "#223645"
+    linea1.style.backgroundColor = "#223645";
     linea2.style.backgroundColor = "#223645";
     linea3.style.backgroundColor = "#223645";
   } else {
     menu.style.width = "100%";
-    linea1.style.backgroundColor = "white"
+    linea1.style.backgroundColor = "white";
     linea2.style.backgroundColor = "white";
     linea3.style.backgroundColor = "white";
   }
@@ -24,16 +24,31 @@ function abrirMenu() {
 
 let index = function inicio() {
   location.replace("/");
-}
+};
 
 let registro = function registrar() {
   location.replace("/registrar");
-}
+};
 
 let lista = function listaPaciente() {
   location.replace("/lista_paciente");
-}
+};
 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 // Get the modal
 var modal = document.getElementById("paciente-details");
@@ -46,8 +61,8 @@ var span = document.getElementsByClassName("close")[0];
 
 //Para cada card qué ha sido pulsado, utilizamos la función
 card.forEach(function (item) {
-	item.onclick = displayModal;
-})
+  item.onclick = displayModal;
+});
 
 // When the user clicks on the button, open the modal
 function displayModal() {
@@ -55,14 +70,13 @@ function displayModal() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-
+};

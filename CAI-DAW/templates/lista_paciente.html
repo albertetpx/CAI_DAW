@@ -10,6 +10,11 @@
       type="text/css"
       href="{{url_for('static',filename='estilos_pagina.css')}}"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -41,14 +46,16 @@
           <div id="tapa-caja"></div>
           <div id="caja-pastilla">
             <div class="pastilla" onclick="index()">
-              <div id="tapa-pastilla-start">
-                <h3>INI</h3>
-              </div>
+              <div id="tapa-pastilla-start"><h3>INI</h3></div>
               <div id="tapa-pastilla-end"><h3>CI</h3></div>
             </div>
             <div class="pastilla" onclick="registro()">
-              <div id="tapa-pastilla-start"><h3>REGI</h3></div>
-              <div id="tapa-pastilla-end"><h3>STRE</h3></div>
+              <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
+              <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+            </div>
+            <div class="pastilla" onclick="lista()">
+              <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
+              <div id="tapa-pastilla-end"><h3>TAR</h3></div>
             </div>
             <div class="pastilla">
               <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
@@ -93,55 +100,68 @@
       </div>
 
       <!--Modal para cada CardView-->
+
       <div id="paciente-details" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="paciente">
-            <img src="./../static/man.png" alt="hombre" class="image-man" />
-            <div class="details">
-              <div class="paciente-left">
-                <p>Pacient</p>
-                <p>Edat</p>
-                <p>Sexe</p>
-                <p>Lloc de naixement</p>
-              </div>
-              <div class="paciente-right">
-                <p>Lloc de residencia</p>
-                <p>viu desde...</p>
-                <p>Viu sol?</p>
-                <p>Medicaments que pren</p>
-              </div>
-            </div>
+            <!-- Modal content -->
+            <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="swiper mySwiper container">
+                    <div class="swiper-wrapper content">
+                      
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 1</h1>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 2</h1>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 3</h1>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 4</h1>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 5</h1>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide data">
+                        <div class="data-content">
+                          <h1>FORMULARIO 6</h1>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+              
+                  <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
           </div>
         </div>
       </div>
-      <!-- <section class="s_main_list">
-        <table>
-          <tr>
-            <th>Pacient</th>
-            <th>Edat</th>
-            <th>Sexe</th>
-            <th>Lloc de naixement</th>
-            <th>Lloc de residencia</th>
-            <th>viu desde...</th>
-            <th>Viu sol?</th>
-            <th>Medicaments que pren</th>
-          </tr>
-          {% for linea in data %}
-          <tr>
-            {% for n in linea %}
-            <td>{{n}}</td>
-            {% endfor %}
-          </tr>
-          {% endfor %}
-        </table>
-      </section> -->
     </main>
     <!-- 
     <footer>
       <p>ADAW ETPXAVIER 2022</p>
     </footer> -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="/static/funciones.js"></script>
   </body>
