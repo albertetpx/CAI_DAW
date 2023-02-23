@@ -77,6 +77,10 @@ h1 {
   font-weight: 700;
 }
 
+.paciente h1 {
+  font-size: 4vw;
+}
+
 .row {
   display: flex;
   flex-direction: column;
@@ -88,10 +92,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 40px;
   height: 30vw;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .card {
@@ -106,7 +109,7 @@ h1 {
   cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   opacity: 0.6;
 }
 
@@ -164,33 +167,80 @@ h1 {
 }
 
 .modal {
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
   display: none;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; 
+  background-color: transparent;
+  margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
   width: 80%;
-  height: 60%; 
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 
+/*TODO EL CONTENIDO DEL MODAL*/
+.swiper {
+  height: 30vw;
+  width: 70vw;
+}
+
+.swiper-pagination-bullet {
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #223645;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  color: #c9c9c9;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  color: #c9c9c9;
+}
 
 .close {
-  color: #aaa;
+  color: #fff;
   float: right;
-  font-size: 28px;
+  font-size: 70px;
   font-weight: bold;
+}
+
+.data {
+  align-items: center;
+  background-color: #223645;
+  border-radius: 10px;
+  color: #ddd;
+}
+
+.data-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-content h1 {
+  color: #f1f1f1;
+  font-size: 1.5em;
 }
 
 .close:hover,
@@ -200,32 +250,25 @@ h1 {
   cursor: pointer;
 }
 
-.paciente{
+.paciente {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.paciente .image-man{
+.paciente .image-man {
   width: 70px;
   height: 70px;
   padding: 10px;
 }
 
-.details{
+.details {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.paciente-left{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-}
-
-.paciente-right{
+.paciente-forms {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -529,7 +572,7 @@ label {
   display: inline-block;
   cursor: pointer;
   position: relative;
-  z-index: 99;
+  z-index: 5;
 }
 
 .bar1,
