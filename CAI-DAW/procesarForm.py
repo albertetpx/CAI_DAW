@@ -6,6 +6,7 @@ from bdPacients import rellenar_datos_13,rellenar_datos_14,rellenar_datos_15
 def procesarFormulario(request):
     respuesta = request.form
     # LEER PRIMERA PARTE FORM
+    dni = respuesta['dni']
     nom = respuesta['nom']
     edat = respuesta['edat']
     sexe = respuesta['sexe']
@@ -25,7 +26,7 @@ def procesarFormulario(request):
     problema_salut_actual =respuesta['problema_salut_actual']
     familia_procreacio =respuesta['familia_procreacio']
     
-    resultado =  rellenar_datos_1(nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
+    resultado =  rellenar_datos_1(dni,nom, edat, sexe, LLoc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments)
     print(resultado)
 
     # LEER SEGUNDA PARTE

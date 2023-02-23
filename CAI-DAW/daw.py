@@ -15,7 +15,7 @@ def principalTabla_inicio():
 def lista_paciente():
     consulta_sel = "select * from info_general;"
     data = obtenerDatos(consulta_sel)
-
+    
     return render_template("lista_paciente.html", data = data)
 
 @app.route("/registrar",methods=['GET'])
