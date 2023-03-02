@@ -323,3 +323,27 @@ def getData15(dni):
         f"""SELECT * FROM formulario_cai.necessitat_aprendre where dni = '{dni}'""")
     getData = cursor.fetchall()
     return getData
+
+def obtenerDatosPacienteTabla(dni,tableNum):
+    userData = None
+    if tableNum == 0:
+        userData = getData1(dni)
+    elif tableNum == 1:
+        userData = getData2(dni)
+    elif tableNum == 2:
+        userData = getData3(dni)
+    elif tableNum == 3:
+        userData = getData4(dni)
+    elif tableNum == 4:
+        userData = getData5(dni)
+    elif tableNum == 5:
+        userData = getData6(dni)
+    elif tableNum == 6:
+        userData = getData7(dni)
+    elif tableNum == 7:
+        userData = getData8(dni)
+    
+    if userData == []:
+        return None
+    else:
+        return userData[0]

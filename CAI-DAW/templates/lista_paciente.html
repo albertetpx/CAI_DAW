@@ -1,168 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Llista</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static',filename='estilos_pagina.css')}}"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <!-- LOGO DE LA APP-->
-      <div id="logo">
-        <img
-          src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
-          alt="Imagen de logo"
-          width="90px"
-        />
-      </div>
 
-      <!-- TITULO DE LA PAGINA-->
-      <div class="titulo">
-        <h1>LLISTA</h1>
-      </div>
-      <!--Menu Hmaburguesa-->
-      <span id="caja-menu">
-        <div class="container-menu" id="menu" onclick="abrirMenu()">
-          <div id="bar1" class="bar1"></div>
-          <div id="bar2" class="bar2"></div>
-          <div id="bar3" class="bar3"></div>
-        </div>
-      </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Llista</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='estilos_pagina.css')}}" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
 
-      <!-- Overlay cuando el menu esta activado-->
-      <div id="myNav" class="overlay">
-        <div class="overlay-content">
-          <div id="tapa-caja"></div>
-          <div id="caja-pastilla">
-            <div class="pastilla" onclick="index()">
-              <div id="tapa-pastilla-start"><h3>INI</h3></div>
-              <div id="tapa-pastilla-end"><h3>CI</h3></div>
+<body>
+  <header>
+    <!-- LOGO DE LA APP-->
+    <div id="logo">
+      <img src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png" alt="Imagen de logo"
+        width="90px" />
+    </div>
+
+    <!-- TITULO DE LA PAGINA-->
+    <div class="titulo">
+      <h1>LLISTA</h1>
+    </div>
+    <!--Menu Hmaburguesa-->
+    <span id="caja-menu">
+      <div class="container-menu" id="menu" onclick="abrirMenu()">
+        <div id="bar1" class="bar1"></div>
+        <div id="bar2" class="bar2"></div>
+        <div id="bar3" class="bar3"></div>
+      </div>
+    </span>
+
+    <!-- Overlay cuando el menu esta activado-->
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <div id="tapa-caja"></div>
+        <div id="caja-pastilla">
+          <div class="pastilla" onclick="index()">
+            <div id="tapa-pastilla-start">
+              <h3>INI</h3>
             </div>
-            <div class="pastilla" onclick="registro()">
-              <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>CI</h3>
             </div>
-            <div class="pastilla" onclick="lista()">
-              <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TAR</h3></div>
+          </div>
+          <div class="pastilla" onclick="registro()">
+            <div id="tapa-pastilla-start">
+              <h3>REGIS</h3>
             </div>
-            <div class="pastilla">
-              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
-              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>TRAR</h3>
+            </div>
+          </div>
+          <div class="pastilla" onclick="lista()">
+            <div id="tapa-pastilla-start">
+              <h3>LLIS</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>TAR</h3>
+            </div>
+          </div>
+          <div class="pastilla">
+            <div id="tapa-pastilla-start">
+              <h3>VALOR</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>ACIÓ</h3>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- contenido de MAIN  -->
-    <main>
-      <div class="column">
-        {% for linea in data %}
-        <div class="row">
-          {% for n in linea %}
-          <div class="card">
-            <img src="./../static/man.png" alt="hombre" class="image-man" />
-            <div class="text-card">
-              <div class="text-name">
-                <h3>Pacient</h3>
+  <!-- contenido de MAIN  -->
+  <main>
+    <div class="column">
+      {% for linea in data %}
+      <div class="row">
+        <div class="card" id="{{linea[0]}}">
+          <img src="./../static/man.png" alt="hombre" class="image-man" />
+          <div class="text-card">
+            <div class="text-name">
+              <h3>{{linea[0]}}</h3>
+            </div>
+            <div class="list">
+              <div class="items-right">
+                <p>Edat</p>
+                <p>Sexe</p>
               </div>
-              <div class="list">
-                <div class="items-right">
-                  <p>Edat</p>
-                  <p>Sexe</p>
-                </div>
-                <div class="items-center">
-                  <p>lloc de residencia</p>
-                  <p>viu desde..</p>
-                </div>
-                <div class="items-left">
-                  <p>Viu sol?</p>
-                  <p>Medicaments que pren</p>
-                </div>
+              <div class="items-center">
+                <p>lloc de residencia</p>
+                <p>viu desde..</p>
+              </div>
+              <div class="items-left">
+                <p>Viu sol?</p>
+                <p>Medicaments que pren</p>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
 
-      <!--Modal para cada CardView-->
+    <!--Modal para cada CardView-->
 
-      <div id="paciente-details" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <div class="swiper mySwiper container">
-                    <div class="swiper-wrapper content">
-                      
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 1</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 2</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 3</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 4</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 5</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 6</h1>
-                        </div>
-                      </div>
-              
-                    </div>
-                  </div>
-              
-                  <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
+    <div id="paciente-details" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="swiper mySwiper container">
+          <div class="swiper-wrapper content">
+            {% for n in range(numTablas)%}
+            <div class="swiper-slide data">
+              <div class="data-content">
+                <h1>FORMULARIO {{n}}</h1>
+                <p>Datos de paciente aquí</p>
+              </div>
+            </div>
+            {% endfor %}
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-    </main>
-    <!-- 
+    </div>
+    </div>
+    </div>
+  </main>
+  <!-- 
     <footer>
       <p>ADAW ETPXAVIER 2022</p>
     </footer> -->
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="/static/funciones.js"></script>
-  </body>
+  <script src="/static/funciones.js"></script>
+</body>
+
 </html>
