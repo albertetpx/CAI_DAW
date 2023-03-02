@@ -57,7 +57,9 @@ def getData1(dni):
     cursor.execute(
         f"""SELECT * FROM formulario_cai.info_general where dni = '{dni}'""")
     getData = cursor.fetchall()
-    return getData
+    num_fields = len(cursor.description)
+    field_names = [i[0] for i in cursor.description]
+    return (field_names,getData[0])
 
 
 def rellenar_datos_2(ritme, frequencia_cardiaca, frequencia_r, pa, amplitud, tipus_respiracio, orifisis_nasals_permeables, coloracio_mucoses, coloracio_pell, respiracio, tos, tos_descripcio, mucositat, mucositat_descripcio, expectoracio, altres_manifestacions, situacions_influencien_respiracio, quines_influencien, mitja_utilitza_respirar_millor, fuma, cigars_dia, dni):
@@ -346,4 +348,4 @@ def obtenerDatosPacienteTabla(dni,tableNum):
     if userData == []:
         return None
     else:
-        return userData[0]
+        return userData

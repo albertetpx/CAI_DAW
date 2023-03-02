@@ -8,7 +8,8 @@
   <title>Llista</title>
   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='estilos_pagina.css')}}" />
   <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="{{url_for('static',filename='swiper-bundle.css')}}" />
 </head>
 
 <body>
@@ -37,7 +38,7 @@
       <div class="overlay-content">
         <div id="tapa-caja"></div>
         <div id="caja-pastilla">
-          <div class="pastilla" onclick="index()">
+          <div class="pastilla" onclick="inico()">
             <div id="tapa-pastilla-start">
               <h3>INI</h3>
             </div>
@@ -45,7 +46,7 @@
               <h3>CI</h3>
             </div>
           </div>
-          <div class="pastilla" onclick="registro()">
+          <div class="pastilla" onclick="registrar()">
             <div id="tapa-pastilla-start">
               <h3>REGIS</h3>
             </div>
@@ -53,7 +54,7 @@
               <h3>TRAR</h3>
             </div>
           </div>
-          <div class="pastilla" onclick="lista()">
+          <div class="pastilla" onclick="listarPacientes()">
             <div id="tapa-pastilla-start">
               <h3>LLIS</h3>
             </div>
@@ -138,7 +139,6 @@
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="/static/funciones.js"></script>
 </body>
 

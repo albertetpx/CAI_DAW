@@ -19,23 +19,24 @@ var modal = document.getElementById("paciente-details");
 var span = document.getElementsByClassName("close")[0];
 var currentUser = "";
 
+// Configuración del menú de navegación
+function inicio() {
+  location.replace("/");
+};
+
+function registrar() {
+  console.log("Boton registrar clicado")
+  location.replace("/registrar");
+};
+
+function listarPacientes() {
+  location.replace("/lista_paciente");
+};
+
+
 // Funciones a ejecutar en el windows load
 window.onload = () => {
-  // Configuración del menú de navegación
-  let index = function inicio() {
-    location.replace("/");
-  };
-
-  let registro = function registrar() {
-    location.replace("/registrar");
-  };
-
-  let lista = function listaPaciente() {
-    location.replace("/lista_paciente");
-  };
-
-
-  // Configuración del swiper
+   // Configuración del swiper
   var card = Array.from(document.getElementsByClassName("card"));
   var swiperButtonPrev = Array.from(document.getElementsByClassName("swiper-button-prev"));
   var swiperButtonNext = Array.from(document.getElementsByClassName("swiper-button-next"));
@@ -100,28 +101,63 @@ function getDataForModal(card) {
   currentDNI = currentUser;
   currentSlide = swiper.realIndex;
   currentModal = swiper.slides[swiper.realIndex];
-  
+  // console.log(currentModal);
   // Montar AJAX
   queryData(currentDNI, currentSlide, currentModal)
-
-  
 }
 
-function queryData(currentDNI, currentSlide, currentModal){
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function(currentModal) {
-    userData = this.response;
-    updateModalElements(currentModal,userData)
-    }
+function queryData(currentDNI, currentSlide, currentModal) {
+  const xhttp = new XMLHttpRequest(); 
+  xhttp.onload = function () {
+    userData = JSON.parse(this.responseText);
+    updateModalElements(currentModal, userData)
+  }
   xhttp.open("POST", "/consultarDatosPaciente", true);
-  payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+  payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
   xhttp.send(payload);
   return
 }
 
-function updateModalElements(currentModal,userData){
+function updateModalElements(currentModal, userData) {
   // Update modal
-  console.log(userData);  
+  // console.log(currentModal);
+  let modalContent = currentModal.children[0]
+  // modalContent.innerHTML = userData;
+  createTable(modalContent,userData)
   return
+}
+
+function createTable(modalContent,userData){
+  let tables = document.getElementsByClassName("dataTable")[0];
+  if (tables != undefined){
+    tables.remove();  
+  }
+
+  //Creamos tabla
+  let table = document.createElement('table');
+  table.classList.add("dataTable");
+  let rowHeading = document.createElement('tr');
+  let rowData = document.createElement('tr');
+  // console.log(userData[0]);
+  //Crear celdas de encabezado
+  for (let heading of userData[0]){
+    // console.log(heading)
+    let th = document.createElement('th');
+    th.innerHTML = heading;
+    rowHeading.append(th)
+  }
+  //Crear celdas de datos
+  for (let data of userData[1]){
+    // console.log(data)
+    let td = document.createElement('td');
+    td.innerHTML = data;
+    rowData.append(td)
+  }
+  //Montamos tabla
+  table.append(rowHeading);
+  table.append(rowData);
+  modalContent.append(table);
+
 }

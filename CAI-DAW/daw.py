@@ -49,9 +49,9 @@ def ex_pagina_error():
 def consultarDatosPaciente():
     # Tenemos que recibir: DNI, num slide-tabla
     if request.method == 'POST':  
-        # print(request.form['dni'],request.form['tableNum'])
+        print(request.form['dni'],request.form['tableNum'])
         userData = obtenerDatosPacienteTabla(request.form['dni'],int(request.form['tableNum']))
-        print(userData)
+        # print(userData)
         return jsonify(userData)
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True

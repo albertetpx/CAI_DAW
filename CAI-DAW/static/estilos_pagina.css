@@ -243,6 +243,13 @@ h1 {
   font-size: 1.5em;
 }
 
+
+/* .dataTable{
+  width: 50vw !important;
+  background-color: red !important;
+} */
+
+
 .close:hover,
 .close:focus {
   color: black;
@@ -342,7 +349,7 @@ table {
   border: 1px solid black;
   margin-top: 2.9%;
   margin-left: 8%;
-  width: 90%;
+  max-width: 50vw;
   box-shadow: 2px 3px 20px black;
   text-align: center;
 }
@@ -350,10 +357,10 @@ tr,
 th,
 td {
   border: 1px solid black;
-  font-size: 20px;
+  font-size: 10px;
 }
 th {
-  background-color: black;
+  background-color: red;
   color: rgb(163, 157, 157);
   padding: 10px;
 }
