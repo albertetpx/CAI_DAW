@@ -1,25 +1,3 @@
-// ******
-// Para subir cada vez al principio del todo 
-// ******
-document.addEventListener("DOMContentLoaded", function() {
-  for (let i = 1; i <= 14; i++) {
-    const button = document.getElementById(`button${i}_siguiente`);
-    const button_conGion = document.getElementById(`button${i}_1_siguiente`);
-    button.addEventListener("click", function() {
-      window.scrollTo({
-        top: -100,
-        behavior: 'smooth'
-      });
-    });
-    button_conGion.addEventListener("click", function() {
-      window.scrollTo({
-        top: -100,
-        behavior: 'smooth'
-      });
-    });
-  }
-});
-
 function ocultarBotonRegistrar(){
   let butonFinal = document.getElementById("butonFinal");
   butonFinal.style.display = "block";
@@ -53,6 +31,28 @@ function showForm(id){
 
 
 // DEPRECATED FUNCIONS ////////////////////////////////////////////////////////////////////////////
+
+// ******
+// Para subir cada vez al principio del todo 
+// ******
+// document.addEventListener("DOMContentLoaded", function() {
+//   for (let i = 1; i <= 14; i++) {
+//     const button = document.getElementById(`button${i}_siguiente`);
+//     const button_conGion = document.getElementById(`button${i}_1_siguiente`);
+//     button.addEventListener("click", function() {
+//       window.scrollTo({
+//         top: -100,
+//         behavior: 'smooth'
+//       });
+//     });
+//     button_conGion.addEventListener("click", function() {
+//       window.scrollTo({
+//         top: -100,
+//         behavior: 'smooth'
+//       });
+//     });
+//   }
+// });
 
 function pasarForm1() {
 
