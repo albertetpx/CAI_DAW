@@ -29,7 +29,7 @@ def registrar():
 def registrarPacientes():
     try:
         if request.method == 'POST':
-            procesarFormulario(request)
+            procesarFormulario(request)         
             return redirect(url_for("ex_pagina_exit"))
         else:
             return render_template("registrar.html")    

@@ -488,6 +488,7 @@ main h1 {
   flex-wrap: wrap;
   column-gap: 3%;
   overflow: auto;
+  justify-content: space-between;
 }
 
 .modal-content .data-content .dataTable .cell{
@@ -541,7 +542,6 @@ main h1 {
 
 .form {
   display: flex;
-  /* margin-left: 250px; */
 }
 
 .s_main_registrar {
@@ -550,12 +550,19 @@ main h1 {
   color: white;
   text-align:center;
   margin: 0 auto;
-  padding: 15px;
+  padding: 10px;
 }
 .s_main_registrar h2{
   background-color: rgba(0,0,0,0.4);
   padding: 20px;
-  margin: 0 0 5% 0;
+  margin: 0 0 1% 0;
+}
+
+.s_main_registrar h3{
+  color: rgba(0,0,0,0.4);
+  background-color: #c9c9c9;
+  width: 80%;
+  padding: 1%;
 }
 
 .form table {
@@ -732,6 +739,27 @@ td {
     transform: translate(0vw, 0vw);
   }
 }
+
+/* Estils de botonera */
+.botonera{
+  display: flex;
+  justify-content: center;
+  column-gap: 3%;
+  margin: 2%;
+  margin-bottom: 0%;
+}
+.botonera button{
+  width: 1%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgba(24, 39, 51, 0.85);
+  border: gray solid 1px;
+}
+
+.botonera button.active{
+  background-color: #c9c9c9;
+}
+
 
 /* PaginaExit page styles *************************************************************************/
 .s_main_exitosa {
