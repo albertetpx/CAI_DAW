@@ -36,7 +36,7 @@ function listarPacientes() {
 
 // Funciones a ejecutar en el windows load
 window.onload = () => {
-   // Configuración del swiper
+  // Configuración del swiper
   var card = Array.from(document.getElementsByClassName("card"));
   var swiperButtonPrev = Array.from(document.getElementsByClassName("swiper-button-prev"));
   var swiperButtonNext = Array.from(document.getElementsByClassName("swiper-button-next"));
@@ -107,7 +107,7 @@ function getDataForModal(card) {
 }
 
 function queryData(currentDNI, currentSlide, currentModal) {
-  const xhttp = new XMLHttpRequest(); 
+  const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
     userData = JSON.parse(this.responseText);
     updateModalElements(currentModal, userData)
@@ -125,14 +125,42 @@ function updateModalElements(currentModal, userData) {
   // console.log(currentModal);
   let modalContent = currentModal.children[0]
   // modalContent.innerHTML = userData;
-  createTable(modalContent,userData)
+  createTableFlex(modalContent, userData)
   return
 }
 
-function createTable(modalContent,userData){
+function createTableFlex(modalContent, userData) {
   let tables = document.getElementsByClassName("dataTable")[0];
-  if (tables != undefined){
-    tables.remove();  
+  if (tables != undefined) {
+    tables.remove();
+  }
+
+  //Creamos tabla
+  let table = document.createElement('div');
+  table.classList.add("dataTable");
+  //Crear celdas de encabezado
+  userData[0].forEach(function(value,index){
+    // console.log(heading)
+    let cell = document.createElement('div');
+    cell.classList.add("cell");
+    let headingCell = document.createElement('div');
+    headingCell.classList.add("headingCell");
+    let dataCell = document.createElement('div');
+    dataCell.classList.add("dataCell");
+    headingCell.innerHTML = value;
+    dataCell.innerHTML = userData[1][index];
+    cell.append(headingCell);
+    cell.append(dataCell);
+    table.append(cell);
+  })
+  modalContent.append(table);
+}
+
+
+function createTable(modalContent, userData) {
+  let tables = document.getElementsByClassName("dataTable")[0];
+  if (tables != undefined) {
+    tables.remove();
   }
 
   //Creamos tabla
@@ -142,14 +170,14 @@ function createTable(modalContent,userData){
   let rowData = document.createElement('tr');
   // console.log(userData[0]);
   //Crear celdas de encabezado
-  for (let heading of userData[0]){
+  for (let heading of userData[0]) {
     // console.log(heading)
     let th = document.createElement('th');
     th.innerHTML = heading;
     rowHeading.append(th)
   }
   //Crear celdas de datos
-  for (let data of userData[1]){
+  for (let data of userData[1]) {
     // console.log(data)
     let td = document.createElement('td');
     td.innerHTML = data;
