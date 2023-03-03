@@ -25,6 +25,35 @@ function ocultarBotonRegistrar(){
   butonFinal.style.display = "block";
 }
 
+function showForm(id){
+  //Ocultamos todos los forms
+  let forms = Array.from(document.getElementsByClassName("form"));
+  forms.forEach((value,index)=>{
+    value.style.display = "none";
+  })
+  //Mostramos el form activo
+  let form = document.getElementById(`part${id}`);
+  form.style.display = "flex";
+  //Actualizamos botonera
+  Array.from(document.getElementsByClassName("botoneraActive"))[0].classList.remove('botoneraActive');
+  document.getElementById(`botonera${id}`).classList.add('botoneraActive');
+
+  //Si es último form, mostramos botón de SUBMIT
+  if(id == 19){
+    let butonFinal = document.getElementById("butonFinal");
+    butonFinal.style.display = "block";
+  }
+
+  //Scroll a la parte de arriba de window
+  window.scrollTo({
+    top: -100,
+    behavior: 'smooth'
+  });
+}
+
+
+// DEPRECATED FUNCIONS ////////////////////////////////////////////////////////////////////////////
+
 function pasarForm1() {
 
   let form1 = document.getElementById("part1");
@@ -978,4 +1007,3 @@ function pasarForm14_atras() {
   let butonFinal = document.getElementById("butonFinal");
     butonFinal.style.display = "none";
 }
-

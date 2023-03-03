@@ -19,7 +19,7 @@
 
     <!-- TITULO DE LA PAGINA-->
     <div class="titulo">
-      <h1>REGISTRE</h1>
+      <h1>REGISTRE DE NOU PACIENT </h1>
     </div>
     <!--Menu Hmaburguesa-->
     <span id="caja-menu">
@@ -76,38 +76,38 @@
 
   <main class="register__contenido--main">
     <section class="s_main_registrar">
-      <h2>REGISTRE DE NOU PACIENT</h2>
+      <!-- <h2>REGISTRE DE NOU PACIENT</h2> -->
 
       <div class="botonera">
-        <button id="botonera1" class="active"></button>
-        <button id="botonera2"></button>
-        <button id="botonera3"></button>
-        <button id="botonera4"></button>
-        <button id="botonera5"></button>
-        <button id="botonera6"></button>
-        <button id="botonera7"></button>
-        <button id="botonera8"></button>
-        <button id="botonera9"></button>
-        <button id="botonera10"></button>
-        <button id="botonera11"></button>
-        <button id="botonera12"></button>
-        <button id="botonera13"></button>
-        <button id="botonera14"></button>
-        <button id="botonera15"></button>
-        <button id="botonera16"></button>
-        <button id="botonera17"></button>
-        <button id="botonera18"></button>
-        <button id="botonera19"></button>
+        <button id="botonera1" class="botoneraActive" onclick="showForm(1)"></button>
+        <button id="botonera2"" onclick="showForm(2)"></button>
+        <button id="botonera3"" onclick="showForm(3)"></button>
+        <button id="botonera4"" onclick="showForm(4)"></button>
+        <button id="botonera5"" onclick="showForm(5)"></button>
+        <button id="botonera6"" onclick="showForm(6)"></button>
+        <button id="botonera7"" onclick="showForm(7)"></button>
+        <button id="botonera8"" onclick="showForm(8)"></button>
+        <button id="botonera9"" onclick="showForm(9)"></button>
+        <button id="botonera10" onclick="showForm(10)"></button>
+        <button id="botonera11" onclick="showForm(11)"></button>
+        <button id="botonera12" onclick="showForm(12)"></button>
+        <button id="botonera13" onclick="showForm(13)"></button>
+        <button id="botonera14" onclick="showForm(14)"></button>
+        <button id="botonera15" onclick="showForm(15)"></button>
+        <button id="botonera16" onclick="showForm(16)"></button>
+        <button id="botonera17" onclick="showForm(17)"></button>
+        <button id="botonera18" onclick="showForm(18)"></button>
+        <button id="botonera19" onclick="showForm(19)"></button>
       </div>
 
       <form action="/recibirDatosPaciente" method="POST">
 
-        <!-- Inicio Form 1.I -->
+        <!-- Inicio Form 1 -->
         <div class="form" id="part1">
           <h3>Informació general (I)</h3>
           <label for="nom">Nom</label>
           <input placeholder="Nom" type="text" value="a" id="nom" name="nom" />
-          <label for="dni">Nif</label>
+          <label for="dni">DNI/NIE</label>
           <input placeholder="Dni" type="text" value="a" id="dni" name="dni" />
           <label for="edat">Edat </label>
           <input placeholder="Edat" type="number" value=1 id="edat" name="edat" />
@@ -134,11 +134,15 @@
           <input type="text" value="a" id="rol_ocupa" name="rol_ocupa" />
           <label for="membres_integren">MEMBRE QUE LA INTEGREN </label>
           <input type="text" value="a" id="membres_integren" name="membres_integren" />
+          <div class="formControls formControls01">
+            <div class="formButton prev hidden">ENRERE</div>
+            <div class="formButton back" onclick="showForm(2)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 1.I -->
+        <!-- Fin Form 1 -->
 
-        <!-- Inicio Form 1.II -->
-        <div class="form" id="part1_1">
+        <!-- Inicio Form 2 -->
+        <div class="form" id="part2">
           <h3>Informació general (i II)</h3>
           <label for="temps_residencia">TEMPS DE RESIDÈNCIA</label>
           <input type="number" value=1 name="temps_residencia" />
@@ -160,11 +164,15 @@
             <label>NO
               <input type="radio" value="NO" name="familia_procreacio" /> </label>
           </div>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(1)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(3)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 1.II -->
+        <!-- Fin Form 2 -->
 
-        <!-- Inicio Form 2.I -->
-        <div class="form" id="part2">
+        <!-- Inicio Form 3 -->
+        <div class="form" id="part3">
           <h3>Necessitats respiratòries (I)</h3>
           <label for="ritme">RITME </label>
           <input type="text" value="a" name="ritme" />
@@ -196,11 +204,15 @@
             <label>SOROLLOSA
               <input type="radio" value="a" name="respiracio" id="res2" /></label>
           </div>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(2)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(4)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 2.I -->
+        <!-- Fin Form 3 -->
 
-        <!-- Inicio Form 2.II -->
-        <div class="form" id="part2_1">
+        <!-- Inicio Form 4 -->
+        <div class="form" id="part4">
           <h3>Necessitats respiratòries (i II)</h3>
           <label>TOS: </label>
           <div class="form_label_si_no">
@@ -245,11 +257,15 @@
           </div>
           <label for="cigars_dia">CIGARS DIA </label>
           <input type="number" value=1 name="cigars_dia" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(3)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(5)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 2.II -->
+        <!-- Fin Form 4 -->
 
-        <!-- Inicio Form 3.I -->
-        <div class="form" id="part3">
+        <!-- Inicio Form 5 -->
+        <div class="form" id="part5">
           <h3>Menjar i beure (I)</h3>
           <label for="pes">PES</label>
           <input type="number" value=1 name="pes">
@@ -281,11 +297,15 @@
           <input type="text" value="a" name="esmorzar">
           <label for="dinar">DINAR </label>
           <input type="text" value="a" name="dinar">
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(4)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(6)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 3.I -->
+        <!-- Fin Form 5 -->
 
-        <!-- Inicio Form 3.II -->
-        <div class="form" id="part3_1">
+        <!-- Inicio Form 6 -->
+        <div class="form" id="part6">
           <h3>Menjar i beure (i II)</h3>
           <label for="berenar">BERENAR </label>
           <input type="text" value="a" name="berenar">
@@ -335,11 +355,15 @@
             name="mitjans_utilitza_millorar"></textarea>
           <label for="altres_manifestacions3">ALTRES MANIFESTACIONS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions3"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(5)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(7)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 3.II -->
+        <!-- Fin Form 6 -->
 
-        <!-- Inicio Form 4.I -->
-        <div class="form" id="part4">
+        <!-- Inicio Form 7 -->
+        <div class="form" id="part7">
           <h3>Necesssitats d'eliminar (I)</h3>
           <table class="table_multi">
             <tr>
@@ -389,11 +413,15 @@
               <td></td>
             </tr>
           </table> <br><br>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(6)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(8)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 4.I -->
+        <!-- Fin Form 7 -->
 
-        <!-- Inicio Form 4.II -->
-        <div class="form" id="part4_1">
+        <!-- Inicio Form 8 -->
+        <div class="form" id="part8">
           <h3>Necesssitats d'eliminar (i II)</h3>
           <label>HI HA SITUACIONS QUE INFLUENCIEN ELS SEUS HÀBITS D'ELIMINACIÓ: </label>
           <div class="form_label_si_no">
@@ -409,11 +437,15 @@
             name="mitjans_utilitzar_eliminar_millor"></textarea>
           <label for="altres_manifestacions4">ALTRES MANIFESTACIONS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions4"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(7)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(9)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 4.I -->
+        <!-- Fin Form 8 -->
 
-        <!-- Inicio Form 5 -->
-        <div class="form" id="part5">
+        <!-- Inicio Form 9 -->
+        <div class="form" id="part9">
           <h3>Necesssitats de mobilitat</h3>
           <label>POT MOURE TOTES LES PART DEL COS </label>
           <div class="form_label_si_no">
@@ -453,11 +485,15 @@
             name="mitjans_utilitza_moure_millor_mantenir_postura_adequada"></textarea>
           <label for="altres_manifestacions5"> ALTRES MANIFESTACIONS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions5"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(8)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(10)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 5 -->
+        <!-- Fin Form 9 -->
 
-        <!-- Inicio Form 6 -->
-        <div class="form" id="part6">
+        <!-- Inicio Form 10 -->
+        <div class="form" id="part10">
           <h3>Necesssitats relacionades amb la son</h3>
           <label for="hores_dorm">HORES QUE DORM HABITUALMENT</label>
           <input type="number" value=1 name="hores_dorm">
@@ -491,11 +527,15 @@
           <input type="text" value="a" name="mitjans_utilitza_dormir_millor_reposar">
           <label for="altres_manifestacions6">Altres manifestacions: </label>
           <input type="text" value="a" name="altres_manifestacions6">
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(9)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(11)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 6 -->
+        <!-- Fin Form 10 -->
 
-        <!-- Inicio Form 7 -->
-        <div class="form" id="part7">
+        <!-- Inicio Form 11 -->
+        <div class="form" id="part11">
           <h3>Necesssitats de vestimenta</h3>
           <label for="significat_roba"> SIGNIFICAT DE LA ROBA</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="significat_roba"></textarea>
@@ -524,11 +564,15 @@
             name="mitjans_millorar_satisfaccio_vestir_desvestir"></textarea>
           <label for="altres_manifestacions7">ALTRES MANIFESTACIONS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions7"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(10)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(12)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 7 -->
+        <!-- Fin Form 11 -->
 
-        <!-- Inicio Form 8 -->
-        <div class="form" id="part8">
+        <!-- Inicio Form 12 -->
+        <div class="form" id="part12">
           <h3>Necesssitats relacionades amb la temperatura</h3>
           <label for="TEMP_PELL">TEMPERATURA DE LA PELL:</label>
           <input type="number" value=1 id="TEMP_PELL" name="temperatura_pell">
@@ -553,11 +597,15 @@
           <label for="mitjans_utilitza_mantenir_temperatura">MITJANS QUE UTILITZA PER MANTENIR LA TEMPERATURA:</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
             name="mitjans_utilitza_mantenir_temperatura"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(11)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(13)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 8 -->
+        <!-- Fin Form 12 -->
 
-        <!-- Inicio Form 9-->
-        <div class="form" id="part9">
+        <!-- Inicio Form 13-->
+        <div class="form" id="part13">
           <h3>Necesssitats d'higiene</h3>
           <label for="condicions_higeniques_pell_mucoses"> CONDICIONS HIGIÈNIQUES DE PELL Y MUCOSAS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
@@ -586,11 +634,15 @@
             name="mijans_utilitza_millorar_higene"></textarea>
           <label for="altres_manifestacions9"> ALTRES MANIFESTACIONS </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions9"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(12)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(14)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 9 -->
+        <!-- Fin Form 13 -->
 
-        <!-- Inicio Form 10 -->
-        <div class="form" id="part10">
+        <!-- Inicio Form 14 -->
+        <div class="form" id="part14">
           <h3>Necesssitats d'evitar perills</h3>
           <label for="coneix_mides_prevencio">CONEIX MIDES DE PREVENCIÓ: </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="coneix_mides_prevencio"
@@ -621,11 +673,15 @@
           <label for="altres_manifestacio10">ALTRES MANIFESTACIONS:</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacio10"
             value="a"></textarea>
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(13)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(15)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 10 -->
+        <!-- Fin Form 14 -->
 
-        <!-- Inicio Form 11 -->
-        <div class="form" id="part11">
+        <!-- Inicio Form 15 -->
+        <div class="form" id="part15">
           <h3>Necesssitats de comunicació</h3>
           <label for="estat_consciencia">ESTAT DE CONSCIENCIA: </label>
           <input type="text" value="a" name="estat_consciencia" />
@@ -650,11 +706,15 @@
           <input type="text" value="a" name="mitjans_faciliten_comunicacio" />
           <label for="altres_manifestacions11">ALTRES MANIFESTACIONS: </label>
           <input type="text" value="a" name="altres_manifestacions11" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(14)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(16)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 11 -->
+        <!-- Fin Form 15 -->
 
-        <!-- Inicio Form 12 -->
-        <div class="form" id="part12">
+        <!-- Inicio Form 16 -->
+        <div class="form" id="part16">
           <h3>Necesssitats de creences i valors</h3>
           <label for="quines_creences_valors">QUINES SON LES SEVES CREENCES I VALORS PRIORITARIS: </label>
           <input type="text" value="a" name="quines_creences_valors" />
@@ -663,11 +723,15 @@
           <input type="text" value="a" name="mitjans_utilitza_viure_creences_valors" />
           <label for="altres_manifestacions12">ALTRES MANIFESTACIONS: </label>
           <input type="text" value="a" name="altres_manifestacions12" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(15)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(17)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 12 -->
+        <!-- Fin Form 16 -->
 
-        <!-- Inicio Form 13 -->
-        <div class="form" id="part13">
+        <!-- Inicio Form 17 -->
+        <div class="form" id="part17">
           <label for="rol_familiar">ROL FAMILIAR:</label>
           <input type="text" value="a" name="rol_familiar" />
           <label for="rol_social">ROL SOCIAL:</label>
@@ -681,11 +745,15 @@
           <input type="text" value="a" name="mitjans_millorar13" />
           <label for="altres_manifestacions13">ALTRES MANIFESTACIONS: </label>
           <input type="text" value="a" name="altres_manifestacions13" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(16)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(18)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 13 -->
+        <!-- Fin Form 17 -->
 
-        <!-- Inicio Form 14 -->
-        <div class="form" id="part14">
+        <!-- Inicio Form 18 -->
+        <div class="form" id="part18">
           <h3>Necesssitats d'esbargiment</h3>
           <label for="HABITS_DE_DIVERSIO_I_DISTRACCIO">HABITS DE DIVERSIÓ I DISTRACCIÓ:</label>
           <input type="text" value="a" name="HABITS_DE_DIVERSIO_I_DISTRACCIO" />
@@ -714,11 +782,15 @@
           <input type="text" value="a" name="mitjans_utilitza_millorar_realitzacio" />
           <label for="altres_manifestacions14">ALTRES MANIFESTACIONS: </label><input type="text" value="a"
             name="altres_manifestacions14" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(17)">ENRERE</div>
+            <div class="formButton back" onclick="showForm(19)">SEGÜENT</div>
+          </div>
         </div>
-        <!-- Fin Form 14 -->
+        <!-- Fin Form 18 -->
 
-        <!-- Inicio Form 15 -->
-        <div class="form" id="part15">
+        <!-- Inicio Form 19 -->
+        <div class="form" id="part19">
           <h3>Necesssitats d'aprenentatge</h3>
           <label>TE INTERÈS PER A CONEIXER EL PROCÉS DE LA SEVA SALUT:</label>
           <div class="form_label_si_no">
@@ -737,19 +809,23 @@
           <input type="text" value="a" name="mitjans_utilitza_aprendre" value="a" />
           <label for="altres_manifestacions15">ALTRES MANIFESTACIONS:</label>
           <input type="text" value="a" name="altres_manifestacions15" />
+          <div class="formControls formControls01">
+            <div class="formButton prev" onclick="showForm(18)">ENRERE</div>
+            <input type="submit" name="registrar" value="REGISTRAR PACIENT" id="butonFinal" class="formButton final" />
+          </div>
         </div>
-        <!-- Fin Form 15 -->
-        <input type="submit" name="registrar" value="Registrar pacient" id="butonFinal" />
+        <!-- Fin Form 19 -->
+        
       </form>
-      
+
 
       <!-- BOTONES DE NAVEGACIÓN -->
-      <button onclick="pasarForm1()" id="button1_siguiente">Següent</button>
-      <button onclick="pasarForm1_1()" class="buton_oculta" id="button1_1_siguiente">Següent
-        (button1_1_siguiente)</button>
-      <button onclick="pasarForm2()" class="buton_oculta" id="button2_siguiente">Següent (button2_siguiente)</button>
+      <!-- <button onclick="pasarForm1()" id="button1_siguiente">Següent</button> -->
+      <!-- <button onclick="pasarForm1_1()" class="buton_oculta" id="button1_1_siguiente">Següent -->
+        <!-- (button1_1_siguiente)</button> -->
+      <!-- <button onclick="pasarForm2()" class="buton_oculta" id="button2_siguiente">Següent (button2_siguiente)</button> -->
       <!-- Echa asta aqui -->
-      <button onclick="pasarForm2_1()" class="buton_oculta" id="button2_1_siguiente">Següent
+      <!-- <button onclick="pasarForm2_1()" class="buton_oculta" id="button2_1_siguiente">Següent
         (button2_1_siguiente)</button>
       <button onclick="pasarForm3()" class="buton_oculta" id="button3_siguiente">Següent (button3_siguiente)</button>
       <button onclick="pasarForm3_1()" class="buton_oculta" id="button3_1_siguiente">Següent
@@ -766,13 +842,13 @@
       <button onclick="pasarForm11()" class="buton_oculta" id="button11_siguiente">Següent (button11_siguiente)</button>
       <button onclick="pasarForm12()" class="buton_oculta" id="button12_siguiente">Següent (button12_siguiente)</button>
       <button onclick="pasarForm13()" class="buton_oculta" id="button13_siguiente">Següent (button13_siguiente)</button>
-      <button onclick="pasarForm14()" class="buton_oculta" id="button14_siguiente">Següent (button14_siguiente)</button>
+      <button onclick="pasarForm14()" class="buton_oculta" id="button14_siguiente">Següent (button14_siguiente)</button> -->
       <!-- Boton atras -->
-      <button onclick="pasarForm1_atras()" class="buton_oculta" id="button1_atras">Enrere (button1_atras)</button>
+      <!-- <button onclick="pasarForm1_atras()" class="buton_oculta" id="button1_atras">Enrere (button1_atras)</button>
       <button onclick="pasarForm1_1_atras()" class="buton_oculta" id="button1_1_atras">Enrere (button1_1_atras)</button>
-      <button onclick="pasarForm2_atras()" class="buton_oculta" id="button2_atras">Enrere (button2_atras)</button>
+      <button onclick="pasarForm2_atras()" class="buton_oculta" id="button2_atras">Enrere (button2_atras)</button> -->
       <!-- echa  -->
-      <button onclick="pasarForm2_1_atras()" class="buton_oculta" id="button2_1_atras">Enrere (button2_1_atras)</button>
+      <!-- <button onclick="pasarForm2_1_atras()" class="buton_oculta" id="button2_1_atras">Enrere (button2_1_atras)</button>
       <button onclick="pasarForm3_atras()" class="buton_oculta" id="button3_atras">Enrere (button3_atras)</button>
       <button onclick="pasarForm3_1_atras()" class="buton_oculta" id="button3_1_atras">Enrere (button3_1_atras)</button>
       <button onclick="pasarForm4_atras()" class="buton_oculta" id="button4_atras">Enrere</button>
@@ -786,7 +862,7 @@
       <button onclick="pasarForm11_atras()" class="buton_oculta" id="button11_atras">Enrere</button>
       <button onclick="pasarForm12_atras()" class="buton_oculta" id="button12_atras">Enrere</button>
       <button onclick="pasarForm13_atras()" class="buton_oculta" id="button13_atras">Enrere</button>
-      <button onclick="pasarForm14_atras()" class="buton_oculta" id="button14_atras">Enrere</button>
+      <button onclick="pasarForm14_atras()" class="buton_oculta" id="button14_atras">Enrere</button> -->
     </section>
   </main>
   <!-- 

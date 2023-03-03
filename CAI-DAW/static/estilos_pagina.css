@@ -551,18 +551,22 @@ main h1 {
   text-align:center;
   margin: 0 auto;
   padding: 10px;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
 }
 .s_main_registrar h2{
   background-color: rgba(0,0,0,0.4);
   padding: 20px;
-  margin: 0 0 1% 0;
+  margin: 0 0 3% 0;
 }
 
 .s_main_registrar h3{
-  color: rgba(0,0,0,0.4);
-  background-color: #c9c9c9;
+  background-color: rgba(0,0,0,0.4);
+  opacity: 60%;
   width: 80%;
   padding: 1%;
+  letter-spacing: .1rem;
+  margin-bottom: 3%
 }
 
 .form table {
@@ -592,11 +596,12 @@ main h1 {
 /* INPUTS selects */
 .form input,
 .form label input {
-  width: 30%;
+  width: 50%;
   height: 15px;
   font-size: 20px;
-  margin: 20px 0 40px 0;
-
+  margin: 10px 0 20px 0;
+  padding: 3px;
+  text-align: center;
 }
 .form textarea {
   width: 400px;
@@ -620,6 +625,7 @@ main h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-bottom: 2vh;
 }
 
 /* Estilos multiform */
@@ -638,24 +644,16 @@ td {
 } */
 
 /* partes */
-
-#part1_1 {
-  display: none;
-}
-
 #part2 {
   display: none;
 }
-
-#part2_1 {
-  display: none;
-}
-
 #part3 {
   display: none;
 }
-
-#part3_1 {
+#part4 {
+  display: none;
+}
+#part5 {
   display: none;
 }
 /* linea larga de si o no  */
@@ -677,22 +675,12 @@ td {
   padding-left: 120px;
 }
 
-#part4 {
-  display: none;
-}
-#part4_1 {
-  display: none;
-}
-#part5 {
-  display: none;
-}
 #part6 {
   display: none;
 }
 #part7 {
   display: none;
 }
-
 #part8 {
   display: none;
 }
@@ -717,6 +705,19 @@ td {
 #part15 {
   display: none;
 }
+#part16 {
+  display: none;
+}
+#part17 {
+  display: none;
+}
+#part18 {
+  display: none;
+}
+
+#part19 {
+  display: none;
+}
 
 /*BUTTONS*/
 /* Button ocult general  */
@@ -725,10 +726,10 @@ td {
   margin: 0 auto;
 }
 
-#butonFinal {
+/* #butonFinal {
   display: none;
   margin: 0 auto;
-}
+} */
 
 /*ANIMACIONES*/
 @keyframes slide {
@@ -756,8 +757,39 @@ td {
   border: gray solid 1px;
 }
 
-.botonera button.active{
+.botonera button.botoneraActive{
   background-color: #c9c9c9;
+}
+
+.formControls{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.formControls .formButton{
+  width: 20%;
+  height: 3vh;
+  background-color: rgba(0,0,0,0.4);
+  padding: 2%;
+  cursor: pointer;
+}
+
+.formControls .formButton.hidden{
+  visibility: hidden;
+}
+
+.formControls .formButton.final{
+  width: 40%;
+  height: 7vh;
+  background-color: green;
+  border: none;
+  padding: 2%;
+  cursor: pointer;
+  font-size: 16px;
+  margin:0 !important;
+  display: block;
 }
 
 
