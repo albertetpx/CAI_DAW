@@ -88,7 +88,11 @@
       {% for linea in data %}
       <div class="row">
         <div class="card" id="{{linea[0]}}">
+          {% if linea[3] == 'H' %}
           <img src="./../static/man.png" alt="hombre" class="image-man" />
+          {% else %}
+          <img src="./../static/woman.png" alt="hombre" class="image-man" />
+          {% endif %}
           <div class="text-card">
             <div class="text-name">
               <h3>{{linea[0]}}</h3>
