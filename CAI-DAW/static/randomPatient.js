@@ -1,4 +1,6 @@
 window.onload = () =>{
+    // Fins ara només està implementat el Form 1 
+    // Form 1 
     document.getElementById("dni").value = rand_dni();
     document.getElementById("nom").value = randomName();
     document.getElementById("edat").value = randomInt(70,100);
@@ -11,7 +13,11 @@ window.onload = () =>{
     document.getElementById("familia_origen_germans").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
     document.getElementById("rol_ocupa").value = randomElement(['Pare','Mare','Avi','Àvia','Cap'])
     document.getElementById("membres_integren").value = randomInt(2,4);
-
+    //pren_medicaments_casa
+    document.getElementById("temps_residencia").value = randomInt(10,60);
+    document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC'])
+    document.getElementById("problema_salut_actual").value = randomElement(['Diabetes','Hipertensió','Artrosi','Cap','Colesterol'])
+    //familia_procreacio
 }
 
 function formatNumberLength(num, length) {

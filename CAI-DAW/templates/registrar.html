@@ -13,8 +13,14 @@
   <header>
     <!-- LOGO DE LA APP-->
     <div id="logo">
-      <img src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png" alt="Imagen de logo"
-        width="90px" />
+      <!-- <img
+          src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
+          alt="Imagen de logo"
+          width="90px"
+        /> -->
+        <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+          alt="Imagen de logo"
+          width="150px">
     </div>
 
     <!-- TITULO DE LA PAGINA-->
@@ -145,18 +151,18 @@
         <div class="form" id="part2">
           <h3>Informació general (i II)</h3>
           <label for="temps_residencia">TEMPS DE RESIDÈNCIA</label>
-          <input type="number" value=1 name="temps_residencia" />
+          <input type="number" value=1 id="temps_residencia" name="temps_residencia" />
           <label>PRENS MEDICAMENTS A CASA</label>
           <div class="form_label_si_no">
             <label>SI
-              <input type="radio" value="SI" name="pren_medicaments_casa" /> </label>
+              <input type="radio" value="SI" name="pren_medicaments_casa" checked/> </label>
             <label>NO
-              <input type="radio" value="NO" name="pren_medicaments_casa" checked /> </label>
+              <input type="radio" value="NO" name="pren_medicaments_casa" /> </label>
           </div>
           <label for="quins_medicaments">QUINS </label>
-          <input type="text" value="a" name="quins_medicaments" />
+          <input type="text" value="a" id="quins_medicaments" name="quins_medicaments" />
           <label for="problema_salut_actual">PROBLEMAS DE SALUT </label>
-          <input type="text" value="a" name="problema_salut_actual" />
+          <input type="text" value="a" id="problema_salut_actual" name="problema_salut_actual" />
           <label>FAMILIA DE PROCREACIÓ </label>
           <div class="form_label_si_no">
             <label> SI
