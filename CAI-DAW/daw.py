@@ -17,8 +17,15 @@ def lista_paciente():
     # TOFIX: la consulta a la bd va en bdPacients.py 
     consulta_sel = "select * from info_general;"
     data = obtenerDatos(consulta_sel)
-    
-    return render_template("lista_paciente.html", data = data, numTablas=8)
+    nombreTablas = ['Informació general',
+                    'Necessitats respiratòries',
+                    'Menjar i beure',
+                    'Necessitats d\'eliminació',
+                    'Necessitats de mobilitat',
+                    'Necessitats de son i repòs',
+                    'Necessitats de vertimenta',
+                    'Necessitats de temperatura']
+    return render_template("lista_paciente.html", data = data, numTablas=8, nombreTablas=nombreTablas)
 
 @app.route("/registrar",methods=['GET'])
 def registrar():
