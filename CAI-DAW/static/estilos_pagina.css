@@ -528,14 +528,14 @@ main h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 3%;
+  column-gap: 1%;
   overflow: auto;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .modal-content .data-content .dataTable .cell{
   border: 2px solid black;
-  margin: 1%;
+  margin-top: 1%;
   padding: 1%;
   text-align: center;
 }
@@ -544,10 +544,12 @@ main h1 {
   border: 1px solid black;
   background-color: white;
   color: black;
+  padding: .2rem .5rem .2rem .5rem;
 }
 
 .modal-content .data-content .dataTable .dataCell{
-  font-style: italic;
+  /* font-style: italic; */
+  margin-top: .5rem;
 }
 
 
