@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: formulario_cai
+-- Host: localhost    Database: formulario_cai
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -30,12 +30,9 @@ CREATE TABLE `alarma` (
   `situacions_influenica_respiracio` varchar(3) DEFAULT NULL,
   `fuma` varchar(3) DEFAULT NULL,
   `situacion_influencien_aliments` varchar(3) DEFAULT NULL,
-  `suor` varchar(3) DEFAULT NULL,
-  `regla` varchar(3) DEFAULT NULL,
   `situacions_influencien_eliminacio` varchar(3) DEFAULT NULL,
   `moure_cos` varchar(3) DEFAULT NULL,
   `situacions_influencien_moure_cos` varchar(3) DEFAULT NULL,
-  `midigada` varchar(3) DEFAULT NULL,
   `situacions_influencien_son` varchar(3) DEFAULT NULL,
   `capasitat_vestirse` varchar(3) DEFAULT NULL,
   `situacions_influencien_vestimenta` varchar(3) DEFAULT NULL,
@@ -54,6 +51,7 @@ CREATE TABLE `alarma` (
 
 LOCK TABLES `alarma` WRITE;
 /*!40000 ALTER TABLE `alarma` DISABLE KEYS */;
+INSERT INTO `alarma` VALUES ('47567498T',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('a',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Cap',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('dni','si','si','si','si','si','si','si','si','si',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `alarma` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +67,7 @@ CREATE TABLE `info_general` (
   `nom` varchar(60) NOT NULL,
   `edat` int NOT NULL,
   `sexe` varchar(60) NOT NULL,
-  `LLoc_naixement` int NOT NULL,
+  `LLoc_naixement` varchar(30) NOT NULL,
   `Lloc_residencia` varchar(60) NOT NULL,
   `temps_residencia` int NOT NULL,
   `familia_origen_pare` varchar(60) NOT NULL,
@@ -92,6 +90,7 @@ CREATE TABLE `info_general` (
 
 LOCK TABLES `info_general` WRITE;
 /*!40000 ALTER TABLE `info_general` DISABLE KEYS */;
+INSERT INTO `info_general` VALUES ('26869471C','Hayk Sánchez Hassan',75,'H','Ecuador','Marruecos',11,'Marruecos','Brasil','España','SI','Àvia','2','SI','Cap','SI','Nolotil'),('46579107J','Joan Brown Sánchez',72,'H','Brasil','España',1,'Armenia','Brasil','Armenia','SI','Cap','3','SI','a','NO','a'),('54870864V','Albert Idrissi Sargsyan',85,'H','Brasil','Ecuador',10,'Ecuador','Armenia','Brasil','SI','Pare','2','SI','Diabetes','SI','NS/NC'),('55614375F','Fatima Gonzalez Gonzalez',85,'D','España','Ecuador',1,'Marruecos','España','Marruecos','SI','Pare','2','SI','a','NO','a'),('97034731P','Maria Alaoui León',89,'D','Ecuador','Armenia',1,'España','Armenia','Ecuador','SI','Mare','2','SI','a','NO','a');
 /*!40000 ALTER TABLE `info_general` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,6 +120,7 @@ CREATE TABLE `necesitat_dormir_reposar` (
 
 LOCK TABLES `necesitat_dormir_reposar` WRITE;
 /*!40000 ALTER TABLE `necesitat_dormir_reposar` DISABLE KEYS */;
+INSERT INTO `necesitat_dormir_reposar` VALUES ('26869471C',1,'SI','tranquil','on','','a','a'),('46579107J',1,'SI','tranquil','on','','a','a'),('54870864V',1,'SI','tranquil','on','','a','a'),('55614375F',1,'SI','tranquil','on','','a','a'),('97034731P',1,'SI','tranquil','on','','a','a'),('a',1,'SI','tranquil','on','','a','a');
 /*!40000 ALTER TABLE `necesitat_dormir_reposar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,6 +148,7 @@ CREATE TABLE `necessitat_aprendre` (
 
 LOCK TABLES `necessitat_aprendre` WRITE;
 /*!40000 ALTER TABLE `necessitat_aprendre` DISABLE KEYS */;
+INSERT INTO `necessitat_aprendre` VALUES ('26869471C','s','a','a','a','a'),('46579107J','s','a','a','a','a'),('54870864V','s','a','a','a','a'),('55614375F','s','a','a','a','a'),('97034731P','s','a','a','a','a'),('a','s','a','a','a','a');
 /*!40000 ALTER TABLE `necessitat_aprendre` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,6 +180,7 @@ CREATE TABLE `necessitat_comunicar` (
 
 LOCK TABLES `necessitat_comunicar` WRITE;
 /*!40000 ALTER TABLE `necessitat_comunicar` DISABLE KEYS */;
+INSERT INTO `necessitat_comunicar` VALUES ('26869471C','a','a','a','a','a','a','a','a','a'),('46579107J','a','a','a','a','a','a','a','a','a'),('54870864V','a','a','a','a','a','a','a','a','a'),('55614375F','a','a','a','a','a','a','a','a','a'),('97034731P','a','a','a','a','a','a','a','a','a'),('a','a','a','a','a','a','a','a','a','a');
 /*!40000 ALTER TABLE `necessitat_comunicar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -215,6 +217,7 @@ CREATE TABLE `necessitat_eliminar` (
 
 LOCK TABLES `necessitat_eliminar` WRITE;
 /*!40000 ALTER TABLE `necessitat_eliminar` DISABLE KEYS */;
+INSERT INTO `necessitat_eliminar` VALUES ('26869471C',1,1,'a',1,1,'a','a',1,'a','a','a','','',''),('46579107J',1,1,'a',1,1,'a','a',1,'a','a','a','','',''),('54870864V',1,1,'a',1,1,'a','a',1,'a','a','a','','',''),('55614375F',1,1,'a',1,1,'a','a',1,'a','a','a','','',''),('97034731P',1,1,'a',1,1,'a','a',1,'a','a','a','','',''),('a',1,1,'a',1,1,'a','a',1,'a','a','a','','','');
 /*!40000 ALTER TABLE `necessitat_eliminar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -246,6 +249,7 @@ CREATE TABLE `necessitat_esbargir` (
 
 LOCK TABLES `necessitat_esbargir` WRITE;
 /*!40000 ALTER TABLE `necessitat_esbargir` DISABLE KEYS */;
+INSERT INTO `necessitat_esbargir` VALUES ('26869471C','a','a','a','a','a','if','a','a','a'),('46579107J','a','a','a','a','a','if','a','a','a'),('54870864V','a','a','a','a','a','if','a','a','a'),('55614375F','a','a','a','a','a','if','a','a','a'),('97034731P','a','a','a','a','a','if','a','a','a'),('a','a','a','a','a','a','if','a','a','a');
 /*!40000 ALTER TABLE `necessitat_esbargir` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -276,6 +280,7 @@ CREATE TABLE `necessitat_estar_net_polt_protegir_teguments` (
 
 LOCK TABLES `necessitat_estar_net_polt_protegir_teguments` WRITE;
 /*!40000 ALTER TABLE `necessitat_estar_net_polt_protegir_teguments` DISABLE KEYS */;
+INSERT INTO `necessitat_estar_net_polt_protegir_teguments` VALUES ('26869471C','','','','','a','','',''),('46579107J','','','','','a','','',''),('54870864V','','','','','a','','',''),('55614375F','','','','','a','','',''),('97034731P','','','','','a','','',''),('a','','','','','a','','','');
 /*!40000 ALTER TABLE `necessitat_estar_net_polt_protegir_teguments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -304,6 +309,7 @@ CREATE TABLE `necessitat_evitar_perills` (
 
 LOCK TABLES `necessitat_evitar_perills` WRITE;
 /*!40000 ALTER TABLE `necessitat_evitar_perills` DISABLE KEYS */;
+INSERT INTO `necessitat_evitar_perills` VALUES ('26869471C','','a','a','','',''),('46579107J','','a','a','','',''),('54870864V','','a','a','','',''),('55614375F','','a','a','','',''),('97034731P','','a','a','','',''),('a','','a','a','','','');
 /*!40000 ALTER TABLE `necessitat_evitar_perills` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -333,6 +339,7 @@ CREATE TABLE `necessitat_mantenir_temperatura_corporal_limits_normals` (
 
 LOCK TABLES `necessitat_mantenir_temperatura_corporal_limits_normals` WRITE;
 /*!40000 ALTER TABLE `necessitat_mantenir_temperatura_corporal_limits_normals` DISABLE KEYS */;
+INSERT INTO `necessitat_mantenir_temperatura_corporal_limits_normals` VALUES ('26869471C',1,1,'','a','','',''),('46579107J',1,1,'','a','','',''),('54870864V',1,1,'','a','','',''),('55614375F',1,1,'','a','','',''),('97034731P',1,1,'','a','','',''),('a',1,1,'','a','','','');
 /*!40000 ALTER TABLE `necessitat_mantenir_temperatura_corporal_limits_normals` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,6 +381,7 @@ CREATE TABLE `necessitat_menjar_beure` (
 
 LOCK TABLES `necessitat_menjar_beure` WRITE;
 /*!40000 ALTER TABLE `necessitat_menjar_beure` DISABLE KEYS */;
+INSERT INTO `necessitat_menjar_beure` VALUES ('26869471C',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a'),('46579107J',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a'),('54870864V',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a'),('55614375F',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a'),('97034731P',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a'),('a',1,'a',1,'a','a','a','a','a','a','a','','','','a','a','','','','a');
 /*!40000 ALTER TABLE `necessitat_menjar_beure` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -406,6 +414,7 @@ CREATE TABLE `necessitat_moure_mantenir_postura_adequada` (
 
 LOCK TABLES `necessitat_moure_mantenir_postura_adequada` WRITE;
 /*!40000 ALTER TABLE `necessitat_moure_mantenir_postura_adequada` DISABLE KEYS */;
+INSERT INTO `necessitat_moure_mantenir_postura_adequada` VALUES ('26869471C','a','','','a','a','','a','','',''),('46579107J','a','','','a','a','','a','','',''),('54870864V','a','','','a','a','','a','','',''),('55614375F','a','','','a','a','','a','','',''),('97034731P','a','','','a','a','','a','','',''),('a','a','','','a','a','','a','','','');
 /*!40000 ALTER TABLE `necessitat_moure_mantenir_postura_adequada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -434,6 +443,7 @@ CREATE TABLE `necessitat_ocupar_realitzar` (
 
 LOCK TABLES `necessitat_ocupar_realitzar` WRITE;
 /*!40000 ALTER TABLE `necessitat_ocupar_realitzar` DISABLE KEYS */;
+INSERT INTO `necessitat_ocupar_realitzar` VALUES ('26869471C','a','a','a','a','a','a'),('46579107J','a','a','a','a','a','a'),('54870864V','a','a','a','a','a','a'),('55614375F','a','a','a','a','a','a'),('97034731P','a','a','a','a','a','a'),('a','a','a','a','a','a','a');
 /*!40000 ALTER TABLE `necessitat_ocupar_realitzar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -477,6 +487,7 @@ CREATE TABLE `necessitat_respirar` (
 
 LOCK TABLES `necessitat_respirar` WRITE;
 /*!40000 ALTER TABLE `necessitat_respirar` DISABLE KEYS */;
+INSERT INTO `necessitat_respirar` VALUES ('26869471C','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1),('46579107J','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1),('54870864V','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1),('55614375F','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1),('97034731P','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1),('a','a',1,1,1,1,'a','a','a','a','a','a','a','a','a','a','a','a','','','a',1);
 /*!40000 ALTER TABLE `necessitat_respirar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -506,6 +517,7 @@ CREATE TABLE `necessitat_vestir_desvestir` (
 
 LOCK TABLES `necessitat_vestir_desvestir` WRITE;
 /*!40000 ALTER TABLE `necessitat_vestir_desvestir` DISABLE KEYS */;
+INSERT INTO `necessitat_vestir_desvestir` VALUES ('26869471C','','','a','a','','',''),('46579107J','','','a','a','','',''),('54870864V','','','a','a','','',''),('55614375F','','','a','a','','',''),('97034731P','','','a','a','','',''),('a','','','a','a','','','');
 /*!40000 ALTER TABLE `necessitat_vestir_desvestir` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -531,6 +543,7 @@ CREATE TABLE `necessitat_viure_creences_valors` (
 
 LOCK TABLES `necessitat_viure_creences_valors` WRITE;
 /*!40000 ALTER TABLE `necessitat_viure_creences_valors` DISABLE KEYS */;
+INSERT INTO `necessitat_viure_creences_valors` VALUES ('26869471C','a','a','a'),('46579107J','a','a','a'),('54870864V','a','a','a'),('55614375F','a','a','a'),('97034731P','a','a','a'),('a','a','a','a');
 /*!40000 ALTER TABLE `necessitat_viure_creences_valors` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -543,4 +556,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-19 18:13:17
+-- Dump completed on 2023-03-05  8:55:55
