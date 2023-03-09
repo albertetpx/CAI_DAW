@@ -1,29 +1,58 @@
-// ******
-// Para subir cada vez al principio del todo 
-// ******
-document.addEventListener("DOMContentLoaded", function() {
-  for (let i = 1; i <= 14; i++) {
-    const button = document.getElementById(`button${i}_siguiente`);
-    const button_conGion = document.getElementById(`button${i}_1_siguiente`);
-    button.addEventListener("click", function() {
-      window.scrollTo({
-        top: -100,
-        behavior: 'smooth'
-      });
-    });
-    button_conGion.addEventListener("click", function() {
-      window.scrollTo({
-        top: -100,
-        behavior: 'smooth'
-      });
-    });
-  }
-});
-
 function ocultarBotonRegistrar(){
   let butonFinal = document.getElementById("butonFinal");
   butonFinal.style.display = "block";
 }
+
+function showForm(id){
+  //Ocultamos todos los forms
+  let forms = Array.from(document.getElementsByClassName("form"));
+  forms.forEach((value,index)=>{
+    value.style.display = "none";
+  })
+  //Mostramos el form activo
+  let form = document.getElementById(`part${id}`);
+  form.style.display = "flex";
+  //Actualizamos botonera
+  Array.from(document.getElementsByClassName("botoneraActive"))[0].classList.remove('botoneraActive');
+  document.getElementById(`botonera${id}`).classList.add('botoneraActive');
+
+  //Si es último form, mostramos botón de SUBMIT
+  if(id == 19){
+    let butonFinal = document.getElementById("butonFinal");
+    butonFinal.style.display = "block";
+  }
+
+  //Scroll a la parte de arriba de window
+  window.scrollTo({
+    top: -100,
+    behavior: 'smooth'
+  });
+}
+
+
+// DEPRECATED FUNCIONS ////////////////////////////////////////////////////////////////////////////
+
+// ******
+// Para subir cada vez al principio del todo 
+// ******
+// document.addEventListener("DOMContentLoaded", function() {
+//   for (let i = 1; i <= 14; i++) {
+//     const button = document.getElementById(`button${i}_siguiente`);
+//     const button_conGion = document.getElementById(`button${i}_1_siguiente`);
+//     button.addEventListener("click", function() {
+//       window.scrollTo({
+//         top: -100,
+//         behavior: 'smooth'
+//       });
+//     });
+//     button_conGion.addEventListener("click", function() {
+//       window.scrollTo({
+//         top: -100,
+//         behavior: 'smooth'
+//       });
+//     });
+//   }
+// });
 
 function pasarForm1() {
 
@@ -42,6 +71,9 @@ function pasarForm1() {
   // Atras 
   let buton1_atras = document.getElementById("button1_atras");
   buton1_atras.style.display = "block";
+
+  document.getElementById("botonera1").classList.remove('active');
+  document.getElementById("botonera2").classList.add('active');
 }
 
 function pasarForm1_1() {
@@ -64,6 +96,10 @@ function pasarForm1_1() {
   let buton1_atras = document.getElementById("button1_atras");
   buton1_atras.style.display = "none";
 
+  document.getElementById("botonera2").classList.remove('active');
+  document.getElementById("botonera3").classList.add('active');
+
+  // Karlen: qué hace esta función aquí??
   function crear(){
     // llevar arriba  de la pantalla 
     document.getElementById("button1_siguiente").addEventListener("click", function(){
@@ -98,6 +134,9 @@ function pasarForm2() {
 
   let button1_1_atras = document.getElementById("button1_1_atras");
   button1_1_atras.style.display = "none";
+
+  document.getElementById("botonera3").classList.remove('active');
+  document.getElementById("botonera4").classList.add('active');
 }
 
 function pasarForm2_1() {
@@ -121,7 +160,8 @@ function pasarForm2_1() {
   let button2_atras = document.getElementById("button2_atras");
   button2_atras.style.display = "none";
 
- 
+  document.getElementById("botonera4").classList.remove('active');
+  document.getElementById("botonera5").classList.add('active');
 }
 
 function pasarForm3() {
@@ -145,6 +185,8 @@ function pasarForm3() {
   let button2_1_atras = document.getElementById("button2_1_atras");
   button2_1_atras.style.display = "none";
 
+  document.getElementById("botonera5").classList.remove('active');
+  document.getElementById("botonera6").classList.add('active');
 }
 
 function pasarForm3_1() {
@@ -167,7 +209,8 @@ function pasarForm3_1() {
   let button3_atras = document.getElementById("button3_atras");
   button3_atras.style.display = "none";
 
- 
+  document.getElementById("botonera6").classList.remove('active');
+  document.getElementById("botonera7").classList.add('active');
 
 }
 
@@ -190,6 +233,9 @@ function pasarForm4() {
 
   let button3_1_atras = document.getElementById("button3_1_atras");
   button3_1_atras.style.display = "none";
+
+  document.getElementById("botonera7").classList.remove('active');
+  document.getElementById("botonera8").classList.add('active');
 
 }
 
@@ -214,6 +260,8 @@ function pasarForm4_1() {
   let button4_atras = document.getElementById("button4_atras");
   button4_atras.style.display = "none";
 
+  document.getElementById("botonera8").classList.remove('active');
+  document.getElementById("botonera9").classList.add('active');
 }
 
 function pasarForm5() {
@@ -236,6 +284,9 @@ function pasarForm5() {
   let button4_1_atras = document.getElementById("button4_1_atras");
   button4_1_atras.style.display = "none";
 
+  document.getElementById("botonera9").classList.remove('active');
+  document.getElementById("botonera10").classList.add('active');
+
 }
 
 function pasarForm6() {
@@ -257,6 +308,9 @@ function pasarForm6() {
   let button5_atras = document.getElementById("button5_atras");
   button5_atras.style.display = "none";
 
+  document.getElementById("botonera10").classList.remove('active');
+  document.getElementById("botonera11").classList.add('active');
+
 }
 
 function pasarForm7() {
@@ -272,12 +326,15 @@ function pasarForm7() {
   let button8_siguiente = document.getElementById("button8_siguiente");
   button8_siguiente.style.display = "block";
 
-    // atras
-    let buton7_atras = document.getElementById("button7_atras");
-    buton7_atras.style.display = "block";
+  // atras
+  let buton7_atras = document.getElementById("button7_atras");
+  buton7_atras.style.display = "block";
   
-    let buton6_atras = document.getElementById("button6_atras");
-    buton6_atras.style.display = "none";
+  let buton6_atras = document.getElementById("button6_atras");
+  buton6_atras.style.display = "none";
+
+  document.getElementById("botonera11").classList.remove('active');
+  document.getElementById("botonera12").classList.add('active');
 }
 
 function pasarForm8() {
@@ -293,12 +350,15 @@ function pasarForm8() {
   let button9_siguiente = document.getElementById("button9_siguiente");
   button9_siguiente.style.display = "block";
 
-      // atras
-      let button8_atras = document.getElementById("button8_atras");
-      button8_atras.style.display = "block";
-    
-      let button7_atras = document.getElementById("button7_atras");
-      button7_atras.style.display = "none";
+  // atras
+  let button8_atras = document.getElementById("button8_atras");
+  button8_atras.style.display = "block";
+
+  let button7_atras = document.getElementById("button7_atras");
+  button7_atras.style.display = "none";
+
+  document.getElementById("botonera12").classList.remove('active');
+  document.getElementById("botonera13").classList.add('active');
 
 }
 
@@ -315,14 +375,15 @@ function pasarForm9() {
   let button10_siguiente = document.getElementById("button10_siguiente");
   button10_siguiente.style.display = "block";
   
-     // atras
-     let button9_atras = document.getElementById("button9_atras");
-     button9_atras.style.display = "block";
-   
-     let button8_atras = document.getElementById("button8_atras");
-     button8_atras.style.display = "none";
+  // atras
+  let button9_atras = document.getElementById("button9_atras");
+  button9_atras.style.display = "block";
 
-    
+  let button8_atras = document.getElementById("button8_atras");
+  button8_atras.style.display = "none";
+
+  document.getElementById("botonera13").classList.remove('active');
+  document.getElementById("botonera14").classList.add('active');
 }
 
 function pasarForm10() {
@@ -338,12 +399,15 @@ function pasarForm10() {
   let button11_siguiente = document.getElementById("button11_siguiente");
   button11_siguiente.style.display = "block";
 
-     // atras
-     let button10_atras = document.getElementById("button10_atras");
-     button10_atras.style.display = "block";
-   
-     let button9_atras = document.getElementById("button9_atras");
-     button9_atras.style.display = "none";
+  // atras
+  let button10_atras = document.getElementById("button10_atras");
+  button10_atras.style.display = "block";
+
+  let button9_atras = document.getElementById("button9_atras");
+  button9_atras.style.display = "none";
+
+  document.getElementById("botonera14").classList.remove('active');
+  document.getElementById("botonera15").classList.add('active');
 }
 
 function pasarForm11() {
@@ -360,12 +424,15 @@ function pasarForm11() {
 let button12_siguiente = document.getElementById("button12_siguiente");
   button12_siguiente.style.display = "block";
   
-     // atras
-     let button11_atras = document.getElementById("button11_atras");
-     button11_atras.style.display = "block";
-   
-     let button10_atras = document.getElementById("button10_atras");
-     button10_atras.style.display = "none";
+// atras
+let button11_atras = document.getElementById("button11_atras");
+button11_atras.style.display = "block";
+
+let button10_atras = document.getElementById("button10_atras");
+button10_atras.style.display = "none";
+
+document.getElementById("botonera15").classList.remove('active');
+document.getElementById("botonera16").classList.add('active');
 }
 
 function pasarForm12() {
@@ -381,12 +448,15 @@ function pasarForm12() {
   let button13_siguiente = document.getElementById("button13_siguiente");
   button13_siguiente.style.display = "block";
 
-     // atras
-     let button12_atras = document.getElementById("button12_atras");
-     button12_atras.style.display = "block";
-   
-     let button11_atras = document.getElementById("button11_atras");
-     button11_atras.style.display = "none";
+  // atras
+  let button12_atras = document.getElementById("button12_atras");
+  button12_atras.style.display = "block";
+
+  let button11_atras = document.getElementById("button11_atras");
+  button11_atras.style.display = "none";
+
+  document.getElementById("botonera16").classList.remove('active');
+  document.getElementById("botonera17").classList.add('active');
 }
 
 function pasarForm13() {
@@ -402,12 +472,15 @@ function pasarForm13() {
   let button14_siguiente = document.getElementById("button14_siguiente");
   button14_siguiente.style.display = "block";
 
-     // atras
-     let button13_atras = document.getElementById("button13_atras");
-     button13_atras.style.display = "block";
-   
-     let buton12_atras = document.getElementById("button12_atras");
-     buton12_atras.style.display = "none";
+  // atras
+  let button13_atras = document.getElementById("button13_atras");
+  button13_atras.style.display = "block";
+
+  let buton12_atras = document.getElementById("button12_atras");
+  buton12_atras.style.display = "none";
+
+  document.getElementById("botonera17").classList.remove('active');
+  document.getElementById("botonera18").classList.add('active');
 
 }
 
@@ -427,17 +500,17 @@ function pasarForm14() {
   let butonFinal = document.getElementById("butonFinal");
     butonFinal.style.display = "block";
 
-       // atras
-       let button14_atras = document.getElementById("button14_atras");
-       button14_atras.style.display = "block";
-     
-       let button13_atras = document.getElementById("button13_atras");
-       button13_atras.style.display = "none";
+  // atras
+  let button14_atras = document.getElementById("button14_atras");
+  button14_atras.style.display = "block";
+
+  let button13_atras = document.getElementById("button13_atras");
+  button13_atras.style.display = "none";
+
+  document.getElementById("botonera18").classList.remove('active');
+  document.getElementById("botonera19").classList.add('active');
 
 }
-
-
-
 
 
 // Boton atras 
@@ -885,8 +958,6 @@ function pasarForm12_atras() {
    
    let button14_siguiente = document.getElementById("button14_siguiente");
    button14_siguiente.style.display = "none";
-   
-
 }
 
 function pasarForm13_atras() {
@@ -936,4 +1007,3 @@ function pasarForm14_atras() {
   let butonFinal = document.getElementById("butonFinal");
     butonFinal.style.display = "none";
 }
-

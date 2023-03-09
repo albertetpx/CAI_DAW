@@ -1,166 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Llista</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static',filename='estilos_pagina.css')}}"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <!-- LOGO DE LA APP-->
-      <div id="logo">
-        <img
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Llista</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='estilos_pagina.css')}}" />
+  <!-- Link Swiper's CSS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="{{url_for('static',filename='swiper-bundle.css')}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <!-- LOGO DE LA APP-->
+    <div id="logo">
+      <!-- <img
           src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
           alt="Imagen de logo"
           width="90px"
-        />
-      </div>
+        /> -->
+        <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+          alt="Imagen de logo"
+          width="150px">
+    </div>
 
-      <!-- TITULO DE LA PAGINA-->
-      <div class="titulo">
-        <h1>LLISTA</h1>
+    <!-- TITULO DE LA PAGINA-->
+    <div class="titulo">
+      <h1>LLISTAT DE PACIENTS</h1>
+    </div>
+    <!--Menu Hmaburguesa-->
+    <span id="caja-menu">
+      <div class="container-menu" id="menu" onclick="abrirMenu()">
+        <div id="bar1" class="bar1"></div>
+        <div id="bar2" class="bar2"></div>
+        <div id="bar3" class="bar3"></div>
       </div>
-      <!--Menu Hmaburguesa-->
-      <span id="caja-menu">
-        <div class="container-menu" id="menu" onclick="abrirMenu()">
-          <div id="bar1" class="bar1"></div>
-          <div id="bar2" class="bar2"></div>
-          <div id="bar3" class="bar3"></div>
-        </div>
-      </span>
+    </span>
 
-      <!-- Overlay cuando el menu esta activado-->
-      <div id="myNav" class="overlay">
-        <div class="overlay-content">
-          <div id="tapa-caja"></div>
-          <div id="caja-pastilla">
-            <div class="pastilla" onclick="index()">
-              <div id="tapa-pastilla-start"><h3>INI</h3></div>
-              <div id="tapa-pastilla-end"><h3>CI</h3></div>
+    <!-- Overlay cuando el menu esta activado-->
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <div id="tapa-caja"></div>
+        <div id="caja-pastilla">
+          <div class="pastilla" onclick="inicio()">
+            <div id="tapa-pastilla-start">
+              <h3>INI</h3>
             </div>
-            <div class="pastilla" onclick="registro()">
-              <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>CI</h3>
             </div>
-            <div class="pastilla" onclick="lista()">
-              <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TAR</h3></div>
+          </div>
+          <div class="pastilla" onclick="registrar()">
+            <div id="tapa-pastilla-start">
+              <h3>REGIS</h3>
             </div>
-            <div class="pastilla">
-              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
-              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>TRAR</h3>
+            </div>
+          </div>
+          <div class="pastilla" onclick="listarPacientes()">
+            <div id="tapa-pastilla-start">
+              <h3>LLIS</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>TAR</h3>
+            </div>
+          </div>
+          <div class="pastilla">
+            <div id="tapa-pastilla-start">
+              <h3>VALOR</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>ACIÓ</h3>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- contenido de MAIN  -->
-    <main>
-      <div class="column">
-        {% for linea in data %}
-        <div id="{{linea[0]}}" class="row">
-          <div class="card">
-            <img src="./../static/man.png" alt="hombre" class="image-man" />
-            <div class="text-card">
-              <div class="text-name">
-                <h3>Pacient: {{linea[1]}}</h3>
+  <!-- contenido de MAIN  -->
+  <main>
+    <div class="column">
+      {% for linea in data %}
+      <div class="row">
+        <div class="card" id="{{linea[0]}}">
+          {% if linea[3] == 'H' %}
+          <img src="./../static/man.png" alt="hombre" class="image-man" />
+          {% else %}
+          <img src="./../static/woman.png" alt="hombre" class="image-man" />
+          {% endif %}
+          <div class="text-card">
+            <div class="text-name">
+              <h3>{{linea[0]}}</h3>
+            </div>
+            <div class="list">
+              <div class="dadesPersonals">
+                <div class="dadesNom">
+                  <h4>Nom:</h4><div>{{linea[1]}}</div>
+                </div>
+                <div class="dadesEdat">
+                  <h4>Edat:</h4><div>{{linea[2]}}</div>
+                </div>
               </div>
-              <div class="list">
-                <div class="items-right">
-                  <p>Edat: {{linea[2]}}</p>
-                  <p>Sexe: {{linea[3]}}</p>
-                </div>
-                <div class="items-center">
-                  <p>lloc de residencia: {{linea[5]}}</p>
-                  <p>viu desde... {{linea[6]}}</p>
-                </div>
-                <div class="items-left">
-                  <p>Viu sol?Revisa: {{linea[13]}}</p>
-                  <p>Medicaments que pren: {{linea[16]}}</p>
-                </div>
+              <div class="alarmes">
+                <div class="alarma activa"><i class="fa fa-wheelchair fa-xl" aria-hidden="true"></i></div>
+                <div class="alarma"><i class="fa fa-heartbeat fa-xl" aria-hidden="true"></i></div>
+                <div class="alarma activa"><i class="fa fa-thermometer-full fa-xl" aria-hidden="true"></i></div>
+                <div class="alarma"><i class="fa fa-shower fa-xl" aria-hidden="true"></i></div>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
 
-      <!--Modal para cada CardView-->
+    <!--Modal para cada CardView-->
 
-      <div id="paciente-details" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <div class="swiper mySwiper container">
-                    <div class="swiper-wrapper content">
-                      
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 1</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 2</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 3</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 4</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 5</h1>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide data">
-                        <div class="data-content">
-                          <h1>FORMULARIO 6</h1>
-                        </div>
-                      </div>
-              
-                    </div>
-                  </div>
-              
-                  <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
+    <div id="paciente-details" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="swiper mySwiper container">
+          <div class="swiper-wrapper content">
+            {% for n in range(numTablas)%}
+            <div class="swiper-slide data">
+              <div class="data-content">
+                <h1>{{n}}. {{nombreTablas[n]}}</h1>
+              </div>
+            </div>
+            {% endfor %}
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-    </main>
-    <!-- 
+    </div>
+    </div>
+    </div>
+  </main>
+  <!-- 
     <footer>
       <p>ADAW ETPXAVIER 2022</p>
     </footer> -->
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/listPatients.js"></script>
+  <script src="/static/menu.js"></script>
+</body>
 
-    <script src="/static/funciones.js"></script>
-  </body>
 </html>

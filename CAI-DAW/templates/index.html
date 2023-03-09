@@ -16,11 +16,14 @@
     <header>
       <!-- LOGO DE LA APP-->
       <div id="logo">
-        <img
+        <!-- <img
           src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
           alt="Imagen de logo"
           width="90px"
-        />
+        /> -->
+        <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+          alt="Imagen de logo"
+          width="150px">
       </div>
 
       <!-- TITULO DE LA PAGINA-->
@@ -41,15 +44,15 @@
         <div class="overlay-content">
           <div id="tapa-caja"></div>
           <div id="caja-pastilla">
-            <div class="pastilla" onclick="index()">
+            <div class="pastilla" onclick="inicio()">
               <div id="tapa-pastilla-start"><h3>INI</h3></div>
               <div id="tapa-pastilla-end"><h3>CI</h3></div>
             </div>
-            <div class="pastilla" onclick="registro()">
+            <div class="pastilla" onclick="registrar()">
               <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
               <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
             </div>
-            <div class="pastilla" onclick="lista()">
+            <div class="pastilla" onclick="listarPacientes()">
               <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
               <div id="tapa-pastilla-end"><h3>TAR</h3></div>
             </div>
@@ -65,10 +68,10 @@
     <main>
       <div class="container">
         <div id="text" class="text">
-          <p><h1>Benvingut a DAWCAI, l'aplicació de registre de pacients en cures</h1></p>
-          <p id="descripcion">Actualmente hi ha un total de <b> {{ data }}</b> en el
+          <p><h1>Benvingut a TELÈSFOR, l'aplicació de registre de pacients en cures</h1></p>
+          <p id="descripcion">Actualment hi ha un total de <b> {{ data }} pacients</b> en el
             registre.</p>
-            <button class="button-registro" id="button-registro" onclick="registro()">Registrar</button>
+            <button class="button-registro" id="button-registro" onclick="registrar()">Registrar</button>
         </div>
         <div id="image">
           <img src="/static/medica.png" alt="Medica" width="480px">
@@ -80,6 +83,6 @@
       <p>ADAW ETPXAVIER 2022</p>
     </footer> -->
 
-    <script src="/static/funciones.js"></script>
+    <script src="/static/menu.js"></script>
   </body>
 </html>
