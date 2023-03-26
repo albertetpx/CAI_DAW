@@ -61,5 +61,9 @@ def consultarDatosPaciente():
         # print(userData)
         return jsonify(userData)
 
+@app.route("/consultarAlarmasPaciente", methods=['POST'])
+def actualizarAlarmas():
+    return jsonify()
+
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.run(host='localhost',port=5000,debug=True)
