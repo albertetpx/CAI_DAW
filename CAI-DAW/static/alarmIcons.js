@@ -12,21 +12,22 @@ function cargasAlarmas() {
     });
 }
 
-function pedirAlarmasPaciente(dni, element) {
+function pedirAlarmasPaciente(dni) {
     const xmlhhtp = new XMLHttpRequest();
-
-    xmlhhtp.open('POST','/consultarAlarmasPaciente',true);
-
+    xmlhhtp.open('POST', '/consultarAlarmasPaciente', true);
+  
     xmlhhtp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200){
-            actualizarAlarmas(this.responseText,element);
-        }
+      if (this.readyState == 4 && this.status == 200) {
+        const data = JSON.parse(this.responseText);
+        console.log(data);
+      }
     }
-
+  
     xmlhhtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     payload = `dni=${dni}`
     xmlhhtp.send(payload);
-}
+  }
+  
 
 
 // function conectionBD(dni) {
