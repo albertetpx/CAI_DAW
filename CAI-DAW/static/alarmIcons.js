@@ -20,18 +20,16 @@ function pedirAlarmasPaciente(dni, element) {
     xmlhhtp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
-            const dni = data.pacientes[0].dni;
-            console.log(dni);
+            const pacient = data.pacientes[counter];
 
-            const alarmas = element.querySelectorAll(".alarma");
-            alarmas.forEach((alarma) => {
-                if (data.pacientes[counter].fuma != null) {
-                    const icono = alarma.querySelector("i");
-                    icono.classList.add = "activa";                    
+            const alarmas = document.querySelectorAll('.alarmes > div');
+            alarmas.forEach(alarma => {
+                if (pacient.tos === "a") {
+                    alarma.classList.add('activa');
                 }
             });
-            counter++;
         }
+
     }
 
     xmlhhtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
