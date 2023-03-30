@@ -72,30 +72,27 @@ def consultarDatosPaciente():
 
 @app.route("/consultarAlarmasPaciente", methods=['POST'])
 def actualizarAlarmas():
-    data = obtenerDatos("SELECT * from alarma")
-    result_dict = {'results': []}
+    dni = request.form.get("dni")
+    data = obtenerDatos(f"""SELECT * from alarma WHERE dni = '{dni}'""")
+    result = {'pacientes': []}
     for row in data:
-        result_dict['results'].append({
+        result['pacientes'].append({
             'dni': row[0],
-            'pren_medicaments': row[1],
-            'tos': row[2],
-            'expectoracio': row[3],
-            'influencia_respiracio': row[4],
-            'fuma': row[5],
-            'influencia_aliments': row[6],
-            'influencia_eliminacio': row[7],
-            'moure_cos': row[8],
-            'influencia_moure_cos': row[9],
-            'influencia_son': row[10],
-            'capacitat_vestirse': row[11],
-            'influencia_vestimenta': row[12],
-            'influencien_termoregulacio': row[13],
-            'influencien_higene': row[14],
-            'influencien_seguretat': row[15],
-            'influencien_comunicacio': row[16],
-            'proces_salut': row[17]
+            'tos': row[1],
+            'expectoracio': row[2],
+            'influencia_respiracio': row[3],
+            'fuma': row[4],
+            'influencia_aliments': row[5],
+            'influencia_eliminacio': row[6],
+            'influencia_moure_cos': row[7],
+            'influencia_son': row[8],
+            'influencia_vestimenta': row[9],
+            'influencien_termoregulacio': row[10],
+            'influencien_higene': row[11],
+            'influencien_seguretat': row[12],
+            'influencien_comunicacio': row[13],
         })
-    return jsonify(result_dict)
+    return jsonify(result)
 
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True

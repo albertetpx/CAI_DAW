@@ -11,23 +11,33 @@ function cargasAlarmas() {
         pedirAlarmasPaciente(dni, element);
     });
 }
-
-function pedirAlarmasPaciente(dni) {
+var counter = 0;
+function pedirAlarmasPaciente(dni, element) {
     const xmlhhtp = new XMLHttpRequest();
+
     xmlhhtp.open('POST', '/consultarAlarmasPaciente', true);
-  
+
     xmlhhtp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        const data = JSON.parse(this.responseText);
-        console.log(data);
-      }
+        if (this.readyState == 4 && this.status == 200) {
+            const data = JSON.parse(this.responseText);
+            const dni = data.pacientes[0].dni;
+            console.log(dni);
+
+            const alarmas = element.querySelectorAll(".alarma");
+            alarmas.forEach((alarma) => {
+                if (data.pacientes[counter].fuma != null) {
+                    const icono = alarma.querySelector("i");
+                    icono.classList.add = "activa";                    
+                }
+            });
+            counter++;
+        }
     }
-  
+
     xmlhhtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     payload = `dni=${dni}`
     xmlhhtp.send(payload);
-  }
-  
+}
 
 
 // function conectionBD(dni) {
