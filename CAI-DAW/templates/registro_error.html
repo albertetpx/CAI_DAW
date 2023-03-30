@@ -72,7 +72,32 @@
     </main>
 
     <footer>
-      <p>ADAW ETPXAVIER 2022</p>
+      <div class="logo-footer">
+        <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+        alt="Imagen de logo"
+        width="50px">
+        <h2>CAI PROYECTOS</h2>
+      </div>
+      <div class="footer-container">
+        <div>
+          <div class="iconos">
+            <img src="{{url_for('static',filename='telefone.png')}}" 
+            alt="Telefono"
+            class="icono-telefono">
+            <h4>+34 933 19 17 00</h4>
+          </div>
+          <div class="iconos">
+            <img src="{{url_for('static',filename='email.png')}}" 
+            alt="Email"
+            class="icono-email">
+            <h4>pregunta@epx.fjaverianas.com</h4>
+          </div>
+        </div>
+        <div class="footer-descripcion">
+          <h3>Sobre el Proyecto</h3>
+          <p>Nuestro objetivo es ayudar los pacientes alta lo más pronto posible. </br> Por eso, creamos una pagina para controlar la salud y bien estar de nuestros pacientes.</p>
+        </div>
+    </div>
     </footer>
 
     <script src="/static/menu.js"></script>

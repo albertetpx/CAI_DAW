@@ -1,4 +1,4 @@
-/* Layout styles **********************************************************************************/
+/*********************GENERAL STYLES ************************/
 body {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
   padding-left: 40%;
 } */
 
-/* Header styles **********************************************************************************/
+/********************* HEADER STYLES ************************/
 header {
   display: flex;
   flex-direction: row;
@@ -38,7 +38,7 @@ header .titulo h1 {
   color: #223645;
 }
 
-/* Header menu  */
+/********************* MENU STYLES ************************/
 .overlay {
   height: 100%;
   width: 0;
@@ -82,17 +82,6 @@ header .titulo h1 {
   top: 20px;
   right: 45px;
   font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
 }
 
 #tapa-caja {
@@ -214,18 +203,7 @@ header .titulo h1 {
   display: relative;
 }
 
-/* Footer styles **********************************************************************************/
-footer {
-  background-color: #223645;
-  background-image: linear-gradient(white, #223645);
-  color: #fff;
-  margin: 16px 0px;
-  position: relative;
-  padding: 10px;
-  bottom: 0;
-}
-
-/* Index page styles *******************************************************************************/
+/********************* PAGINA INDEX STYLES ************************/
 /* Unused classes? */
 /* .s_main_index {
   width: 70%;
@@ -310,7 +288,7 @@ main h1 {
   font-size: 4vw;
 } */
 
-/* Lista_paciente page styles *********************************************************************/
+/********************* PAGINA LISTAR STYLES ************************/
 .row {
   display: flex;
   flex-direction: column;
@@ -516,7 +494,7 @@ main h1 {
   cursor: pointer;
 }
 
-/* Modal content styles */
+/********************* MODAL STYLES ************************/
 .modal-content .data-content{
   display: flex;
   flex-direction: column;
@@ -526,32 +504,34 @@ main h1 {
 .modal-content .data-content .dataTable{
   width: 90%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   column-gap: 1%;
   overflow: auto;
   justify-content: start;
+  border: 4px solid #525252;
+  border-radius: 10px;
 }
 
 .modal-content .data-content .dataTable .cell{
-  border: 2px solid black;
+  border-bottom: 4px solid #525252;
   margin-top: 1%;
   padding: 1%;
   text-align: center;
 }
 
 .modal-content .data-content .dataTable .headingCell{
-  border: 1px solid black;
-  background-color: white;
-  color: black;
+  background-color: #ffffff00;
+  color: #fff700;
+  text-transform: uppercase;
   padding: .2rem .5rem .2rem .5rem;
+  font-size: 1.5em;
+  border-bottom: 1px solid white;
 }
 
 .modal-content .data-content .dataTable .dataCell{
   /* font-style: italic; */
   margin-top: .5rem;
 }
-
 
 /* Unused classes ? */
 /* .paciente {
@@ -579,7 +559,7 @@ main h1 {
   align-items: center;
 } */
 
-/* Registrar page styles **************************************************************************/
+/********************* PAGINA REGISTRAR STYLES ************************/
 .register__contenido--main{
   margin: 0 auto;
 }
@@ -661,8 +641,7 @@ main h1 {
 .form_label_si_no label input {
   width: 15px;
 }
-/* Form raiz caja  */
-/* CONTENIDO DDE FPRM  */
+
 .form {
   display: flex;
   flex-direction: column;
@@ -687,7 +666,7 @@ td {
     display: none;
 } */
 
-/* partes */
+/********************* FORMULARIOS STYLES ************************/
 #part2 {
   display: none;
 }
@@ -775,17 +754,7 @@ td {
   margin: 0 auto;
 } */
 
-/*ANIMACIONES*/
-@keyframes slide {
-  0% {
-    transform: translate(0vw, 100vw);
-  }
-  100% {
-    transform: translate(0vw, 0vw);
-  }
-}
-
-/* Estils de botonera */
+/********************* BOTONERA STYLES ************************/
 .botonera{
   display: flex;
   justify-content: center;
@@ -848,7 +817,7 @@ td {
 }
 
 
-/* PaginaExit page styles *************************************************************************/
+/********************* PAGINA EXIT STYLES ************************/
 .s_main_exitosa {
   background-color: white;
   padding: 10px;
@@ -863,7 +832,7 @@ td {
   font-size: 30px;
 }
 
-/* RegistroError page styles **********************************************************************/
+/********************* REGISTRO ERROR STYLES ************************/
 .s_main_error {
   background-color: white;
   padding: 10px;
@@ -888,3 +857,73 @@ td {
   font-size: 14px;
   color: white;
 } */
+
+/********************* FOOTER STYLES ************************/
+footer{
+  background-color: #223645;
+  padding-left: 25px;
+  color: white;
+  animation-name: slide;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.logo-footer{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.iconos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono-telefono {
+  width: 20px;
+  height: 20px;
+}
+
+.icono-email {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-container{
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-around;
+  padding: 0px 70px 0px 70px;
+}
+
+.footer-descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/********************* MEDIA SCREEN ************************/
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/********************* ANIMACIONES STYLES ************************/
+@keyframes slide {
+  0% {
+    transform: translate(0vw, 100vw);
+  }
+  100% {
+    transform: translate(0vw, 0vw);
+  }
+}
