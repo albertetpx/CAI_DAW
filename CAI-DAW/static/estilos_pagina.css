@@ -704,6 +704,11 @@ td {
 #part7 {
   display: none;
 }
+
+#part7 td label{
+  color: black;
+}
+
 #part8 {
   display: none;
 }
