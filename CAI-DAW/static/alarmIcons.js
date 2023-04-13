@@ -26,6 +26,7 @@ function pedirAlarmasPaciente(dni, element) {
 
 
             var alarma = element.querySelectorAll('.alarmes > div');
+
             if (pacient.tos === "a") {
                 alarma[0].classList.add('activa');
             }
