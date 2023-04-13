@@ -354,6 +354,7 @@ main h1 {
   flex-direction: row;
   align-items: center;
   width: 70%;
+  margin-left: -7.5%;
 }
 
 .dadesPersonals .dadesEdat{
@@ -361,21 +362,32 @@ main h1 {
   flex-direction: row;
   align-items: center;
   width: 20%;
+  margin-left: 5%;
 }
 
 .alarmes{
   display: flex;
   flex-direction: row;
-  column-gap: 15%;
+  column-gap: 10%;
   align-items: center;
-  width: 30%;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-left: 5%;
+}
+
+.alarma {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .alarmes .alarma.activa {
   color: red;
 }
 
-
+.text-name h3 {
+  margin-left: 5%;
+  margin-top: 55%;
+}
 
 /* .text-name {
   display: flex;

@@ -22,9 +22,7 @@
           alt="Imagen de logo"
           width="90px"
         /> -->
-        <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
-          alt="Imagen de logo"
-          width="150px">
+      <img src="{{url_for('static',filename='enfermeros.jpg')}}" alt="Imagen de logo" width="150px">
     </div>
 
     <!-- TITULO DE LA PAGINA-->
@@ -100,21 +98,31 @@
             <div class="list">
               <div class="dadesPersonals">
                 <div class="dadesNom">
-                  <h4>Nom:</h4><div>{{linea[1]}}</div>
+                  <h4>Nom:</h4>
+                  <div>{{linea[1]}}</div>
                 </div>
                 <div class="dadesEdat">
-                  <h4>Edat:</h4><div>{{linea[2]}}</div>
+                  <h4>Edat:</h4>
+                  <div>{{linea[2]}}</div>
                 </div>
               </div>
               <!-- CON ESTE LOOP.INDEX OBTENEMOS EL INDICE -->
               <!-- <p>{{linea[0]}}</p> -->
               <div class="alarmes">
-                <div class="alarma"><i class="fa-duotone fa-head-side-cough fa xl"></i></div>
-                <div class="alarma"><i class="fa-solid fa-box-tissue fa-xl" ></i></div>
-                <div class="alarma"><i class="fa fa-thermometer-full fa-xl" aria-hidden="true"></i></div>
-                <div class="alarma"><i class="fa fa-shower fa-xl" aria-hidden="true"></i></div>
-                <div class="alarma"><i class="fa-solid fa-weight-scale fa-xl" aria-hidden="true"></i></div>
-                <div class="alarma"><i class="fa fa-shower fa-xl" aria-hidden="true"></i></div>
+                <div class="alarma"><i class="fa-solid fa-head-side-cough fa-xl"></i></div>
+                <div class="alarma"><i class="fa-solid fa-box-tissue fa-xl"></i></div>
+                <div class="alarma"><i class="fa-solid fa-lungs fa-xl"></i></div>
+                <div class="alarma"><i class="fa-sharp fa-solid fa-smoking fa-lg"></i></div>
+                <div class="alarma"><i class="fa-solid fa-bowl-food fa-xl"></i></div>
+                <div class="alarma"><i class="fa fa-thermometer-full fa-xl" aria-hidden="true"></i></div> <!-- Buscar imagen de habitos para camibar-->
+                <div class="alarma"><i class="fa-solid fa-person-walking fa-xl"></i></div>                
+                <div class="alarma"><i class="fa-sharp fa-solid fa-bed fa-xl"></i></div>
+
+                <div class="alarma"><i class="fa-solid fa-person-half-dress fa-2xl"></i></div>
+                <div class="alarma"><i class="fa fa-thermometer-full fa-2xl" aria-hidden="true"></i></div>
+                <div class="alarma"><i class="fa fa-shower fa-xl" aria-hidden="true"></i></div> 
+                <div class="alarma"><i class="fa-sharp fa-solid fa-shield-halved fa-xl"></i></div>
+                <div class="alarma"><i class="fa-solid fa-comments fa-xl"></i></div>
               </div>
             </div>
           </div>
@@ -150,31 +158,26 @@
   </main>
   <footer>
     <div class="logo-footer">
-      <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
-      alt="Imagen de logo"
-      width="50px">
+      <img src="{{url_for('static',filename='enfermeros.jpg')}}" alt="Imagen de logo" width="50px">
       <h2>CAI PROYECTOS</h2>
     </div>
     <div class="footer-container">
       <div>
         <div class="iconos">
-          <img src="{{url_for('static',filename='telefone.png')}}" 
-          alt="Telefono"
-          class="icono-telefono">
+          <img src="{{url_for('static',filename='telefone.png')}}" alt="Telefono" class="icono-telefono">
           <h4>+34 933 19 17 00</h4>
         </div>
         <div class="iconos">
-          <img src="{{url_for('static',filename='email.png')}}" 
-          alt="Email"
-          class="icono-email">
+          <img src="{{url_for('static',filename='email.png')}}" alt="Email" class="icono-email">
           <h4>pregunta@epx.fjaverianas.com</h4>
         </div>
       </div>
       <div class="footer-descripcion">
         <h3>Sobre el Proyecto</h3>
-        <p>Nuestro objetivo es ayudar los pacientes alta lo más pronto posible. </br> Por eso, creamos una pagina para controlar la salud y bien estar de nuestros pacientes.</p>
+        <p>Nuestro objetivo es ayudar los pacientes alta lo más pronto posible. </br> Por eso, creamos una pagina para
+          controlar la salud y bien estar de nuestros pacientes.</p>
       </div>
-  </div>
+    </div>
   </footer>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

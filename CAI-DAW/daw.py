@@ -83,7 +83,7 @@ def actualizarAlarmas():
             'influencia_respiracio': row[3],
             'fuma': row[4],
             'influencia_aliments': row[5],
-            'influencia_eliminacio': row[6],
+            'influencia_eliminacio': row[6],#Buscar imagen para habitos a elimiar
             'influencia_moure_cos': row[7],
             'influencia_son': row[8],
             'influencia_vestimenta': row[9],

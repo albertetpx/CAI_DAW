@@ -23,7 +23,7 @@ function pedirAlarmasPaciente(dni, element) {
 
             const data = JSON.parse(this.responseText);
             const pacient = data.pacientes[0];
-            console.log(pacient);
+
 
             var alarma = element.querySelectorAll('.alarmes > div');
             if (pacient.tos === "a") {
@@ -44,27 +44,27 @@ function pedirAlarmasPaciente(dni, element) {
             if (pacient.influencia_eliminacio === "a") {
                 alarma[5].classList.add('activa');
             }
-            // if (pacient.influencia_moure_cos === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencia_son === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencia_vestimenta === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencien_termoregulacio === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencien_higene === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencien_seguretat === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
-            // if (pacient.influencien_comunicacio === "a") {
-            //     alarma[0].classList.add('activa');
-            // }
+            if (pacient.influencia_moure_cos === "a") {
+                alarma[6].classList.add('activa');
+            }
+            if (pacient.influencia_son === "a") {
+                alarma[7].classList.add('activa');
+            }
+            if (pacient.influencia_vestimenta === "a") {
+                alarma[8].classList.add('activa');
+            }
+            if (pacient.influencien_termoregulacio === "a") {
+                alarma[9].classList.add('activa');
+            }
+            if (pacient.influencien_higene === "a") {
+                alarma[10].classList.add('activa');
+            }
+            if (pacient.influencien_seguretat === "a") {
+                alarma[11].classList.add('activa');
+            }
+            if (pacient.influencien_comunicacio === "a") {
+                alarma[12].classList.add('activa');
+            }
         }
 
     }
