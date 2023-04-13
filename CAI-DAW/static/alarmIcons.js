@@ -23,11 +23,9 @@ function pedirAlarmasPaciente(dni, element) {
 
             const data = JSON.parse(this.responseText);
             const pacient = data.pacientes[0];
-            console.log(pacient.dni);
-            console.log(pacient.tos)
+            console.log(pacient);
 
             var alarma = element.querySelectorAll('.alarmes > div');
-
             if (pacient.tos === "a") {
                 alarma[0].classList.add('activa');
             }
