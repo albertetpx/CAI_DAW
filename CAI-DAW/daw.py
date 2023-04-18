@@ -3,9 +3,11 @@ from procesarForm import procesarFormulario
 from bdPacients import obtenerDatos
 from bdPacients import obtenerDatosPacienteTabla
 from bdPacients import obtenerNumPacientes
+from bdPacients import initdb
 
 app = Flask(__name__)
 
+initdb()
 
 @app.route("/")
 def principalTabla_inicio():
@@ -24,7 +26,7 @@ def lista_paciente():
                     'Menjar i beure',
                     'Necessitats d\'eliminació',
                     'Necessitats de mobilitat',
-                    'Necessitats de son i repòs',
+                    'Necessitats de son i repòsxxxxx',
                     'Necessitats de vertimenta',
                     'Necessitats de temperatura']
     return render_template("lista_paciente.html", data=data, numTablas=8, nombreTablas=nombreTablas)
@@ -96,4 +98,4 @@ def actualizarAlarmas():
 
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.run(host='localhost', port=5000, debug=True)
+app.run(host='localhost', port=5000)

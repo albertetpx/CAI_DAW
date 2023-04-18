@@ -1,15 +1,51 @@
 import mysql.connector
+import sqlite3
+import os
 from config import CONTRASENA
-
+DB = 'SQLITE'
+# DB = 'MYSQL'
 
 def conectarBD():
-    db = mysql.connector.connect(host='localhost',
-                                 user='root',
-                                 password=CONTRASENA,
-                                 database="formulario_cai"
-                                 )
+    if DB == 'MYSQL':
+        db = mysql.connector.connect(host='localhost',
+                                    user='root',
+                                    password=CONTRASENA,
+                                    database="formulario_cai"
+                                    )
+    elif DB == 'SQLITE':
+        db = sqlite3.connect("formulario_cai.db")
     return db
 
+
+def initdb():
+    db = conectarBD()
+    cursor = db.cursor()
+    try:
+        # AQUÍ EJECUTAR SCRIPT SI BD ESTÁ VACÍA
+        if DB == 'MySQL':
+            # TO DEBUG
+            query = "SHOW TABLES;"
+            cursor.execute(query)
+            tables = cursor.fetchall()
+            if (tables == []):
+                path = os.getcwd()+'\\telesfor.sql'
+                sql_file = open(path, 'r', encoding='UTF-8')
+                sql_script = sql_file.read()
+                cursor.execute(sql_script)
+        elif DB == 'SQLITE':
+            query = "SELECT name FROM sqlite_master WHERE type='table';"
+            cursor.execute(query)
+            tables = cursor.fetchall()
+            if (tables == []):
+                path = os.getcwd()+'\\telesfor_sqlite.sql'
+                sql_file = open(path, 'r', encoding='UTF-8')
+                sql_script = sql_file.read()
+                cursor.executescript(sql_script)
+    except:
+        print(str(mysql.connector.errors.Error()))
+    db.commit()
+    db.close()
+    return
 
 def insertarDatosDB(consulta):
     db = conectarBD()
