@@ -5,6 +5,7 @@ if DB == 'MYSQL':
     import mysql.connector
 elif DB == 'SQLITE':
      import sqlite3
+import os
 
 
 def conectarBD():
@@ -15,7 +16,10 @@ def conectarBD():
                                     database="formulario_cai"
                                     )
     elif DB == 'SQLITE':
-        db = sqlite3.connect("formulario_cai.db")
+        if os.getenv('HOSTING', default=None) == None:
+            db = sqlite3.connect("formulario_cai.db")
+        else:
+            db = sqlite3.connect("/home/telesfor/CAI_DAW/formulario_cai.db")
     return db
 
 
@@ -24,7 +28,7 @@ def initdb():
     cursor = db.cursor()
     try:
         # AQUÍ EJECUTAR SCRIPT SI BD ESTÁ VACÍA
-        if DB == 'MySQL':
+        if DB == 'MYSQL':
             # TO DEBUG
             query = "SHOW TABLES;"
             cursor.execute(query)
@@ -44,7 +48,10 @@ def initdb():
                 sql_script = sql_file.read()
                 cursor.executescript(sql_script)
     except:
-        print(str(mysql.connector.errors.Error()))
+        if DB == 'MYSQL':
+            print(str(mysql.connector.errors.Error()))
+        elif DB == 'SQLITE':
+            pass
     db.commit()
     db.close()
     return
@@ -56,7 +63,10 @@ def insertarDatosDB(consulta):
         print(consulta)
         cursor.execute(consulta)
     except:
-        print(str(mysql.connector.errors.Error()))
+        if DB == 'MYSQL':
+            print(str(mysql.connector.errors.Error()))
+        elif DB == 'SQLITE':
+            pass
     db.commit()
     db.close()
     return

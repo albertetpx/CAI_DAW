@@ -4,6 +4,7 @@ from bdPacients import obtenerDatos
 from bdPacients import obtenerDatosPacienteTabla
 from bdPacients import obtenerNumPacientes
 from bdPacients import initdb
+import os
 
 app = Flask(__name__)
 
@@ -103,7 +104,7 @@ def actualizarAlarmas():
         })
     return jsonify(result)
 
-
-# app.config['TEMPLATES_AUTO_RELOAD'] = True
-# app.run(host='localhost', port=5000, debug=True)
-app.run()
+if os.getenv('HOSTING', default=None) == None:
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(host='localhost', port=5000, debug=True)
+    app.run()
