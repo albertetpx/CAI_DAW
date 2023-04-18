@@ -153,43 +153,43 @@ function pedirAlarmasPaciente(dni, element) {
 
           var alarma = element.querySelectorAll('.alarmes > div');
 
-          if (pacient.tos === "a") {
+          if (pacient.tos === "SI") {
               alarma[0].classList.add('activa');
           }
-          if (pacient.expectoracio === "a") {
+          if (pacient.expectoracio === "SI") {
               alarma[1].classList.add('activa');
           }
-          if (pacient.influencia_respiracio === "a") {
+          if (pacient.influencia_respiracio === "SI") {
               alarma[2].classList.add('activa');
           }
-          if (pacient.fuma === "a") {
+          if (pacient.fuma === "SI") {
               alarma[3].classList.add('activa');
           }
-          if (pacient.influencia_aliments === "a") {
+          if (pacient.influencia_aliments === "SI") {
               alarma[4].classList.add('activa');
           }
-          if (pacient.influencia_eliminacio === "a") {
+          if (pacient.influencia_eliminacio === "SI") {
               alarma[5].classList.add('activa');
           }
-          if (pacient.influencia_moure_cos === "a") {
+          if (pacient.influencia_moure_cos === "SI") {
               alarma[6].classList.add('activa');
           }
-          if (pacient.influencia_son === "a") {
+          if (pacient.influencia_son === "SI") {
               alarma[7].classList.add('activa');
           }
-          if (pacient.influencia_vestimenta === "a") {
+          if (pacient.influencia_vestimenta === "SI") {
               alarma[8].classList.add('activa');
           }
-          if (pacient.influencien_termoregulacio === "a") {
+          if (pacient.influencien_termoregulacio === "SI") {
               alarma[9].classList.add('activa');
           }
-          if (pacient.influencien_higene === "a") {
+          if (pacient.influencien_higene === "SI") {
               alarma[10].classList.add('activa');
           }
-          if (pacient.influencien_seguretat === "a") {
+          if (pacient.influencien_seguretat === "SI") {
               alarma[11].classList.add('activa');
           }
-          if (pacient.influencien_comunicacio === "a") {
+          if (pacient.influencien_comunicacio === "SI") {
               alarma[12].classList.add('activa');
           }
       }
