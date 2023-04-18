@@ -98,4 +98,4 @@ def actualizarAlarmas():
 
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.run(host='localhost', port=5000)
+app.run(host='localhost', port=5000, debug=True)

@@ -28,7 +28,7 @@ def initdb():
             cursor.execute(query)
             tables = cursor.fetchall()
             if (tables == []):
-                path = os.getcwd()+'\\telesfor.sql'
+                path = os.getcwd()+'/scripts/telesfor.sql'
                 sql_file = open(path, 'r', encoding='UTF-8')
                 sql_script = sql_file.read()
                 cursor.execute(sql_script)
@@ -37,7 +37,7 @@ def initdb():
             cursor.execute(query)
             tables = cursor.fetchall()
             if (tables == []):
-                path = os.getcwd()+'\\telesfor_sqlite.sql'
+                path = './scripts/telesfor_sqlite.sql'
                 sql_file = open(path, 'r', encoding='UTF-8')
                 sql_script = sql_file.read()
                 cursor.executescript(sql_script)
