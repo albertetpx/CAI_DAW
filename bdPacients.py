@@ -1,9 +1,11 @@
-import mysql.connector
-import sqlite3
-import os
 from config import CONTRASENA
 DB = 'SQLITE'
 # DB = 'MYSQL'
+if DB == 'MYSQL':
+    import mysql.connector
+elif DB == 'SQLITE':
+     import sqlite3
+
 
 def conectarBD():
     if DB == 'MYSQL':
@@ -28,7 +30,7 @@ def initdb():
             cursor.execute(query)
             tables = cursor.fetchall()
             if (tables == []):
-                path = os.getcwd()+'/scripts/telesfor.sql'
+                path = './scripts/telesfor.sql'
                 sql_file = open(path, 'r', encoding='UTF-8')
                 sql_script = sql_file.read()
                 cursor.execute(sql_script)
