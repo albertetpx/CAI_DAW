@@ -303,6 +303,7 @@ main h1 {
   padding: 40px;
   height: 30vw;
   overflow-y: scroll;
+  row-gap: 2vh;
 }
 
 .card {
@@ -330,16 +331,17 @@ main h1 {
 .text-card {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
 }
 
 .list {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   justify-content: start;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 7%;
 }
 
 .dadesPersonals{
@@ -353,7 +355,7 @@ main h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 70%;
+  width: 90%;
   margin-left: -7.5%;
 }
 
@@ -361,8 +363,8 @@ main h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 20%;
-  margin-left: 5%;
+  width: 15%;
+  /* margin-left: 10%; */
 }
 
 .alarmes{
@@ -386,7 +388,7 @@ main h1 {
 
 .text-name h3 {
   margin-left: 5%;
-  margin-top: 55%;
+  font-size: 18px;
 }
 
 /* .text-name {
