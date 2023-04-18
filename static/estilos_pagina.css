@@ -357,6 +357,7 @@ main h1 {
   align-items: center;
   width: 90%;
   margin-left: -7.5%;
+  column-gap: 2%;
 }
 
 .dadesPersonals .dadesEdat{
@@ -364,7 +365,7 @@ main h1 {
   flex-direction: row;
   align-items: center;
   width: 15%;
-  /* margin-left: 10%; */
+  column-gap: 1%;
 }
 
 .alarmes{
