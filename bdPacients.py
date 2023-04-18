@@ -257,7 +257,7 @@ def getData8(dni):
 
 def rellenar_datos_9(dni, condicions, descripcio, habits_corporal, habits_bucal, situacions, quines, mitjans, altres):
 
-    consulta = f""" insert necessitat_estar_net_polt_protegir_teguments (
+    consulta = f""" insert into necessitat_estar_net_polt_protegir_teguments (
         dni,condicions_higeniques_pell_mucoses,descripcio_condicions_pell_mucosa,habits_higene_corporal,habits_higene_bucal,
         situacions_influencien_higene,quines_situacions_influencien_higene,mijans_utilitza_millorar_higene,altres_manifestacions)
         values ('{dni}','{condicions}','{descripcio}','{habits_corporal}','{habits_bucal}','{situacions}','{quines}','{mitjans}','{altres}')"""
@@ -280,7 +280,7 @@ def getData9(dni):
 
 def rellenar_datos_10(dni, coneix_mides, salubritat, situacions, quines, mitjans, altres):
 
-    consulta = f""" insert necessitat_evitar_perills (
+    consulta = f""" into necessitat_evitar_perills (
         dni,coneix_mides_prevencio,salubritat_habitat_1,situacions_circumstancies_seguretat_fisica_psicologica_social,
         quines_situacions_seguretat_fisica_psicologica_social,mitjans_utilitza_proteccio,altres_manifestacio)
         values ('{dni}','{coneix_mides}','{salubritat}','{situacions}','{quines}','{mitjans}','{altres}');"""
@@ -326,7 +326,7 @@ def getData11(dni):
 
 def rellenar_datos_12(dni, quines, mitjans, altres):
 
-    consulta = f""" insert necessitat_viure_creences_valors (
+    consulta = f""" insert into necessitat_viure_creences_valors (
         dni,quines_creences_valors, mitjans_utilitza_viure_creences_valors,altres_manifestacions)
         values ('{dni}','{quines}','{mitjans}','{altres}')"""
     insertarDatosDB(consulta)
