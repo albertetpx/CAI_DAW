@@ -104,5 +104,6 @@ def actualizarAlarmas():
     return jsonify(result)
 
 
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.run(host='localhost', port=5000, debug=True)
+# app.config['TEMPLATES_AUTO_RELOAD'] = True
+# app.run(host='localhost', port=5000, debug=True)
+app.run()
