@@ -83,7 +83,7 @@
   <!-- contenido de MAIN  -->
   <main>
     <div class="column">
-      {% for linea in data %}
+      {% for linea in data | reverse %}
       <div class="row">
         <div class="card" id="{{linea[0]}}">
           {% if linea[3] == 'H' %}
