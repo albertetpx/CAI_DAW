@@ -26,10 +26,17 @@ def lista_paciente():
                     'Menjar i beure',
                     'Necessitats d\'eliminació',
                     'Necessitats de mobilitat',
-                    'Necessitats de son i repòsxxxxx',
+                    'Necessitats de son i repòs',
                     'Necessitats de vertimenta',
-                    'Necessitats de temperatura']
-    return render_template("lista_paciente.html", data=data, numTablas=8, nombreTablas=nombreTablas)
+                    'Necessitats de temperatura',
+                    'Necessitats d\'higiene',
+                    'Necessitats d\'evitar perills',
+                    'Necessitats de comunicació',
+                    'Creences i valors',
+                    'Realització personal',
+                    'Necessitats d\'esbarjo',
+                    'Necessitats d\'aprenentatge']
+    return render_template("lista_paciente.html", data=data, numTablas=15, nombreTablas=nombreTablas)
 
 
 @app.route("/registrar", methods=['GET'])

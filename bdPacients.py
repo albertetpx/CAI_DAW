@@ -91,7 +91,7 @@ def getData1(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.info_general where dni = '{dni}'""")
+        f"""SELECT * FROM info_general where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -111,7 +111,7 @@ def getData2(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_respirar where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_respirar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -131,7 +131,7 @@ def getData3(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_menjar_beure where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_menjar_beure where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -151,7 +151,7 @@ def getData4(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_eliminar where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_eliminar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -171,7 +171,7 @@ def getData5(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_moure_mantenir_postura_adequada where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_moure_mantenir_postura_adequada where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -191,7 +191,7 @@ def getData6(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necesitat_dormir_reposar where dni = '{dni}'""")
+        f"""SELECT * FROM necesitat_dormir_reposar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -213,7 +213,7 @@ def getData7(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_vestir_desvestir where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_vestir_desvestir where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -236,7 +236,7 @@ def getData8(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -259,7 +259,7 @@ def getData9(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -282,7 +282,7 @@ def getData10(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_evitar_perills where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_evitar_perills where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -305,7 +305,7 @@ def getData11(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_comunicar where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_comunicar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -324,7 +324,7 @@ def getData12(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_viure_creences_valors where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_viure_creences_valors where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -343,7 +343,7 @@ def getData13(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_ocupar_realitzar where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_ocupar_realitzar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -362,7 +362,7 @@ def getData14(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_esbargir where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_esbargir where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -382,7 +382,7 @@ def getData15(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM formulario_cai.necessitat_aprendre where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_aprendre where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -407,7 +407,20 @@ def obtenerDatosPacienteTabla(dni, tableNum):
         userData = getData7(dni)
     elif tableNum == 7:
         userData = getData8(dni)
-
+    elif tableNum == 8:
+        userData = getData9(dni)
+    elif tableNum == 9:
+        userData = getData10(dni)
+    elif tableNum == 10:
+        userData = getData11(dni)
+    elif tableNum == 11:
+        userData = getData12(dni)
+    elif tableNum == 12:
+        userData = getData13(dni)
+    elif tableNum == 13:
+        userData = getData14(dni)
+    elif tableNum == 14:
+        userData = getData15(dni)
     if userData == []:
         return None
     else:
