@@ -238,6 +238,7 @@ main .container{
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   margin-left: 3%;
+  margin-bottom: 2%;
 }
 
 main h1 {
@@ -918,13 +919,14 @@ footer{
   flex-direction: row;
   justify-items: center;
   justify-content: space-around;
-  padding: 0px 70px 0px 70px;
+  padding: 0px 50px 10px 50px;
 }
 
 .footer-descripcion {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  justify-content: start;
 }
 /********************* MEDIA SCREEN ************************/
 @media screen and (max-height: 450px) {
