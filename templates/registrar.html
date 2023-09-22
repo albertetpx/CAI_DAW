@@ -166,10 +166,15 @@
           <label>FAMILIA DE PROCREACIÓ</label>
           <div class="form_label_si_no">
             <label> SI
-              <input type="radio" value="SI" name="familia_procreacio"  /></label>
+              <input type="radio" value="SI" id="familia_procreacio_si" name="familia_procreacio"  /></label>
             <label>NO
-              <input type="radio" value="NO" name="familia_procreacio" checked/> </label>
+              <input type="radio" value="NO" id="familia_procreacio_no" name="familia_procreacio" checked/> </label>
           </div>
+ 
+
+
+
+
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(1)">ENRERE</div>
             <div class="formButton back" onclick="showForm(3)">SEGÜENT</div>
@@ -181,17 +186,17 @@
         <div class="form" id="part3">
           <h3>Necessitats respiratòries (I)</h3>
           <label for="ritme">RITME </label>
-          <input type="text" value="" name="ritme" />
+          <input type="text" value="" id="ritme" name="ritme" />
           <label for="frequencia_r">FREQÜENCIA R </label>
-          <input type="number" value=0 name="frequencia_r" />
+          <input type="number" value=0 id="frequencia_r" name="frequencia_r" />
           <label for="amplitud">AMPLITUD </label>
-          <input type="number" value=0 name="amplitud" />
+          <input type="number" value=0 id="amplitud" name="amplitud" />
           <label>RESPIRACIÓ</label>
           <div class="form_label_si_no">
             <label>BUCAL
-              <input type="radio" value="Bucal" name="tipus_respiracio"  /></label>
+              <input type="radio" value="Bucal" id="tipus_respiracio_bucal" name="tipus_respiracio"  /></label>
             <label>NASAL
-              <input type="radio" value="Nasal" name="tipus_respiracio" checked/> </label>
+              <input type="radio" value="Nasal" id="tipus_respiracio_nasal" name="tipus_respiracio" checked/> </label>
           </div>
           <label for="orifisis_nasals_permeables">ORIFICIS NASALS PERMEABLES </label>
           <input type="text" value="" name="orifisis_nasals_permeables" />
@@ -903,7 +908,7 @@
   </footer>
   <script src="{{url_for('static',filename='multistep_form.js')}}"></script>
   <script src="/static/menu.js"></script>
-  <!-- <script src="/static/randomPatient.js"></script> -->
+  <script src="/static/randomPatient.js"></script> 
 </body>
 
 </html>

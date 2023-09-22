@@ -18,7 +18,25 @@ window.onload = () =>{
     document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC'])
     document.getElementById("problema_salut_actual").value = randomElement(['Diabetes','Hipertensió','Artrosi','Cap','Colesterol'])
     //familia_procreacio
+    document.getElementById("familia_procreacio_si").value = randomRadioButton();
+    document.getElementById("familia_procreacio_no").value = randomRadioButton();
+    //ritme
+    document.getElementById("ritme").value = randomInt(50,120);
+    //frequencia_r
+    document.getElementById("frequencia_r").value = randomInt(50,100);
+    //amplitud
+    document.getElementById("amplitud").value = randomInt(50,100)
+    //respiració
+    document.getElementById("familia_procreacio_bucal").value = randomRespiracio();
+    document.getElementById("familia_procreacio_nasal").value = randomRespiracio();
+    
+
+
+    
+
+
 }
+
 
 function formatNumberLength(num, length) {
     var r = "" + num;
@@ -56,3 +74,32 @@ function formatNumberLength(num, length) {
     return randomElement(names) + ' ' + randomElement(surnames) + ' ' + randomElement(surnames)
 
   }
+  function randomRadioButton() {
+    const options = ['SI', 'NO'];
+
+    const randomIndex = Math.floor(Math.random() * options.length);
+
+    if (randomIndex === 0) {
+        document.getElementById("familia_procreacio_si").checked = true;
+        document.getElementById("familia_procreacio_no").checked = false;
+    } else {
+        document.getElementById("familia_procreacio_si").checked = false;
+        document.getElementById("familia_procreacio_no").checked = true;
+    }
+}
+
+function randomRespiracio() {
+  const options = ['BUCAL', 'NASAL'];
+
+  const randomIndex = Math.floor(Math.random() * options.length);
+
+  if (randomIndex === 0) {
+      document.getElementById("tipus_respiracio_bucal").checked = true;
+      document.getElementById("tipus_respiracio_nasal").checked = false;
+  } else {
+      document.getElementById("tipus_respiracio_bucal").checked = false;
+      document.getElementById("tipus_respiracio_nasal").checked = true;
+  }
+}
+
+
