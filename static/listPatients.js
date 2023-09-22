@@ -63,7 +63,7 @@ function swipeSlide() {
 }
 
 function getDataForModal(card) {
-  currentDNI = currentUser;
+  currentDNI = currentUser; 
   currentSlide = swiper.realIndex;
   currentModal = swiper.slides[swiper.activeIndex];
   // console.log(`active: ${swiper.activeIndex}, real: ${swiper.realIndex}`)
@@ -76,7 +76,7 @@ function queryData(currentDNI, currentSlide, currentModal) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
     userData = JSON.parse(this.responseText);
-    // console.log(userData);
+    console.log(userData);
     updateModalElements(currentModal, userData)
   }
   xhttp.open("POST", "/consultarDatosPaciente", true);
@@ -84,8 +84,8 @@ function queryData(currentDNI, currentSlide, currentModal) {
 
   payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
   xhttp.send(payload);
-  return
 }
+
 
 function updateModalElements(currentModal, userData) {
   // Update modal
@@ -93,7 +93,11 @@ function updateModalElements(currentModal, userData) {
   let modalContent = currentModal.children[0]
   // modalContent.innerHTML = userData;
   createTable(modalContent, userData)
-  return
+}
+
+////funcion del boton del 'model' para modificar
+function modificarValorFormulario(){
+  console.log('clicaste el boton')
 }
 
 function createTable(modalContent, userData) {
@@ -108,6 +112,14 @@ function createTable(modalContent, userData) {
   //Crear celdas de encabezado
   userData[0].forEach(function(value,index){
     // console.log(heading)
+
+    ////crear boton de modificar valores
+    let modifyButton = document.createElement('button');
+    modifyButton.classList.add("modifyButton");
+    modifyButton.innerHTML = 'MODIFICAR';
+    ///añadir el evento al boton 
+    modifyButton.addEventListener("click", modificarValorFormulario, false);
+    ///
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -119,6 +131,10 @@ function createTable(modalContent, userData) {
     cell.append(headingCell);
     cell.append(dataCell);
     table.append(cell);
+    ///añadir boton de modificar valores
+    headingCell.append(modifyButton)
+    //
+
   })
   modalContent.append(table);
 }
