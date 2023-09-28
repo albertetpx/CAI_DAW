@@ -91,18 +91,14 @@ function updateModalElements(currentModal, userData) {
   // Update modal
   // console.log(currentModal);
   let modalContent = currentModal.children[0]
-  // modalContent.innerHTML = userData;
+  //  modalContent.innerHTML = userData;
   createTable(modalContent, userData)
 }
 
-////funcion del boton del 'model' para modificar
-function modificarValorFormulario(){
-  console.log('clicaste el boton')
-}
 
 function createTable(modalContent, userData) {
   let tables = document.getElementsByClassName("dataTable")[0];
-  if (tables != undefined) {
+  if (tables != undefined) { 
     tables.remove();
   }
 
@@ -116,10 +112,10 @@ function createTable(modalContent, userData) {
     ////crear boton de modificar valores
     let modifyButton = document.createElement('button');
     modifyButton.classList.add("modifyButton");
+    ///ponemos id al boton
+    modifyButton.id = userData[0][index];
     modifyButton.innerHTML = 'MODIFICAR';
-    ///añadir el evento al boton 
-    modifyButton.addEventListener("click", modificarValorFormulario, false);
-    ///
+    //
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -133,10 +129,27 @@ function createTable(modalContent, userData) {
     table.append(cell);
     ///añadir boton de modificar valores
     headingCell.append(modifyButton)
+    ///añadir el evento al boton 
+    modifyButton.addEventListener("click", modificarValorFormulario, false);
     //
 
   })
   modalContent.append(table);
+}
+
+////funcion del boton del 'model' para modificar
+function modificarValorFormulario(){
+  let dataCell = document.getElementsByClassName("dataCell");
+  let cell = document.getElementsByClassName("cell");
+
+  //creamos atributo para editar
+  let editable = document.createAttribute("contenteditable");
+  editable.value = true;
+  //
+  dataCell.id= this.id;
+
+  dataCell.setAttributeNode(editable);
+  console.log(dataCell.getAttribute("contenteditable"));
 }
 
 // AlarmIcons
