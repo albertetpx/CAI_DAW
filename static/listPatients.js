@@ -63,7 +63,7 @@ function swipeSlide() {
 }
 
 function getDataForModal(card) {
-  currentDNI = currentUser;
+  currentDNI = currentUser; 
   currentSlide = swiper.realIndex;
   currentModal = swiper.slides[swiper.activeIndex];
   // console.log(`active: ${swiper.activeIndex}, real: ${swiper.realIndex}`)
@@ -76,7 +76,7 @@ function queryData(currentDNI, currentSlide, currentModal) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
     userData = JSON.parse(this.responseText);
-    // console.log(userData);
+    console.log(userData);
     updateModalElements(currentModal, userData)
   }
   xhttp.open("POST", "/consultarDatosPaciente", true);
@@ -84,23 +84,21 @@ function queryData(currentDNI, currentSlide, currentModal) {
 
   payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
   xhttp.send(payload);
-  return
 }
+
 
 function updateModalElements(currentModal, userData) {
   // Update modal
   // console.log(currentModal);
   let modalContent = currentModal.children[0]
-  // modalContent.innerHTML = userData;
+  //  modalContent.innerHTML = userData;
   createTable(modalContent, userData)
-  return
 }
-
 
 
 function createTable(modalContent, userData) {
   let tables = document.getElementsByClassName("dataTable")[0];
-  if (tables != undefined) {
+  if (tables != undefined) { 
     tables.remove();
   }
 
@@ -111,21 +109,13 @@ function createTable(modalContent, userData) {
   userData[0].forEach(function(value,index){
     // console.log(heading)
 
-    // crear button para cada modificar el valor de cada celda
+    ////crear boton de modificar valores
     let modifyButton = document.createElement('button');
-    modifyButton.classList.add("buttonmodify");
-    modifyButton.innerHTML="Modificar";
-    // añadir evento al button
-    // modifyButton.addEventListener("click", modificarValorFormulario,false);
-
-    //  añadir evento al button
-    modifyButton.addEventListener("click", function () {
-      // función para editar el valor 
-      editValue(dataCell, userData[1][index]);
-
-    });
-
-// crear los elementos de cada cela
+    modifyButton.classList.add("modifyButton");
+    ///ponemos id al boton
+    modifyButton.id = userData[0][index];
+    modifyButton.innerHTML = 'MODIFICAR';
+    //
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -137,42 +127,9 @@ function createTable(modalContent, userData) {
     cell.append(headingCell);
     cell.append(dataCell);
     table.append(cell);
-
-    // Append para agregar el button en el heading cell
-    headingCell.append(modifyButton);
   })
   modalContent.append(table);
 }
-
-
-function editValue(cell, initialValue) {
-  const editingValue = document.createElement("input");
-  editingValue.type = "text";
-  editingValue.value = initialValue;
-
-  const saveButton = document.createElement("button");
-  saveButton.innerHTML = "Guardar";
-
-  saveButton.addEventListener("click", function () {
-    // conseguir el valor modificado que el usuario ingresa como input
-    const modifiedValue = editingValue.value;
-
-    // actualizar el dato modificado en la celda
-    cell.innerHTML = modifiedValue;
-
-    // Llamar a una función para guardar el valor modificado en la base de datos
-    saveDB(currentUser, modifiedValue);
-
-    // Elimina el input y el botón guardar
-    editingValue.remove();
-    saveButton.remove();
-  });
-
-  cell.innerHTML = '';
-  cell.appendChild(editingValue);
-  cell.appendChild(saveButton);
-}
-
 
 // AlarmIcons
 // window.onload = function () {
