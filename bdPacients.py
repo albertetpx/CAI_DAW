@@ -89,6 +89,11 @@ def obtenerNumPacientes(consulta):
     return numPacient
 
 
+def ModifyPatientData(dni, tableName, valueHeadingCell, modifiedValue):
+    consulta = f"UPDATE '{tableName}' SET '{valueHeadingCell}' = '{modifiedValue}' WHERE dni = '{dni}'"
+    insertarDatosDB(consulta)
+
+
 def rellenar_datos_1(dni, nom, edat, sexe, LLoc_naixement, Lloc_residencia, temps_residencia, familia_origen_pare, familia_origen_mare, familia_origen_germans, familia_procreacio, rol_ocupa, membres_integren, viu_sol, problema_salut_actual, pren_medicaments_casa, quins_medicaments):
 
     consulta = f"""insert into info_general (dni,nom,edat,sexe,Lloc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments) 

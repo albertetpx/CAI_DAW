@@ -3,6 +3,7 @@ from bdPacients import rellenar_datos_5,rellenar_datos_6,rellenar_datos_7,rellen
 from bdPacients import rellenar_datos_9,rellenar_datos_10,rellenar_datos_11,rellenar_datos_12
 from bdPacients import rellenar_datos_13,rellenar_datos_14,rellenar_datos_15
 
+
 def procesarFormulario(request):
     respuesta = request.form
     

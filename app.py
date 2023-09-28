@@ -39,6 +39,11 @@ def lista_paciente():
                     'Necessitats d\'aprenentatge']
     return render_template("lista_paciente.html", data=data, numTablas=15, nombreTablas=nombreTablas)
 
+@app.route("/actualizar_lista_paciente")
+def lista_paciente():
+
+    return render_template("lista_paciente.html")
+
 
 @app.route("/registrar", methods=['GET'])
 def registrar():
@@ -79,19 +84,6 @@ def consultarDatosPaciente():
         # print(userData)
         return jsonify(userData)
 
-
-@app.route('/actualizarDatosBD', methods=['POST'])
-def update_data():
-        # obtener los datos con el método POST
-        data = request.form
-        dni = data.get('dni')
-        modified_value = data.get('modifiedValue')
-
-        # actualizar la BD
-        database[dni] = modified_value
-
-        return jsonify({'Los datos han sido modificados'})
- 
 
 
 @app.route("/consultarAlarmasPaciente", methods=['POST'])

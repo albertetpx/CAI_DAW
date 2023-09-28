@@ -19,6 +19,26 @@ var modal = document.getElementById("paciente-details");
 var span = document.getElementsByClassName("close")[0];
 var currentUser = "";
 
+
+////diccionario para modificar _CC
+const diccionarioTablas = {
+  t1:"info_general" , 
+  t2:"necesitat_dormir_reposar",
+  t3:"necesitat_aprendre",
+  t4:"necesitat_comunicar",
+  t5:"necesitat_eliminar",
+  t6:"necesitat_esbargir",
+  t7:"necesitat_estar_net_polt_protegir_teguments",
+  t8:"necesitat_evitar_perills",
+  t9:"necesitat_mantenir_temperatura_corporal_limits_normals",
+  t10:"necesitat_menjar_beure",
+  t11:"necesitat_moure_mantenir_postura_adequada",
+  t12:"necesitat_ocupar_realitzar",
+  t13:"necesitat_respirar",
+  t14:"necesitat_vestir_desvestir",
+  t15:"necesitat_viure_creences_valors"
+}
+
 // Funciones a ejecutar en el windows load
 window.onload = () => {
   // Leer alarmas
@@ -86,6 +106,17 @@ function queryData(currentDNI, currentSlide, currentModal) {
   xhttp.send(payload);
 }
 
+///UPDATE PAAR MODIFICAR DATOS BD
+function saveToDataBase(currentDNI, currentSlide) {
+  const xhttp = new XMLHttpRequest();
+  
+  xhttp.open("POST", "/consultarDatosPaciente", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+  payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
+  xhttp.send(payload);
+}
+
 
 function updateModalElements(currentModal, userData) {
   // Update modal
@@ -95,12 +126,12 @@ function updateModalElements(currentModal, userData) {
   createTable(modalContent, userData)
 }
 
-
 function createTable(modalContent, userData) {
   let tables = document.getElementsByClassName("dataTable")[0];
-  if (tables != undefined) { 
+  if (tables != undefined) {
     tables.remove();
   }
+
 
   //Creamos tabla
   let table = document.createElement('div');
@@ -109,13 +140,25 @@ function createTable(modalContent, userData) {
   userData[0].forEach(function(value,index){
     // console.log(heading)
 
-    ////crear boton de modificar valores
+
+    // crear button para cada modificar el valor de cada celda
     let modifyButton = document.createElement('button');
-    modifyButton.classList.add("modifyButton");
-    ///ponemos id al boton
-    modifyButton.id = userData[0][index];
-    modifyButton.innerHTML = 'MODIFICAR';
-    //
+    modifyButton.classList.add("buttonmodify");
+    modifyButton.innerHTML="Modificar";
+    // añadir evento al button
+    // modifyButton.addEventListener("click", modificarValorFormulario,false);
+
+
+    //  añadir evento al button
+    modifyButton.addEventListener("click", function () {
+      // función para editar el valor
+      editValue(dataCell, userData[1][index]);
+
+
+    });
+
+
+// crear los elementos de cada cela
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -127,14 +170,40 @@ function createTable(modalContent, userData) {
     cell.append(headingCell);
     cell.append(dataCell);
     table.append(cell);
+
+
+    // Append para agregar el button en el heading cell
+    headingCell.append(modifyButton);
   })
   modalContent.append(table);
 }
 
-// AlarmIcons
-// window.onload = function () {
-//   cargasAlarmas();
-// }
+function editValue(cell, initialValue) {
+  const editingValue = document.createElement("input");
+  editingValue.type = "text";
+  editingValue.value = initialValue;
+
+  const saveButton = document.createElement("button");
+  saveButton.innerHTML = "Guardar";
+
+  saveButton.addEventListener("click", function () {
+    // conseguir el valor modificado que el usuario ingresa como input
+    const modifiedValue = editingValue.value;
+
+    // actualizar el dato modificado en la celda
+    cell.innerHTML = modifiedValue;
+
+    // Elimina el input y el botón guardar
+    saveButton.remove();
+  });
+
+  cell.innerHTML = '';
+  cell.appendChild(editingValue);
+  cell.appendChild(saveButton);
+}
+
+
+
 
 function cargasAlarmas() {
   // Cojo todas las cards
