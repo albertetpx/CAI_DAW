@@ -5,32 +5,36 @@ window.onload = () =>{
     document.getElementById("nom").value = randomName();
     document.getElementById("edat").value = randomInt(70,100);
     document.getElementById("sexe").value = randomElement(['H','D']);
-    document.getElementById("LLoc_naixement").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
-    document.getElementById("Lloc_residencia").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
+    document.getElementById("LLoc_naixement").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador']);
+    document.getElementById("Lloc_residencia").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador']);
     //viu_sol
-    document.getElementById("familia_origen_pare").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
-    document.getElementById("familia_origen_mare").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
-    document.getElementById("familia_origen_germans").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador'])
-    document.getElementById("rol_ocupa").value = randomElement(['Pare','Mare','Avi','Àvia','Cap'])
+    document.getElementById("familia_origen_pare").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador']);
+    document.getElementById("familia_origen_mare").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador']);
+    document.getElementById("familia_origen_germans").value = randomElement(['España','Brasil','Armenia','Marruecos','Ecuador']);
+    document.getElementById("rol_ocupa").value = randomElement(['Pare','Mare','Avi','Àvia','Cap']);
     document.getElementById("membres_integren").value = randomInt(2,4);
     //pren_medicaments_casa
     document.getElementById("temps_residencia").value = randomInt(10,60);
-    document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC'])
+    document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC']);
     document.getElementById("problema_salut_actual").value = randomElement(['Diabetes','Hipertensió','Artrosi','Cap','Colesterol'])
     //familia_procreacio
-    document.getElementById("familia_procreacio_si").value = randomRadioButton();
-    document.getElementById("familia_procreacio_no").value = randomRadioButton();
+    document.getElementById("familia_procreacio_si").value = randomRadioButton("familia_procreacio_si","familia_procreacio_no",2);
+    document.getElementById("familia_procreacio_no").value = randomRadioButton("familia_procreacio_si","familia_procreacio_no",2);
     //ritme
     document.getElementById("ritme").value = randomInt(50,120);
     //frequencia_r
     document.getElementById("frequencia_r").value = randomInt(50,100);
     //amplitud
-    document.getElementById("amplitud").value = randomInt(50,100)
+    document.getElementById("amplitud").value = randomInt(50,100);
     //respiració
-    document.getElementById("familia_procreacio_bucal").value = randomRespiracio();
-    document.getElementById("familia_procreacio_nasal").value = randomRespiracio();
-    
-
+    document.getElementById("familia_procreacio_bucal").value = randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
+    document.getElementById("familia_procreacio_nasal").value =  randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
+    //orifisis_nasals_permeables
+    document.getElementById("orifisis_nasals_permeables").value = randomElement(['Taponat','Correcte']);
+    //frequencia_cardiaca
+    document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
+    //pa 
+    document.getElementById("pa").value = randomInt(50,120);
 
     
 
@@ -74,32 +78,19 @@ function formatNumberLength(num, length) {
     return randomElement(names) + ' ' + randomElement(surnames) + ' ' + randomElement(surnames)
 
   }
-  function randomRadioButton() {
-    const options = ['SI', 'NO'];
-
-    const randomIndex = Math.floor(Math.random() * options.length);
+  function randomRadioButton(id1, id2, size) {
+    const randomIndex = Math.floor(Math.random() * size);
 
     if (randomIndex === 0) {
-        document.getElementById("familia_procreacio_si").checked = true;
-        document.getElementById("familia_procreacio_no").checked = false;
+        document.getElementById(id1).checked = true;
+        document.getElementById(id2).checked = false;
     } else {
-        document.getElementById("familia_procreacio_si").checked = false;
-        document.getElementById("familia_procreacio_no").checked = true;
+        document.getElementById(id1).checked = false;
+        document.getElementById(id2).checked = true;
     }
 }
 
-function randomRespiracio() {
-  const options = ['BUCAL', 'NASAL'];
 
-  const randomIndex = Math.floor(Math.random() * options.length);
 
-  if (randomIndex === 0) {
-      document.getElementById("tipus_respiracio_bucal").checked = true;
-      document.getElementById("tipus_respiracio_nasal").checked = false;
-  } else {
-      document.getElementById("tipus_respiracio_bucal").checked = false;
-      document.getElementById("tipus_respiracio_nasal").checked = true;
-  }
-}
 
 
