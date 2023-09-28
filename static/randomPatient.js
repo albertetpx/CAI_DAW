@@ -1,3 +1,4 @@
+// Hem de generar ub botó i canviar l'event window.onload per un click buton
 window.onload = () =>{
     // Fins ara només està implementat el Form 1 
     // Form 1 
