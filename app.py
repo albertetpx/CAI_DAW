@@ -80,6 +80,20 @@ def consultarDatosPaciente():
         return jsonify(userData)
 
 
+@app.route('/actualizarDatosBD', methods=['POST'])
+def update_data():
+        # obtener los datos con el método POST
+        data = request.form
+        dni = data.get('dni')
+        modified_value = data.get('modifiedValue')
+
+        # actualizar la BD
+        database[dni] = modified_value
+
+        return jsonify({'Los datos han sido modificados'})
+ 
+
+
 @app.route("/consultarAlarmasPaciente", methods=['POST'])
 def actualizarAlarmas():
     dni = request.form.get("dni")

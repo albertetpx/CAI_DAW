@@ -96,6 +96,8 @@ function updateModalElements(currentModal, userData) {
   return
 }
 
+
+
 function createTable(modalContent, userData) {
   let tables = document.getElementsByClassName("dataTable")[0];
   if (tables != undefined) {
@@ -108,6 +110,22 @@ function createTable(modalContent, userData) {
   //Crear celdas de encabezado
   userData[0].forEach(function(value,index){
     // console.log(heading)
+
+    // crear button para cada modificar el valor de cada celda
+    let modifyButton = document.createElement('button');
+    modifyButton.classList.add("buttonmodify");
+    modifyButton.innerHTML="Modificar";
+    // añadir evento al button
+    // modifyButton.addEventListener("click", modificarValorFormulario,false);
+
+    //  añadir evento al button
+    modifyButton.addEventListener("click", function () {
+      // función para editar el valor 
+      editValue(dataCell, userData[1][index]);
+
+    });
+
+// crear los elementos de cada cela
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -119,9 +137,42 @@ function createTable(modalContent, userData) {
     cell.append(headingCell);
     cell.append(dataCell);
     table.append(cell);
+
+    // Append para agregar el button en el heading cell
+    headingCell.append(modifyButton);
   })
   modalContent.append(table);
 }
+
+
+function editValue(cell, initialValue) {
+  const editingValue = document.createElement("input");
+  editingValue.type = "text";
+  editingValue.value = initialValue;
+
+  const saveButton = document.createElement("button");
+  saveButton.innerHTML = "Guardar";
+
+  saveButton.addEventListener("click", function () {
+    // conseguir el valor modificado que el usuario ingresa como input
+    const modifiedValue = editingValue.value;
+
+    // actualizar el dato modificado en la celda
+    cell.innerHTML = modifiedValue;
+
+    // Llamar a una función para guardar el valor modificado en la base de datos
+    saveDB(currentUser, modifiedValue);
+
+    // Elimina el input y el botón guardar
+    editingValue.remove();
+    saveButton.remove();
+  });
+
+  cell.innerHTML = '';
+  cell.appendChild(editingValue);
+  cell.appendChild(saveButton);
+}
+
 
 // AlarmIcons
 // window.onload = function () {
