@@ -289,9 +289,16 @@
           <label>CAVITAT BUCAL: </label>
           <br>
           <label for="numero_dents_realitzar_funcio">a) DENTS EN Nº SUFICIENT PER A REALITZAR BÉ LA SEVA FUNCIÓ</label>
-          <input type="number" value=0 name="numero_dents_realitzar_funcio">
-          <label id="b">b) PRÒTESI DENTAL? </label>
+          <div class="form_si_no">
+            <label>NO
+              <input type="radio" value="no" name="numero_dents_realitzar_funcio"  id="noRad"></label>
+              <label>SI
+                <input type="radio" value="si" name="numero_dents_realitzar_funcio" checked > </label>
+          </div>
+          <input type="number" value=0 name="numero_dents_realitzar_funcio" disabled id="totalnumber">
 
+
+          <label id="b">b) PRÒTESI DENTAL? </label>
           <div class="form_label_si_no">
             <label>NO
               <input type="radio" value="no" name="protesi_dental" checked></label>
