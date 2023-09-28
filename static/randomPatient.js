@@ -1,5 +1,6 @@
 // Hem de generar ub botó i canviar l'event window.onload per un click buton
-window.onload = () =>{
+    document.getElementById("botoneraRandom").addEventListener("click",randomitzarFormulari)
+    function randomitzarFormulari () {
     // Fins ara només està implementat el Form 1 
     // Form 1 
     document.getElementById("dni").value = rand_dni();
