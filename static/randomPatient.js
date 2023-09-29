@@ -115,7 +115,9 @@
 
       //quines_influencien2
       document.getElementById("quines_influencien2").value = randomElement(['Exercici intens', 'Allèrgies', 'Infecció respiratòria', 'Fum de tabac', 'Pol·lució atmosfèrica', 'Canvis de temperatura', 'Estrès', 'Consum alcohol']);
-
+      
+      //mitja_utilitza_respirar_millor
+      document.getElementById("mitja_utilitza_respirar_millor").value = randomElement(['Inhalador', 'Hidratant nasal', 'Gargarejos amb aigua salada', 'Respiració profunda', 'Umidificador', 'Medicaments antial·lèrgics', 'Estiraments', 'Màscara oxigen']);
 
 
 
