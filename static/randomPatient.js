@@ -57,6 +57,8 @@
     document.getElementById("membres_integren").value = randomInt(2,4);
     //pren_medicaments_casa
     document.getElementById("temps_residencia").value = randomInt(10,60);
+    document.getElementById("pren_medicaments_casa_si").value = randomRadioButton("pren_medicaments_casa_si","pren_medicaments_casa_no",2);
+    document.getElementById("pren_medicaments_casa_no").value = randomRadioButton("pren_medicaments_casa_si","pren_medicaments_casa_no",2);
     document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC']);
     document.getElementById("problema_salut_actual").value = randomElement(['Diabetes','Hipertensió','Artrosi','Cap','Colesterol'])
     //familia_procreacio
