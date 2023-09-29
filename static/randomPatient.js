@@ -104,10 +104,6 @@
     // Expectoració
      document.getElementById("expectoracio_si").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
      document.getElementById("expectoracio_no").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
-
-<<<<<<< HEAD
-
-=======
      //altres_manifestacions2
       document.getElementById("altres_manifestacions2").value = randomElement(['Espiracions amb mucositat', 'Dificultat per expulsar la mucositat', 'Garganta irritada', 'Nas congestionat', 
       'Tos persistente', 'Mucositat en les vies respiratòries', 'Expectoració', 'Mucositat en la boca']);
@@ -127,8 +123,6 @@
        document.getElementById("fuma_si").value = randomRadioButton("fuma_si","fuma_no",2);
        document.getElementById("fuma_no").value = randomRadioButton("fuma_si","fuma_no",2);
 
-
->>>>>>> 34cc4411de40feb2b602d3e620e8d892d74c20e0
 
 }
 
