@@ -99,7 +99,9 @@
     
 
 
-
+      // Expectoració
+     document.getElementById("expectoracio_si").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
+     document.getElementById("expectoracio_no").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
 }
 
 
