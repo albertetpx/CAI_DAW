@@ -94,33 +94,17 @@
      document.getElementById("tos_descripcio").value = randomElement(['Tos seca','Tos productiva','Tos crònica o aguda','Tos psicògena',]);
      
     //mucositat
-     document.getElementById("mucositat").value = randomElement(['Mucositat clara', 'Mucositat gruixuda', 'Mucositat groga', 'Mucositat amb sang', 'Mucositat excessiva', 'Mucositat nasal', 'Mucositat bronquial', 'Mucositat oral']);
-
-
-     
+     document.getElementById("mucositat").value = randomElement(['Mucositat clara', 'Mucositat gruixuda', 'Mucositat groga', 'Mucositat amb sang', 'Mucositat excessiva', 
+     'Mucositat nasal', 'Mucositat bronquial', 'Mucositat oral']);
     
-
+     //mucositat_descripcio
+     document.getElementById("mucositat_descripcio").value = randomElement(['Mucositat transparent i fluida', 'Mucositat espessa i viscosa', 'Mucositat de color groc o verd', 
+     'Mucositat amb sang', 'Quantitat anormalment alta de mucositat', 'Mucositat a la narina', 'Mucositat als bronquis', 'Mucositat a la boca']);
 
     // Expectoració
      document.getElementById("expectoracio_si").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
      document.getElementById("expectoracio_no").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
 
-    // Menjar i beure
-    document.getElementById("pes").value = randomInt(50,120);
-    document.getElementById("talla").value = randomInt(140,210);
-    document.getElementById("pecesDentals").value = randomInt(0,32);
-    // Tipus de dentadura
-    document.getElementById("Parcial").value = randomRadioButton("Parcial","Total",2);
-    document.getElementById("Total").value =  randomRadioButton("Parcial","Total",2);
-    // Masticació
-    document.getElementById("Lenta").value = randomRadioButton("Lenta","Rapida",2);
-    document.getElementById("Rapida").value =  randomRadioButton("Lenta","Rapida",2);
-    // Deglució
-    document.getElementById("tipusDeglucio").value = randomElement(['Deglució voluntaria', 'Deglució involuntaria / Fase Oral', 'Deglució involuntaria / Fase Faríngia', 'Deglució involuntaria / Fase Espfàgica']);
-    document.getElementById("tipusDieta").value = randomElement(['Dieta Basal', 'Dieta líquida clara', 'Dieta líquida completa', 'Dieta tova o poca fibra', 'DIeta baixa en sodi', 'Dieta baixa en greixos', 'Dieta baixa en sucres', 'Dieta sense gluten', 'Dieta Vegana', 'Dieta enteral', 'Dieta parenteral']);
-    // Àpats
-    document.getElementById("esmorzar").value = randomElement(['pa', 'cereals', 'fruita', 'cafe','iogurt','fruits secs','embotit','formatge']);
-    document.getElementById("dinar").value = randomElement(['amanida', 'arròs', 'pasta', 'llegums', 'carn', 'peix', 'ous','iogurt','fruita']);
 
 }
 
