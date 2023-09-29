@@ -156,6 +156,8 @@ function createTable(modalContent, userData) {
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
     headingCell.classList.add("headingCell");
+
+    ///ID NO PUEDE SER EL DATO (QUE ID PONEMOS?)
     headingCell.id = userData[1][index];
     let dataCell = document.createElement('div');
     dataCell.classList.add("dataCell");
@@ -194,6 +196,7 @@ function editValue(cell, initialValue) {
     xhttp.open("POST", "/modificarDatosPaciente", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
+    ///EL FIELD NAME NO VA REALMENTE CON INNER TEXT, HAY TEXTO EXTRA
     let fieldName= document.getElementById(initialValue);
   
     let diccionaryKey = "t"+currentSlide;
