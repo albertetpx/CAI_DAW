@@ -1,6 +1,46 @@
-// Hem de generar ub botó i canviar l'event window.onload per un click buton
+// Hem generat un botó i implementant un listener activem el formulari aleatori.
     document.getElementById("botoneraRandom").addEventListener("click",randomitzarFormulari)
     function randomitzarFormulari () {
+    // Espai dedicat al canvi d'ordre a procedir
+    // sexe = document.getElementById("sexe").value = randomElement(["H","D"]);
+    // if (sexe === "H"){
+    //   paisOrigen = document.getElementById("Lloc_naixement").value = randomPaisOrigen();
+    //   if (paisOrigen === "España") {
+    //     document.getElementById("familia_origen_pare").value = origenPare();
+    //     document.getElementById("familia_origen_mare").value = origenMare();
+    //   }
+    //   else if (paisOrigen === "Brasil") {
+
+    //   }
+    //   else if (paisOrigen === "Armenia") {
+
+    //   }
+    //   else if (paisOrigen === "Marruecos") {
+
+    //   }
+    //   else if (paisOrigen === "Ecuador") {
+
+    //   }
+    // }
+    // else { // Cas de ser dona
+    //   paisOrigen = document.getElementById("Lloc_naixement").value = randomPaisOrigen();
+    //   if (paisOrigen === "España") {
+
+    //   }
+    //   else if (paisOrigen === "Brasil") {
+
+    //   }
+    //   else if (paisOrigen === "Armenia") {
+
+    //   }
+    //   else if (paisOrigen === "Marruecos") {
+
+    //   }
+    //   else if (paisOrigen === "Ecuador") {
+        
+    //   }
+    // }
+
     // Fins ara només està implementat el Form 1 
     // Form 1 
     document.getElementById("dni").value = rand_dni();
@@ -32,18 +72,12 @@
     document.getElementById("tipus_respiracio_bucal").value = randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
     document.getElementById("tipus_respiracio_nasal").value =  randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
     //orifisis_nasals_permeables
-    document.getElementById("orifisis_nasals_permeables").value = randomElement(['Taponat','Correcte']);
+    document.getElementById("orifisis_nasals_permeables").value = randomElement(['Obert','Taponat']);
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
     document.getElementById("pa").value = randomInt(50,120);
-    //coloracio_mucoses
-    document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
-    //coloracio_pell
-    document.getElementById("coloracio_pell").value = randomElement(['Clara','Morena','Fosca']);
-     //respiració
-     document.getElementById("silenciosa").value = randomRadioButton("silenciosa","sorollosa",2);
-     document.getElementById("sorollosa").value =  randomRadioButton("silenciosa","sorollosa",2);
+
     
 
 
