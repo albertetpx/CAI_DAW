@@ -158,6 +158,21 @@
       document.getElementById("mitjans_utilitza_millorar").value = randomElement(['medicació adequada pels signes i simptomes', "desconexió de la tecnología a l'hora dels àpats", 'saber demanar una pausa per menjar','cap']);
       document.getElementById("altres_manifestacions3").value = randomElement(['cap']);
       // Fi de la 6ª pagina del formulari
+
+      // Inici de la 7ª pagina del formulari
+      document.getElementById("frequencia_orina").value = randomInt(2,10);
+      document.getElementById("quantitat_orinar").value = randomInt(0.5,3);
+      document.getElementById("aspecte_orina").value = randomElement(['groguenca', 'blanca', 'enturbiada', 'roja','olorosa']);
+      document.getElementById("frequencia_femtes").value = randomInt(2,6);
+      document.getElementById("quantitat_femtes").value = randomInt(0.5,3);
+      document.getElementById("aspecte_femtes").value = randomElement(['marrò', 'negra', 'roja', 'líquida','dura','tova']);
+      document.getElementById("suor_si").value = randomRadioButton("suor_si","suor_no",2);
+      document.getElementById("suor_no").value = randomRadioButton("suor_si","suor_no",2);
+      document.getElementById("quantitat_suor").value = randomInt(0.2,1);
+      document.getElementById("aspecte_suor").value = randomElement(['poc olorosa', 'sense olor', 'pudenta']);
+      document.getElementById("regla_si").value = randomRadioButton("regla_si","regla_no",2);
+      document.getElementById("regla_no").value = randomRadioButton("regla_si","regla_no",2);
+    // Fi de la 7ª pagina del formulari
     }
 
 
