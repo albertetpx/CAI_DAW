@@ -78,7 +78,15 @@
     //pa 
     document.getElementById("pa").value = randomInt(50,120);
 
+    //coloracio_mucoses
+    document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
+    //coloracio_pell
+    document.getElementById("coloracio_pell").value = randomElement(['Clara','Morena','Fosca']);
+     //respiració
+     document.getElementById("tipus_respiracio_silenciosa").value = randomRadioButton("tipus_respiracio_silenciosa","tipus_respiracio_sorollosa",2);
+     document.getElementById("tipus_respiracio_sorollosa").value = randomRadioButton("tipus_respiracio_silenciosa","tipus_respiracio_sorollosa",2);
     
+
 
 
 }
