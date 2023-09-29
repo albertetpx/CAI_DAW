@@ -22,21 +22,21 @@ var currentUser = "";
 
 ////diccionario para modificar _CC
 const diccionarioTablas = {
-  t1:"info_general" , 
-  t2:"necesitat_dormir_reposar",
-  t3:"necesitat_aprendre",
-  t4:"necesitat_comunicar",
-  t5:"necesitat_eliminar",
-  t6:"necesitat_esbargir",
-  t7:"necesitat_estar_net_polt_protegir_teguments",
-  t8:"necesitat_evitar_perills",
-  t9:"necesitat_mantenir_temperatura_corporal_limits_normals",
-  t10:"necesitat_menjar_beure",
-  t11:"necesitat_moure_mantenir_postura_adequada",
-  t12:"necesitat_ocupar_realitzar",
-  t13:"necesitat_respirar",
-  t14:"necesitat_vestir_desvestir",
-  t15:"necesitat_viure_creences_valors"
+  t1: "info_general",
+  t2: "necesitat_dormir_reposar",
+  t3: "necesitat_aprendre",
+  t4: "necesitat_comunicar",
+  t5: "necesitat_eliminar",
+  t6: "necesitat_esbargir",
+  t7: "necesitat_estar_net_polt_protegir_teguments",
+  t8: "necesitat_evitar_perills",
+  t9: "necesitat_mantenir_temperatura_corporal_limits_normals",
+  t10: "necesitat_menjar_beure",
+  t11: "necesitat_moure_mantenir_postura_adequada",
+  t12: "necesitat_ocupar_realitzar",
+  t13: "necesitat_respirar",
+  t14: "necesitat_vestir_desvestir",
+  t15: "necesitat_viure_creences_valors"
 }
 
 // Funciones a ejecutar en el windows load
@@ -83,7 +83,7 @@ function swipeSlide() {
 }
 
 function getDataForModal(card) {
-  currentDNI = currentUser; 
+  currentDNI = currentUser;
   currentSlide = swiper.realIndex;
   currentModal = swiper.slides[swiper.activeIndex];
   // console.log(`active: ${swiper.activeIndex}, real: ${swiper.realIndex}`)
@@ -107,8 +107,8 @@ function queryData(currentDNI, currentSlide, currentModal) {
 }
 
 ///UPDATE PAAR MODIFICAR DATOS BD
-function saveToDataBase(currentDNI, currentSlide) { 
-  currentDNI=dni
+function saveToDataBase(currentDNI, currentSlide) {
+  currentDNI = dni
 }
 
 
@@ -131,14 +131,14 @@ function createTable(modalContent, userData) {
   let table = document.createElement('div');
   table.classList.add("dataTable");
   //Crear celdas de encabezado
-  userData[0].forEach(function(value,index){
+  userData[0].forEach(function (value, index) {
     // console.log(heading)
 
 
     // crear button para cada modificar el valor de cada celda
     let modifyButton = document.createElement('button');
     modifyButton.classList.add("buttonmodify");
-    modifyButton.innerHTML="Modificar";
+    modifyButton.innerHTML = "Modificar";
     // añadir evento al button
     // modifyButton.addEventListener("click", modificarValorFormulario,false);
 
@@ -152,7 +152,7 @@ function createTable(modalContent, userData) {
     });
 
 
-// crear los elementos de cada cela
+    // crear los elementos de cada cela
     let cell = document.createElement('div');
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
@@ -180,7 +180,25 @@ function editValue(cell, initialValue) {
   const saveButton = document.createElement("button");
   saveButton.innerHTML = "Guardar";
 
-  saveButton.addEventListener("click", function () {
+  saveButton.addEventListener("click", editPatientData);
+
+  function editPatientData() {
+
+    // enviar una petición asíncrona de cambio de datos de paciente al backend
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      // userData = JSON.parse(this.responseText);
+      // console.log(userData);
+      // updateModalElements(currentModal, userData)
+    }
+    xhttp.open("POST", "/modificarDatosPaciente", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    fieldName = "DNI";
+    newValue = "tarara";
+    payload = `dni=${currentDNI}&tableNum=${currentSlide}&fieldName=${fieldName}&newValue=${newValue}`;
+    xhttp.send(payload);
+
     // conseguir el valor modificado que el usuario ingresa como input
     const modifiedValue = editingValue.value;
 
@@ -189,7 +207,7 @@ function editValue(cell, initialValue) {
 
     // Elimina el input y el botón guardar
     saveButton.remove();
-  });
+  }
 
   cell.innerHTML = '';
   cell.appendChild(editingValue);
@@ -204,8 +222,8 @@ function cargasAlarmas() {
   let cards = Array.from(document.getElementsByClassName("text-card"));
 
   cards.forEach(function (element) {
-      dni = element.children[0].children[0].innerHTML;
-      pedirAlarmasPaciente(dni, element);
+    dni = element.children[0].children[0].innerHTML;
+    pedirAlarmasPaciente(dni, element);
   });
 }
 
@@ -216,54 +234,54 @@ function pedirAlarmasPaciente(dni, element) {
   xmlhhtp.open('POST', '/consultarAlarmasPaciente', true);
 
   xmlhhtp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) {
 
-          const data = JSON.parse(this.responseText);
-          const pacient = data.pacientes[0];
+      const data = JSON.parse(this.responseText);
+      const pacient = data.pacientes[0];
 
 
-          var alarma = element.querySelectorAll('.alarmes > div');
+      var alarma = element.querySelectorAll('.alarmes > div');
 
-          if (pacient.tos === "SI") {
-              alarma[0].classList.add('activa');
-          }
-          if (pacient.expectoracio === "SI") {
-              alarma[1].classList.add('activa');
-          }
-          if (pacient.influencia_respiracio === "SI") {
-              alarma[2].classList.add('activa');
-          }
-          if (pacient.fuma === "SI") {
-              alarma[3].classList.add('activa');
-          }
-          if (pacient.influencia_aliments === "SI") {
-              alarma[4].classList.add('activa');
-          }
-          if (pacient.influencia_eliminacio === "SI") {
-              alarma[5].classList.add('activa');
-          }
-          if (pacient.influencia_moure_cos === "SI") {
-              alarma[6].classList.add('activa');
-          }
-          if (pacient.influencia_son === "SI") {
-              alarma[7].classList.add('activa');
-          }
-          if (pacient.influencia_vestimenta === "SI") {
-              alarma[8].classList.add('activa');
-          }
-          if (pacient.influencien_termoregulacio === "SI") {
-              alarma[9].classList.add('activa');
-          }
-          if (pacient.influencien_higene === "SI") {
-              alarma[10].classList.add('activa');
-          }
-          if (pacient.influencien_seguretat === "SI") {
-              alarma[11].classList.add('activa');
-          }
-          if (pacient.influencien_comunicacio === "SI") {
-              alarma[12].classList.add('activa');
-          }
+      if (pacient.tos === "SI") {
+        alarma[0].classList.add('activa');
       }
+      if (pacient.expectoracio === "SI") {
+        alarma[1].classList.add('activa');
+      }
+      if (pacient.influencia_respiracio === "SI") {
+        alarma[2].classList.add('activa');
+      }
+      if (pacient.fuma === "SI") {
+        alarma[3].classList.add('activa');
+      }
+      if (pacient.influencia_aliments === "SI") {
+        alarma[4].classList.add('activa');
+      }
+      if (pacient.influencia_eliminacio === "SI") {
+        alarma[5].classList.add('activa');
+      }
+      if (pacient.influencia_moure_cos === "SI") {
+        alarma[6].classList.add('activa');
+      }
+      if (pacient.influencia_son === "SI") {
+        alarma[7].classList.add('activa');
+      }
+      if (pacient.influencia_vestimenta === "SI") {
+        alarma[8].classList.add('activa');
+      }
+      if (pacient.influencien_termoregulacio === "SI") {
+        alarma[9].classList.add('activa');
+      }
+      if (pacient.influencien_higene === "SI") {
+        alarma[10].classList.add('activa');
+      }
+      if (pacient.influencien_seguretat === "SI") {
+        alarma[11].classList.add('activa');
+      }
+      if (pacient.influencien_comunicacio === "SI") {
+        alarma[12].classList.add('activa');
+      }
+    }
 
   }
 

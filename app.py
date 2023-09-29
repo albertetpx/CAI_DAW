@@ -4,6 +4,7 @@ from bdPacients import obtenerDatos
 from bdPacients import obtenerDatosPacienteTabla
 from bdPacients import obtenerNumPacientes
 from bdPacients import initdb
+from bdPacients import modifyPatientData
 import os
 
 app = Flask(__name__)
@@ -40,15 +41,15 @@ def lista_paciente():
     return render_template("lista_paciente.html", data=data, numTablas=15, nombreTablas=nombreTablas)
 
 
-@app.route("/")
-def saveToDataBase():
+# @app.route("/")
+# def saveToDataBase():
 
-    return render_template("lista_paciente.html", dni, tableName, valueHeadingCell, modifiedValue)
+#     return render_template("lista_paciente.html", dni, tableName, valueHeadingCell, modifiedValue)
 
-@app.route("/actualizar_lista_paciente")
-def lista_paciente():
+# @app.route("/actualizar_lista_paciente")
+# def lista_paciente():
 
-    return render_template("lista_paciente.html")
+#     return render_template("lista_paciente.html")
 
 
 @app.route("/registrar", methods=['GET'])
@@ -90,7 +91,13 @@ def consultarDatosPaciente():
         # print(userData)
         return jsonify(userData)
 
-
+@app.route("/modificarDatosPaciente", methods=["GET", "POST"])
+def modificarDatosPaciente():
+    # Tenemos que recibir: DNI, num slide-tabla, nombre_campo, valor_nuevo
+    if request.method == 'POST':
+        print(request.form['dni'], request.form['tableNum'], request.form['fieldName'], request.form['newValue'])
+        modifyPatientData(request.form['dni'], request.form['tableNum'], request.form['fieldName'], request.form['newValue']))
+        return jsonify("ok")
 
 @app.route("/consultarAlarmasPaciente", methods=['POST'])
 def actualizarAlarmas():

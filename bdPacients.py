@@ -89,7 +89,7 @@ def obtenerNumPacientes(consulta):
     return numPacient
 
 
-def ModifyPatientData(dni, tableName, valueHeadingCell, modifiedValue):
+def modifyPatientData(dni, tableName, valueHeadingCell, modifiedValue):
     consulta = f"UPDATE '{tableName}' SET '{valueHeadingCell}' = '{modifiedValue}' WHERE dni = '{dni}'"
     insertarDatosDB(consulta)
 
