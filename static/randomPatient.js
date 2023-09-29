@@ -57,8 +57,6 @@
     document.getElementById("membres_integren").value = randomInt(2,4);
     //pren_medicaments_casa
     document.getElementById("temps_residencia").value = randomInt(10,60);
-    document.getElementById("pren_medicaments_casa_si").value = randomRadioButton("pren_medicaments_casa_si","pren_medicaments_casa_no",2);
-    document.getElementById("pren_medicaments_casa_no").value = randomRadioButton("pren_medicaments_casa_si","pren_medicaments_casa_no",2);
     document.getElementById("quins_medicaments").value = randomElement(['Danacol','Sintrom','Nolotil','NS/NC']);
     document.getElementById("problema_salut_actual").value = randomElement(['Diabetes','Hipertensió','Artrosi','Cap','Colesterol'])
     //familia_procreacio
@@ -78,7 +76,7 @@
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
-    document.getElementById("pressioArterial").value = randomInt(50,120);
+    document.getElementById("pa").value = randomInt(50,120);
 
     //coloracio_mucoses
     document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
@@ -92,8 +90,12 @@
      document.getElementById("tos_si").value = randomRadioButton("tos_si","tos_no",2);
      document.getElementById("tos_no").value = randomRadioButton("tos_si","tos_no",2);
 
-     //tos_descripcio
+     //tos_descripcioS
      document.getElementById("tos_descripcio").value = randomElement(['Tos seca','Tos productiva','Tos crònica o aguda','Tos psicògena',]);
+     
+    //mucositat
+     document.getElementById("mucositat").value = randomElement(['Mucositat clara', 'Mucositat gruixuda', 'Mucositat groga', 'Mucositat amb sang', 'Mucositat excessiva', 'Mucositat nasal', 'Mucositat bronquial', 'Mucositat oral']);
+
 
      
     
