@@ -22,21 +22,21 @@ var currentUser = "";
 
 ////diccionario para modificar _CC
 const diccionarioTablas = {
-  t1: "info_general",
-  t2: "necesitat_dormir_reposar",
-  t3: "necesitat_aprendre",
-  t4: "necesitat_comunicar",
-  t5: "necesitat_eliminar",
-  t6: "necesitat_esbargir",
-  t7: "necesitat_estar_net_polt_protegir_teguments",
-  t8: "necesitat_evitar_perills",
-  t9: "necesitat_mantenir_temperatura_corporal_limits_normals",
-  t10: "necesitat_menjar_beure",
-  t11: "necesitat_moure_mantenir_postura_adequada",
-  t12: "necesitat_ocupar_realitzar",
-  t13: "necesitat_respirar",
-  t14: "necesitat_vestir_desvestir",
-  t15: "necesitat_viure_creences_valors"
+  t0: "info_general",
+  t1: "necesitat_dormir_reposar",
+  t2: "necesitat_aprendre",
+  t3: "necesitat_comunicar",
+  t4: "necesitat_eliminar",
+  t5: "necesitat_esbargir",
+  t6: "necesitat_estar_net_polt_protegir_teguments",
+  t7: "necesitat_evitar_perills",
+  t8: "necesitat_mantenir_temperatura_corporal_limits_normals",
+  t9: "necesitat_menjar_beure",
+  t10: "necesitat_moure_mantenir_postura_adequada",
+  t11: "necesitat_ocupar_realitzar",
+  t12: "necesitat_respirar",
+  t13: "necesitat_vestir_desvestir",
+  t14: "necesitat_viure_creences_valors"
 }
 
 // Funciones a ejecutar en el windows load
@@ -148,7 +148,6 @@ function createTable(modalContent, userData) {
       // función para editar el valor
       editValue(dataCell, userData[1][index]);
 
-
     });
 
 
@@ -157,6 +156,7 @@ function createTable(modalContent, userData) {
     cell.classList.add("cell");
     let headingCell = document.createElement('div');
     headingCell.classList.add("headingCell");
+    headingCell.id = userData[1][index];
     let dataCell = document.createElement('div');
     dataCell.classList.add("dataCell");
     headingCell.innerHTML = value;
@@ -194,10 +194,13 @@ function editValue(cell, initialValue) {
     xhttp.open("POST", "/modificarDatosPaciente", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    fieldName = "DNI";
-    newValue = "tarara";
-    payload = `dni=${currentDNI}&tableNum=${currentSlide}&fieldName=${fieldName}&newValue=${newValue}`;
+    let fieldName= document.getElementById(initialValue);
+  
+    let diccionaryKey = "t"+currentSlide;
+
+    payload = `dni=${currentDNI}&tableNum=${diccionarioTablas[diccionaryKey]}&fieldName=${fieldName.innerText}&newValue=${editingValue.value}`;
     xhttp.send(payload);
+    console.log(payload)
 
     // conseguir el valor modificado que el usuario ingresa como input
     const modifiedValue = editingValue.value;

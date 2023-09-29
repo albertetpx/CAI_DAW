@@ -96,7 +96,7 @@ def modificarDatosPaciente():
     # Tenemos que recibir: DNI, num slide-tabla, nombre_campo, valor_nuevo
     if request.method == 'POST':
         print(request.form['dni'], request.form['tableNum'], request.form['fieldName'], request.form['newValue'])
-        modifyPatientData(request.form['dni'], request.form['tableNum'], request.form['fieldName'], request.form['newValue']))
+        modifyPatientData(request.form['dni'], request.form['tableNum'], request.form['fieldName'], request.form['newValue'])
         return jsonify("ok")
 
 @app.route("/consultarAlarmasPaciente", methods=['POST'])
