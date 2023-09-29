@@ -29,15 +29,21 @@
     //amplitud
     document.getElementById("amplitud").value = randomInt(50,100);
     //respiració
-    document.getElementById("familia_procreacio_bucal").value = randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
-    document.getElementById("familia_procreacio_nasal").value =  randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
+    document.getElementById("tipus_respiracio_bucal").value = randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
+    document.getElementById("tipus_respiracio_nasal").value =  randomRadioButton("tipus_respiracio_bucal","tipus_respiracio_nasal",2);
     //orifisis_nasals_permeables
     document.getElementById("orifisis_nasals_permeables").value = randomElement(['Taponat','Correcte']);
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
     document.getElementById("pa").value = randomInt(50,120);
-
+    //coloracio_mucoses
+    document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
+    //coloracio_pell
+    document.getElementById("coloracio_pell").value = randomElement(['Clara','Morena','Fosca']);
+     //respiració
+     document.getElementById("silenciosa").value = randomRadioButton("silenciosa","sorollosa",2);
+     document.getElementById("sorollosa").value =  randomRadioButton("silenciosa","sorollosa",2);
     
 
 
