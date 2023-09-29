@@ -76,7 +76,7 @@
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
-    document.getElementById("pa").value = randomInt(50,120);
+    document.getElementById("pressioArterial").value = randomInt(50,120);
 
     //coloracio_mucoses
     document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
@@ -101,9 +101,11 @@
     
 
 
-      // Expectoració
+    // Expectoració
      document.getElementById("expectoracio_si").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
      document.getElementById("expectoracio_no").value = randomRadioButton("expectoracio_si","expectoracio_no",2);
+
+
 }
 
 
