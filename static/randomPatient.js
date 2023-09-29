@@ -122,6 +122,7 @@
        //fuma
        document.getElementById("fuma_si").value = randomRadioButton("fuma_si","fuma_no",2);
        document.getElementById("fuma_no").value = randomRadioButton("fuma_si","fuma_no",2);
+      // Inici 5ª pagina del formulari
       // Menjar i beure
       document.getElementById("pes").value = randomInt(50,120);
       document.getElementById("talla").value = randomInt(140,210);
@@ -138,7 +139,7 @@
       // Àpats
       document.getElementById("esmorzar").value = randomElement(['pa', 'cereals', 'fruita', 'cafe','iogurt','fruits secs','embotit','formatge']);
       document.getElementById("dinar").value = randomElement(['amanida', 'arròs', 'pasta', 'llegums', 'carn', 'peix', 'ous','iogurt','fruita']);
-
+      // Final 5ª pagina del formulari
 }
 
 
