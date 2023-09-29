@@ -39,6 +39,12 @@ def lista_paciente():
                     'Necessitats d\'aprenentatge']
     return render_template("lista_paciente.html", data=data, numTablas=15, nombreTablas=nombreTablas)
 
+
+@app.route("/")
+def saveToDataBase():
+
+    return render_template("lista_paciente.html", dni, tableName, valueHeadingCell, modifiedValue)
+
 @app.route("/actualizar_lista_paciente")
 def lista_paciente():
 

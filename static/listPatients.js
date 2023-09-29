@@ -107,14 +107,8 @@ function queryData(currentDNI, currentSlide, currentModal) {
 }
 
 ///UPDATE PAAR MODIFICAR DATOS BD
-function saveToDataBase(currentDNI, currentSlide) {
-  const xhttp = new XMLHttpRequest();
-  
-  xhttp.open("POST", "/consultarDatosPaciente", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-  payload = `dni=${currentDNI}&tableNum=${currentSlide}`;
-  xhttp.send(payload);
+function saveToDataBase(currentDNI, currentSlide) { 
+  currentDNI=dni
 }
 
 
