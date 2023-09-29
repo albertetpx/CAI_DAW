@@ -76,7 +76,7 @@
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
-    document.getElementById("pa").value = randomInt(50,120);
+    document.getElementById("pressioArterial").value = randomInt(50,120);
 
     //coloracio_mucoses
     document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
