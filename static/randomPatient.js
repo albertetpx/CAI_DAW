@@ -78,7 +78,7 @@
     //frequencia_cardiaca
     document.getElementById("frequencia_cardiaca").value = randomInt(50,120);
     //pa 
-    document.getElementById("pressioArterial").value = randomInt(50,120);
+    document.getElementById("pa").value = randomInt(50,120);
 
     //coloracio_mucoses
     document.getElementById("coloracio_mucoses").value = randomElement(['Verda','Blava','Lila','Vermella']);
@@ -87,6 +87,11 @@
      //respiració
      document.getElementById("tipus_respiracio_silenciosa").value = randomRadioButton("tipus_respiracio_silenciosa","tipus_respiracio_sorollosa",2);
      document.getElementById("tipus_respiracio_sorollosa").value = randomRadioButton("tipus_respiracio_silenciosa","tipus_respiracio_sorollosa",2);
+
+     //Tos
+     document.getElementById("tos_si").value = randomRadioButton("tos_si","tos_no",2);
+     document.getElementById("tos_no").value = randomRadioButton("tos_si","tos_no",2);
+
     
 
 
