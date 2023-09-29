@@ -117,7 +117,12 @@
       document.getElementById("quines_influencien2").value = randomElement(['Exercici intens', 'Allèrgies', 'Infecció respiratòria', 'Fum de tabac', 'Pol·lució atmosfèrica', 'Canvis de temperatura', 'Estrès', 'Consum alcohol']);
       
       //mitja_utilitza_respirar_millor
-      document.getElementById("mitja_utilitza_respirar_millor").value = randomElement(['Inhalador', 'Hidratant nasal', 'Gargarejos amb aigua salada', 'Respiració profunda', 'Umidificador', 'Medicaments antial·lèrgics', 'Estiraments', 'Màscara oxigen']);
+      document.getElementById("mitja_utilitza_respirar_millor").value = randomElement(['Inhalador', 'Hidratant nasal', 'Gargarejos amb aigua salada', 'Respiració profunda',
+       'Umidificador', 'Medicaments antial·lèrgics', 'Estiraments', 'Màscara oxigen']);
+
+       //fuma
+       document.getElementById("fuma_si").value = randomRadioButton("fuma_si","fuma_no",2);
+       document.getElementById("fuma_no").value = randomRadioButton("fuma_si","fuma_no",2);
 
 
 
