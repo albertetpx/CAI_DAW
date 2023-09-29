@@ -242,9 +242,9 @@
           <label>EXPECTORACIÓ?</label>
           <div class="form_label_si_no">
             <label> SI
-              <input type="radio" value="SI" name="expectoracio_si"  /> </label>
+              <input type="radio" value="SI" name="expectoracio_si" id="expectoracio_si" /> </label>
             <label>NO
-              <input type="radio" value="NO" name="expectoracio_no" checked/> </label>
+              <input type="radio" value="NO" name="expectoracio_no" id="expectoracio_no" checked/> </label>
           </div>
           <label for="altres_manifestacions2">ALTRES MANIFESTACIONS </label>
           <input type="text" value="" name="altres_manifestacions2" />
@@ -280,37 +280,37 @@
         <div class="form" id="part5">
           <h3>Menjar i beure (I)</h3>
           <label for="pes">PES</label>
-          <input type="number" value=0 name="pes">
+          <input type="number" id="pes" name="pes">
           <label for="talla">TALLA</label>
-          <input type="text" value="" name="talla">
+          <input type="text" id="talla" name="talla">
           <label>CAVITAT BUCAL: </label>
           <br>
           <label for="numero_dents_realitzar_funcio">a) DENTS EN Nº SUFICIENT PER A REALITZAR BÉ LA SEVA FUNCIÓ</label>
-          <input type="number" value=0 name="numero_dents_realitzar_funcio">
+          <input type="number" id="pecesDentals" name="numero_dents_realitzar_funcio">
           <label id="b">b) PRÒTESI DENTAL? </label>
           <div class="form_label_si_no">
             <label>PARCIAL
-              <input type="radio" value="Parcial" name="protesi_dental" > </label>
+              <input type="radio" value="Parcial" name="protesi_dental" id="Parcial" > </label>
             <label>TOTAL
-              <input type="radio" value="Total" name="protesi_dental" checked></label>
+              <input type="radio" value="Total" name="protesi_dental" id="Total" checked></label>
           </div>
           <label>MASTICACIÓ </label>
           <div class="form_label_si_no">
             <label> LENTA
-              <input type="radio" value="Lenta" name="masticacio" checked></label>
+              <input type="radio" value="Lenta" name="masticacio" id="Lenta" checked></label>
             <label>RÀPIDA
-              <input type="radio" value="Ràpida" name="masticacio" ></label>
+              <input type="radio" value="Rapida" name="masticacio" id="Rapida" ></label>
           </div>
           <label for="caracteriques_deglucio">DEGLUCIÓ: CARACTERÍSTIQUES</label>
-          <input type="text" value="" name="caracteriques_deglucio">
+          <input type="text" value="" name="caracteriques_deglucio" id="tipusDeglucio">
           <label for="tipus_dieta">TIPUS DE DIETA</label>
-          <input type="text" value="" name="tipus_dieta">
+          <input type="text" value="" name="tipus_dieta" id="tipusDieta">
           <label>ALIMENTS I LÍQUIDS QUE PREN HABITUALMENT I QUANTITAT/DIA: </label>
           <br>
           <label for="esmorzar">ESMORZAR</label>
-          <input type="text" value="" name="esmorzar">
+          <input type="text" value="" name="esmorzar" id="esmorzar">
           <label for="dinar">DINAR </label>
-          <input type="text" value="" name="dinar">
+          <input type="text" value="" name="dinar" id="dinar">
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(4)">ENRERE</div>
             <div class="formButton back" onclick="showForm(6)">SEGÜENT</div>
