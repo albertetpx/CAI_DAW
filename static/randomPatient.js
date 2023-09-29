@@ -92,6 +92,10 @@
      document.getElementById("tos_si").value = randomRadioButton("tos_si","tos_no",2);
      document.getElementById("tos_no").value = randomRadioButton("tos_si","tos_no",2);
 
+     //tos_descripcio
+     document.getElementById("tos_descripcio").value = randomElement(['Tos seca','Tos productiva','Tos crònica o aguda','Tos psicògena',]);
+
+     
     
 
 
