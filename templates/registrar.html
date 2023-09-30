@@ -510,37 +510,37 @@
         <div class="form" id="part10">
           <h3>Necesssitats relacionades amb la son</h3>
           <label for="hores_dorm">HORES QUE DORM HABITUALMENT</label>
-          <input type="number" value=0 name="hores_dorm">
+          <input type="number" value=0 name="hores_dorm" id="hores_dorm">
           <label>MIGDIADA</label>
           <div class="form_label_si_no">
             <label>SI
-              <input type="radio" name="migdia" value="SI" ></label>
+              <input type="radio" name="migdia" value="SI" id="migdiadaSi" ></label>
             <label>NO
-              <input type="radio" name="migdia" value="NO" checked></label>
+              <input type="radio" name="migdia" value="NO" id="migdiadaNo" checked></label>
           </div>
           <label>QUALITAT DEL SON</label>
           <div class="form_label_si_no">
             <label>a) TRANQUIL
-              <input type="radio" name="qualitat_son" value="Tranquil" checked></label>
+              <input type="radio" name="qualitat_son" value="Tranquil" id="qualitatSonTranquil" checked></label>
             <label>b) MALSONS
-              <input type="radio" name="qualitat_son" value="Malsons"></label>
+              <input type="radio" name="qualitat_son" value="Malsons" id="qualitatSonMalsons"></label>
             <label>c) INTERRUPCIONS
-              <input type="radio" name="qualitat_son" value="Interrupcions"></label>
+              <input type="radio" name="qualitat_son" value="Interrupcions" id="qualitatSonInterrupcions"></label>
           </div>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA SON?</label>
           <div class="form_label_si_no">
             <label>SI
-              <input type="radio" name="situacions_influencien_son"  value="SI"></label>
+              <input type="radio" name="situacions_influencien_son"  value="SI" id="situacions_influencien_son_si"></label>
             <label>NO
-              <input type="radio" name="situacions_influencien_son" value="NO" checked></label>
+              <input type="radio" name="situacions_influencien_son" value="NO" id="situacions_influencien_son_no" checked></label>
           </div>
           <label for="quienes_situacions_influencien_son">QUINES</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="quienes_situacions_influencien_son"></textarea>
+            name="quienes_situacions_influencien_son" id="quienes_situacions_influencien_son"></textarea>
           <label for="mitjans_utilitza_dormir_millor_reposar">MITJANS QUE UTILITZA PER REPOSAR MILLOR</label>
           <input type="text" value="a" name="mitjans_utilitza_dormir_millor_reposar">
           <label for="altres_manifestacions6">ALTRES MANIFESTACIONS</label>
-          <input type="text" value="a" name="altres_manifestacions6">
+          <input type="text" value="a" name="altres_manifestacions6" id="altres_manifestacions6">
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(9)">ENRERE</div>
             <div class="formButton back" onclick="showForm(11)">SEGÜENT</div>

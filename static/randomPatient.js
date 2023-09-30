@@ -198,6 +198,23 @@
     document.getElementById("mitjans_utilitza_moure_millor_mantenir_postura_adequada").value = randomElement(["repòs", "respirar profundament", "prendre glucosa"]);
     document.getElementById("altres_manifestacions5").value = randomElement(["tremolors", "fatiga"]);
     // Fi de la 9ª pagina del formulari
+
+    // Inici de la 10ª pagina del formulari
+    document.getElementById("hores_dorm").value = randomInt(6,10);
+    document.getElementById("migdiadaSi").value = randomRadioButton("migdiadaSi","migdiadaNo",2);
+    document.getElementById("migdiadaNo").value = randomRadioButton("migdiadaSi","migdiadaNo",2);
+    document.getElementById("qualitatSonTranquil").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("qualitatSonMalsons").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("qualitatSonInterrupcions").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("situacions_influencien_son_si").value = randomRadioButton("situacions_influencien_son_si","situacions_influencien_son_no",2);
+    document.getElementById("situacions_influencien_son_no").value = randomRadioButton("situacions_influencien_son_si","situacions_influencien_son_no",2);
+    document.getElementById("quienes_situacions_influencien_son").value = randomElement(["set","dolors","tos"]);
+    document.getElementById("mitjans_utilitza_dormir_millor_reposar").value = randomElement(["tenir aigua a prop","prendre medicació","so de fons"]);
+    document.getElementById("altres_manifestacions6").value = randomElement(["?","¿","¿?"]);
+    // Fi de la 10ª pagina del formulari
+
+    // Inici de la 11ª pagina del formulari
+    
   }
 
 
