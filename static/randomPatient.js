@@ -181,6 +181,23 @@
     document.getElementById("mitjans_utilitzar_eliminar_millor").value = randomElement(["meditació", 'aliments rics en fibra', 'prendre aliments amb proviotics naturals','fer exercici']);
     document.getElementById("altres_manifestacions4").value = randomElement(["sang en femtes", 'incontinència fecal', 'canvis en la consistència','eliminacións doloroses',"síndrome de l'intestí irritable"]);
     // Fi de la 8ª pagina del formulari
+
+    // Inici de la 9ª pagina del formulari
+    document.getElementById("pot_moure_totes_parts_cos_si").value = randomRadioButton("pot_moure_totes_parts_cos_si","pot_moure_totes_parts_cos_no",2);
+    document.getElementById("pot_moure_totes_parts_cos_no").value = randomRadioButton("pot_moure_totes_parts_cos_si","pot_moure_totes_parts_cos_no",2);
+    // No te sentit preguntar quines parts pot moure i el perque serà tot el contrari
+    document.getElementById("quines_parts").value = randomElement(["cama dreta", "cama esquerra", "braç dret", "braç esquerra","cap"]);
+    document.getElementById("perque_pot_moure").value = randomElement(["amputació", "paraplègia", "tetraplègia", "esguinç"]);
+    document.getElementById("esEsquerra").value = randomRadioButton("esEsquerra","esDreta",2);
+    document.getElementById("esDreta").value = randomRadioButton("esEsquerra","esDreta",2);
+    document.getElementById("posturaHabitual").value = randomElement(["?","¿","¿?"]);
+    document.getElementById("activitatsFisiques").value = randomElement(["passejat", "bicicleta", "natació", "aquagim"]);
+    document.getElementById("situacions_interfereixen_mobilitat_si").value = randomRadioButton("situacions_interfereixen_mobilitat_si","situacions_interfereixen_mobilitat_no",2);
+    document.getElementById("situacions_interfereixen_mobilitat_no").value = randomRadioButton("situacions_interfereixen_mobilitat_si","situacions_interfereixen_mobilitat_no",2);
+    document.getElementById("quines_situacions_interfreixen_mobilitat").value = randomElement(["marejos", "desequilibri", "paràlisi temporal"]);
+    document.getElementById("mitjans_utilitza_moure_millor_mantenir_postura_adequada").value = randomElement(["repòs", "respirar profundament", "prendre glucosa"]);
+    document.getElementById("altres_manifestacions5").value = randomElement(["tremolors", "fatiga"]);
+    // Fi de la 9ª pagina del formulari
   }
 
 
