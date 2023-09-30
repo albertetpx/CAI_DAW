@@ -150,6 +150,22 @@
             <input type="text" value="" id="familia_origen_germans" name="familia_origen_germans" />
           </fieldset>
 
+          <!-- <fieldset>
+            <legend>Familia de Contacte</legend>
+            <label>
+              Familia d'origen: Pare
+              <input type="radio" name="familia_origen" value="Pare" />
+            </label>          
+            <label>
+              Familia d'origen: Mare
+              <input type="radio" name="familia_origen" value="Mare" />
+            </label>         
+            <label>
+              Familia d'origen: Germans
+              <input type="radio" name="familia_origen" value="Germans" />
+            </label>
+          </fieldset> -->
+
           <label for="rol_ocupa">Rol que ocupa </label>
           <input type="text" value="" id="rol_ocupa" name="rol_ocupa" />
           <label for="membres_integren">MEMBRE QUE LA INTEGREN </label>
@@ -614,7 +630,13 @@
         <div class="form" id="part12">
           <h3>Necesssitats relacionades amb la temperatura</h3>
           <label for="TEMP_PELL">TEMPERATURA DE LA PELL</label>
-          <input type="number" value=0 id="TEMP_PELL" name="temperatura_pell">
+          <div class="form_label_si_no">
+            <label>CALENTA
+              <input type="radio" value="CALENTA" name="opcion" ></label>
+              <label>TÈBIA
+                <input type="radio" value="TÈBIA" name="opcion" > </label>
+          </div>
+          
           <label for="TEMP_AUXXILAR">TEMPERATURA AXILAR</label>
           <input type="number" value=0 id="TEMP_AUXXILAR" name="temperatura_axilar">
           <label for="com_sent_temperatura_ambient">NORMALMENT COM ES SENT RESPECTE DE LA TEMPERATURA AMBIENT</label>
