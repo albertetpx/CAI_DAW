@@ -147,11 +147,11 @@
       document.getElementById("altres").value = randomElement(['cervesa', 'vi', 'te', 'bolleria', 'Bitter Kas']);
       document.getElementById("sensacioRespecteAlMenjar").value = randomElement(['plaer', 'degustació', 'sacietat', 'fam', 'repugnància','cansament']);
       document.getElementById("restriccio").value = randomElement(['lactosa', 'gluten', 'marisc', 'ou', 'llegums','peixos']);
-      document.getElementById("habitualment_menja_CASA").value = randomRadioButton("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
-      document.getElementById("habitualment_menja_FEINA").value = randomRadioButton("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
-      document.getElementById("habitualment_menja_RESTAURANT").value = randomRadioButton("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
-      document.getElementById("habitualment_menja_SOL").value = randomRadioButton("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
-      document.getElementById("habitualment_menja_ACOMPANYAT").value = randomRadioButton("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
+      document.getElementById("habitualment_menja_CASA").value = randomRadioButtonRange5("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
+      document.getElementById("habitualment_menja_FEINA").value = randomRadioButtonRange5("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
+      document.getElementById("habitualment_menja_RESTAURANT").value = randomRadioButtonRange5("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
+      document.getElementById("habitualment_menja_SOL").value = randomRadioButtonRange5("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
+      document.getElementById("habitualment_menja_ACOMPANYAT").value = randomRadioButtonRange5("habitualment_menja_CASA","habitualment_menja_FEINA","habitualment_menja_RESTAURANT","habitualment_menja_SOL","habitualment_menja_ACOMPANYAT",5);
       document.getElementById("situacions_influencien_habits_alimentalis_si").value = randomRadioButton("situacions_influencien_habits_alimentalis_si","situacions_influencien_habits_alimentalis_no",2);
       document.getElementById("situacions_influencien_habits_alimentalis_no").value = randomRadioButton("situacions_influencien_habits_alimentalis_si","situacions_influencien_habits_alimentalis_no",2);
       document.getElementById("quines_situacions").value = randomElement(['problemes de salut','distraccións amb el telèfon',"reunions d'ultima hora",'cap']);
@@ -203,9 +203,9 @@
     document.getElementById("hores_dorm").value = randomInt(6,10);
     document.getElementById("migdiadaSi").value = randomRadioButton("migdiadaSi","migdiadaNo",2);
     document.getElementById("migdiadaNo").value = randomRadioButton("migdiadaSi","migdiadaNo",2);
-    document.getElementById("qualitatSonTranquil").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
-    document.getElementById("qualitatSonMalsons").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
-    document.getElementById("qualitatSonInterrupcions").value = randomRadioButton("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("qualitatSonTranquil").value = randomRadioButtonRange3("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("qualitatSonMalsons").value = randomRadioButtonRange3("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
+    document.getElementById("qualitatSonInterrupcions").value = randomRadioButtonRange3("qualitatSonTranquil","qualitatSonMalsons","qualitatSonInterrupcions",3);
     document.getElementById("situacions_influencien_son_si").value = randomRadioButton("situacions_influencien_son_si","situacions_influencien_son_no",2);
     document.getElementById("situacions_influencien_son_no").value = randomRadioButton("situacions_influencien_son_si","situacions_influencien_son_no",2);
     document.getElementById("quienes_situacions_influencien_son").value = randomElement(["set","dolors","tos"]);
@@ -264,7 +264,64 @@ function formatNumberLength(num, length) {
         document.getElementById(id1).checked = false;
         document.getElementById(id2).checked = true;
     }
+  }
+    function randomRadioButtonRange3(id1, id2, id3, size) {
+      const randomIndex = Math.floor(Math.random() * size);
+  
+      if (randomIndex === 0) {
+          document.getElementById(id1).checked = true;
+          document.getElementById(id2).checked = false;
+          document.getElementById(id3).checked = false;
+      } else if (randomIndex === 1) {
+          document.getElementById(id1).checked = false;
+          document.getElementById(id2).checked = true;
+          document.getElementById(id3).checked = false;
+      }
+      else {
+          document.getElementById(id1).checked = false;
+          document.getElementById(id2).checked = false;
+          document.getElementById(id3).checked = true;
+      }
 }
+    function randomRadioButtonRange5(id1, id2, id3, id4, id5, size) {
+      const randomIndex = Math.floor(Math.random() * size);
+
+      if (randomIndex === 0) {
+          document.getElementById(id1).checked = true;
+          document.getElementById(id2).checked = false;
+          document.getElementById(id3).checked = false;
+          document.getElementById(id4).checked = false;
+          document.getElementById(id5).checked = false;
+      } 
+      else if (randomIndex === 1) {
+          document.getElementById(id1).checked = false;
+          document.getElementById(id2).checked = true;
+          document.getElementById(id3).checked = false;
+          document.getElementById(id4).checked = false;
+          document.getElementById(id5).checked = false;
+      }
+      else if (randomIndex === 2) {
+        document.getElementById(id1).checked = false;
+        document.getElementById(id2).checked = false;
+        document.getElementById(id3).checked = true;
+        document.getElementById(id4).checked = false;
+        document.getElementById(id5).checked = false;
+      } 
+      else if (randomIndex === 3) {
+        document.getElementById(id1).checked = false;
+        document.getElementById(id2).checked = false;
+        document.getElementById(id3).checked = false;
+        document.getElementById(id4).checked = true;
+        document.getElementById(id5).checked = false;
+      }
+      else {
+          document.getElementById(id1).checked = false;
+          document.getElementById(id2).checked = false;
+          document.getElementById(id3).checked = false;
+          document.getElementById(id4).checked = false;
+          document.getElementById(id5).checked = true;
+      }
+    }
 
 
 
