@@ -173,7 +173,15 @@
       document.getElementById("regla_si").value = randomRadioButton("regla_si","regla_no",2);
       document.getElementById("regla_no").value = randomRadioButton("regla_si","regla_no",2);
     // Fi de la 7ª pagina del formulari
-    }
+
+    // Inici de la 8ª pagina del formulari
+    document.getElementById("situacions_influencien_habits_eliminacio_si").value = randomRadioButton("situacions_influencien_habits_eliminacio_si","situacions_influencien_habits_eliminacio_no",2);
+    document.getElementById("situacions_influencien_habits_eliminacio_no").value = randomRadioButton("situacions_influencien_habits_eliminacio_si","situacions_influencien_habits_eliminacio_no",2);
+    document.getElementById("quines_influencien4").value = randomElement(["situació d'estrés", 'medicació', 'vida sedentaria','poca fibra']);
+    document.getElementById("mitjans_utilitzar_eliminar_millor").value = randomElement(["meditació", 'aliments rics en fibra', 'prendre aliments amb proviotics naturals','fer exercici']);
+    document.getElementById("altres_manifestacions4").value = randomElement(["sang en femtes", 'incontinència fecal', 'canvis en la consistència','eliminacións doloroses',"síndrome de l'intestí irritable"]);
+    // Fi de la 8ª pagina del formulari
+  }
 
 
 function formatNumberLength(num, length) {
