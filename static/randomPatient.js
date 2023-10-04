@@ -235,6 +235,18 @@
     document.getElementById("altres_manifestacions8").value = randomElement(["¿?","¿","?"]);
     document.getElementById("mitjans_utilitza_mantenir_temperatura").value = randomElement(["Ficar-se capes","retirar capes","hidratar-se"]);
     // Fi de la 12ª pagina del formulari
+
+    // Inici de la 13ª pagina del formulari
+    document.getElementById("condicions_higeniques_pell_mucoses").value = randomElement(["Bon estat","deteriorades"]);
+    document.getElementById("descripcio_condicions_pell_mucosa").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("habits_higene_corporal").value = randomElement(["neteja diària","aigua i sabo suaus","neteja en sec"]);
+    document.getElementById("habits_higene_bucal").value = randomElement(["desprès de cada àpat","3 cops al dia","1 cop al dia","de tant en quant"]);
+    document.getElementById("situacions_influencien_higene_si").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
+    document.getElementById("situacions_influencien_higene_no").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
+    document.getElementById("quines_situacions_influencien_higene").value = randomElement(["discapacitat","dificultat d'accés a aigues de sanejament","recursos limitats","problemes de salut mental","estil de vida"]);
+    document.getElementById("mijans_utilitza_millorar_higene").value = randomElement(["accès a l'aigua de sanejament","educació en higiene","distribució de recursos d'higiene","adaptació a les necessitats pròpies"]);
+    document.getElementById("altres_manifestacions9").value = randomElement(["¿?","¿","?"]);
+    // Fi de la 13ª pagina del formulari
   }
 
 
