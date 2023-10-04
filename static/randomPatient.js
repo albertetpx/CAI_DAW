@@ -214,7 +214,16 @@
     // Fi de la 10ª pagina del formulari
 
     // Inici de la 11ª pagina del formulari
-    
+    document.getElementById("significat_roba").value = randomElement(["Expressió personal","Estatus","religiós","proteccio i funcinalitat"]);
+    document.getElementById("tipus_roba").value = randomElement(["Teixits fins","teixits gruixuts","maniga curta","maniga llarga", "falda", "vestit","texà","vermudes","sabates","bambes","espardenyes","mitjóns","mitjes"]);
+    document.getElementById("capacitat_vestir_desvestir_si").value = randomRadioButton("capacitat_vestir_desvestir_si","capacitat_vestir_desvestir_no",2);
+    document.getElementById("capacitat_vestir_desvestir_no").value = randomRadioButton("capacitat_vestir_desvestir_si","capacitat_vestir_desvestir_no",2);
+    document.getElementById("situacions_influencien_vestimenta_si").value = randomRadioButton("situacions_influencien_vestimenta_si","situacions_influencien_vestimenta_no",2);
+    document.getElementById("situacions_influencien_vestimenta_no").value = randomRadioButton("situacions_influencien_vestimenta_si","situacions_influencien_vestimenta_no",2);
+    document.getElementById("quines_situacions_influencien_vestimenta").value = randomElement(["desequilibri","transtorns de conducta","pèrdua de memria","dolor als moviments amplis"]);
+    document.getElementById("mitjans_millorar_satisfaccio_vestir_desvestir").value = randomElement(["premis","castics"]);
+    document.getElementById("altres_manifestacions7").value = randomElement(["¿?","¿","?"]);
+    // Fi de la 11ª pagina del formulari
   }
 
 
