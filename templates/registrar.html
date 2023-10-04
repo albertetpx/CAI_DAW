@@ -589,28 +589,28 @@
         <div class="form" id="part12">
           <h3>Necesssitats relacionades amb la temperatura</h3>
           <label for="TEMP_PELL">TEMPERATURA DE LA PELL</label>
-          <input type="number" value=0 id="TEMP_PELL" name="temperatura_pell">
+          <input type="number" name="temperatura_pell" id="temperatura_pell">
           <label for="TEMP_AUXXILAR">TEMPERATURA AXILAR</label>
-          <input type="number" value=0 id="TEMP_AUXXILAR" name="temperatura_axilar">
+          <input type="number" name="temperatura_axilar" id="temperatura_axilar">
           <label for="com_sent_temperatura_ambient">NORMALMENT COM ES SENT RESPECTE DE LA TEMPERATURA AMBIENT</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="com_sent_temperatura_ambient"></textarea>
+            name="com_sent_temperatura_ambient" id="com_sent_temperatura_ambient"></textarea>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA TERMOREGULACIÓ?</label>
           <div class="form_label_si_no">
             <label>SI
-              <input type="radio" value="SI" name="situacions_influencien_termoregulacio" >
+              <input type="radio" value="SI" name="situacions_influencien_termoregulacio" id="situacions_influencien_termoregulacio_si">
             </label>
             <label>NO
-              <input type="radio" value="NO" name="situacions_influencien_termoregulacio" checked></label>
+              <input type="radio" value="NO" name="situacions_influencien_termoregulacio" id="situacions_influencien_termoregulacio_no" checked></label>
           </div>
           <label for="quines_situacions_influencien_termoregulacio">QUINES?</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="quines_situacions_influencien_termoregulacio"></textarea>
+            name="quines_situacions_influencien_termoregulacio" id="quines_situacions_influencien_termoregulacio"></textarea>
           <label for="altres_manifestacions8">ALTES MANIFESTACIONS</label>
-          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions8"></textarea>
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacions8" id="altres_manifestacions8"></textarea>
           <label for="mitjans_utilitza_mantenir_temperatura">MITJANS QUE UTILITZA PER MANTENIR LA TEMPERATURA</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="mitjans_utilitza_mantenir_temperatura"></textarea>
+            name="mitjans_utilitza_mantenir_temperatura" id="mitjans_utilitza_mantenir_temperatura"></textarea>
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(11)">ENRERE</div>
             <div class="formButton back" onclick="showForm(13)">SEGÜENT</div>

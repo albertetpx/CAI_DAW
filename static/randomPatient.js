@@ -224,6 +224,17 @@
     document.getElementById("mitjans_millorar_satisfaccio_vestir_desvestir").value = randomElement(["premis","castics"]);
     document.getElementById("altres_manifestacions7").value = randomElement(["¿?","¿","?"]);
     // Fi de la 11ª pagina del formulari
+
+    // Inici de la 12ª pagina del formulari
+    document.getElementById("temperatura_pell").value = randomInt(35,40);
+    document.getElementById("temperatura_axilar").value = randomInt(35,40);
+    document.getElementById("com_sent_temperatura_ambient").value = randomElement(["calorosa","fredolica"]);
+    document.getElementById("situacions_influencien_termoregulacio_si").value = randomRadioButton("situacions_influencien_termoregulacio_si","situacions_influencien_termoregulacio_no",2);
+    document.getElementById("situacions_influencien_termoregulacio_no").value = randomRadioButton("situacions_influencien_termoregulacio_si","situacions_influencien_termoregulacio_no",2);
+    document.getElementById("quines_situacions_influencien_termoregulacio").value = randomElement(["deshidratació","humitat","sequedat"]);
+    document.getElementById("altres_manifestacions8").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("mitjans_utilitza_mantenir_temperatura").value = randomElement(["Ficar-se capes","retirar capes","hidratar-se"]);
+    // Fi de la 12ª pagina del formulari
   }
 
 
