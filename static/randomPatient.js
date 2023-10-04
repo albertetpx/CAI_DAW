@@ -247,6 +247,18 @@
     document.getElementById("mijans_utilitza_millorar_higene").value = randomElement(["accès a l'aigua de sanejament","educació en higiene","distribució de recursos d'higiene","adaptació a les necessitats pròpies"]);
     document.getElementById("altres_manifestacions9").value = randomElement(["¿?","¿","?"]);
     // Fi de la 13ª pagina del formulari
+
+    // Inici de la 14ª pagina del formulari
+    document.getElementById("coneix_mides_prevencio").value = randomElement(["si","no"]);
+    document.getElementById("salubritat_medi_1").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("salubritat_habitat_1").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("lloc_treball").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_si").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
+    document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_no").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
+    document.getElementById("quines_situacions_seguretat_fisica_psicologica_social").value = randomElement(["pressió social","companys de treball","problemes familiars","males amistats"]);
+    document.getElementById("mitjans_utilitza_proteccio").value = randomElement(["selecció selectiva de les companyies","?","¿"]);
+    document.getElementById("altres_manifestacio10").value = randomElement(["¿?","¿","?"]);
+    // Fi de la 14ª pagina del formulari
   }
 
 
