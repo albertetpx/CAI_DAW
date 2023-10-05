@@ -190,7 +190,7 @@
     document.getElementById("perque_pot_moure").value = randomElement(["amputació", "paraplègia", "tetraplègia", "esguinç"]);
     document.getElementById("esEsquerra").value = randomRadioButton("esEsquerra","esDreta",2);
     document.getElementById("esDreta").value = randomRadioButton("esEsquerra","esDreta",2);
-    document.getElementById("posturaHabitual").value = randomElement(["?","¿","¿?"]);
+    document.getElementById("posturaHabitual").value = randomElement(["Postura Correcta","Esquena Inclinada","Esquena Plana","Esquena Rodona","Esquena Defectuosa","Esquena Relaxada"]);
     document.getElementById("activitatsFisiques").value = randomElement(["passejat", "bicicleta", "natació", "aquagim"]);
     document.getElementById("situacions_interfereixen_mobilitat_si").value = randomRadioButton("situacions_interfereixen_mobilitat_si","situacions_interfereixen_mobilitat_no",2);
     document.getElementById("situacions_interfereixen_mobilitat_no").value = randomRadioButton("situacions_interfereixen_mobilitat_si","situacions_interfereixen_mobilitat_no",2);
