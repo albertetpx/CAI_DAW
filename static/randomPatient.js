@@ -356,9 +356,37 @@
     // Fi de la 15ª pagina del formulari
 
     // Inici de la 16ª pagina del formulari
-    document.getElementById("quines_creences_valors").value = randomElement(["si","no","alguns"]);
-    document.getElementById("mitjans_utilitza_viure_creences_valors").value = randomElement(["si","no","alguns"]);
-    document.getElementById("altres_manifestacions12").value = randomElement(["si","no","alguns"]);
+    document.getElementById("quines_creences_valors").value = randomElement([  "Creences religioses", "Creences espirituals", "Creences científiques", "Creences polítiques",
+    "Creences morals o ètiques","Creences culturals o tradicionals","Creences personals o individuals","Creences filosòfiques",
+    "Creences superstitioses", "Creences sobre l'amor i les relacions", "Creences sobre l'èxit i la prosperitat", "Creences sobre la salut i la malaltia",
+    "Creences sobre la justícia i la igualtat", "Creences sobre la natura humana", "Creences sobre la vida després de la mort", "Creences sobre l'origen de l'univers",
+    "Creences sobre la creació o l'evolució", "Creences sobre la llibertat i la lliure voluntat", "Creences sobre el destí o el karma", "Creences sobre la família i la criança",
+    "Creences sobre la felicitat i el benestar",   "Creences sobre la comunitat i la societat",   "Creences sobre l'educació i l'aprenentatge",   "Creences sobre l'art i la cultura",   "Creences sobre la bellesa i l'estètica",]);
+    document.getElementById("mitjans_utilitza_viure_creences_valors").value = randomElement([  "Vivint les creences religioses mitjançant la participació activa en rituales i pràctiques religioses.",
+    "Manifestant les seves creences espirituals a través de la meditació i la connexió amb la natura.",
+    "Aplicant les seves creences científiques mitjançant l'observació i l'exploració de fets i fenòmens naturals.",
+    "Expressant les seves creences polítiques mitjançant el vot i l'activisme polític.",
+    "Guiant-se per les seves creences morals i ètiques a l'hora de prendre decisions ètiques en la vida quotidiana.",
+    "Celebren les seves creences culturals o tradicionals mitjançant festes i costums culturals.",
+    "Demostrant les seves creences personals o individuals a través del comportament i les eleccions personals.",
+    "Expliquen les seves creences filosòfiques mitjançant discussions i reflexions profundes sobre la vida i la realitat.",
+    "Seguint pràctiques o supersticions basades en les seves creences superstitioses.",
+    "Aplicant les seves creences sobre l'amor i les relacions a través del comportament en les relacions personals.",
+    "Guiant les seves decisions financeres i empresarials segons les seves creences sobre l'èxit i la prosperitat.",
+    "Tenint cura de la salut física i emocional segons les seves creences sobre la salut i la malaltia.",
+    "Defensant les seves creences sobre la justícia i la igualtat mitjançant l'activisme social i polític.",
+    "Aplicant les seves creences sobre la naturalesa humana en la interacció amb altres persones.",
+    "Preparant-se per a la vida després de la mort segons les seves creences religioses o espirituals.",]);
+    document.getElementById("altres_manifestacions12").value = randomElement(["Compartint les seves creences amb altres persones mitjançant la conversa i la comunicació.",
+    "Influint en les seves eleccions de vida, com l'educació, la carrera i el lloc de residència.",
+    "Defensant les seves creences en debats i discussió públiques o en xarxes socials.",
+    "Participant en activitats comunitàries o grups basats en les seves creences.",
+    "Realitzant accions d'ajuda i solidaritat que estan alineades amb les seves creences morals.",
+    "Buscant connexió i sentit en les pràctiques i ritus relacionats amb les seves creences religioses o espirituals.",
+    "Contribuint a causes i organitzacions polítiques que reflecteixen les seves creences polítiques.",
+    "Complint els deures i responsabilitats familiars segons les seves creences culturals i tradicionals.",
+    "Adoptant pràctiques de salut específiques basades en les seves creences sobre la salut i el benestar.",
+    "Fomentant l'educació i la consciència en les seves creences filosòfiques a través d'obres literàries o artístiques.",]);
     // Fi de la 16ª pagina del formulari
 
     // Inici de la 17ª pagina del formulari
