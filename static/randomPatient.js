@@ -210,7 +210,10 @@
     document.getElementById("situacions_influencien_son_no").value = randomRadioButton("situacions_influencien_son_si","situacions_influencien_son_no",2);
     document.getElementById("quienes_situacions_influencien_son").value = randomElement(["set","dolors","tos"]);
     document.getElementById("mitjans_utilitza_dormir_millor_reposar").value = randomElement(["tenir aigua a prop","prendre medicació","so de fons"]);
-    document.getElementById("altres_manifestacions6").value = randomElement(["?","¿","¿?"]);
+    document.getElementById("altres_manifestacions6").value = randomElement([  "Insomni",
+    "Somnis agitats", "Sonambulisme", "Apnèa del son", "Ronc", "Pesadilles", "Trastorns del ritme circadià",
+    "Fadiga diürna", "Somnolència excessiva", "Dificultat per conciliar el son", "Dificultat per mantenir el son",
+    "Despertars freqüents durant la nit", "Alteracions en la qualitat del son", "Trastorns del son relacionats amb l'estrès", "Son confús o interromput",]);
     // Fi de la 10ª pagina del formulari
 
     // Inici de la 11ª pagina del formulari
