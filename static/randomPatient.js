@@ -259,6 +259,57 @@
     document.getElementById("mitjans_utilitza_proteccio").value = randomElement(["selecció selectiva de les companyies","?","¿"]);
     document.getElementById("altres_manifestacio10").value = randomElement(["¿?","¿","?"]);
     // Fi de la 14ª pagina del formulari
+
+    // Inici de la 15ª pagina del formulari
+    document.getElementById("estat_consciencia").value = randomElement(["si","no","alguns"]);
+    document.getElementById("orientacio_temps_espai").value = randomElement(["si","no","alguns"]);
+    document.getElementById("estat_sesorials").value = randomElement(["si","no","alguns"]);
+    document.getElementById("expressio_verbal").value = randomElement(["si","no","alguns"]);
+    document.getElementById("descripccio_expressio_no_verbal").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_influencien_comunicacio_si").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
+    document.getElementById("situacions_influencien_comunicacio_no").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
+    document.getElementById("quines_situacions_influencien_comunicacio").value = randomElement(["si","no","alguns"]);
+    document.getElementById("mitjans_faciliten_comunicacio").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions11").value = randomElement(["si","no","alguns"]);
+    // Fi de la 15ª pagina del formulari
+
+    // Inici de la 16ª pagina del formulari
+    document.getElementById("quines_creences_valors").value = randomElement(["si","no","alguns"]);
+    document.getElementById("mitjans_utilitza_viure_creences_valors").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions12").value = randomElement(["si","no","alguns"]);
+    // Fi de la 16ª pagina del formulari
+
+    // Inici de la 17ª pagina del formulari
+    document.getElementById("rol_familiar").value = randomElement(["si","no","alguns"]);
+    document.getElementById("rol_social").value = randomElement(["si","no","alguns"]);
+    document.getElementById("tipus_ocupacio").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_desenvolupacio_rol_social_familiar").value = randomElement(["si","no","alguns"]);
+    document.getElementById("mitjans_millorar13").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions13").value = randomElement(["si","no","alguns"]);
+    // Fi de la 17ª pagina del formulari
+
+    // Inici de la 18ª pagina del formulari
+    document.getElementById("HABITS_DE_DIVERSIO_I_DISTRACCIO").value = randomElement(["si","no","alguns"]);
+    document.getElementById("habits_esport").value = randomElement(["si","no","alguns"]);
+    document.getElementById("habits_musica").value = randomElement(["si","no","alguns"]);
+    document.getElementById("habits_lectura").value = randomElement(["si","no","alguns"]);
+    document.getElementById("habits_audiovisual").value = randomElement(["si","no","alguns"]);
+    document.getElementById("habits_altres").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_influencien_interes_esbargir_si").value = randomRadioButton("situacions_influencien_interes_esbargir_si","situacions_influencien_interes_esbargir_no",2);
+    document.getElementById("situacions_influencien_interes_esbargir_no").value = randomRadioButton("situacions_influencien_interes_esbargir_si","situacions_influencien_interes_esbargir_no",2);
+    document.getElementById("quines_situacions_influencien_interes_esbargir").value = randomElement(["si","no","alguns"]);
+    document.getElementById("mitjans_utilitza_millorar_realitzacio").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions14").value = randomElement(["si","no","alguns"]);
+    // Fi de la 18ª pagina del formulari
+
+    // Inici de la 19ª pagina del fromulari
+    document.getElementById("interes_coneixer_proces_salut_si").value = randomRadioButton("interes_coneixer_proces_salut_si","interes_coneixer_proces_salut_no",2);
+    document.getElementById("interes_coneixer_proces_salut_no").value = randomRadioButton("interes_coneixer_proces_salut_si","interes_coneixer_proces_salut_no",2);
+    document.getElementById("perque_interes_coneixer_proces_salut").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_dificulten_aprenentatge").value = randomElement(["si","no","alguns"]);
+    document.getElementById("mitjans_utilitza_aprendre").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions15").value = randomElement(["si","no","alguns"]);
+    
   }
 
 
