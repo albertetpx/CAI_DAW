@@ -222,7 +222,10 @@
     document.getElementById("situacions_influencien_vestimenta_no").value = randomRadioButton("situacions_influencien_vestimenta_si","situacions_influencien_vestimenta_no",2);
     document.getElementById("quines_situacions_influencien_vestimenta").value = randomElement(["desequilibri","transtorns de conducta","pèrdua de memria","dolor als moviments amplis"]);
     document.getElementById("mitjans_millorar_satisfaccio_vestir_desvestir").value = randomElement(["premis","castics"]);
-    document.getElementById("altres_manifestacions7").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("altres_manifestacions7").value = randomElement([ "Irritació cutània","Alergies a teixits o materials","Desenvolupament de berrugues","Dolor de la pell","Exacerbar malalties de la pell com l'eczema",
+    "Dificultats respiratòries", "Reaccions al·lèrgiques a tintes o substàncies químiques", "Desgast prematur de la roba", "Dolor muscular per roba massa ajustada", "Aparició de taques o taques a la pell",
+    "Problemes de la columna vertebral per roba inadequada", "Aparició de mal olor corporal per roba que reté l'humitat", "Molesties i dolors als peus per calçat incòmode", "Problemes circulatoris per roba massa ajustada","Desenvolupament de dolor de cap per pressió al cap per part de barrets o cascs",
+  ]);
     // Fi de la 11ª pagina del formulari
 
     // Inici de la 12ª pagina del formulari
@@ -255,8 +258,16 @@
     document.getElementById("lloc_treball").value = randomElement(["si","no","alguns"]);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_si").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_no").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
-    document.getElementById("quines_situacions_seguretat_fisica_psicologica_social").value = randomElement(["pressió social","companys de treball","problemes familiars","males amistats"]);
-    document.getElementById("mitjans_utilitza_proteccio").value = randomElement(["selecció selectiva de les companyies","?","¿"]);
+    document.getElementById("quines_situacions_seguretat_fisica_psicologica_social").value = randomElement(["pressió social","company, Fomentar la comunicació oberta i honesta amb amics i familiars per parlar dels sentiments i problemes.",
+    "Aprendre tècniques de gestió de l'estrès com la meditació o la respiració profunda.","Mantenir rutines diàries saludables que inclouen temps per a l'exercici, la dieta i el son.","Establir límits saludables en el treball, les relacions i les expectatives per evitar l'esgotament.",
+    "Limitar el temps dedicat a les xarxes socials per evitar la comparació constant i la sobreexposició a notícies negatives.", "Buscar ajuda professional d'un psicòleg o psiquiatre en cas de problemes psicològics.",
+    "Allotjar temps per a activitats recreatives i hobbies que generin plaer i relaxació.","Mantenir les relacions socials i buscar suport emocional en moments difícils.","Aprendre i ensenyar habilitats d'educació emocional per gestionar les emocions de manera saludable.",
+    "Treballar en el desenvolupament de l'autoestima i la confiança en un mateix.","Evitar l'ús excessiu d'alcohol, drogues o altres substàncies per controlar les emocions.","Fomentar l'afrontament positiu de les adversitats i veure-les com a oportunitats d'aprenentatge.",
+    "Mantenir un seguiment regular de la salut mental i buscar ajuda en cas de símptomes persistents.", "Ser conscient dels propis límits i saber quan és necessari dir no.",
+    "Mantenir un equilibri adequat entre les responsabilitats laborals i les activitats fora del treballs de treball","problemes familiars","males amistats"]);
+
+
+    document.getElementById("mitjans_utilitza_proteccio").value = randomElement([]);
     document.getElementById("altres_manifestacio10").value = randomElement(["¿?","¿","?"]);
     // Fi de la 14ª pagina del formulari
 
