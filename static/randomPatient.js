@@ -282,7 +282,9 @@
     "Manca d'instal·lacions sanitàries netes i ben mantenides","Manca de pautes de neteja i desinfecció regulars","Problemes relacionats amb el maneig inadequat de residus perillosos",
     "Pobres condicions de calefacció o refrigeració", "Inadequada gestió de riscos laborals",]);
     
-    document.getElementById("lloc_treball").value = randomElement(["si","no","alguns"]);
+    document.getElementById("lloc_treball").value = randomElement([  "Oficina","Hospital","Restaurants","Fàbrica","Botiga",
+    "Escola", "Estació de policia", "Estació de bombers", "Estació de tren", "Aeroport",
+    "Camp de conreu", "Platja", "Estudi de gravació", "Laboratori", "Centre comercial", "Taller mecànic",]);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_si").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_no").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
     document.getElementById("quines_situacions_seguretat_fisica_psicologica_social").value = randomElement(["pressió social","company, Fomentar la comunicació oberta i honesta amb amics i familiars per parlar dels sentiments i problemes.",
@@ -323,8 +325,13 @@
     "Avi o àvia",  "Oncle o tia","Germà o germana mitjana","Fill o filla petit",
     "Cosí o cosina","Gendre o nora",   "Nuvi o núvia",  "Padrí o madrina",  "Fill o filla adoptat",
     "Membre més jove","Fill o fillastra de matrimoni anterior", "Nuvi o núvia de matrimoni anterior",]);
-    
-    document.getElementById("rol_social").value = randomElement(["si","no","alguns"]);
+
+    document.getElementById("rol_social").value = randomElement(["Mestre o professora",
+    "Doctor o metge", "Advocat o advocada", "Policia o policia", "Bomber o bombera",
+    "Cambrer o cambrera", "Empresari o empresària", "Treballador o treballadora social",
+    "Artista", "Estudiant",   "Pares de família", "Esportista",
+    "Periodista", "Pilot d'avió"
+  ]);
     document.getElementById("tipus_ocupacio").value = randomElement(["si","no","alguns"]);
     document.getElementById("situacions_desenvolupacio_rol_social_familiar").value = randomElement(["si","no","alguns"]);
     document.getElementById("mitjans_millorar13").value = randomElement(["si","no","alguns"]);
