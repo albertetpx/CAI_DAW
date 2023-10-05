@@ -207,45 +207,64 @@
         </div>
         <!-- Fin Form 2 -->
 
-        <!-- Inicio Form 3 -->
-        <div class="form" id="part3">
-          <h3>Necessitats respiratòries (I)</h3>
-          <label for="ritme">RITME </label>
-          <input type="text" value="" name="ritme" />
-          <label for="frequencia_r">FREQÜENCIA R </label>
-          <input type="number" value=0 name="frequencia_r" />
-          <label for="amplitud">AMPLITUD </label>
-          <input type="number" value=0 name="amplitud" />
-          <label>RESPIRACIÓ</label>
-          <div class="form_label_si_no">
-            <label>BUCAL
-              <input type="radio" value="Bucal" name="tipus_respiracio"  /></label>
-            <label>NASAL
-              <input type="radio" value="Nasal" name="tipus_respiracio" checked/> </label>
-          </div>
-          <label for="orifisis_nasals_permeables">ORIFICIS NASALS PERMEABLES </label>
-          <input type="text" value="" name="orifisis_nasals_permeables" />
-          <label for="frequencia_cardiaca">FREQÜENCIA CARDIACA </label>
-          <input type="number" value=0 name="frequencia_cardiaca" />
-          <label for="pa">PA. </label>
-          <input type="number" value=0 name="pa" />
-          <label for="coloracio_mucoses">COLORACIÓ DE LES MUCOSES</label>
-          <input type="text" value="" name="coloracio_mucoses" />
-          <label for="coloracio_pell" id="pell">COLORACIÓ DE LA PELL</label>
-          <input type="text" value="" name="coloracio_pell" />
-          <label>RESPIRACIÓ</label>
-          <div class="form_label_si_no">
-            <label>SILENCIOSA
-              <input type="radio" value="Silenciosa" name="respiracio" id="res"  checked/> </label>
-            <label>SOROLLOSA
-              <input type="radio" value="Sorollosa" name="respiracio" id="res2" /></label>
-          </div>
-          <div class="formControls formControls01">
-            <div class="formButton prev" onclick="showForm(2)">ENRERE</div>
-            <div class="formButton back" onclick="showForm(4)">SEGÜENT</div>
-          </div>
-        </div>
-        <!-- Fin Form 3 -->
+   <!-- Inicio Form 3 -->
+   <div class="form" id="part3">
+    <h3>Necessitats respiratòries (I)</h3>
+    <label for="ritme">RESPIRACIÓ RÍTMICA </label>
+    <div class="form_label_si_no">
+      <label> SI
+        <input type="radio" value="SI" name="ritme" /></label>
+      <label>NO  
+        <input type="radio" value="NO" name="ritme" checked/> </label>
+    </div>
+    <input type="text" value="" name="ritme" />Ç
+  4
+    <label for="frequencia_r">FREQÜENCIA RESPIRATÒRIA (FR) </label>
+    <input type="number" value="" name="frequencia_r" />
+    <label for="amplitud">AMPLITUD </label>
+    <div class="form_label_si_no">
+      <label>SUPERFICIAL
+        <input type="radio" value="Bucal" name="amplitud"  /></label>
+      <label>PROFUNDA
+        <input type="radio" value="Nasal" name="amplitud" checked/> </label>
+    </div>
+    <input type="number" value="" name="amplitud" />
+    <label>RESPIRACIÓ</label>
+    <div class="form_label_si_no">
+      <label>BUCAL
+        <input type="radio" value="Bucal" name="tipus_respiracio"  /></label>
+      <label>NASAL
+        <input type="radio" value="Nasal" name="tipus_respiracio" checked/> </label>
+    </div>
+    <label for="orifisis_nasals_permeables">ORIFICIS NASALS PERMEABLES </label>
+    <div class="form_label_si_no">
+      <label> SI
+        <input type="radio" value="SI" name="orifisis_nasals_permeables" /></label>
+      <label>NO  
+        <input type="radio" value="NO" name="orifisis_nasals_permeables" checked/> </label>
+    </div>
+    <input type="text" value="" name="orifisis_nasals_permeables" />
+    <label for="frequencia_cardiaca">FREQÜENCIA CARDIACA </label>
+    <input type="number" value="" name="frequencia_cardiaca" />
+    <label for="pa">PA. </label>
+    <input type="number" value="" name="pa" />
+    <label for="coloracio_mucoses">COLORACIÓ DE LES MUCOSES</label>
+    <input type="text" value="" name="coloracio_mucoses" />
+    <label for="coloracio_pell" id="pell">COLORACIÓ DE LA PELL</label>
+    <input type="text" value="" name="coloracio_pell" />
+    <label>RESPIRACIÓ</label>
+    <div class="form_label_si_no">
+      <label>SILENCIOSA
+        <input type="radio" value="Silenciosa" name="respiracio" id="res"  checked/> </label>
+      <label>SOROLLOSA
+        <input type="radio" value="Sorollosa" name="respiracio" id="res2" /></label>
+    </div>
+    <div class="formControls formControls01">
+      <div class="formButton prev" onclick="showForm(2)">ENRERE</div>
+      <div class="formButton back" onclick="showForm(4)">SEGÜENT</div>
+    </div>
+  </div>
+  <!-- Fin Form 3 -->
 
         <!-- Inicio Form 4 -->
         <div class="form" id="part4">
@@ -260,9 +279,15 @@
           <label for="tos_descripcio">DESCRIPCIÓ DE LA TOS</label>
           <input type="text" value="" name="tos_descripcio" />
           <label for="mucositat">MUCOSITAT</label>
+          <div class="form_label_si_no">
+            <label>SI
+              <input type="radio" value="SI" name="mucositat"  /></label>
+            <label>NO
+              <input type="radio" value="NO" name="mucositat" checked/></label>
+          </div>
           <input type="text" value="" name="mucositat" />
           <label for="mucositat_descripcio">DESCRIPCIÓ DE LA MUCOSITAT</label>
-          <input type="text" value="" name="mucositat_descripcio" />
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="descripcio_mucositat"></textarea>
           <label>EXPECTORACIÓ?</label>
           <div class="form_label_si_no">
             <label> SI
