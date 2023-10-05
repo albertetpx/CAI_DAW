@@ -319,7 +319,11 @@
     // Fi de la 16ª pagina del formulari
 
     // Inici de la 17ª pagina del formulari
-    document.getElementById("rol_familiar").value = randomElement(["si","no","alguns"]);
+    document.getElementById("rol_familiar").value = randomElement([ "Pare o cap de família", "Mare o cuidadora principal",  "Fill o filla gran",
+    "Avi o àvia",  "Oncle o tia","Germà o germana mitjana","Fill o filla petit",
+    "Cosí o cosina","Gendre o nora",   "Nuvi o núvia",  "Padrí o madrina",  "Fill o filla adoptat",
+    "Membre més jove","Fill o fillastra de matrimoni anterior", "Nuvi o núvia de matrimoni anterior",]);
+    
     document.getElementById("rol_social").value = randomElement(["si","no","alguns"]);
     document.getElementById("tipus_ocupacio").value = randomElement(["si","no","alguns"]);
     document.getElementById("situacions_desenvolupacio_rol_social_familiar").value = randomElement(["si","no","alguns"]);
@@ -338,7 +342,9 @@
     document.getElementById("situacions_influencien_interes_esbargir_no").value = randomRadioButton("situacions_influencien_interes_esbargir_si","situacions_influencien_interes_esbargir_no",2);
     document.getElementById("quines_situacions_influencien_interes_esbargir").value = randomElement(["si","no","alguns"]);
     document.getElementById("mitjans_utilitza_millorar_realitzacio").value = randomElement(["si","no","alguns"]);
-    document.getElementById("altres_manifestacions14").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions14").value = randomElement(["Disminució de la concentració","Pèrdua de la productivitat","Increment del temps de procrastinació",
+    "Estress i ansietat per les tasques pendents","Dificultat per complir terminis", "Baix rendiment acadèmic o laboral","Problemes de relacions interpersonals", "Pèrdua d'oportunitats d'aprenentatge",
+    "Canvis en el patró de son i insomni","Pèrdua de temps i recursos","Sensació de culpa o frustració", "Desorganització i caos en la vida diària"]);
     // Fi de la 18ª pagina del formulari
 
     // Inici de la 19ª pagina del fromulari
