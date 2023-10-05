@@ -323,12 +323,36 @@
     "Parla amb tonalitat nasal", "Incapacitat per formar frases coherents", "Parla amb accents o dialectes específics",
     "Retard en el desenvolupament del llenguatge", "Uso d'argot o jerga específica", "Incapacitat per comunicar-se verbalment",
     "Parla en murmuri o en veu alta sense consciència", "Expressió de sentiment o emoció a través de la veu",]);
-    document.getElementById("descripccio_expressio_no_verbal").value = randomElement(["si","no","alguns"]);
+    document.getElementById("descripccio_expressio_no_verbal").value = randomElement([ "Expressió facial relaxada i serena",
+    "Somriure sincer i amigable", "Celes frunzides o mirada seriosa", "Parpelles caigudes o cansament", "Mirada evasiva o falta de contacte visual",
+    "Contacte visual fort i segur",  "Postura corporal oberta i relaxada",   "Postura corporal tancada o defensiva",
+    "Moviments de mans relaxats i naturals",   "Moviments de mans nerviosos o inquietos",   "Contacte físic adequat (com apretó de mà)",   "Manca de contacte físic o evitació",
+    "Moure's amb confiança i seguretat",   "Moure's amb inseguretat o falta de determinació",  "Expressió de sorpresa o incredulitat",
+    "Expressió de preocupació o angoixa",   "Gestos que indiquen interès o atenció", "Gestos que indiquen desinterès o distracció",
+    "Expressió de relaxació i comoditat","Fregament de mans o moviments inquiets", "Mirada fixa o intensa", "Expressió de confiança i autoestima",
+    "Expressió de nerviosisme o inseguretat",  "Moviments d'espatlla o encogiment",  "Contacte visual constant o penetrant",]);
     document.getElementById("situacions_influencien_comunicacio_si").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
     document.getElementById("situacions_influencien_comunicacio_no").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
-    document.getElementById("quines_situacions_influencien_comunicacio").value = randomElement(["si","no","alguns"]);
-    document.getElementById("mitjans_faciliten_comunicacio").value = randomElement(["si","no","alguns"]);
-    document.getElementById("altres_manifestacions11").value = randomElement(["si","no","alguns"]);
+    document.getElementById("quines_situacions_influencien_comunicacio").value = randomElement([ "Entorn tranquil i silenciós que facilita la comunicació","Entorn amb soroll excessiu o distraccions que dificulta la comunicació","Comunicació cara a cara que permet una millor comprensió",
+    "Comunicació per telèfon o virtual que pot ser menys clara","Diferències culturals que poden causar malentesos","Estats emocionals intensos que poden afectar la comunicació","Falta de temps per a una comunicació adequada",
+    "Comunicació en situacions d'emergència que requereix claredat i rapidesa",  "Comunicació en grups grans o multituds que pot ser caòtica",  "Comunicació amb persones amb discapacitats que requereix adaptacions",
+    "Llenguatge tècnic o jerga que pot ser incomprensible per als no experts",  "Dificultats de traducció en la comunicació multilingüe",  "Comunicació escrita que permet una revisió i reflexió més gran",
+    "Comunicació en un ambient de treball que pot ser formal o informal"]);
+    document.getElementById("mitjans_faciliten_comunicacio").value = randomElement([ "Entorn tranquil i silenciós que afavoreix la concentració",
+    "Comunicació cara a cara que permet una millor interacció", "Empatia i comprensió mútua entre les parts", "Ús d'un llenguatge clar i senzill",
+    "Presència d'ajudes visuals o gràfiques per aclarir conceptes",  "Disposició a escoltar i donar temps per expressar-se",  "Foment de la confiança i una atmosfera d'obertura",
+    "Empatia i comprensió mútua entre les parts",   "Llenguatge no verbal congruent amb les paraules",   "Pausa i reflexió per a una comunicació més efectiva",
+    "Comunicació estructurada i ben organitzada","Ús de preguntes obertes per aprofundir en el diàleg",  "Comunicació respectuosa i considerada",
+    "Clarificació de malentesos o dubtes",  "Feedback i confirmació de la comprensió",   "Adaptació del llenguatge segons l'audiència", "Ús de tecnologies de comunicació eficaces",
+    "Ambient agradable i acollidor que fomenta la comunicació", "Comunicació en un entorn de treball col·laboratiu", "Comunicació en una relació interpersonal saludable",
+    "Ús d'habilitats de comunicació efectives",]);
+    document.getElementById("altres_manifestacions11").value = randomElement([  "Fluidez verbal sin dificultades",
+    "Tartamudeo o disfluencia ocasional","Habla rápida y fluida",  "Habla lenta y pausada",  "Voz clara y bien articulada",
+    "Voz nasal o entrecortada",    "Uso de un tono de voz adecuado", "Alteraciones en el ritmo del habla",
+    "Repetición frecuente de palabras o frases",  "Pérdida de la voz o afonía temporal",   "Habla susurrada o en un tono bajo",
+    "Dificultad para pronunciar ciertos sonidos",  "Uso excesivo de muletillas o palabras de relleno",  "Vocabulario rico y variado",
+    "Dificultad para encontrar las palabras adecuadas",   "Articulación deficiente de los sonidos",   "Inclinación a hablar de manera monótona",    "Uso de jerga o argot específico",
+    "Vocalización clara y precisa",]);
     // Fi de la 15ª pagina del formulari
 
     // Inici de la 16ª pagina del formulari
