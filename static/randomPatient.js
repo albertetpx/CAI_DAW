@@ -302,7 +302,12 @@
     // Fi de la 14ª pagina del formulari
 
     // Inici de la 15ª pagina del formulari
-    document.getElementById("estat_consciencia").value = randomElement(["si","no","alguns"]);
+    document.getElementById("estat_consciencia").value = randomElement([  "Vigil i alerta",
+    "Somnolent o adormit", "Inconscient", "Confús o desorientat", "Lúcid i coherent",
+    "Despert",  "Hipnòtic o en estat d'hipnosi",  "Estuporós o abatut",  "Delirant o agitat",
+    "Inconscient però respon a estímuls",   "Amb pèrdua de memòria a curt termini",   "Trance meditatiu",
+    "En estat de xoc",   "Estadística vegetativa",   "Eufòric o exaltat",]);
+    
     document.getElementById("orientacio_temps_espai").value = randomElement(["si","no","alguns"]);
     document.getElementById("estat_sesorials").value = randomElement(["si","no","alguns"]);
     document.getElementById("expressio_verbal").value = randomElement(["si","no","alguns"]);
