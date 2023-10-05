@@ -251,7 +251,13 @@
     document.getElementById("situacions_influencien_higene_no").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
     document.getElementById("quines_situacions_influencien_higene").value = randomElement(["discapacitat","dificultat d'accés a aigues de sanejament","recursos limitats","problemes de salut mental","estil de vida"]);
     document.getElementById("mijans_utilitza_millorar_higene").value = randomElement(["accès a l'aigua de sanejament","educació en higiene","distribució de recursos d'higiene","adaptació a les necessitats pròpies"]);
-    document.getElementById("altres_manifestacions9").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("altres_manifestacions9").value = randomElement([  "Calor excessiu (sensació de calor intens)",
+    "Fred excessiu (sensació de fred intens)", "Sofocs o ones de calor", "Tremolors (sensació de temblores o escalofríos)",
+    "Pèrdua de sensació de temperatura (anestèsia tèrmica)", "Sensació de picor o ardor en la pell",
+    "Marejos o desmais relacionats amb canvis bruscs de temperatura", "Hipersensibilitat a canvis de temperatura",
+    "Transpiració excessiva (sudoració profusa)", "Sensació de fred intern (congelació)", "Pèrdua de la capacitat per regular la temperatura",
+    "Mal de cap relacionat amb canvis de temperatura", "Inflamació o erupcions cutànies a causa de la temperatura", "Malestar general per canvis bruscos de temperatura",
+    "Deshidratació per suor excessiu en temperatures elevades",]);
     // Fi de la 13ª pagina del formulari
 
     // Inici de la 14ª pagina del formulari
