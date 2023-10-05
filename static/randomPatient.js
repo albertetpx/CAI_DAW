@@ -457,10 +457,25 @@
     // Inici de la 19ª pagina del fromulari
     document.getElementById("interes_coneixer_proces_salut_si").value = randomRadioButton("interes_coneixer_proces_salut_si","interes_coneixer_proces_salut_no",2);
     document.getElementById("interes_coneixer_proces_salut_no").value = randomRadioButton("interes_coneixer_proces_salut_si","interes_coneixer_proces_salut_no",2);
-    document.getElementById("perque_interes_coneixer_proces_salut").value = randomElement(["si","no","alguns"]);
-    document.getElementById("situacions_dificulten_aprenentatge").value = randomElement(["si","no","alguns"]);
-    document.getElementById("mitjans_utilitza_aprendre").value = randomElement(["si","no","alguns"]);
-    document.getElementById("altres_manifestacions15").value = randomElement(["si","no","alguns"]);
+    document.getElementById("perque_interes_coneixer_proces_salut").value = randomElement(["Vivir una vida més llarga i saludable", "Prevenir malalties i trastorns de salut", "Tenir energia i vitalitat per fer les coses que m'agraden",
+    "Mantenir un pes saludable i evitar problemes de pes","Millorar la meva resistència i condició física", "Tindre una millor qualitat de vida en la meva vellesa",
+    "Reducir el risc de malalties cardíaques i diabetis",  "Aconseguir una pell més radiant i una aparença saludable",  "Reduir l'estrès i millorar la salut mental",
+    "Dormir millor i tenir un son reparador",  "Tenir una millor salut mental i emocional",]);
+    document.getElementById("situacions_dificulten_aprenentatge").value = randomElement([ "Manca de motivació o interès en el tema d'estudi","Distractions i interrupcions constants mentre s'estudia",
+    "Estudi en un entorn sorollós o poc adequat", "Pressió i estrès excessiu per obtenir bons resultats", "Problemes de salut que afecten la concentració",
+    "Manca de recursos d'estudi o materials adients", "Mètodes d'estudi ineficaços o inadecuats", "Manca d'orientació i suport acadèmic",  "Dificultats d'aprenentatge o discapacitats","Manca de temps degut a responsabilitats laborals o familiars",
+    "Manca de connexió amb el professor o els companys","Falta d'accessibilitat a l'educació i la informació",]);
+    document.getElementById("mitjans_utilitza_aprendre").value = randomElement(["Llibres de text i materials d'estudi impresos","Classes presencials a l'escola o la universitat",
+    "Recursos en línia com llocs web educatius","Plataformes d'aprenentatge en línia i cursos a distància",
+    "Vídeos educatius i tutorials a través de plataformes com YouTube","Audiollibres i podcasts educatius",
+    "Sessions de tutoria o assessorament acadèmic","Aplicacions mòbils i jocs educatius",
+    "Biblioteques i recursos de lectura","Laboratoris i entorns d'aprenentatge pràctic"]);
+    document.getElementById("altres_manifestacions15").value = randomElement([ "Aprenentatge basat en la resolució de problemes",
+    "Aprenentatge mitjançant la pràctica i l'experimentació", "Aprenentatge a través de la col·laboració i el treball en equip",
+    "Aprenentatge autodidacta i autoaprenentatge",  "Aprenentatge a través de l'observació i la imitació",
+    "Aprenentatge basat en la investigació i la recerca",  "Aprenentatge a través del joc i l'aprenentatge actiu",
+    "Aprenentatge reflexiu i autoavaluació",  "Aprenentatge basat en la interacció social",
+    "Aprenentatge mitjançant la narració i la història",   "Aprenentatge contextual i basat en l'experiència"]);
     
   }
 
