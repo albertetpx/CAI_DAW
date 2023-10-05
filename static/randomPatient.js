@@ -265,10 +265,11 @@
     "Treballar en el desenvolupament de l'autoestima i la confiança en un mateix.","Evitar l'ús excessiu d'alcohol, drogues o altres substàncies per controlar les emocions.","Fomentar l'afrontament positiu de les adversitats i veure-les com a oportunitats d'aprenentatge.",
     "Mantenir un seguiment regular de la salut mental i buscar ajuda en cas de símptomes persistents.", "Ser conscient dels propis límits i saber quan és necessari dir no.",
     "Mantenir un equilibri adequat entre les responsabilitats laborals i les activitats fora del treballs de treball","problemes familiars","males amistats"]);
-
-
     document.getElementById("mitjans_utilitza_proteccio").value = randomElement([]);
-    document.getElementById("altres_manifestacio10").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("altres_manifestacio10").value = randomElement([  "Ansietat",
+    "Depressió","Estress crònic","Insomni","Pèrdua d'interès en activitats solades","Problemes de concentració",
+    "Irritabilitat","Culpa excessiva","Pensaments obsessius","Retirada social","Canvis d'apetit","Baixa autoestima",
+    "Pensaments o intents de suïcidi","Trastorns alimentaris","Pèrdua de la motivació",]);
     // Fi de la 14ª pagina del formulari
 
     // Inici de la 15ª pagina del formulari
