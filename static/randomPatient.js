@@ -307,10 +307,22 @@
     "Despert",  "Hipnòtic o en estat d'hipnosi",  "Estuporós o abatut",  "Delirant o agitat",
     "Inconscient però respon a estímuls",   "Amb pèrdua de memòria a curt termini",   "Trance meditatiu",
     "En estat de xoc",   "Estadística vegetativa",   "Eufòric o exaltat",]);
-    
-    document.getElementById("orientacio_temps_espai").value = randomElement(["si","no","alguns"]);
-    document.getElementById("estat_sesorials").value = randomElement(["si","no","alguns"]);
-    document.getElementById("expressio_verbal").value = randomElement(["si","no","alguns"]);
+    document.getElementById("orientacio_temps_espai").value = randomElement(["Orientat en temps i espai","Orientat en temps, però desorientat en espai",
+    "Orientat en espai, però desorientat en temps","Desorientat en temps i espai","Orientat en temps passat i present, però no en el futur",
+    "Orientat en espai proper, però no en l'espai distant", "Orientat en temps futur, però no en temps passat o present", "Orientat en espai distant, però no en l'espai proper",
+    "Orientat en temps i espai de manera intermitent", "Confús en temps i espai, sense orientació clara",]);
+    document.getElementById("estat_sesorials").value = randomElement(["Normal, sense anomalies sensorials", "Visió alterada (visió borrosa, visió doble)", "Audiència afectada (pèrdua d'audició, zumbits a les oïdes)",
+    "Alteracions gustatives (sabor estrany o falta de gust)",   "Alteracions olfactives (pèrdua de l'olfacte, olors inusuals)",   "Alteracions tàctils (sensació de formigueig, entumiment)",
+    "Hipersensibilitat a estímuls sensorials (llum intensa, soroll fort)",  "Desorientació espacial (dificultat per percebre l'entorn)",  "Parestèsies (sensacions inusuals a la pell)",
+    "Sensació de picor o ardor en la pell","Visió fosca o tenebrosa","Hiposmia (disminució de l'olfacte)","Hipogeusia (disminució del gust)"]);
+    document.getElementById("expressio_verbal").value = randomElement(["Expressió verbal clara i coherent",
+    "Dificultat per trobar les paraules adequades", "Tartamudesa o disfluència", "Afasia (pèrdua de la capacitat de parlar)",
+    "Ecolàlia (repetició involuntària de les paraules dels altres)",  "Dificultat per articular les paraules correctament",  "Balbuceig o parloteig incoherent",  "Parla ràpida o atropellada",
+    "Parla lenta o pausada", "Monotonia vocal (tonalitat de veu constant)", "Parla fortament o crida", "Suspirs o gemecs durant la parla",
+    "Veu tremolosa o inestable",  "Parla murmurada o en un to baix",  "Vocalització incorrecta de les consonants",
+    "Parla amb tonalitat nasal", "Incapacitat per formar frases coherents", "Parla amb accents o dialectes específics",
+    "Retard en el desenvolupament del llenguatge", "Uso d'argot o jerga específica", "Incapacitat per comunicar-se verbalment",
+    "Parla en murmuri o en veu alta sense consciència", "Expressió de sentiment o emoció a través de la veu",]);
     document.getElementById("descripccio_expressio_no_verbal").value = randomElement(["si","no","alguns"]);
     document.getElementById("situacions_influencien_comunicacio_si").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
     document.getElementById("situacions_influencien_comunicacio_no").value = randomRadioButton("situacions_influencien_comunicacio_si","situacions_influencien_comunicacio_no",2);
