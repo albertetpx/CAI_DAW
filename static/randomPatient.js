@@ -408,12 +408,43 @@
     // Fi de la 17ª pagina del formulari
 
     // Inici de la 18ª pagina del formulari
-    document.getElementById("HABITS_DE_DIVERSIO_I_DISTRACCIO").value = randomElement(["si","no","alguns"]);
-    document.getElementById("habits_esport").value = randomElement(["si","no","alguns"]);
-    document.getElementById("habits_musica").value = randomElement(["si","no","alguns"]);
-    document.getElementById("habits_lectura").value = randomElement(["si","no","alguns"]);
-    document.getElementById("habits_audiovisual").value = randomElement(["si","no","alguns"]);
-    document.getElementById("habits_altres").value = randomElement(["si","no","alguns"]);
+    document.getElementById("HABITS_DE_DIVERSIO_I_DISTRACCIO").value = randomElement([  "Videojocs",
+    "Sèries de televisió","Internet","Pel·lícules",
+    "Esdeveniments esportius","Xarxes socials","Lectura de llibres",
+    "Xat en línia","Passatemps","Espectacles en viu",
+    "Concerts","Jocs d'atzar","Esports",]);
+    document.getElementById("habits_esport").value = randomElement([  "Fer exercici físic regularment",
+    "Anar al gimnàs dues vegades a la setmana","Practicar ioga cada matí","Nadar tres cops a la setmana","Jogging cada dia",
+    "Practicar esport en equip els caps de setmana", "Entrenar amb peses dues vegades a la setmana", "Fer ciclisme els diumenges",
+    "Assistir a classes d'arts marcials",  "Practicar esgrima com a passatemps", "Participar en maratons i carreres",  "Realitzar estiraments i flexions a diari",
+    "Fer escalada de muntanya els caps de setmana", "Jugar al tennis o al pàdel amb amics",   "Practicar surf o windsurf a la platja",
+    "Fer exercicis de cardio al parc",   "Participar en competicions esportives locals",
+    "Entrenar amb un personal trainer",    "Fer ioga al aire lliure","Practicar pilates per millorar la flexibilitat",
+    "Sedentarisme","Realitzar exercicis de força i resistència",]);
+    document.getElementById("habits_musica").value = randomElement([  "Escoltar música diàriament", "Assistir a concerts i espectacles musicals",
+    "Tocar un instrument musical com el piano, la guitarra o la bateria", "Practicar cant o vocalització regularment",
+    "Crear música pròpia i composicions",  "Explorar diferents gèneres musicals",  "Aprendre a llegir partitures musicals",
+    "Formar part d'una banda o conjunt musical","Cap", "Participar en corals o grups vocals",
+    "Estudiar teoria musical i harmonia",]);
+    document.getElementById("habits_lectura").value = randomElement([ "Llegir un llibre cada setmana",
+    "Dedicar temps diàriament a la lectura", "Fer una llista de llibres per llegir durant l'any",
+    "Visitar regularment una biblioteca", "Participar en un club de lectura",
+    "Explorar diferents gèneres literaris",   "Llegir notícies i articles en línia",
+    "Escollir llibres basats en les recomanacions d'amics","Llegir llibres en diverses llengües",
+    "Crear un racó de lectura acollidor a casa", "Compartir llibres amb altres persones",
+    "Llegir a l'aire lliure o en la naturalesa","Cap"]);
+    document.getElementById("habits_audiovisual").value = randomElement([ "Mirar una pel·lícula o sèrie cada nit",
+    "Fer maratons de sèries els caps de setmana", "Assistir a projeccions de cinema regularment",
+    "Seguir les últimes notícies i tendències de cinema i televisió", "Crear llistes de les pròximes pel·lícules i sèries per veure",
+    "Explorar diferents gèneres audiovisuals, com la ciència-ficció o el drama",  "Consumir documentals i pel·lícules de no-ficció per aprendre nous temes",
+    "Fomentar la discussió i el debat sobre pel·lícules i sèries vistes","Cap",  "Subscriure's a plataformes de streaming per accedir a contingut divers",
+    "Explorar pel·lícules i sèries d'altres països i cultures"]);
+    document.getElementById("habits_altres").value = randomElement(["Sortir amb amics a fer activitats socials",
+    "Organitzar i assistir a festes i esdeveniments socials", "Explorar llocs nous i viatjar per a descobrir noves cultures",
+    "Realitzar activitats d'oci com senderisme o ciclisme", "Practicar esports i jocs recreatius amb amics",
+    "Visitar parcs d'atraccions i parcs temàtics", "Anar al cinema o al teatre regularment",
+    "Participar en jocs de taula i jocs de cartes", "Assistir a concerts i espectacles en viu",
+    "Passar temps a la naturalesa, com a la platja o la muntanya"]);
     document.getElementById("situacions_influencien_interes_esbargir_si").value = randomRadioButton("situacions_influencien_interes_esbargir_si","situacions_influencien_interes_esbargir_no",2);
     document.getElementById("situacions_influencien_interes_esbargir_no").value = randomRadioButton("situacions_influencien_interes_esbargir_si","situacions_influencien_interes_esbargir_no",2);
     document.getElementById("quines_situacions_influencien_interes_esbargir").value = randomElement(["si","no","alguns"]);
