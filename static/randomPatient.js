@@ -402,9 +402,29 @@
     "Periodista", "Pilot d'avió"
   ]);
     document.getElementById("tipus_ocupacio").value = randomElement(["si","no","alguns"]);
-    document.getElementById("situacions_desenvolupacio_rol_social_familiar").value = randomElement(["si","no","alguns"]);
+    document.getElementById("situacions_desenvolupacio_rol_social_familiar").value = randomElement([  "Naixement d'un nou fill i l'adaptació als nous rols de pares",
+    "Adolescents que comencen a assumir responsabilitats i independents","La jubilació dels pares i els canvis en els rols familiars",
+    "La pèrdua d'un membre de la família i l'ajustament a la nova dinàmica",  "Reubicació de la família a una nova ciutat o país i l'adaptació",
+    "Divorci o separació dels pares i la redefinició dels rols familiars",   "Criança de germans més petits per part dels germans majors",
+    "Famílies que cuiden de membres amb discapacitats o malalties cròniques",   "Famílies amb membres que assumeixen rols de cuidadors",
+    "Desenvolupament de nous interessos i aficions familiars",   "Famílies que passen per canvis econòmics significatius i ajustaments",
+    "Adopció o acollida d'un nou membre de la família i l'adaptació",   "Famílies que gestionen una empresa o negocis junts",
+    "Famílies que promouen la inclusió i la diversitat en els rols",   "Transició de membres joves a adults i els seus nous rols",
+    "Famílies que passen per processos de reconciliació i curació",   "Famílies que celebren esdeveniments importants com casaments i aniversaris",
+    "Adaptació als canvis en les relacions entre els membres a mesura que envellixen",  "Famílies que integren nous membres per casaments o parelles",
+    "Famílies que naveguen per les relacions entre padrastres i fills"]);
     document.getElementById("mitjans_millorar13").value = randomElement(["si","no","alguns"]);
-    document.getElementById("altres_manifestacions13").value = randomElement(["si","no","alguns"]);
+    document.getElementById("altres_manifestacions13").value = randomElement([ "Família amb una distribució equitativa de responsabilitats domèstiques",
+    "Pares que comparteixen activitats d'oci i esdeveniments familiars", "Rols familiars flexibles i adaptatius segons les necessitats",
+    "Els avis juguen un paper actiu en la criança i l'educació dels nets",  "Famílies que promouen la coeducació i la igualtat de gènere",
+    "Rols familiars basats en les habilitats i interessos individuals",   "Famílies amb membres que assumeixen múltiples rols segons les circumstàncies",
+    "Famílies amb membres que col·laboren en negocis familiars o projectes",   "Criança compartida o coresponsabilitat entre familiars",
+    "Famílies que promouen la independència dels fills des de joves",    "Famílies que valoren les relacions intergeneracionals",
+    "Rols familiars que canvien al llarg de les etapes de la vida",    "Famílies que adapten els rols segons les necessitats dels membres",
+    "Famílies amb membres que assumeixen rols de cuidador",  "Famílies amb membres que promouen l'aprenentatge contínu de tots",
+    "Rols familiars que es basen en l'afecte i el suport mutu", "Famílies amb membres que promouen la preservació de la cultura i les tradicions",
+    "Famílies amb membres que assumeixen rols de mentors i guies", "Famílies amb membres que es fan càrrec de familiars amb necessitats especials",
+    "Famílies amb membres que fomenten la comunicació oberta i respectuosa",]);
     // Fi de la 17ª pagina del formulari
 
     // Inici de la 18ª pagina del formulari
