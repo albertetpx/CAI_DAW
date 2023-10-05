@@ -238,32 +238,50 @@
     document.getElementById("situacions_influencien_termoregulacio_si").value = randomRadioButton("situacions_influencien_termoregulacio_si","situacions_influencien_termoregulacio_no",2);
     document.getElementById("situacions_influencien_termoregulacio_no").value = randomRadioButton("situacions_influencien_termoregulacio_si","situacions_influencien_termoregulacio_no",2);
     document.getElementById("quines_situacions_influencien_termoregulacio").value = randomElement(["deshidratació","humitat","sequedat"]);
-    document.getElementById("altres_manifestacions8").value = randomElement(["¿?","¿","?"]);
-    document.getElementById("mitjans_utilitza_mantenir_temperatura").value = randomElement(["Ficar-se capes","retirar capes","hidratar-se"]);
-    // Fi de la 12ª pagina del formulari
-
-    // Inici de la 13ª pagina del formulari
-    document.getElementById("condicions_higeniques_pell_mucoses").value = randomElement(["Bon estat","deteriorades"]);
-    document.getElementById("descripcio_condicions_pell_mucosa").value = randomElement(["¿?","¿","?"]);
-    document.getElementById("habits_higene_corporal").value = randomElement(["neteja diària","aigua i sabo suaus","neteja en sec"]);
-    document.getElementById("habits_higene_bucal").value = randomElement(["desprès de cada àpat","3 cops al dia","1 cop al dia","de tant en quant"]);
-    document.getElementById("situacions_influencien_higene_si").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
-    document.getElementById("situacions_influencien_higene_no").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
-    document.getElementById("quines_situacions_influencien_higene").value = randomElement(["discapacitat","dificultat d'accés a aigues de sanejament","recursos limitats","problemes de salut mental","estil de vida"]);
-    document.getElementById("mijans_utilitza_millorar_higene").value = randomElement(["accès a l'aigua de sanejament","educació en higiene","distribució de recursos d'higiene","adaptació a les necessitats pròpies"]);
-    document.getElementById("altres_manifestacions9").value = randomElement([  "Calor excessiu (sensació de calor intens)",
+    document.getElementById("altres_manifestacions8").value = randomElement(["Calor excessiu (sensació de calor intens)",
     "Fred excessiu (sensació de fred intens)", "Sofocs o ones de calor", "Tremolors (sensació de temblores o escalofríos)",
     "Pèrdua de sensació de temperatura (anestèsia tèrmica)", "Sensació de picor o ardor en la pell",
     "Marejos o desmais relacionats amb canvis bruscs de temperatura", "Hipersensibilitat a canvis de temperatura",
     "Transpiració excessiva (sudoració profusa)", "Sensació de fred intern (congelació)", "Pèrdua de la capacitat per regular la temperatura",
     "Mal de cap relacionat amb canvis de temperatura", "Inflamació o erupcions cutànies a causa de la temperatura", "Malestar general per canvis bruscos de temperatura",
     "Deshidratació per suor excessiu en temperatures elevades",]);
+    document.getElementById("mitjans_utilitza_mantenir_temperatura").value = randomElement(["Ficar-se capes","retirar capes","hidratar-se"]);
+    // Fi de la 12ª pagina del formulari
+
+    // Inici de la 13ª pagina del formulari
+    document.getElementById("condicions_higeniques_pell_mucoses").value = randomElement(["Bon estat","deteriorades"]);
+    document.getElementById("descripcio_condicions_pell_mucosa").value = randomElement([  "Pell sana i suau al tacte.",
+    "Mucoses humides i rosades.", "Pell amb petites taques de pigmentació.", "Mucoses pàl·lides o blanques.", "Pell amb un aspecte greixós o brillant.",
+    "Mucoses amb una textura suau i uniforme.","Pell amb marques d'acne o cicatrius.","Mucoses seques i pruriginoses.",
+    "Pell amb un color uniforme i sense taques.", "Mucoses inflamades o amb lesions.", "Pell amb taques de sol o hiperpigmentació.",
+    "Mucoses amb secrecions o mucositat excessiva.","Pell amb rugositat o aspror.", "Mucoses amb inflor o edema.", "Pell amb erupcions cutànies o brots.",]);
+    document.getElementById("habits_higene_corporal").value = randomElement(["neteja diària","aigua i sabo suaus","neteja en sec"]);
+    document.getElementById("habits_higene_bucal").value = randomElement(["desprès de cada àpat","3 cops al dia","1 cop al dia","de tant en quant"]);
+    document.getElementById("situacions_influencien_higene_si").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
+    document.getElementById("situacions_influencien_higene_no").value = randomRadioButton("situacions_influencien_higene_si","situacions_influencien_higene_no",2);
+    document.getElementById("quines_situacions_influencien_higene").value = randomElement(["discapacitat","dificultat d'accés a aigues de sanejament","recursos limitats","problemes de salut mental","estil de vida"]);
+    document.getElementById("mijans_utilitza_millorar_higene").value = randomElement(["accès a l'aigua de sanejament","educació en higiene","distribució de recursos d'higiene","adaptació a les necessitats pròpies"]);
+    document.getElementById("altres_manifestacions9").value = randomElement([
+      "Acumulació de bacteris i germens","Obstrucció de porus i formació de comedons",  "Infeccions cutànies", "Irritació o inflamació de la pell",
+      "Pell opaca o amb aspecte brut", "Dermatitis", "Pell sebosa o greixosa","Mala olor corporal",
+      "Possibles al·lèrgies a substàncies contaminants", "Increment del risc de reaccions al·lèrgiques cutànies", "Desenvolupament de taques o taques a la pell",
+  
+    ]);
     // Fi de la 13ª pagina del formulari
 
     // Inici de la 14ª pagina del formulari
     document.getElementById("coneix_mides_prevencio").value = randomElement(["si","no"]);
-    document.getElementById("salubritat_medi_1").value = randomElement(["¿?","¿","?"]);
-    document.getElementById("salubritat_habitat_1").value = randomElement(["¿?","¿","?"]);
+    document.getElementById("salubritat_medi_1").value = randomElement([ "Fuites d'aigua","Infiltracions o goteres","Presència de fongs o mores","Presència d'insectes o plagues",
+    "Acumulació excessiva de pols o brutícia",  "Manca d'aireació adequada",  "Problemes amb la gestió de residus",  "Pobres condicions d'higiene personal",
+    "Mala conservació dels aliments", "No disposar de detectors de fum o monòxid de carboni", "Manca de manteniment d'equips domèstics",
+    "Desorden excessiu o acumulació d'objectes innecessaris"]);
+    document.getElementById("salubritat_habitat_1").value = randomElement([  "Manca de neteja i higiene en les àrees de treball",
+    "Mala ventilació o manca de circulació d'aire", "Presència d'agents contaminants a l'ambient", "Manca de manteniment d'equips de seguretat",
+    "Pobres condicions d'il·luminació", "Manca d'espai adequat i mobiliari ergonòmic", "Problemes d'accessibilitat i sortides d'emergència bloquejades",
+    "Exposició a substàncies químiques nocives sense protecció adequada","Manca de protocols de seguretat i prevenció d'accidents","Alt nivell de soroll sense protectors auriculars",
+    "Manca d'instal·lacions sanitàries netes i ben mantenides","Manca de pautes de neteja i desinfecció regulars","Problemes relacionats amb el maneig inadequat de residus perillosos",
+    "Pobres condicions de calefacció o refrigeració", "Inadequada gestió de riscos laborals",]);
+    
     document.getElementById("lloc_treball").value = randomElement(["si","no","alguns"]);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_si").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
     document.getElementById("situacions_circumstancies_seguretat_fisica_psicologica_social_no").value = randomRadioButton("situacions_circumstancies_seguretat_fisica_psicologica_social_si","situacions_circumstancies_seguretat_fisica_psicologica_social_no",2);
