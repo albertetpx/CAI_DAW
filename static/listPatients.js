@@ -109,6 +109,7 @@ function queryData(currentDNI, currentSlide, currentModal) {
 ///UPDATE PAAR MODIFICAR DATOS BD
 function saveToDataBase(currentDNI, currentSlide) {
   currentDNI = dni
+
 }
 
 
@@ -168,11 +169,30 @@ function createTable(modalContent, userData) {
     table.append(cell);
 
 
+
+
+    //funcion printar el html ded la cell
+    cell.addEventListener('click', function(event){
+      getFieldValue(event, this);
+    }, false)
+
+
+
     // Append para agregar el button en el heading cell
     headingCell.append(modifyButton);
   })
   modalContent.append(table);
 }
+
+//funcion para obtener el dato de la FielName
+
+function getFieldValue(currentEvent, currentObject){
+  let fieldName = currentObject.innerHTML;
+      
+};
+
+//cambiar id de heading cell 
+// obtener valor de heading cell sin 'modificar'
 
 function editValue(cell, initialValue) {
   const editingValue = document.createElement("input");
@@ -189,19 +209,19 @@ function editValue(cell, initialValue) {
     // enviar una petición asíncrona de cambio de datos de paciente al backend
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
-      // userData = JSON.parse(this.responseText);
-      // console.log(userData);
-      // updateModalElements(currentModal, userData)
     }
     xhttp.open("POST", "/modificarDatosPaciente", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    ///EL FIELD NAME NO VA REALMENTE CON INNER TEXT, HAY TEXTO EXTRA
-    let fieldName= document.getElementById(initialValue);
-  
+
+    //fieldname
+    let headingNames= document.getElementById(initialValue);
+    let fieldName = headingNames.innerText.replace("Modificar", "");
+    //
+
     let diccionaryKey = "t"+currentSlide;
 
-    payload = `dni=${currentDNI}&tableNum=${diccionarioTablas[diccionaryKey]}&fieldName=${fieldName.innerText}&newValue=${editingValue.value}`;
+    payload = `dni=${currentDNI}&tableNum=${diccionarioTablas[diccionaryKey]}&fieldName=${fieldName}&newValue=${editingValue.value}`;
     xhttp.send(payload);
     console.log(payload)
 
