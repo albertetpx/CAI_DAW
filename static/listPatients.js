@@ -106,16 +106,9 @@ function queryData(currentDNI, currentSlide, currentModal) {
   xhttp.send(payload);
 }
 
-///UPDATE PAAR MODIFICAR DATOS BD
-function saveToDataBase(currentDNI, currentSlide) {
-  currentDNI = dni
-
-}
-
 
 function updateModalElements(currentModal, userData) {
   // Update modal
-  // console.log(currentModal);
   let modalContent = currentModal.children[0]
   //  modalContent.innerHTML = userData;
   createTable(modalContent, userData)
@@ -127,30 +120,16 @@ function createTable(modalContent, userData) {
     tables.remove();
   }
 
-
   //Creamos tabla
   let table = document.createElement('div');
   table.classList.add("dataTable");
   //Crear celdas de encabezado
   userData[0].forEach(function (value, index) {
-    // console.log(heading)
-
 
     // crear button para cada modificar el valor de cada celda
     let modifyButton = document.createElement('button');
     modifyButton.classList.add("buttonmodify");
     modifyButton.innerHTML = "Modificar";
-    // añadir evento al button
-    // modifyButton.addEventListener("click", modificarValorFormulario,false);
-
-
-    //  añadir evento al button
-    modifyButton.addEventListener("click", function () {
-      // función para editar el valor
-      editValue(dataCell, userData[1][index]);
-
-    });
-
 
     // crear los elementos de cada cela
     let cell = document.createElement('div');
@@ -158,8 +137,6 @@ function createTable(modalContent, userData) {
     let headingCell = document.createElement('div');
     headingCell.classList.add("headingCell");
 
-    ///ID NO PUEDE SER EL DATO (QUE ID PONEMOS?)
-    headingCell.id = userData[1][index];
     let dataCell = document.createElement('div');
     dataCell.classList.add("dataCell");
     headingCell.innerHTML = value;
@@ -168,15 +145,11 @@ function createTable(modalContent, userData) {
     cell.append(dataCell);
     table.append(cell);
 
-
-
-
-    //funcion printar el html ded la cell
-    cell.addEventListener('click', function(event){
-      getFieldValue(event, this);
-    }, false)
-
-
+     //  añadir evento al button
+    modifyButton.addEventListener("click", function () {
+    ///pasar cell talcual y despues modificar
+      editValue(dataCell, userData[1][index], headingCell);
+    });
 
     // Append para agregar el button en el heading cell
     headingCell.append(modifyButton);
@@ -184,17 +157,7 @@ function createTable(modalContent, userData) {
   modalContent.append(table);
 }
 
-//funcion para obtener el dato de la FielName
-
-function getFieldValue(currentEvent, currentObject){
-  let fieldName = currentObject.innerHTML;
-      
-};
-
-//cambiar id de heading cell 
-// obtener valor de heading cell sin 'modificar'
-
-function editValue(cell, initialValue) {
+function editValue(cell, initialValue, headingCell) {
   const editingValue = document.createElement("input");
   editingValue.type = "text";
   editingValue.value = initialValue;
@@ -214,9 +177,9 @@ function editValue(cell, initialValue) {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 
-    //fieldname
-    let headingNames= document.getElementById(initialValue);
-    let fieldName = headingNames.innerText.replace("Modificar", "");
+    //fieldname;
+    console.log(headingCell)
+    let fieldName = headingCell.innerText.replace("Modificar", "");
     //
 
     let diccionaryKey = "t"+currentSlide;
