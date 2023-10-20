@@ -368,6 +368,9 @@ main h1 {
   width: 15%;
   column-gap: 1%;
 }
+.alarma-container{
+  position: relative;
+}
 
 .alarmes{
   display: flex;
@@ -388,13 +391,17 @@ main h1 {
   color: red;
 }
 
-.titulo-alarma {
-  display: none;
+.alarma.titulo-alarma {
+  position: absolute;
+  top: 0px;
+  color: black;
+  display: block;
 }
 
 .alarma:hover + .titulo-alarma {
   display: block;
 }
+
 
 /* .titulo-alarma.show{
   display: block;
