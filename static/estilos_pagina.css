@@ -392,9 +392,14 @@ main h1 {
   display: none;
 }
 
-.titulo-alarma.show{
+.alarma:hover + .titulo-alarma {
   display: block;
+  color: blue;
 }
+
+/* .titulo-alarma.show{
+  display: block;
+} */
 
 .text-name h3 {
   margin-left: 5%;
