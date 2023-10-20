@@ -217,6 +217,7 @@ function cargasAlarmas() {
     // Agregar eventos mouseover y mouseout a las alarmas
     const alarmas = element.querySelectorAll('.alarma');
     alarmas.forEach((alarma) => {
+      console.log(alarma);
       const tituloElement = alarma.querySelector('titulo-alarma');
 
       alarma.addEventListener('mouseenter', () => {
