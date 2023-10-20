@@ -388,6 +388,14 @@ main h1 {
   color: red;
 }
 
+.titulo-alarma {
+  display: none;
+}
+
+.titulo-alarma.show{
+  display: block;
+}
+
 .text-name h3 {
   margin-left: 5%;
   font-size: 18px;

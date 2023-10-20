@@ -213,6 +213,22 @@ function cargasAlarmas() {
   cards.forEach(function (element) {
     dni = element.children[0].children[0].innerHTML;
     pedirAlarmasPaciente(dni, element);
+
+    // Agregar eventos mouseover y mouseout a las alarmas
+    const alarmas = element.querySelectorAll('.alarma');
+    alarmas.forEach((alarma) => {
+      const tituloElement = alarma.querySelector('titulo-alarma');
+
+      alarma.addEventListener('mouseenter', () => {
+        // Mostrar el título de la alarma
+        tituloElement.classList.show('show');
+      });
+
+      alarma.addEventListener('mouseout', () => {
+        // Ocultar el título cuando el mouse no está encima de la alarma
+        tituloElement.classList.hiden('show');
+      });
+    });
   });
 }
 
