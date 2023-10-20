@@ -394,7 +394,6 @@ main h1 {
 
 .alarma:hover + .titulo-alarma {
   display: block;
-  color: blue;
 }
 
 /* .titulo-alarma.show{
