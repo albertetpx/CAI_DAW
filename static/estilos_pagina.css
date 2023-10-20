@@ -394,12 +394,10 @@ main h1 {
 
 .alarma:hover + .titulo-alarma {
   display: block;
-  color: blue;
+  color: black;
+
 }
 
-/* .titulo-alarma.show{
-  display: block;
-} */
 
 .text-name h3 {
   margin-left: 5%;
