@@ -1,3 +1,7 @@
+
+
+
+
 // Hem generat un botó i implementant un listener activem el formulari aleatori.
     document.getElementById("botoneraRandom").addEventListener("click",randomitzarFormulari)
     function randomitzarFormulari () {

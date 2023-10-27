@@ -928,6 +928,15 @@ footer{
   align-items: start;
   justify-content: start;
 }
+
+.tableEliminar{
+  border-collapse: collapse;
+  
+
+
+
+
+}
 /********************* MEDIA SCREEN ************************/
 @media screen and (max-height: 450px) {
   .overlay a {
