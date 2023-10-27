@@ -246,7 +246,7 @@ function pedirAlarmasPaciente(dni, element) {
       const pacient = data.pacientes[0];
 
 
-      var alarma = element.querySelectorAll('.alarmes > div');
+      var alarma = element.querySelectorAll('.alarmes > .alarma-container > .alarma');
 
       if (pacient.tos === "SI") {
         alarma[0].classList.add('activa');
