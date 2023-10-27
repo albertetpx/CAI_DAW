@@ -655,7 +655,16 @@ main h1 {
   width: 50%;
 }
 .form_label_si_no label input {
-  width: 15px;
+  width: 50px;
+}
+
+.seleccio_apats{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.text_apats {
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .form {
@@ -697,7 +706,7 @@ td {
 }
 /* linea larga de si o no  */
 
-.part_3_1labelsiNo_linea_larga {
+/*.part_3_1labelsiNo_linea_larga {
   padding-left: 40px;
 }
 .part_3_labelsiNo_linea_larga_inputs1,
@@ -712,6 +721,10 @@ td {
 }
 .part_3_labelsiNo_linea_larga_inputs5 {
   padding-left: 120px;
+} */
+
+.text_apats{
+  
 }
 
 #part6 {
