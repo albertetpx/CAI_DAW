@@ -320,7 +320,7 @@ main h1 {
 }
 
 .card:hover {
-  opacity: 0.6;
+  border: 5px solid #e61f57;
 }
 
 .image-man {
@@ -391,17 +391,17 @@ main h1 {
   color: red;
 }
 
-.alarma.titulo-alarma {
+.titulo-alarma {
   position: absolute;
-  top: 0px;
-  color: black;
+  top: 5px;
   display: block;
+  opacity: 0;
+  transform: translate(-30%, -30%);
 }
 
 .alarma:hover + .titulo-alarma {
   display: block;
-  color: black;
-
+  opacity: 100;
 }
 
 
