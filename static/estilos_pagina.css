@@ -874,11 +874,12 @@ td {
 .table_multi {
   border-collapse: collapse;
   border-radius: 4px; 
-  background-color: white; 
+  overflow: hidden;
+  background-color: #dcdcdc; 
 }
 
 .table_multi tr td {
-  font-size: 14px;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: #525252;
 }
@@ -886,7 +887,7 @@ td {
 .table_multi th {
   background-color: #c8c8c8;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   color: #525252;
 }
