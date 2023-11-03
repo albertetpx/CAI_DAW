@@ -1,9 +1,62 @@
-<body>
-    <!--El header esta dividido en 3 partes: menu, titulo y logo-->
-    <header>
-      <!-- LOGO DE LA APP-->
-      <div id="logo">
-        <!-- <img
+{% if pagina == "pagina1" %}
+  <body>
+      <!--El header esta dividido en 3 partes: menu, titulo y logo-->
+      <header>
+        <!-- LOGO DE LA APP-->
+        <div id="logo">
+          <!-- <img
+            src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
+            alt="Imagen de logo"
+            width="90px"
+          /> -->
+          <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+            alt="Imagen de logo"
+            width="150px">
+        </div>
+
+        <!-- TITULO DE LA PAGINA-->
+        <div class="titulo">
+          <h1>INICI</h1>
+        </div>
+        <!--Menu Hmaburguesa-->
+        <span id="caja-menu">
+          <div class="container-menu" id="menu" onclick="abrirMenu()">
+            <div id="bar1" class="bar1"></div>
+            <div id="bar2" class="bar2"></div>
+            <div id="bar3" class="bar3"></div>
+          </div>
+        </span>
+
+        <!-- Overlay cuando el menu esta activado-->
+        <div id="myNav" class="overlay">
+          <div class="overlay-content">
+            <div id="tapa-caja"></div>
+            <div id="caja-pastilla">
+              <div class="pastilla" onclick="inicio()">
+                <div id="tapa-pastilla-start"><h3>INI</h3></div>
+                <div id="tapa-pastilla-end"><h3>CI</h3></div>
+              </div>
+              <div class="pastilla" onclick="registrar()">
+                <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
+                <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+              </div>
+              <div class="pastilla" onclick="listarPacientes()">
+                <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
+                <div id="tapa-pastilla-end"><h3>TAR</h3></div>
+              </div>
+              <div class="pastilla">
+                <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
+                <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+{% elif pagina == "pagina2" %}
+  <header>
+    <!-- LOGO DE LA APP-->
+    <div id="logo">
+      <!-- <img
           src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
           alt="Imagen de logo"
           width="90px"
@@ -11,43 +64,112 @@
         <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
           alt="Imagen de logo"
           width="150px">
-      </div>
+    </div>
 
-      <!-- TITULO DE LA PAGINA-->
-      <div class="titulo">
-        <h1>INICI</h1>
+    <!-- TITULO DE LA PAGINA-->
+    <div class="titulo">
+      <h1>REGISTRE DE NOU PACIENT </h1>
+    </div>
+    <!--Menu Hmaburguesa-->
+    <span id="caja-menu">
+      <div class="container-menu" id="menu" onclick="abrirMenu()">
+        <div id="bar1" class="bar1"></div>
+        <div id="bar2" class="bar2"></div>
+        <div id="bar3" class="bar3"></div>
       </div>
-      <!--Menu Hmaburguesa-->
-      <span id="caja-menu">
-        <div class="container-menu" id="menu" onclick="abrirMenu()">
-          <div id="bar1" class="bar1"></div>
-          <div id="bar2" class="bar2"></div>
-          <div id="bar3" class="bar3"></div>
-        </div>
-      </span>
+    </span>
 
-      <!-- Overlay cuando el menu esta activado-->
-      <div id="myNav" class="overlay">
-        <div class="overlay-content">
-          <div id="tapa-caja"></div>
-          <div id="caja-pastilla">
-            <div class="pastilla" onclick="inicio()">
-              <div id="tapa-pastilla-start"><h3>INI</h3></div>
-              <div id="tapa-pastilla-end"><h3>CI</h3></div>
+    <!-- Overlay cuando el menu esta activado-->
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <div id="tapa-caja"></div>
+        <div id="caja-pastilla">
+          <div class="pastilla" onclick="inicio()">
+            <div id="tapa-pastilla-start">
+              <h3>INI</h3>
             </div>
-            <div class="pastilla" onclick="registrar()">
-              <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>CI</h3>
             </div>
-            <div class="pastilla" onclick="listarPacientes()">
-              <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
-              <div id="tapa-pastilla-end"><h3>TAR</h3></div>
+          </div>
+          <div class="pastilla" onclick="registrar()">
+            <div id="tapa-pastilla-start">
+              <h3>REGIS</h3>
             </div>
-            <div class="pastilla">
-              <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
-              <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+            <div id="tapa-pastilla-end">
+              <h3>TRAR</h3>
+            </div>
+          </div>
+          <div class="pastilla" onclick="listarPacientes()">
+            <div id="tapa-pastilla-start">
+              <h3>LLIS</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>TAR</h3>
+            </div>
+          </div>
+          <div class="pastilla">
+            <div id="tapa-pastilla-start">
+              <h3>VALOR</h3>
+            </div>
+            <div id="tapa-pastilla-end">
+              <h3>ACIÓ</h3>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+{% elif pagina == "pagina3" %}
+  <header>
+    <!-- LOGO DE LA APP-->
+    <div id="logo">
+      <!-- <img
+        src="https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png"
+        alt="Imagen de logo"
+        width="90px"
+      /> -->
+      <img src="{{url_for('static',filename='enfermeros.jpg')}}" 
+        alt="Imagen de logo"
+        width="150px">
+    </div>
+
+    <!-- TITULO DE LA PAGINA-->
+    <div class="titulo">
+      <h1>LLISTAT DE PACIENTS</h1>
+    </div>
+    <!--Menu Hmaburguesa-->
+    <span id="caja-menu">
+      <div class="container-menu" id="menu" onclick="abrirMenu()">
+        <div id="bar1" class="bar1"></div>
+        <div id="bar2" class="bar2"></div>
+        <div id="bar3" class="bar3"></div>
+      </div>
+    </span>
+
+    <!-- Overlay cuando el menu esta activado-->
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <div id="tapa-caja"></div>
+        <div id="caja-pastilla">
+          <div class="pastilla" onclick="inicio()">
+            <div id="tapa-pastilla-start"><h3>INI</h3></div>
+            <div id="tapa-pastilla-end"><h3>CI</h3></div>
+          </div>
+          <div class="pastilla" onclick="registrar()">
+            <div id="tapa-pastilla-start"><h3>REGIS</h3></div>
+            <div id="tapa-pastilla-end"><h3>TRAR</h3></div>
+          </div>
+          <div class="pastilla" onclick="listarPacientes()">
+            <div id="tapa-pastilla-start"><h3>LLIS</h3></div>
+            <div id="tapa-pastilla-end"><h3>TAR</h3></div>
+          </div>
+          <div class="pastilla">
+            <div id="tapa-pastilla-start"><h3>VALOR</h3></div>
+            <div id="tapa-pastilla-end"><h3>ACIÓ</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endif %}

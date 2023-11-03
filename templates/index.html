@@ -11,6 +11,7 @@
       href="{{url_for('static',filename='estilos_pagina.css')}}"
     />
   </head>
+  {% set pagina = "pagina1" %}
   {% include "header.html" %}
     <main>
       <div class="container">
@@ -26,7 +27,6 @@
       </div>
     </main>
     {% include "footer.html" %}
-
     <script src="/static/menu.js"></script>
   </body>
 </html>
