@@ -868,16 +868,29 @@ td {
   font-size: 30px;
 }
 
-/* .table_multi {
+
+
+
+.table_multi {
   border-collapse: collapse;
-  box-shadow: 2px 3px 20px black;
+  border-radius: 4px; 
+  background-color: white; 
 }
 
 .table_multi tr td {
-  background-color: rgb(118, 186, 201);
   font-size: 14px;
-  color: white;
-} */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #525252;
+}
+
+.table_multi th {
+  background-color: #c8c8c8;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #525252;
+}
+
 
 /********************* FOOTER STYLES ************************/
 footer{
