@@ -885,16 +885,28 @@ td {
   font-size: 30px;
 }
 
-/* .table_multi {
+
+.table_multi {
   border-collapse: collapse;
-  box-shadow: 2px 3px 20px black;
+  border-radius: 4px; 
+  overflow: hidden;
+  background-color: #dcdcdc; 
 }
 
 .table_multi tr td {
-  background-color: rgb(118, 186, 201);
-  font-size: 14px;
-  color: white;
-} */
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #525252;
+}
+
+.table_multi th {
+  background-color: #c8c8c8;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #525252;
+}
+
 
 /********************* FOOTER STYLES ************************/
 footer{
@@ -944,6 +956,15 @@ footer{
   flex-direction: column;
   align-items: start;
   justify-content: start;
+}
+
+.tableEliminar{
+  border-collapse: collapse;
+  
+
+
+
+
 }
 /********************* MEDIA SCREEN ************************/
 @media screen and (max-height: 450px) {
