@@ -340,6 +340,7 @@ def rellenar_datos_12(dni, quines, mitjans, altres):
 def getData12(dni):
     db = conectarBD()
     cursor = db.cursor()
+    
     cursor.execute(
         f"""SELECT * FROM necessitat_viure_creences_valors where dni = '{dni}'""")
     getData = cursor.fetchall()
