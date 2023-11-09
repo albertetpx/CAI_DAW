@@ -172,7 +172,7 @@
       document.getElementById("aspecte_femtes").value = randomElement(['marrò', 'negra', 'roja', 'líquida','dura','tova']);
       document.getElementById("suor_si").value = randomRadioButton("suor_si","suor_no",2);
       document.getElementById("suor_no").value = randomRadioButton("suor_si","suor_no",2);
-      document.getElementById("quantitat_suor").value = randomInt(0.2,1);
+      // document.getElementById("quantitat_suor").value = randomInt(0.2,1);
       document.getElementById("aspecte_suor").value = randomElement(['poc olorosa', 'sense olor', 'pudenta']);
       document.getElementById("regla_si").value = randomRadioButton("regla_si","regla_no",2);
       document.getElementById("regla_no").value = randomRadioButton("regla_si","regla_no",2);
