@@ -145,7 +145,7 @@
       document.getElementById("dinar").value = randomElement(['amanida', 'arròs', 'pasta', 'llegums', 'carn', 'peix', 'ous','iogurt','fruita']);
       // Final 5ª pagina del formulari
 
-      // Inici 6ª pagina del formulari
+  //     // Inici 6ª pagina del formulari
       document.getElementById("berenar").value = randomElement(['pa', 'cereals', 'fruita', 'cafe','iogurt','fruits secs','embotit','formatge']);
       document.getElementById("sopar").value = randomElement(['amanida', 'arròs', 'pasta', 'llegums', 'carn', 'peix', 'ous','iogurt','fruita']);
       document.getElementById("altres").value = randomElement(['cervesa', 'vi', 'te', 'bolleria', 'Bitter Kas']);
@@ -165,17 +165,17 @@
 
       // Inici de la 7ª pagina del formulari
       document.getElementById("frequencia_orina").value = randomInt(2,10);
-      document.getElementById("quantitat_orinar").value = randomInt(0.5,3);
+      document.getElementById("quantitat_orinar").value = randomInt(0,5,3);
       document.getElementById("aspecte_orina").value = randomElement(['groguenca', 'blanca', 'enturbiada', 'roja','olorosa']);
       document.getElementById("frequencia_femtes").value = randomInt(2,6);
-      document.getElementById("quantitat_femtes").value = randomInt(0.5,3);
+      document.getElementById("quantitat_femtes").value = randomInt(0,5,3);
       document.getElementById("aspecte_femtes").value = randomElement(['marrò', 'negra', 'roja', 'líquida','dura','tova']);
       document.getElementById("suor_si").value = randomRadioButton("suor_si","suor_no",2);
       document.getElementById("suor_no").value = randomRadioButton("suor_si","suor_no",2);
-      // document.getElementById("quantitat_suor").value = randomInt(0.2,1);
       document.getElementById("aspecte_suor").value = randomElement(['poc olorosa', 'sense olor', 'pudenta']);
       document.getElementById("regla_si").value = randomRadioButton("regla_si","regla_no",2);
       document.getElementById("regla_no").value = randomRadioButton("regla_si","regla_no",2);
+      document.getElementById("aspecte_regla").value = randomElement(['normal','coagulada','dolorosa','olorosa'])
     // Fi de la 7ª pagina del formulari
 
     // Inici de la 8ª pagina del formulari
