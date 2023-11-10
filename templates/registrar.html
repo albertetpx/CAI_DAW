@@ -106,6 +106,7 @@
         <button id="botonera19" onclick="showForm(19)"></button>
       </div>
 
+
       <form action="/recibirDatosPaciente" method="POST">
 
         <!-- Inicio Form 1 -->
@@ -121,7 +122,28 @@
             <option value="CIP">CIP</option>
           </select>
           <input placeholder="Dni/Nie/CIP" type="text" value="" id="dni" name="dni" />
-
+          <button type="button" onclick="validarDNI()">Validar</button>
+          <p id = "missatge"></p>
+          <script>
+            function validarDNI() {
+                try {
+                    const seleccion = document.querySelector('select[name="opciones"]').value;
+                    const dni = document.getElementById('dni').value;
+    
+                    if (seleccion === 'DNI' && !/^\d{8}[A-Z]$/.test(dni)) {
+                        throw new Error("El DNI no es válido.");
+                    } else if (seleccion === 'NIE' && !/^[XYZ]\d{7}[A-Z]$/.test(dni)) {
+                        throw new Error("El NIE no es válido.");
+                    } else if (seleccion === 'CIP' && !/^\d{6}$/.test(dni)) {
+                        throw new Error("El CIP no es válido.");
+                    }
+    
+                    document.getElementById('missatge').innerText = "El " + seleccion + " es válido: " + dni;
+                } catch (error) {
+                    document.getElementById('missatge').innerText = "Error: " + error.message;
+                }
+            }
+        </script>
           <label for="edat">EDAT </label>
           <input placeholder="Edat" type="number" value="" id="edat" name="edat" />
           <label for="sexe">SEXE (H/D/ALTRES) </label>
@@ -174,6 +196,7 @@
             <div class="formButton prev hidden">ENRERE</div>
             <div class="formButton back" onclick="showForm(2)">SEGÜENT</div>
           </div>
+          
         </div>
         <!-- Fin Form 1 -->
 
@@ -181,7 +204,7 @@
         <div class="form" id="part2">
           <h3>Informació general (i II)</h3>
           <label for="temps_residencia">TEMPS DE RESIDÈNCIA</label>
-          <input type="number" value=0 id="temps_residencia" name="temps_residencia" />
+          <input type="number" value="" id="temps_residencia" name="temps_residencia" />
           <label>PRENS MEDICAMENTS A CASA?</label>
           <div class="form_label_si_no">
             <label>SI
@@ -217,8 +240,7 @@
       <label>NO  
         <input type="radio" value="NO" name="ritme" checked/> </label>
     </div>
-    <input type="text" value="" name="ritme" />Ç
-  4
+    <input type="text" value="" name="ritme" />
     <label for="frequencia_r">FREQÜENCIA RESPIRATÒRIA (FR) </label>
     <input type="number" value="" name="frequencia_r" />
     <label for="amplitud">AMPLITUD </label>
@@ -329,7 +351,7 @@
         <div class="form" id="part5">
           <h3>Menjar i beure (I)</h3>
           <label for="pes">PES</label>
-          <input type="number" value=0 name="pes">
+          <input type="number" value="" name="pes">
           <label for="talla">TALLA</label>
           <input type="text" value="" name="talla">
           <label>CAVITAT BUCAL: </label>
@@ -651,9 +673,9 @@
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
             name="quienes_situacions_influencien_son"></textarea>
           <label for="mitjans_utilitza_dormir_millor_reposar">MITJANS QUE UTILITZA PER REPOSAR MILLOR</label>
-          <input type="text" value="a" name="mitjans_utilitza_dormir_millor_reposar">
+          <input type="text" value="" name="mitjans_utilitza_dormir_millor_reposar">
           <label for="altres_manifestacions6">ALTRES MANIFESTACIONS</label>
-          <input type="text" value="a" name="altres_manifestacions6">
+          <input type="text" value="" name="altres_manifestacions6">
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(9)">ENRERE</div>
             <div class="formButton back" onclick="showForm(11)">SEGÜENT</div>
@@ -710,7 +732,7 @@
           </div>
           
           <label for="TEMP_AUXXILAR">TEMPERATURA AXILAR</label>
-          <input type="number" value=0 id="TEMP_AUXXILAR" name="temperatura_axilar">
+          <input type="number" value="" id="TEMP_AUXXILAR" name="temperatura_axilar">
           <label for="com_sent_temperatura_ambient">NORMALMENT COM ES SENT RESPECTE DE LA TEMPERATURA AMBIENT</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
             name="com_sent_temperatura_ambient"></textarea>
@@ -779,7 +801,7 @@
           <h3>Necesssitats d'evitar perills</h3>
           <label for="coneix_mides_prevencio">CONEIX LES MESURES DE PREVENCIÓ?</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="coneix_mides_prevencio"
-            value="a"></textarea>
+            value=""></textarea>
           <label for="salubritat_medi_1">SALUBRITAT DEL MEDI </label>
           <input type="text" value="" name="salubritat_medi_1">
           <!-- AJUSTAR EN LAS FUNCIONES EL HABITAT Y MYSQL -->
@@ -799,13 +821,13 @@
           </div>
           <label for="quines_situacions_seguretat_fisica_psicologica_social">QUINES?</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="quines_situacions_seguretat_fisica_psicologica_social" value="a"></textarea>
+            name="quines_situacions_seguretat_fisica_psicologica_social" value=""></textarea>
           <label for="mitjans_utilitza_proteccio">MITJANS QUE UTILITZA DE PROTECCIÓ:</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="mitjans_utilitza_proteccio"
-            value="a"></textarea>
+            value=""></textarea>
           <label for="altres_manifestacio10">ALTRES MANIFESTACIONS</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres_manifestacio10"
-            value="a"></textarea>
+            value=""></textarea>
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(13)">ENRERE</div>
             <div class="formButton back" onclick="showForm(15)">SEGÜENT</div>
