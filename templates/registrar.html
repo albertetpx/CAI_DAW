@@ -122,10 +122,10 @@
             <option value="CIP">CIP</option>
           </select>
           <input placeholder="Dni/Nie/CIP" type="text" value="" id="dni" name="dni" />
-          
           <p id = "missatge"></p>
           <script>
             function validarDNI() {
+
               try {
                   const seleccion = document.querySelector('select[name="opciones"]').value;
                   const dni = document.getElementById('dni').value;
@@ -140,6 +140,7 @@
           
                   document.getElementById('missatge').innerText = "El " + seleccion + " es válido: " + dni;
                   document.getElementById('missatge').style.color = "green";
+
               } catch (error) {
                   document.getElementById('missatge').innerText = "Error: " + error.message;
                   document.getElementById('missatge').style.color = "red";
@@ -167,16 +168,16 @@
           <fieldset>
             <legend>Familia de Contacte</legend>
           
-            <label for="familia_origen_pare">Familia d'origen: Pare</label>
+            <label for="familia_origen_pare">Familia de contacte: Pare</label>
             <input type="text" value="" id="familia_origen_pare" name="familia_origen_pare" />
           </div>
             
           <div>
-            <label for="familia_origen_mare">Familia d'origen: Mare</label>
+            <label for="familia_origen_mare">Familia de contacte: Mare</label>
             <input type="text" value="" id="familia_origen_mare" name="familia_origen_mare" />
           </div>
             <div>
-              <label for="familia_origen_germans">Familia d'origen: Germans</label>
+              <label for="familia_origen_germans">Familia de contacte: Germans</label>
               <input type="text" value="" id="familia_origen_germans" name="familia_origen_germans" />
             </div>
         </fieldset>
