@@ -122,27 +122,32 @@
             <option value="CIP">CIP</option>
           </select>
           <input placeholder="Dni/Nie/CIP" type="text" value="" id="dni" name="dni" />
-          <button type="button" onclick="validarDNI()">Validar</button>
+          
           <p id = "missatge"></p>
           <script>
             function validarDNI() {
-                try {
-                    const seleccion = document.querySelector('select[name="opciones"]').value;
-                    const dni = document.getElementById('dni').value;
-    
-                    if (seleccion === 'DNI' && !/^\d{8}[A-Z]$/.test(dni)) {
-                        throw new Error("El DNI no es válido.");
-                    } else if (seleccion === 'NIE' && !/^[XYZ]\d{7}[A-Z]$/.test(dni)) {
-                        throw new Error("El NIE no es válido.");
-                    } else if (seleccion === 'CIP' && !/^\d{6}$/.test(dni)) {
-                        throw new Error("El CIP no es válido.");
-                    }
-    
-                    document.getElementById('missatge').innerText = "El " + seleccion + " es válido: " + dni;
-                } catch (error) {
-                    document.getElementById('missatge').innerText = "Error: " + error.message;
-                }
-            }
+              try {
+                  const seleccion = document.querySelector('select[name="opciones"]').value;
+                  const dni = document.getElementById('dni').value;
+          
+                  if (seleccion === 'DNI' && !/^\d{8}[A-Z]$/.test(dni)) {
+                      throw new Error("El DNI no es válido.");
+                  } else if (seleccion === 'NIE' && !/^[XYZ]\d{7}[A-Z]$/.test(dni)) {
+                      throw new Error("El NIE no es válido.");
+                  } else if (seleccion === 'CIP' && !/^\d{6}$/.test(dni)) {
+                      throw new Error("El CIP no es válido.");
+                  }
+          
+                  document.getElementById('missatge').innerText = "El " + seleccion + " es válido: " + dni;
+                  document.getElementById('missatge').style.color = "green";
+              } catch (error) {
+                  document.getElementById('missatge').innerText = "Error: " + error.message;
+                  document.getElementById('missatge').style.color = "red";
+                  
+              }
+          }
+          // Añadir el evento "blur" al campo 'dni' para ejecutar la función validarDNI()
+          document.getElementById('dni').addEventListener('blur', validarDNI);
         </script>
           <label for="edat">EDAT </label>
           <input placeholder="Edat" type="number" value="" id="edat" name="edat" />
