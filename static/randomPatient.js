@@ -546,9 +546,14 @@ function formatNumberLength(num, length) {
     if (randomIndex === 0) {
         document.getElementById(id1).checked = true;
         document.getElementById(id2).checked = false;
+        document.getElementById(id1).value = "SI";
+        document.getElementById(id2).value = "NO";
+
     } else {
         document.getElementById(id1).checked = false;
         document.getElementById(id2).checked = true;
+        document.getElementById(id1).value = "SI";
+        document.getElementById(id2).value = "NO";
     }
   }
     function randomRadioButtonRange3(id1, id2, id3, size) {
@@ -558,33 +563,42 @@ function formatNumberLength(num, length) {
           document.getElementById(id1).checked = true;
           document.getElementById(id2).checked = false;
           document.getElementById(id3).checked = false;
+          document.getElementById(id1).value = "SI";
+          document.getElementById(id2).value = "NO";
+          document.getElementById(id3).value = "NO";
       } else if (randomIndex === 1) {
           document.getElementById(id1).checked = false;
           document.getElementById(id2).checked = true;
           document.getElementById(id3).checked = false;
+          document.getElementById(id1).value = "NO";
+          document.getElementById(id2).value = "SI";
+          document.getElementById(id3).value = "NO";
       }
       else {
           document.getElementById(id1).checked = false;
           document.getElementById(id2).checked = false;
           document.getElementById(id3).checked = true;
+          document.getElementById(id1).value = "NO";
+          document.getElementById(id2).value = "NO";
+          document.getElementById(id3).value = "SI";
       }
 }
     function randomRadioButtonRange5(id1, id2, id3, id4, id5, size) {
       const randomIndex = Math.floor(Math.random() * size);
 
       if (randomIndex === 0) {
-          document.getElementById(id1).checked = true;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = false;
+        document.getElementById(id1).checked = true;
+        document.getElementById(id2).checked = false;
+        document.getElementById(id3).checked = false;
+        document.getElementById(id4).checked = false;
+        document.getElementById(id5).checked = false;
       } 
       else if (randomIndex === 1) {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = true;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = false;
+        document.getElementById(id1).checked = false;
+        document.getElementById(id2).checked = true;
+        document.getElementById(id3).checked = false;
+        document.getElementById(id4).checked = false;
+        document.getElementById(id5).checked = false;
       }
       else if (randomIndex === 2) {
         document.getElementById(id1).checked = false;
@@ -601,11 +615,11 @@ function formatNumberLength(num, length) {
         document.getElementById(id5).checked = false;
       }
       else {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = true;
+        document.getElementById(id1).checked = false;
+        document.getElementById(id2).checked = false;
+        document.getElementById(id3).checked = false;
+        document.getElementById(id4).checked = false;
+        document.getElementById(id5).checked = true;
       }
     }
 
