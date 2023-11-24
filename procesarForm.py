@@ -175,13 +175,15 @@ def procesarFormulario(request):
     # # LEER DECIMA PARTE
 
     coneix_mides =respuesta['coneix_mides_prevencio']
-    salubritat_habitat =respuesta['salubritat_habitat_1']
+    ventilacio =respuesta['ventilacio']
+    net = respuesta ['net']
+    endreçat = respuesta ['endreçat']
     situacions =respuesta['situacions_circumstancies_seguretat_fisica_psicologica_social']
     quines =respuesta['quines_situacions_seguretat_fisica_psicologica_social']
     mitjans =respuesta['mitjans_utilitza_proteccio']
     altres =respuesta['altres_manifestacio10']
 
-    resultado= rellenar_datos_10(dni,coneix_mides,salubritat_habitat,situacions,quines,mitjans,altres)
+    resultado= rellenar_datos_10(dni,coneix_mides,ventilacio,net, endreçat,situacions,quines,mitjans,altres)
     # print(resultado)
 
     # # LEER DECIMO PRIMERA PARTE
