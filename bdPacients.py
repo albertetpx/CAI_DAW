@@ -278,12 +278,12 @@ def getData9(dni):
     return (field_names, getData[0])
 
 
-def rellenar_datos_10(dni, coneix_mides, salubritat, situacions, quines, mitjans, altres):
+def rellenar_datos_10(dni, coneix_mides, ventilacio, net,endreçat, situacions, quines, mitjans, altres):
 
     consulta = f"""insert into necessitat_evitar_perills (
         dni,coneix_mides_prevencio,salubritat_habitat_1,situacions_circumstancies_seguretat_fisica_psicologica_social,
         quines_situacions_seguretat_fisica_psicologica_social,mitjans_utilitza_proteccio,altres_manifestacio)
-        values ('{dni}','{coneix_mides}','{salubritat}','{situacions}','{quines}','{mitjans}','{altres}');"""
+        values ('{dni}','{coneix_mides}','{ventilacio}','{net}','{endreçat}','{situacions}','{quines}','{mitjans}','{altres}');"""
     insertarDatosDB(consulta)
 
     rellenarAlarma = f"""UPDATE alarma SET situacions_influencien_seguretat="{situacions}" where dni="{dni}" """
