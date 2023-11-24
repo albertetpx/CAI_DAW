@@ -546,9 +546,11 @@ function formatNumberLength(num, length) {
     if (randomIndex === 0) {
         document.getElementById(id1).checked = true;
         document.getElementById(id2).checked = false;
+        return true;
     } else {
         document.getElementById(id1).checked = false;
         document.getElementById(id2).checked = true;
+        return false;
     }
   }
     function randomRadioButtonRange3(id1, id2, id3, size) {

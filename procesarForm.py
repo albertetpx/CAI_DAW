@@ -63,7 +63,7 @@ def procesarFormulario(request):
         pren_medicaments_casa,
         quins_medicaments,
     )
-    # print(respuesta)
+    print(respuesta)
 
     # LEER SEGUNDA PARTE
 
