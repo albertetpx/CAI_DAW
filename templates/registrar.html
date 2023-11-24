@@ -112,17 +112,17 @@
         <div class="form" id="part1">
           <h3>Informació general (I)</h3>
           <label for="nom">NOM DEL PACIENT</label>
-          <input placeholder="Nom" type="text" value="" id="nom" name="nom" />
+          <input placeholder="Nom" type="text" value="" id="nom" name="nom" required/>
           <label for="dni">DNI/NIE</label>
-          <input placeholder="Dni" type="text" value="" id="dni" name="dni" />
+          <input placeholder="Dni" type="text" value="" id="dni" name="dni" required/>
           <label for="edat">EDAT </label>
-          <input placeholder="Edat" type="number" value=0 id="edat" name="edat" />
+          <input placeholder="Edat" type="number" value=0 id="edat" name="edat" required/>
           <label for="sexe">SEXE (H/D/ALTRES) </label>
-          <input placeholder="Sexe" type="text" value="" id="sexe" name="sexe" />
+          <input placeholder="Sexe" type="text" value="" id="sexe" name="sexe" required/>
           <label for="LLoc_naixement">LLOC DE NAIXEMENT </label>
-          <input type="text" value='' id="LLoc_naixement" name="LLoc_naixement" />
+          <input type="text" value='' id="LLoc_naixement" name="LLoc_naixement" required/>
           <label for="Lloc_residencia">LLOC DE RESIDÈNCIA</label>
-          <input type="text" value="" id="Lloc_residencia" name="Lloc_residencia" />
+          <input type="text" value="" id="Lloc_residencia" name="Lloc_residencia" required/>
           <label>VIU SOL?</label>
           <div class="form_label_si_no">
             <label>SI
@@ -131,15 +131,15 @@
               <input type="radio" value="NO" name="viu_sol" checked/></label>
           </div>
           <label for="familia_origen_pare">Familia d'origen: Pare </label>
-          <input type="text" value="" id="familia_origen_pare" name="familia_origen_pare" />
+          <input type="text" value="" id="familia_origen_pare" name="familia_origen_pare" required/>
           <label for="familia_origen_mare">Familia d'origen: Mare </label>
-          <input type="text" value="" id="familia_origen_mare" name="familia_origen_mare" />
+          <input type="text" value="" id="familia_origen_mare" name="familia_origen_mare" required/>
           <label for="familia_origen_germans">Familia d'origen: Germans</label>
-          <input type="text" value="" id="familia_origen_germans" name="familia_origen_germans" />
+          <input type="text" value="" id="familia_origen_germans" name="familia_origen_germans" required/>
           <label for="rol_ocupa">Rol que ocupa </label>
-          <input type="text" value="" id="rol_ocupa" name="rol_ocupa" />
+          <input type="text" value="" id="rol_ocupa" name="rol_ocupa" required/>
           <label for="membres_integren">MEMBRE QUE LA INTEGREN </label>
-          <input type="text" value="" id="membres_integren" name="membres_integren" />
+          <input type="text" value="" id="membres_integren" name="membres_integren" required/>
           <div class="formControls formControls01">
             <div class="formButton prev hidden">ENRERE</div>
             <div class="formButton back" onclick="showForm(2)">SEGÜENT</div>
@@ -151,7 +151,7 @@
         <div class="form" id="part2">
           <h3>Informació general (i II)</h3>
           <label for="temps_residencia">TEMPS DE RESIDÈNCIA</label>
-          <input type="number" value=0 id="temps_residencia" name="temps_residencia" />
+          <input type="number" value=0 id="temps_residencia" name="temps_residencia" required/>
           <label>PRENS MEDICAMENTS A CASA?</label>
           <div class="form_label_si_no">
             <label>SI
@@ -160,9 +160,9 @@
               <input type="radio" value="NO" name="pren_medicaments_casa" checked/> </label>
           </div>
           <label for="quins_medicaments">QUINS?</label>
-          <input type="text" value="" id="quins_medicaments" name="quins_medicaments" />
+          <input type="text" value="" id="quins_medicaments" name="quins_medicaments" required/>
           <label for="problema_salut_actual">PROBLEMES DE SALUT </label>
-          <input type="text" value="" id="problema_salut_actual" name="problema_salut_actual" />
+          <input type="text" value="" id="problema_salut_actual" name="problema_salut_actual" required/>
           <label>FAMILIA DE PROCREACIÓ</label>
           <div class="form_label_si_no">
             <label> SI
@@ -181,11 +181,11 @@
         <div class="form" id="part3">
           <h3>Necessitats respiratòries (I)</h3>
           <label for="ritme">RITME </label>
-          <input type="text" value="" name="ritme" />
+          <input type="text" value="" name="ritme" required/>
           <label for="frequencia_r">FREQÜENCIA R </label>
-          <input type="number" value=0 name="frequencia_r" />
+          <input type="number" value=0 name="frequencia_r" required/>
           <label for="amplitud">AMPLITUD </label>
-          <input type="number" value=0 name="amplitud" />
+          <input type="number" value=0 name="amplitud" required/>
           <label>RESPIRACIÓ</label>
           <div class="form_label_si_no">
             <label>BUCAL
@@ -194,15 +194,15 @@
               <input type="radio" value="Nasal" name="tipus_respiracio" checked/> </label>
           </div>
           <label for="orifisis_nasals_permeables">ORIFICIS NASALS PERMEABLES </label>
-          <input type="text" value="" name="orifisis_nasals_permeables" />
+          <input type="text" value="" name="orifisis_nasals_permeables" required/>
           <label for="frequencia_cardiaca">FREQÜENCIA CARDIACA </label>
-          <input type="number" value=0 name="frequencia_cardiaca" />
+          <input type="number" value=0 name="frequencia_cardiaca" required/>
           <label for="pa">PA. </label>
-          <input type="number" value=0 name="pa" />
+          <input type="number" value=0 name="pa" required/>
           <label for="coloracio_mucoses">COLORACIÓ DE LES MUCOSES</label>
-          <input type="text" value="" name="coloracio_mucoses" />
+          <input type="text" value="" name="coloracio_mucoses" required/>
           <label for="coloracio_pell" id="pell">COLORACIÓ DE LA PELL</label>
-          <input type="text" value="" name="coloracio_pell" />
+          <input type="text" value="" name="coloracio_pell" required/>
           <label>RESPIRACIÓ</label>
           <div class="form_label_si_no">
             <label>SILENCIOSA
@@ -230,9 +230,9 @@
           <label for="tos_descripcio">DESCRIPCIÓ DE LA TOS</label>
           <input type="text" value="" name="tos_descripcio" />
           <label for="mucositat">MUCOSITAT</label>
-          <input type="text" value="" name="mucositat" />
+          <input type="text" value="" name="mucositat" required/>
           <label for="mucositat_descripcio">DESCRIPCIÓ DE LA MUCOSITAT</label>
-          <input type="text" value="" name="mucositat_descripcio" />
+          <input type="text" value="" name="mucositat_descripcio" required/>
           <label>EXPECTORACIÓ?</label>
           <div class="form_label_si_no">
             <label> SI
@@ -241,7 +241,7 @@
               <input type="radio" value="NO" name="expectoracio" checked/> </label>
           </div>
           <label for="altres_manifestacions2">ALTRES MANIFESTACIONS </label>
-          <input type="text" value="" name="altres_manifestacions2" />
+          <input type="text" value="" name="altres_manifestacions2" required/>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA RESPIRACIÓ? </label>
           <div class="form_label_si_no">
             <label>SI
@@ -262,7 +262,7 @@
               <input type="radio" value="NO" name="fuma" checked/></label>
           </div>
           <label for="cigars_dia">CIGARRETES AL DIA </label>
-          <input type="number" value=0 name="cigars_dia" />
+          <input type="number" value=0 name="cigars_dia" required/>
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(3)">ENRERE</div>
             <div class="formButton back" onclick="showForm(5)">SEGÜENT</div>
@@ -274,9 +274,9 @@
         <div class="form" id="part5">
           <h3>Menjar i beure (I)</h3>
           <label for="pes">PES</label>
-          <input type="number" value=0 name="pes">
+          <input type="number" value=0 name="pes" required>
           <label for="talla">TALLA</label>
-          <input type="text" value="" name="talla">
+          <input type="text" value="" name="talla" required>
           <label>CAVITAT BUCAL: </label>
           <br>
           <label for="numero_dents_realitzar_funcio">a) DENTS EN Nº SUFICIENT PER A REALITZAR BÉ LA SEVA FUNCIÓ</label>
@@ -296,15 +296,15 @@
               <input type="radio" value="Ràpida" name="masticacio" ></label>
           </div>
           <label for="caracteriques_deglucio">DEGLUCIÓ: CARACTERÍSTIQUES</label>
-          <input type="text" value="" name="caracteriques_deglucio">
+          <input type="text" value="" name="caracteriques_deglucio" required>
           <label for="tipus_dieta">TIPUS DE DIETA</label>
-          <input type="text" value="" name="tipus_dieta">
+          <input type="text" value="" name="tipus_dieta" required>
           <label>ALIMENTS I LÍQUIDS QUE PREN HABITUALMENT I QUANTITAT/DIA: </label>
           <br>
           <label for="esmorzar">ESMORZAR</label>
-          <input type="text" value="" name="esmorzar">
+          <input type="text" value="" name="esmorzar" required>
           <label for="dinar">DINAR </label>
-          <input type="text" value="" name="dinar">
+          <input type="text" value="" name="dinar" required>
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(4)">ENRERE</div>
             <div class="formButton back" onclick="showForm(6)">SEGÜENT</div>
@@ -316,19 +316,19 @@
         <div class="form" id="part6">
           <h3>Menjar i beure (i II)</h3>
           <label for="berenar">BERENAR </label>
-          <input type="text" value="" name="berenar">
+          <input type="text" value="" name="berenar" required>
           <label for="sopar">SOPAR </label>
-          <input type="text" value="" name="sopar">
+          <input type="text" value="" name="sopar" required>
           <label for="altres">ALTRES </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="altres"></textarea>
           <label for="sensacio_habitual_respecte_menjar">HABITUALMENT, QUINA SENSACIÓ TÉ RESPECTE AL MENJAR? </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="sensacio_habitual_respecte_menjar"></textarea>
+            name="sensacio_habitual_respecte_menjar" required></textarea>
           <label for="aliments_solits_liquids_no_agraden_intolera_restriccio">
             ALIMENTS SÒLIDS O LÍQUIDS QUE NO LI AGRADEN, NO TOLERA O TÉ ALGUNA RESTRICCIÓ
           </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="aliments_solits_liquids_no_agraden_intolera_restriccio"></textarea>
+            name="aliments_solits_liquids_no_agraden_intolera_restriccio " required></textarea>
           <label>HABITUALMENT MENJA...</label>
           <div class="form_label_si_no">
             <label for="habitualment_menja_CASA" class="part_3_1labelsiNo_linea_larga">A CASA </label>
@@ -382,15 +382,15 @@
             </tr>
             <tr>
               <th>ORINA</th>
-              <td><input type="number" value=0 name="frequencia_orina"></td>
-              <td><input type="number" value=0 name="quantitat_orinar"></td>
-              <td><input type="text" value="" name="aspecte_orina"></td>
+              <td><input type="number" value=0 name="frequencia_orina" required></td>
+              <td><input type="number" value=0 name="quantitat_orinar" required></td>
+              <td><input type="text" value="" name="aspecte_orina" required></td>
             </tr>
             <tr>
               <th>FEMTES</th>
-              <td><input type="number" value=0 name="frequencia_femtes"></td>
-              <td><input type="number" value=0 name="quantitat_femtes"></td>
-              <td><input type="text" value="" name="aspecte_femtes"></td>
+              <td><input type="number" value=0 name="frequencia_femtes" required></td>
+              <td><input type="number" value=0 name="quantitat_femtes" required></td>
+              <td><input type="text" value="" name="aspecte_femtes" required></td>
             </tr>
             <tr>
               <th>SUOR</th>
@@ -504,7 +504,7 @@
         <div class="form" id="part10">
           <h3>Necesssitats relacionades amb la son</h3>
           <label for="hores_dorm">HORES QUE DORM HABITUALMENT</label>
-          <input type="number" value=0 name="hores_dorm">
+          <input type="number" value=0 name="hores_dorm" required>
           <label>MIGDIADA</label>
           <div class="form_label_si_no">
             <label>SI
@@ -546,9 +546,9 @@
         <div class="form" id="part11">
           <h3>Necesssitats de vestimenta</h3>
           <label for="significat_roba"> SIGNIFICAT DE LA ROBA</label>
-          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="significat_roba"></textarea>
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="significat_roba" required></textarea>
           <label for="tipus_roba"> TIPUS DE ROBA </label>
-          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="tipus_roba"></textarea>
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="tipus_roba" required></textarea>
           <label> CAPACITAT DE VESTIR-SE Y DESVESTIR-SE</label>
           <div class="form_label_si_no">
             <label>SÍ
@@ -583,12 +583,12 @@
         <div class="form" id="part12">
           <h3>Necesssitats relacionades amb la temperatura</h3>
           <label for="TEMP_PELL">TEMPERATURA DE LA PELL</label>
-          <input type="number" value=0 id="TEMP_PELL" name="temperatura_pell">
+          <input type="number" value=0 id="TEMP_PELL" name="temperatura_pell" required>
           <label for="TEMP_AUXXILAR">TEMPERATURA AXILAR</label>
-          <input type="number" value=0 id="TEMP_AUXXILAR" name="temperatura_axilar">
+          <input type="number" value=0 id="TEMP_AUXXILAR" name="temperatura_axilar" required>
           <label for="com_sent_temperatura_ambient">NORMALMENT COM ES SENT RESPECTE DE LA TEMPERATURA AMBIENT</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="com_sent_temperatura_ambient"></textarea>
+            name="com_sent_temperatura_ambient" required></textarea>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA TERMOREGULACIÓ?</label>
           <div class="form_label_si_no">
             <label>SI
@@ -617,12 +617,12 @@
           <h3>Necesssitats d'higiene</h3>
           <label for="condicions_higeniques_pell_mucoses"> CONDICIONS HIGIÈNIQUES DE PELL I LES MUCOSES </label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="condicions_higeniques_pell_mucoses"></textarea>
+            name="condicions_higeniques_pell_mucoses" required></textarea>
           <label for="descripcio_condicions_pell_mucosa"> CONDICIONS DE PELL I MUCOSES. DESCRIPCIÓ</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8"
-            name="descripcio_condicions_pell_mucosa"></textarea>
+            name="descripcio_condicions_pell_mucosa" required></textarea>
           <label for="habits_higene_corporal"> HÀBITS D'HIGIENE CORPORAL</label>
-          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="habits_higene_corporal"></textarea>
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="habits_higene_corporal" required></textarea>
           <label for="habits_higene_bucal"> HÀBITS D'HIGIENE BUCAL</label><textarea cols="60"
             placeholder="Escribe tu respuesta..." rows="8" name="habits_higene_bucal"></textarea>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA HIGIENE? </label>
@@ -654,14 +654,14 @@
           <h3>Necesssitats d'evitar perills</h3>
           <label for="coneix_mides_prevencio">CONEIX LES MESURES DE PREVENCIÓ?</label>
           <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="coneix_mides_prevencio"
-            value="a"></textarea>
+            value="a" required></textarea>
           <label for="salubritat_medi_1">SALUBRITAT DEL MEDI </label>
-          <input type="text" value="" name="salubritat_medi_1">
+          <input type="text" value="" name="salubritat_medi_1" required>
           <!-- AJUSTAR EN LAS FUNCIONES EL HABITAT Y MYSQL -->
           <label for="salubritat_habitat_1">SALUBRITAT DE L'HABTATGE </label>
-          <input type="text" value="" name="salubritat_habitat_1">
+          <input type="text" value="" name="salubritat_habitat_1" required>
           <label for="lloc_treball">LLOC DE TREBALL</label>
-          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="lloc_treball" id=""></textarea>
+          <textarea cols="60" placeholder="Escribe tu respuesta..." rows="8" name="lloc_treball" id="" required></textarea>
           <label>HI HA SITUACIONS O CIRCUMSTÀNCIES QUE INFLUENCIEN LA SEVA SEGURETAT FÍSICA, PSICOLÒGICA,
             SOCIAL?</label>
           <div class="form_label_si_no">
@@ -692,15 +692,15 @@
         <div class="form" id="part15">
           <h3>Necesssitats de comunicació</h3>
           <label for="estat_consciencia">ESTAT DE CONSCIÈNCIA</label>
-          <input type="text" value="" name="estat_consciencia" />
+          <input type="text" value="" name="estat_consciencia" required/>
           <label for="orientacio_temps_espai">ORIENTACIÓ TEMPS-ESPAI </label>
-          <input type="text" value="" name="orientacio_temps_espai" /> </label>
+          <input type="text" value="" name="orientacio_temps_espai" required/> </label>
           <label for="estat_sesorials">ESTATS SENSORIALS</label>
-          <input type="text" value="" name="estat_sesorials" />
+          <input type="text" value="" name="estat_sesorials" required/>
           <label for="expressio_verbal">EXPRESSIÓ VERBAL </label>
-          <input type="text" value="" name="expressio_verbal" />
+          <input type="text" value="" name="expressio_verbal" required/>
           <label for="descripccio_expressio_no_verbal">EXPRESSIÓ NO VERBAL</label>
-          <input type="text" value="" name="descripccio_expressio_no_verbal" />
+          <input type="text" value="" name="descripccio_expressio_no_verbal" required/>
           <label>HI HA SITUACIONS QUE INFLUENCIEN LA SEVA COMUNICACIÓ?</label>
           <div class="form_label_si_no">
             <label>SI
@@ -741,18 +741,18 @@
         <!-- Inicio Form 17 -->
         <div class="form" id="part17">
           <label for="rol_familiar">ROL FAMILIAR</label>
-          <input type="text" value="" name="rol_familiar" />
+          <input type="text" value="" name="rol_familiar" required/>
           <label for="rol_social">ROL SOCIAL</label>
-          <input type="text" value="" name="rol_social" />
+          <input type="text" value="" name="rol_social" required/>
           <label for="tipus_ocupacio">TIPUS D'OCUPACIÓ</label>
-          <input type="text" value="" name="tipus_ocupacio" />
+          <input type="text" value="" name="tipus_ocupacio" required/>
           <label for="situacions_desenvolupacio_rol_social_familiar">HI HA SITUACIONS QUE INFLUENCIEN SOBRE EL
             DESENVOLUPAMENT DEL ROL SOCIAL I FAMILIAR? </label>
-          <input type="text" value="" name="situacions_desenvolupacio_rol_social_familiar" />
+          <input type="text" value="" name="situacions_desenvolupacio_rol_social_familiar" required/>
           <label for="mitjans_millorar13">MITJANS QUE UTILITZA PER MILLORAR</label>
-          <input type="text" value="" name="mitjans_millorar13" />
+          <input type="text" value="" name="mitjans_millorar13" required/>
           <label for="altres_manifestacions13">ALTRES MANIFESTACIONS </label>
-          <input type="text" value="" name="altres_manifestacions13" />
+          <input type="text" value="" name="altres_manifestacions13" required/>
           <div class="formControls formControls01">
             <div class="formButton prev" onclick="showForm(16)">ENRERE</div>
             <div class="formButton back" onclick="showForm(18)">SEGÜENT</div>
@@ -767,15 +767,15 @@
           <input type="text" value="" name="HABITS_DE_DIVERSIO_I_DISTRACCIO" />
           <!-- FALTA ESTE APARTADO EN LA BASE DE DATOS -->
           <label for="habits_esport">ESPORT</label>
-          <input type="text" value="" name="habits_esport" />
+          <input type="text" value="" name="habits_esport" required/>
           <label for="habits_musica">MÚSICA </label>
-          <input type="text" value="" name="habits_musica" />
+          <input type="text" value="" name="habits_musica" required/>
           <label for="habits_lectura">LECTURA</label>
-          <input type="text" value="" name="habits_lectura" />
+          <input type="text" value="" name="habits_lectura" required/>
           <label for="habits_audiovisual">AUDIOVISUALS</label>
-          <input type="text" value="" name="habits_audiovisual" />
+          <input type="text" value="" name="habits_audiovisual" required/>
           <label for="habits_altres">ALTRES</label>
-          <input type="text" value="" name="habits_altres" />
+          <input type="text" value="" name="habits_altres" required/>
           <label>HI HA SITUACIONS QUE INFLENCIEN LA SEVA COMUNICACIÓ?</label>
           <div class="form_label_si_no">
             <label>SI
