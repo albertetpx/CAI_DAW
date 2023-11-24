@@ -290,7 +290,9 @@ DROP TABLE IF EXISTS `necessitat_evitar_perills`;
 CREATE TABLE `necessitat_evitar_perills` (
   `dni` varchar(10) NOT NULL,
   `coneix_mides_prevencio` varchar(60) NOT NULL,
-  `salubritat_habitat_1` varchar(60) NOT NULL,
+  `ventilaci` varchar(60) NOT NULL,
+  `net`varchar(60) NOT NULL,
+  `endreçat`varchar(60) NOT NULL,
   `situacions_circumstancies_seguretat_fisica_psicologica_social` varchar(60) NOT NULL,
   `quines_situacions_seguretat_fisica_psicologica_social` varchar(60) NOT NULL,
   `mitjans_utilitza_proteccio` varchar(60) NOT NULL,
