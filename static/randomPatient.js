@@ -583,6 +583,7 @@ function formatNumberLength(num, length) {
           document.getElementById(id3).value = "SI";
       }
 }
+
     function randomRadioButtonRange5(id1, id2, id3, id4, id5, size) {
       const randomIndex = Math.floor(Math.random() * size);
 
