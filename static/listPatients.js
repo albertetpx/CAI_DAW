@@ -131,7 +131,6 @@ function createTable(modalContent, userData) {
 function cargasAlarmas() {
   // Cojo todas las cards
   let cards = Array.from(document.getElementsByClassName("text-card"));
-
   cards.forEach(function (element) {
       dni = element.children[0].children[0].innerHTML;
       pedirAlarmasPaciente(dni, element);

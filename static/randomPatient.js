@@ -546,70 +546,71 @@ function formatNumberLength(num, length) {
     if (randomIndex === 0) {
         document.getElementById(id1).checked = true;
         document.getElementById(id2).checked = false;
-        return true;
+        return "SI";
     } else {
         document.getElementById(id1).checked = false;
         document.getElementById(id2).checked = true;
-        return false;
+        return "NO";
     }
   }
-    function randomRadioButtonRange3(id1, id2, id3, size) {
-      const randomIndex = Math.floor(Math.random() * size);
+//     function randomRadioButtonRange3(id1, id2, id3, size) {
+//       const randomIndex = Math.floor(Math.random() * size);
   
-      if (randomIndex === 0) {
-          document.getElementById(id1).checked = true;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = false;
-      } else if (randomIndex === 1) {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = true;
-          document.getElementById(id3).checked = false;
-      }
-      else {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = true;
-      }
-}
-    function randomRadioButtonRange5(id1, id2, id3, id4, id5, size) {
-      const randomIndex = Math.floor(Math.random() * size);
+//       if (randomIndex === 0) {
+//           document.getElementById(id1).checked = true;
+//           document.getElementById(id2).checked = false;
+//           document.getElementById(id3).checked = false;
+//       } else if (randomIndex === 1) {
+//           document.getElementById(id1).checked = false;
+//           document.getElementById(id2).checked = true;
+//           document.getElementById(id3).checked = false;
+//       }
+//       else {
+//           document.getElementById(id1).checked = false;
+//           document.getElementById(id2).checked = false;
+//           document.getElementById(id3).checked = true;
+//       }
+// }
 
-      if (randomIndex === 0) {
-          document.getElementById(id1).checked = true;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = false;
-      } 
-      else if (randomIndex === 1) {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = true;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = false;
-      }
-      else if (randomIndex === 2) {
-        document.getElementById(id1).checked = false;
-        document.getElementById(id2).checked = false;
-        document.getElementById(id3).checked = true;
-        document.getElementById(id4).checked = false;
-        document.getElementById(id5).checked = false;
-      } 
-      else if (randomIndex === 3) {
-        document.getElementById(id1).checked = false;
-        document.getElementById(id2).checked = false;
-        document.getElementById(id3).checked = false;
-        document.getElementById(id4).checked = true;
-        document.getElementById(id5).checked = false;
-      }
-      else {
-          document.getElementById(id1).checked = false;
-          document.getElementById(id2).checked = false;
-          document.getElementById(id3).checked = false;
-          document.getElementById(id4).checked = false;
-          document.getElementById(id5).checked = true;
-      }
-    }
+//     function randomRadioButtonRange5(id1, id2, id3, id4, id5, size) {
+//       const randomIndex = Math.floor(Math.random() * size);
+
+//       if (randomIndex === 0) {
+//         document.getElementById(id1).checked = true;
+//         document.getElementById(id2).checked = false;
+//         document.getElementById(id3).checked = false;
+//         document.getElementById(id4).checked = false;
+//         document.getElementById(id5).checked = false;
+//       } 
+//       else if (randomIndex === 1) {
+//         document.getElementById(id1).checked = false;
+//         document.getElementById(id2).checked = true;
+//         document.getElementById(id3).checked = false;
+//         document.getElementById(id4).checked = false;
+//         document.getElementById(id5).checked = false;
+//       }
+//       else if (randomIndex === 2) {
+//         document.getElementById(id1).checked = false;
+//         document.getElementById(id2).checked = false;
+//         document.getElementById(id3).checked = true;
+//         document.getElementById(id4).checked = false;
+//         document.getElementById(id5).checked = false;
+//       } 
+//       else if (randomIndex === 3) {
+//         document.getElementById(id1).checked = false;
+//         document.getElementById(id2).checked = false;
+//         document.getElementById(id3).checked = false;
+//         document.getElementById(id4).checked = true;
+//         document.getElementById(id5).checked = false;
+//       }
+//       else {
+//         document.getElementById(id1).checked = false;
+//         document.getElementById(id2).checked = false;
+//         document.getElementById(id3).checked = false;
+//         document.getElementById(id4).checked = false;
+//         document.getElementById(id5).checked = true;
+//       }
+    // }
 
 
 
