@@ -7,8 +7,8 @@ def procesarFormulario(request):
     respuesta = request.form
     
     # LEER PRIMERA PARTE FORM
-    dni = respuesta['dni']
     nom = respuesta['nom']
+    dni = respuesta['dni']
     edat = respuesta['edat']
     sexe = respuesta['sexe']
     
@@ -76,11 +76,11 @@ def procesarFormulario(request):
     sensacio_habitual_respecte_menjar = respuesta['sensacio_habitual_respecte_menjar']
     aliments_solits_liquids_no_agraden_intolera_restriccio = respuesta['aliments_solits_liquids_no_agraden_intolera_restriccio']
     habitualment_menja = respuesta['habitualment_menja']
-    situacions_influencien_habits_alimentalis = respuesta['situacions_influencien_habits_alimentalis']
+    situacions_influencien_habits_alimentaris = respuesta['situacions_influencien_habits_alimentaris']
     quines_situacions = respuesta['quines_situacions']
     mitjans_utilitza_millorar = respuesta['mitjans_utilitza_millorar']
     altres_manifestacions = respuesta['altres_manifestacions3']
-    resultado =  rellenar_datos_3(dni,pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions)
+    resultado =  rellenar_datos_3(dni,pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio,caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentaris,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions)
     # print(resultado)
 
     # # LEER CUARTA PARTE
