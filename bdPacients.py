@@ -1,22 +1,24 @@
 from config import CONTRASENA
-DB = 'SQLITE'
+
+DB = "SQLITE"
 # DB = 'MYSQL'
-if DB == 'MYSQL':
+if DB == "MYSQL":
     import mysql.connector
-elif DB == 'SQLITE':
-     import sqlite3
+elif DB == "SQLITE":
+    import sqlite3
 import os
 
 
 def conectarBD():
-    if DB == 'MYSQL':
-        db = mysql.connector.connect(host='localhost',
-                                    user='root',
-                                    password=CONTRASENA,
-                                    database="formulario_cai"
-                                    )
-    elif DB == 'SQLITE':
-        if os.getenv('HOSTING', default=None) == None:
+    if DB == "MYSQL":
+        db = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password=CONTRASENA,
+            database="formulario_cai",
+        )
+    elif DB == "SQLITE":
+        if os.getenv("HOSTING", default=None) == None:
             db = sqlite3.connect("formulario_cai.db")
         else:
             db = sqlite3.connect("/home/telesfor/CAI_DAW/formulario_cai.db")
@@ -28,33 +30,34 @@ def initdb():
     cursor = db.cursor()
     try:
         # AQUÍ EJECUTAR SCRIPT SI BD ESTÁ VACÍA
-        if DB == 'MYSQL':
+        if DB == "MYSQL":
             # TO DEBUG
             query = "SHOW TABLES;"
             cursor.execute(query)
             tables = cursor.fetchall()
-            if (tables == []):
-                path = './scripts/telesfor.sql'
-                sql_file = open(path, 'r', encoding='UTF-8')
+            if tables == []:
+                path = "./scripts/telesfor.sql"
+                sql_file = open(path, "r", encoding="UTF-8")
                 sql_script = sql_file.read()
                 cursor.execute(sql_script)
-        elif DB == 'SQLITE':
+        elif DB == "SQLITE":
             query = "SELECT name FROM sqlite_master WHERE type='table';"
             cursor.execute(query)
             tables = cursor.fetchall()
-            if (tables == []):
-                path = './scripts/telesfor_sqlite.sql'
-                sql_file = open(path, 'r', encoding='UTF-8')
+            if tables == []:
+                path = "./scripts/telesfor_sqlite.sql"
+                sql_file = open(path, "r", encoding="UTF-8")
                 sql_script = sql_file.read()
                 cursor.executescript(sql_script)
     except:
-        if DB == 'MYSQL':
+        if DB == "MYSQL":
             print(str(mysql.connector.errors.Error()))
-        elif DB == 'SQLITE':
+        elif DB == "SQLITE":
             pass
     db.commit()
     db.close()
     return
+
 
 def insertarDatosDB(consulta):
     db = conectarBD()
@@ -63,9 +66,9 @@ def insertarDatosDB(consulta):
         print(consulta)
         cursor.execute(consulta)
     except:
-        if DB == 'MYSQL':
+        if DB == "MYSQL":
             print(str(mysql.connector.errors.Error()))
-        elif DB == 'SQLITE':
+        elif DB == "SQLITE":
             pass
     db.commit()
     db.close()
@@ -89,8 +92,25 @@ def obtenerNumPacientes(consulta):
     return numPacient
 
 
-def rellenar_datos_1(dni, nom, edat, sexe, LLoc_naixement, Lloc_residencia, temps_residencia, familia_origen_pare, familia_origen_mare, familia_origen_germans, familia_procreacio, rol_ocupa, membres_integren, viu_sol, problema_salut_actual, pren_medicaments_casa, quins_medicaments):
-
+def rellenar_datos_1(
+    dni,
+    nom,
+    edat,
+    sexe,
+    LLoc_naixement,
+    Lloc_residencia,
+    temps_residencia,
+    familia_origen_pare,
+    familia_origen_mare,
+    familia_origen_germans,
+    familia_procreacio,
+    rol_ocupa,
+    membres_integren,
+    viu_sol,
+    problema_salut_actual,
+    pren_medicaments_casa,
+    quins_medicaments,
+):
     consulta = f"""insert into info_general (dni,nom,edat,sexe,Lloc_naixement,Lloc_residencia,temps_residencia,familia_origen_pare,familia_origen_mare,familia_origen_germans,familia_procreacio,rol_ocupa,membres_integren,viu_sol,problema_salut_actual,pren_medicaments_casa,quins_medicaments) 
     values ('{dni}','{nom}',{edat},'{sexe}','{LLoc_naixement}','{Lloc_residencia}',{temps_residencia},'{familia_origen_pare}','{familia_origen_mare}','{familia_origen_germans}','{familia_procreacio}','{rol_ocupa}','{membres_integren}','{viu_sol}','{problema_salut_actual}','{pren_medicaments_casa}','{quins_medicaments}')"""
     insertarDatosDB(consulta)
@@ -102,15 +122,37 @@ def rellenar_datos_1(dni, nom, edat, sexe, LLoc_naixement, Lloc_residencia, temp
 def getData1(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM info_general where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM info_general where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_2(dni, ritme, frequencia_cardiaca, frequencia_r, pa, amplitud, tipus_respiracio, orifisis_nasals_permeables, coloracio_mucoses, coloracio_pell, respiracio, tos, tos_descripcio, mucositat, mucositat_descripcio, expectoracio, altres_manifestacions, situacions_influencien_respiracio, quines_influencien, mitja_utilitza_respirar_millor, fuma, cigars_dia):
+def rellenar_datos_2(
+    dni,
+    ritme,
+    frequencia_cardiaca,
+    frequencia_r,
+    pa,
+    amplitud,
+    tipus_respiracio,
+    orifisis_nasals_permeables,
+    coloracio_mucoses,
+    coloracio_pell,
+    respiracio,
+    tos,
+    tos_descripcio,
+    mucositat,
+    mucositat_descripcio,
+    expectoracio,
+    altres_manifestacions,
+    situacions_influencien_respiracio,
+    quines_influencien,
+    mitja_utilitza_respirar_millor,
+    fuma,
+    cigars_dia,
+):
     consulta = f"""insert into necessitat_respirar (dni,ritme,frequencia_cardiaca,frequencia_r,pa,amplitud,tipus_respiracio,orifisis_nasals_permeables,coloracio_mucoses,coloracio_pell,respiracio,tos,tos_descripcio,mucositat,mucositat_descripcio,expectoracio,altres_manifestacions,situacions_influencien_respiracio,quines_influencien,mitja_utilitza_respirar_millor,fuma,cigars_dia) 
     values ('{dni}','{ritme}',{frequencia_cardiaca},{frequencia_r},{pa},{amplitud},'{tipus_respiracio}','{orifisis_nasals_permeables}','{coloracio_mucoses}','{coloracio_pell}','{respiracio}','{tos}','{tos_descripcio}','{mucositat}','{mucositat_descripcio}','{expectoracio}','{altres_manifestacions}','{situacions_influencien_respiracio}','{quines_influencien}','{mitja_utilitza_respirar_millor}','{fuma}',{cigars_dia});"""
     insertarDatosDB(consulta)
@@ -122,15 +164,35 @@ def rellenar_datos_2(dni, ritme, frequencia_cardiaca, frequencia_r, pa, amplitud
 def getData2(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_respirar where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_respirar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_3(dni, pes, talla, numero_dents_realitzar_funcio, protesi_dental, masticacio, caracteriques_deglucio, tipus_dieta, esmorzar, dinar, berenar, sopar, altres, sensacio_habitual_respecte_menjar, aliments_solits_liquids_no_agraden_intolera_restriccio, habitualment_menja, situacions_influencien_habits_alimentalis, quines_situacions, mitjans_utilitza_millorar, altres_manifestacions):
+def rellenar_datos_3(
+    dni,
+    pes,
+    talla,
+    numero_dents_realitzar_funcio,
+    protesi_dental,
+    masticacio,
+    caracteriques_deglucio,
+    tipus_dieta,
+    esmorzar,
+    dinar,
+    berenar,
+    sopar,
+    altres,
+    sensacio_habitual_respecte_menjar,
+    aliments_solits_liquids_no_agraden_intolera_restriccio,
+    habitualment_menja,
+    situacions_influencien_habits_alimentalis,
+    quines_situacions,
+    mitjans_utilitza_millorar,
+    altres_manifestacions,
+):
     consulta = f"""insert into necessitat_menjar_beure (dni,pes,talla,numero_dents_realitzar_funcio,protesi_dental,masticacio, caracteriques_deglucio,tipus_dieta,esmorzar,dinar,berenar,sopar,altres,sensacio_habitual_respecte_menjar,aliments_solits_liquids_no_agraden_intolera_restriccio,habitualment_menja,situacions_influencien_habits_alimentalis,quines_situacions,mitjans_utilitza_millorar,altres_manifestacions)
     values ('{dni}',{pes},'{talla}',{numero_dents_realitzar_funcio},'{protesi_dental}','{masticacio}','{caracteriques_deglucio}','{tipus_dieta}','{esmorzar}','{dinar}','{berenar}','{sopar}','{altres}','{sensacio_habitual_respecte_menjar}','{aliments_solits_liquids_no_agraden_intolera_restriccio}','{habitualment_menja}','{situacions_influencien_habits_alimentalis}','{quines_situacions}','{mitjans_utilitza_millorar}','{altres_manifestacions}');"""
     insertarDatosDB(consulta)
@@ -142,15 +204,30 @@ def rellenar_datos_3(dni, pes, talla, numero_dents_realitzar_funcio, protesi_den
 def getData3(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_menjar_beure where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_menjar_beure where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_4(dni, frequencia_orina, quantitat_orina, aspecte_orina, frequencia_femtes, quantitat_femtes, aspecte_femtes, frequencia_suor, quantitat_suor, aspecte_suor, frequencia_regla, situacions_influencien_habits_eliminacio, quines_influencien, mitjans_utilitzar_eliminar_millor, altres_manifestacions):
+def rellenar_datos_4(
+    dni,
+    frequencia_orina,
+    quantitat_orina,
+    aspecte_orina,
+    frequencia_femtes,
+    quantitat_femtes,
+    aspecte_femtes,
+    frequencia_suor,
+    quantitat_suor,
+    aspecte_suor,
+    frequencia_regla,
+    situacions_influencien_habits_eliminacio,
+    quines_influencien,
+    mitjans_utilitzar_eliminar_millor,
+    altres_manifestacions,
+):
     consulta = f"""insert into necessitat_eliminar (dni,frequencia_orina,quantitat_orina,aspecte_orina,frequencia_femtes,quantitat_femtes,aspecte_femtes,frequencia_suor,quantitat_suor,aspecte_suor,frequencia_regla,situacions_influencien_habits_eliminacio,quines_influencien,mitjans_utilitzar_eliminar_millor,altres_manifestacions) 
     values ('{dni}',{frequencia_orina},{quantitat_orina},'{aspecte_orina}',{frequencia_femtes},{quantitat_femtes},'{aspecte_femtes}','{frequencia_suor}',{quantitat_suor},'{aspecte_suor}','{frequencia_regla}','{situacions_influencien_habits_eliminacio}','{quines_influencien}','{mitjans_utilitzar_eliminar_millor}','{altres_manifestacions}');"""
     insertarDatosDB(consulta)
@@ -162,15 +239,26 @@ def rellenar_datos_4(dni, frequencia_orina, quantitat_orina, aspecte_orina, freq
 def getData4(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_eliminar where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_eliminar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_5(dni, pot_moure_totes_parts_cos, quines_parts, perque_pot_moure, es, postura_habitual, activitats_fisiques, situacions_interfereixen_mobilitat, quines_situacions_interfreixen_mobilitat, mitjans_utilitza_moure_millor_mantenir_postura_adequada, altres_manifestacions):
+def rellenar_datos_5(
+    dni,
+    pot_moure_totes_parts_cos,
+    quines_parts,
+    perque_pot_moure,
+    es,
+    postura_habitual,
+    activitats_fisiques,
+    situacions_interfereixen_mobilitat,
+    quines_situacions_interfreixen_mobilitat,
+    mitjans_utilitza_moure_millor_mantenir_postura_adequada,
+    altres_manifestacions,
+):
     consulta = f"""insert into necessitat_moure_mantenir_postura_adequada (dni,pot_moure_totes_parts_cos,quines_parts,perque_pot_moure,es,postura_habitual,activitats_fisiques,situacions_interfereixen_mobilitat,quines_situacions_interfreixen_mobilitat,mitjans_utilitza_moure_millor_mantenir_postura_adequada,altres_manifestacions) 
     values ('{dni}','{pot_moure_totes_parts_cos}','{quines_parts}','{perque_pot_moure}','{es}','{postura_habitual}','{activitats_fisiques}','{situacions_interfereixen_mobilitat}','{quines_situacions_interfreixen_mobilitat}','{mitjans_utilitza_moure_millor_mantenir_postura_adequada}','{altres_manifestacions}');"""
     insertarDatosDB(consulta)
@@ -183,14 +271,24 @@ def getData5(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM necessitat_moure_mantenir_postura_adequada where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_moure_mantenir_postura_adequada where dni = '{dni}'"""
+    )
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_6(dni, hores_dorm, migdia, qualitat_son, situacions_influencien, quines_situacions_influencien, mitjans_dormir, altres_manifestacions):
+def rellenar_datos_6(
+    dni,
+    hores_dorm,
+    migdia,
+    qualitat_son,
+    situacions_influencien,
+    quines_situacions_influencien,
+    mitjans_dormir,
+    altres_manifestacions,
+):
     consulta = f"""insert into necesitat_dormir_reposar (dni,hores_dorm,migdia,qualitat_son,situacions_influencien_son,quienes_situacions_influencien_son,mitjans_utilitza_dormir_millor_reposar,altres_manifestacions) 
     values ('{dni}',{hores_dorm},'{migdia}','{qualitat_son}','{situacions_influencien}','{quines_situacions_influencien}','{mitjans_dormir}','{altres_manifestacions}');"""
     insertarDatosDB(consulta)
@@ -202,15 +300,16 @@ def rellenar_datos_6(dni, hores_dorm, migdia, qualitat_son, situacions_influenci
 def getData6(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necesitat_dormir_reposar where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necesitat_dormir_reposar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_7(dni, significat_roba, tipus_roba, capacitat, situacions, quines, mitjans, altres):
+def rellenar_datos_7(
+    dni, significat_roba, tipus_roba, capacitat, situacions, quines, mitjans, altres
+):
     consulta = f""" insert into necessitat_vestir_desvestir(
         dni,significat_roba,tipus_roba,capacitat_vestir_desvestir,situacions_influencien_vestimenta,
         quines_situacions_influencien_vestimenta,mitjans_millorar_satisfaccio_vestir_desvestir,altres_manifestacions)
@@ -224,16 +323,23 @@ def rellenar_datos_7(dni, significat_roba, tipus_roba, capacitat, situacions, qu
 def getData7(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_vestir_desvestir where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_vestir_desvestir where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_8(dni, temperatura_pell, temperatura_axilar, com_sent, situacions, quines, altres, mitjans):
-
+def rellenar_datos_8(
+    dni,
+    temperatura_pell,
+    temperatura_axilar,
+    com_sent,
+    situacions,
+    quines,
+    altres,
+    mitjans,
+):
     consulta = f""" insert into necessitat_mantenir_temperatura_corporal_limits_normals (
         dni,temperatura_pell,temperatura_axilar,com_sent_temperatura_ambient,situacions_influencien_termoregulacio,
         quines_situacions_influencien_termoregulacio,altres_manifestacions,mitjans_utilitza_mantenir_temperatura)
@@ -248,15 +354,25 @@ def getData8(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_mantenir_temperatura_corporal_limits_normals where dni = '{dni}'"""
+    )
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_9(dni, condicions, descripcio, habits_corporal, habits_bucal, situacions, quines, mitjans, altres):
-
+def rellenar_datos_9(
+    dni,
+    condicions,
+    descripcio,
+    habits_corporal,
+    habits_bucal,
+    situacions,
+    quines,
+    mitjans,
+    altres,
+):
     consulta = f""" insert into necessitat_estar_net_polt_protegir_teguments (
         dni,condicions_higeniques_pell_mucoses,descripcio_condicions_pell_mucosa,habits_higene_corporal,habits_higene_bucal,
         situacions_influencien_higene,quines_situacions_influencien_higene,mijans_utilitza_millorar_higene,altres_manifestacions)
@@ -271,15 +387,17 @@ def getData9(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_estar_net_polt_protegir_teguments where dni = '{dni}'"""
+    )
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_10(dni, coneix_mides, salubritat, situacions, quines, mitjans, altres):
-
+def rellenar_datos_10(
+    dni, coneix_mides, salubritat, situacions, quines, mitjans, altres
+):
     consulta = f"""insert into necessitat_evitar_perills (
         dni,coneix_mides_prevencio,salubritat_habitat_1,situacions_circumstancies_seguretat_fisica_psicologica_social,
         quines_situacions_seguretat_fisica_psicologica_social,mitjans_utilitza_proteccio,altres_manifestacio)
@@ -293,16 +411,25 @@ def rellenar_datos_10(dni, coneix_mides, salubritat, situacions, quines, mitjans
 def getData10(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_evitar_perills where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_evitar_perills where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_11(dni, estat_consciencia, orientacio, estat_sesorial, descripcio, expressio_no_verbal, situacions, quines, mitjans, altres_manifestacions13):
-
+def rellenar_datos_11(
+    dni,
+    estat_consciencia,
+    orientacio,
+    estat_sesorial,
+    descripcio,
+    expressio_no_verbal,
+    situacions,
+    quines,
+    mitjans,
+    altres_manifestacions13,
+):
     consulta = f""" insert into necessitat_comunicar(
         dni,estat_consciencia,orientacio_temps_espai,estat_sesorials,expressio_verbal,descripccio_expressio_no_verbal,
         situacions_influencien_comunicacio,quines_situacions_influencien_comunicacio,mitjans_faciliten_comunicacio,altres_maniestacions)
@@ -316,8 +443,7 @@ def rellenar_datos_11(dni, estat_consciencia, orientacio, estat_sesorial, descri
 def getData11(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_comunicar where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_comunicar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -325,7 +451,6 @@ def getData11(dni):
 
 
 def rellenar_datos_12(dni, quines, mitjans, altres):
-
     consulta = f""" insert into necessitat_viure_creences_valors (
         dni,quines_creences_valors, mitjans_utilitza_viure_creences_valors,altres_manifestacions)
         values ('{dni}','{quines}','{mitjans}','{altres}')"""
@@ -336,15 +461,17 @@ def getData12(dni):
     db = conectarBD()
     cursor = db.cursor()
     cursor.execute(
-        f"""SELECT * FROM necessitat_viure_creences_valors where dni = '{dni}'""")
+        f"""SELECT * FROM necessitat_viure_creences_valors where dni = '{dni}'"""
+    )
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_13(dni, rol_familiar, rol_social, tipus_ocupacio, situacions, mitjans13, altres):
-
+def rellenar_datos_13(
+    dni, rol_familiar, rol_social, tipus_ocupacio, situacions, mitjans13, altres
+):
     consulta = f""" insert into necessitat_ocupar_realitzar (
         dni,rol_familiar,rol_social,tipus_ocupacio,situacions_desenvolupacio_rol_social_familiar,mitjans_utilitza_millorar_realitzacio,altres_manifestacions)
         values ('{dni}','{rol_familiar}','{rol_social}','{tipus_ocupacio}','{situacions}','{mitjans13}','{altres}');"""
@@ -354,16 +481,25 @@ def rellenar_datos_13(dni, rol_familiar, rol_social, tipus_ocupacio, situacions,
 def getData13(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_ocupar_realitzar where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_ocupar_realitzar where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
     return (field_names, getData[0])
 
 
-def rellenar_datos_14(dni, esport, musica, lectura, audiovisual, altres, situacions, quines_situacions, mitjans, altres_manifestacions):
-
+def rellenar_datos_14(
+    dni,
+    esport,
+    musica,
+    lectura,
+    audiovisual,
+    altres,
+    situacions,
+    quines_situacions,
+    mitjans,
+    altres_manifestacions,
+):
     consulta = f""" insert into necessitat_esbargir (
         dni,habits_esport,habits_lectura,habits_musica,habits_audiovisual,habits_altres,situacions_influencien_interes_esbargir,quines_situacions_influencien_interes_esbargir,mitjans_utilitza_millorar_realitzacio,altres_manifestacions)
         values ('{dni}','{esport}','{lectura}','{musica}','{audiovisual}','{altres}','{situacions}','{quines_situacions}','{mitjans}','{altres_manifestacions}')"""
@@ -373,8 +509,7 @@ def rellenar_datos_14(dni, esport, musica, lectura, audiovisual, altres, situaci
 def getData14(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_esbargir where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_esbargir where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
@@ -382,19 +517,16 @@ def getData14(dni):
 
 
 def rellenar_datos_15(dni, interes, perque, situacions, mitjans, altres):
-
     consulta = f""" insert into necessitat_aprendre (
         dni,interes_coneixer_proces_salut, perque_interes_coneixer_proces_salut, situacions_dificulten_aprenentatge, mitjans_utilitza_aprendre, altres_manifestacions) 
         values ('{dni}','{interes}','{perque}','{situacions}','{mitjans}','{altres}')"""
     insertarDatosDB(consulta)
 
 
-
 def getData15(dni):
     db = conectarBD()
     cursor = db.cursor()
-    cursor.execute(
-        f"""SELECT * FROM necessitat_aprendre where dni = '{dni}'""")
+    cursor.execute(f"""SELECT * FROM necessitat_aprendre where dni = '{dni}'""")
     getData = cursor.fetchall()
     num_fields = len(cursor.description)
     field_names = [i[0] for i in cursor.description]
