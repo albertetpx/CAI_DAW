@@ -6,6 +6,8 @@ from bdPacients import obtenerNumPacientes
 from bdPacients import initdb
 import os
 
+
+
 @app.route("/lista_paciente")
 def lista_paciente():
     # TOFIX: la consulta a la bd va en bdPacients.py
