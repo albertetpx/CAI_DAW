@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 initdb()
 
+
 @app.route("/")
 def principalTabla_inicio():
     consulta = "select count(*) from info_general;"
