@@ -6,6 +6,17 @@ from bdPacients import obtenerNumPacientes
 from bdPacients import initdb
 import os
 
+app = Flask(__name__)
+
+initdb()
+
+
+@app.route("/")
+def principalTabla_inicio():
+    consulta = "select count(*) from info_general;"
+    data = obtenerNumPacientes(consulta)
+    return render_template("index.html", data=data)
+
 @app.route("/lista_paciente")
 def lista_paciente():
     # TOFIX: la consulta a la bd va en bdPacients.py
@@ -28,17 +39,6 @@ def lista_paciente():
                     'Necessitats d\'aprenentatge']
     return render_template("lista_paciente.html", data=data, numTablas=15, nombreTablas=nombreTablas)
 
-
-app = Flask(__name__)
-
-initdb()
-
-
-@app.route("/")
-def principalTabla_inicio():
-    consulta = "select count(*) from info_general;"
-    data = obtenerNumPacientes(consulta)
-    return render_template("index.html", data=data)
 
 
 @app.route("/registrar", methods=['GET'])
